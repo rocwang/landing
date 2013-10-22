@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.roc {
+    border-right:1px #ddd solid;
+    /*text-align: right;*/
+}
+
+.portrait {
+    width  : 140px;
+    height : 140px;
+}
+
+.infosys-logo {
+    width  : 100%;
+    height : 100%;
+}
+
+.tencent-logo {
+    width  : 100%;
+    height : 100%;
+}
