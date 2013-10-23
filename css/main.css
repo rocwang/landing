@@ -3,7 +3,39 @@
    ========================================================================== */
 .roc {
     border-right:1px #ddd solid;
-    /*text-align: right;*/
+}
+
+.container {
+    overflow: hidden;
+}
+
+.main {
+    transition: width 1s, -webkit-transform 1s 1s;
+
+    width: 100%;
+    -webkit-transform: translateX(0%);
+}
+
+.show-roc {
+    transition: width 1s, -webkit-transform 1s;
+    width: 200%;
+    -webkit-transform: translateX(0%);
+}
+
+.show-vivien {
+    transition: width 1s 1s, -webkit-transform 1s;
+
+    width: 200%;
+    -webkit-transform: translateX(-50%);
+}
+
+.main-ani {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-name: ani;
+}
+
+.align-right {
+    text-align: right;
 }
 
 .portrait {
@@ -19,4 +51,13 @@
 .tencent-logo {
     width  : 100%;
     height : 100%;
+}
+
+.center-align {
+    position: absolute;
+    right: -15px;
+}
+
+address {
+    line-height : 2;
 }
