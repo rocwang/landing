@@ -1,37 +1,104 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-.roc {
-    border-right:1px #ddd solid;
+body {
+    color: #fff;
+    background: url('../img/roc-and-vivien.jpg') no-repeat center top;
 }
 
-.container {
-    overflow: hidden;
+/******************************************************************************/
+
+/* Status: */
+
+.show-vivien .roc-name,
+.show-roc .vivien-name{
+    color: #999;
 }
 
-.main {
-    transition: width 1s, -webkit-transform 1s 1s;
+/**************************************/
 
-    width: 100%;
-    -webkit-transform: translateX(0%);
+body.show-both {
+    background-position-x: center;
 }
 
-.show-roc {
-    transition: width 1s, -webkit-transform 1s;
-    width: 200%;
-    -webkit-transform: translateX(0%);
+body.show-both .roc-info,
+body.show-both .vivien-info {
+    visibility: hidden;
+    opacity: 0;
 }
 
-.show-vivien {
-    transition: width 1s 1s, -webkit-transform 1s;
+/**************************************/
 
-    width: 200%;
-    -webkit-transform: translateX(-50%);
+body.show-roc,
+body.show-vivien {
+    /* Set background-position-x by JS */
 }
 
-.main-ani {
-    -webkit-animation-duration: 2s;
-    -webkit-animation-name: ani;
+body.show-roc .roc-info,
+body.show-vivien .vivien-info {
+    visibility: visible;
+    opacity: 1;
+}
+
+body.show-roc .vivien-info,
+body.show-vivien .roc-info {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/******************************************************************************/
+
+/* Transition: */
+
+.roc-name, .vivien-name {
+    transition: color 2s;
+}
+
+/**************************************/
+
+body.both-roc,
+body.both-vivien {
+    transition: background-position 1s 0s;
+}
+
+body.both-roc .roc-info,
+body.both-vivien .vivien-info {
+    transition: opacity 1s 1s, visibility 0s 0s;
+}
+
+/**************************************/
+
+body.roc-both,
+body.vivien-both {
+    transition: background-position 1s 1s;
+}
+
+body.roc-both .roc-info,
+body.vivien-both .vivien-info {
+    transition: opacity 1s 0s, visibility 0s 1s;
+}
+
+/**************************************/
+
+body.roc-vivien,
+body.vivien-roc {
+    transition: background-position 0.6s 0.7s;
+}
+
+body.roc-vivien .roc-info,
+body.vivien-roc .vivien-info {
+    transition: opacity 0.7s 0s, visibility 0s 0.7s;
+}
+
+body.roc-vivien .vivien-info,
+body.vivien-roc .roc-info {
+    transition: opacity 0.7s 1.3s, visibility 0s 1.3s;
+}
+
+/******************************************************************************/
+.panel, .list-group-item {
+    background-color: transparent;
+}
+
+.icon-stack-base {
+    color: #333;
 }
 
 .align-right {
