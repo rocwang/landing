@@ -1,108 +1,331 @@
-body {
-    color: #fff;
-    background: url('../img/roc-and-vivien.jpg') no-repeat center top;
+/*
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11 {
+    float: left;
+  }
+  .col-lg-1 {
+    width: 8.333333333333332%;
+  }
+  .col-lg-2 {
+    width: 16.666666666666664%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33333333333333%;
+  }
+  .col-lg-5 {
+    width: 41.66666666666667%;
+  }
+  .col-lg-6 {
+    width: 50%;
+  }
+  .col-lg-7 {
+    width: 58.333333333333336%;
+  }
+  .col-lg-8 {
+    width: 66.66666666666666%;
+  }
+  .col-lg-9 {
+    width: 75%;
+  }
+  .col-lg-10 {
+    width: 83.33333333333334%;
+  }
+  .col-lg-11 {
+    width: 91.66666666666666%;
+  }
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-push-0 {
+    left: auto;
+  }
+  .col-lg-push-1 {
+    left: 8.333333333333332%;
+  }
+  .col-lg-push-2 {
+    left: 16.666666666666664%;
+  }
+  .col-lg-push-3 {
+    left: 25%;
+  }
+  .col-lg-push-4 {
+    left: 33.33333333333333%;
+  }
+  .col-lg-push-5 {
+    left: 41.66666666666667%;
+  }
+  .col-lg-push-6 {
+    left: 50%;
+  }
+  .col-lg-push-7 {
+    left: 58.333333333333336%;
+  }
+  .col-lg-push-8 {
+    left: 66.66666666666666%;
+  }
+  .col-lg-push-9 {
+    left: 75%;
+  }
+  .col-lg-push-10 {
+    left: 83.33333333333334%;
+  }
+  .col-lg-push-11 {
+    left: 91.66666666666666%;
+  }
+  .col-lg-pull-0 {
+    right: auto;
+  }
+  .col-lg-pull-1 {
+    right: 8.333333333333332%;
+  }
+  .col-lg-pull-2 {
+    right: 16.666666666666664%;
+  }
+  .col-lg-pull-3 {
+    right: 25%;
+  }
+  .col-lg-pull-4 {
+    right: 33.33333333333333%;
+  }
+  .col-lg-pull-5 {
+    right: 41.66666666666667%;
+  }
+  .col-lg-pull-6 {
+    right: 50%;
+  }
+  .col-lg-pull-7 {
+    right: 58.333333333333336%;
+  }
+  .col-lg-pull-8 {
+    right: 66.66666666666666%;
+  }
+  .col-lg-pull-9 {
+    right: 75%;
+  }
+  .col-lg-pull-10 {
+    right: 83.33333333333334%;
+  }
+  .col-lg-pull-11 {
+    right: 91.66666666666666%;
+  }
+  .col-lg-offset-0 {
+    margin-left: 0;
+  }
+  .col-lg-offset-1 {
+    margin-left: 8.333333333333332%;
+  }
+  .col-lg-offset-2 {
+    margin-left: 16.666666666666664%;
+  }
+  .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .col-lg-offset-4 {
+    margin-left: 33.33333333333333%;
+  }
+  .col-lg-offset-5 {
+    margin-left: 41.66666666666667%;
+  }
+  .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .col-lg-offset-7 {
+    margin-left: 58.333333333333336%;
+  }
+  .col-lg-offset-8 {
+    margin-left: 66.66666666666666%;
+  }
+  .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .col-lg-offset-10 {
+    margin-left: 83.33333333333334%;
+  }
+  .col-lg-offset-11 {
+    margin-left: 91.66666666666666%;
+  }
 }
 
+ */
 /******************************************************************************/
 
 /* Status: */
+
+/* Background */
+
+.show-both {
+    background-position-x: center;
+}
+
+.show-roc,
+.show-vivien {
+    /* Set background-position-x by JS */
+}
+
+/* Name */
+
+.show-both .roc-name {
+    right: 0;
+}
+
+.show-both .vivien-name {
+    left: 0;
+}
+
+.show-roc .roc-name,
+.show-roc .vivien-name,
+.show-vivien .roc-name,
+.show-vivien .vivien-name {
+    /* Set left or right by JS */
+}
+
+.roc-name,
+.vivien-name {
+    color: #fff;
+}
 
 .show-vivien .roc-name,
 .show-roc .vivien-name{
     color: #999;
 }
 
-/**************************************/
+/* Info */
 
-body.show-both {
-    background-position-x: center;
-}
-
-body.show-both .roc-info,
-body.show-both .vivien-info {
+.show-both .roc-info,
+.show-both .vivien-info,
+.show-roc .vivien-info,
+.show-vivien .roc-info {
     visibility: hidden;
     opacity: 0;
 }
 
-/**************************************/
-
-body.show-roc,
-body.show-vivien {
-    /* Set background-position-x by JS */
-}
-
-body.show-roc .roc-info,
-body.show-vivien .vivien-info {
+.show-roc .roc-info,
+.show-vivien .vivien-info {
     visibility: visible;
     opacity: 1;
-}
-
-body.show-roc .vivien-info,
-body.show-vivien .roc-info {
-    visibility: hidden;
-    opacity: 0;
 }
 
 /******************************************************************************/
 
 /* Transition: */
 
-.roc-name, .vivien-name {
-    transition: color 2s;
-}
+/* Background */
 
-/**************************************/
-
-body.both-roc,
-body.both-vivien {
+.both-roc,
+.both-vivien {
     transition: background-position 1s 0s;
 }
 
-body.both-roc .roc-info,
-body.both-vivien .vivien-info {
-    transition: opacity 1s 1s, visibility 0s 0s;
-}
-
-/**************************************/
-
-body.roc-both,
-body.vivien-both {
+.roc-both,
+.vivien-both {
     transition: background-position 1s 1s;
 }
 
-body.roc-both .roc-info,
-body.vivien-both .vivien-info {
-    transition: opacity 1s 0s, visibility 0s 1s;
-}
-
-/**************************************/
-
-body.roc-vivien,
-body.vivien-roc {
+.roc-vivien,
+.vivien-roc {
     transition: background-position 0.6s 0.7s;
 }
 
-body.roc-vivien .roc-info,
-body.vivien-roc .vivien-info {
+/* Name */
+
+.both-roc .roc-name,
+.both-vivien .roc-name {
+    transition: right 1s 0s, color 1s 0s;
+}
+
+.both-roc .vivien-name,
+.both-vivien .vivien-name {
+    transition: left 1s 0s, color 1s 0s;
+}
+
+.roc-both .roc-name,
+.vivien-both .roc-name {
+    transition: right 1s 1s, color 1s 0s;
+}
+
+.roc-both .vivien-name,
+.vivien-both .vivien-name {
+    transition: left 1s 1s, color 1s 0s;
+}
+
+/* Info */
+
+.both-roc .roc-info,
+.both-vivien .vivien-info {
+    transition: opacity 1s 1s, visibility 0s 0s;
+}
+
+.roc-both .roc-info,
+.vivien-both .vivien-info {
+    transition: opacity 1s 0s, visibility 0s 1s;
+}
+
+.roc-vivien .roc-info,
+.vivien-roc .vivien-info {
     transition: opacity 0.7s 0s, visibility 0s 0.7s;
 }
 
-body.roc-vivien .vivien-info,
-body.vivien-roc .roc-info {
+.roc-vivien .vivien-info,
+.vivien-roc .roc-info {
     transition: opacity 0.7s 1.3s, visibility 0s 1.3s;
 }
 
+/* Progress Bar */
+.progress-bar {
+    transition-duration: 1s;
+}
+
 /******************************************************************************/
-.panel, .list-group-item {
-    background-color: transparent;
+
+body {
+    color: #fff;
+    background: url('../img/roc-and-vivien.jpg') no-repeat fixed center top;
+    background-color: black;
+    background-size: auto 100%;
+}
+
+.roc-name, .vivien-name {
+    position: relative;
+}
+
+.roc-name, .roc-name:hover, .roc-name:focus,
+.vivien-name, .vivien-name:hover, .vivien-name:focus{
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 2530px;
+    padding:0 50px;
+}
+
+.vivien-info {
+    position: absolute;
+    top: 0;
+}
+
+.info {
+    position: relative;
 }
 
 .icon-stack-base {
     color: #333;
-}
-
-.align-right {
-    text-align: right;
 }
 
 .portrait {
@@ -118,13 +341,4 @@ body.vivien-roc .roc-info {
 .tencent-logo {
     width  : 100%;
     height : 100%;
-}
-
-.center-align {
-    position: absolute;
-    right: -15px;
-}
-
-address {
-    line-height : 2;
 }
