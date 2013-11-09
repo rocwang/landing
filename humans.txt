@@ -1,15 +1,12 @@
-# h5bp-html5-boilerplate-72cdf1e/
-# The humans responsible & technology colophon
-
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Peng Wang -- Developer -- @rocinwinter
 
 # THANKS
 
-    <name>
+    Vivienne Chan
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+    Normalize.css, jQuery, Modernizr, Bootstrap

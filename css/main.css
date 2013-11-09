@@ -628,8 +628,11 @@ body {
 }
 
 .progress-bar {
-    padding-left: 15px;
     text-align: left;
+}
+
+.progress-bar span {
+    padding-left: 15px;
 }
 
 .experience dt,
@@ -677,7 +680,6 @@ body {
     height: 7%;
     top: 59%;
     right: 0;
-    background: blue;
 }
 
 .popover {
@@ -692,5 +694,11 @@ body {
     height: 7%;
     top: 59%;
     left: 0;
-    background: red;
+}
+
+.show-roc .roc-section {
+    z-index: 20;
+}
+.show-vivien .vivien-section {
+    z-index: 20;
 }

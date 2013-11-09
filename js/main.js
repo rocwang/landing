@@ -1,6 +1,6 @@
 jQuery(function($) {
 
-    var ORIGINAL_BG_WIDTH = 2560;
+    var ORIGINAL_BG_WIDTH = 1792;
     var ORIGINAL_BG_HEIGHT = 1440;
     var EXATR_SMALL_WIDTH = 768;
     var ROC_MOUTH_RATIO = 1.2467;
@@ -96,8 +96,6 @@ jQuery(function($) {
     });
 
     $(window).resize(function(e) {
-        console.log('resized');
-
         $('body').removeClass('both-roc both-vivien roc-vivien vivien-roc');
 
         if ($('body').hasClass('show-roc')) {
@@ -107,12 +105,9 @@ jQuery(function($) {
         }
     });
 
-    $('.stats').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-        if (isInView && visiblePartY == 'both' && $(this).css('visibility') == 'visible') {
-            $(this).find('.progress-bar').each(function(index, element) {
-                $(this).width($(this).attr('aria-valuenow')+'%');
-            });
-            $(this).off('inview');
+    $('.progress-bar').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView && visiblePartY == 'both') {
+            $(this).width($(this).attr('aria-valuenow')+'%').off('inview');
         }
     });
 
@@ -132,26 +127,26 @@ jQuery(function($) {
     $('.operation a').tooltip();
     $('#roc-qrcode').popover({
         html: true,
-        content: '<img src="img/qrcode.png" alt="QR Code to this site">',
+        content: '<img src="img/roc-qrcode.png" alt="QR Code to this site">',
         trigger: 'hover',
         placement: 'top',
         container: 'body',
     });
     $('#vivien-qrcode').popover({
         html: true,
-        content: '<img src="img/qrcode.png" alt="QR Code to this site">',
+        content: '<img src="img/roc-qrcode.png" alt="QR Code to this site">',
         trigger: 'hover',
         placement: 'top',
         container: 'body',
     });
     $('#hire_roc').popover({
-        content: 'HIRE ME~',
+        content: 'HIRE ME PLEASE',
         trigger: 'hover',
         placement: 'left',
         container: 'body',
     });
     $('#hire_vivien').popover({
-        content: 'HIRE ME~',
+        content: 'HIRE ME PLEASE',
         trigger: 'hover',
         placement: 'right',
         container: 'body',
