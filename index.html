@@ -10,24 +10,25 @@
         <meta name="description" content="Profiles of Peng & Vivienne">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-        <link rel="shortcut icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="author" href="humans.txt">
 
-        <!-- TODO: Enable CDN.
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome..min.css">
-        -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.css">
-        <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/main.css">
+        <!-- TODO: Enable CDN.  -->
+        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">-->
+        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">-->
+        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">-->
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendor/gallery-2.11.5/css/blueimp-gallery.min.css">
+
+        <link rel="stylesheet" href="main.css">
 
         <!-- Modernizer.js and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/vendor/respond-1.3.0.min.js"></script>
+        <script src="vendor/modernizr-2.6.2.min.js"></script>
+        <script src="vendor/respond-1.3.0.min.js"></script>
         <![endif]-->
     </head>
     <body class="show-both">
@@ -61,10 +62,10 @@
                         <p>I'm trying to get a web developer job in New Zealand, so I created this page to do marketing for myself. It's also a skill provement per se.</p>
 
                         <div class="row">
-                            <div class="experience col-xl-4">
+                            <div class="col-xl-4">
                                 <h2><i class="fa fa-briefcase"></i> Experience</h2>
 
-                                <dl class="dl-horizontal">
+                                <dl class="experience dl-horizontal">
                                     <dt>
                                     <a href="http://www.tencent.com/en-us/" target="_balnk">
                                         <img src="img/tencent-white.png" alt="Tencent Logo" class="logo">
@@ -94,79 +95,122 @@
                                 </dl>
                             </div>
 
-                            <div class="portfolio col-xl-4 hidden">
+                            <div class="col-sm-12">
                                 <h2><i class="fa fa-picture-o"></i> Portfolio</h2>
-                                <div id="roc-portfolio" class="carousel slide bs-docs-carousel-example" data-ride="carousel">
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#roc-portfolio" data-slide-to="0" class="active"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="1"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="2"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="3"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="4"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="5"></li>
-                                        <li data-target="#roc-portfolio" data-slide-to="6"></li>
-                                    </ol>
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <img src="img/portfolio/adidas.png" alt="Adidas Promotion">
-                                            <div class="carousel-caption">
-                                                <h3>First slide label</h3>
-                                                <p>First slide label</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/mobile_cms.png" alt="m.vip.qq.com CMS">
-                                            <div class="carousel-caption">
-                                                <h3>m.vip.qq.com CMS</h3>
-                                                <p>m.vip.qq.com CMS</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/mobile.png" alt="m.vip.qq.com">
-                                            <div class="carousel-caption">
-                                                <h3>m.vip.qq.com</h3>
-                                                <p>m.vip.qq.com</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/notification.png" alt="User Notification System">
-                                            <div class="carousel-caption">
-                                                <h3>User Notification System</h3>
-                                                <p>User Notification System</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/tip.png" alt="Refined Marketing System">
-                                            <div class="carousel-caption">
-                                                <h3>Refined Marketing System</h3>
-                                                <p>Refined Marketing System</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/tvshow_v1.png" alt="Entertainment Privilege System">
-                                            <div class="carousel-caption">
-                                                <h3>Entertainment Privilege System</h3>
-                                                <p>Entertainment Privilege System</p>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <img src="img/portfolio/tvshow.png" alt="Entertainment Privilege Activity">
-                                            <div class="carousel-caption">
-                                                <h3>Entertainment Privilege Activity</h3>
-                                                <p>Entertainment Privilege Activity</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Controls -->
-                                    <a class="left carousel-control" href="#roc-portfolio" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                <div id="roc-portfolio" class="portfolio ">
+                                    <a class="" href="img/portfolio/Unknown-10.png" title="Unknown-10.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-10.png" alt="Unknown-10.png">
                                     </a>
-                                    <a class="right carousel-control" href="#roc-portfolio" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <a class="" href="img/portfolio/Unknown-11.png" title="Unknown-11.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-11.png" alt="Unknown-11.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-12.png" title="Unknown-12.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-12.png" alt="Unknown-12.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-13.png" title="Unknown-13.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-13.png" alt="Unknown-13.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-14.png" title="Unknown-14.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-14.png" alt="Unknown-14.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-15.png" title="Unknown-15.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-15.png" alt="Unknown-15.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-16.png" title="Unknown-16.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-16.png" alt="Unknown-16.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-17.png" title="Unknown-17.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-17.png" alt="Unknown-17.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-18.png" title="Unknown-18.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-18.png" alt="Unknown-18.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-19.png" title="Unknown-19.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-19.png" alt="Unknown-19.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-2.png" title="Unknown-2.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-2.png" alt="Unknown-2.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-20.png" title="Unknown-20.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-20.png" alt="Unknown-20.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-21.png" title="Unknown-21.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-21.png" alt="Unknown-21.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-22.png" title="Unknown-22.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-22.png" alt="Unknown-22.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-23.png" title="Unknown-23.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-23.png" alt="Unknown-23.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-24.png" title="Unknown-24.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-24.png" alt="Unknown-24.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-25.png" title="Unknown-25.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-25.png" alt="Unknown-25.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-26.png" title="Unknown-26.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-26.png" alt="Unknown-26.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-27.png" title="Unknown-27.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-27.png" alt="Unknown-27.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-28.png" title="Unknown-28.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-28.png" alt="Unknown-28.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-3.png" title="Unknown-3.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-3.png" alt="Unknown-3.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-4.png" title="Unknown-4.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-4.png" alt="Unknown-4.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-5.png" title="Unknown-5.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-5.png" alt="Unknown-5.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-6.png" title="Unknown-6.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-6.png" alt="Unknown-6.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-7.png" title="Unknown-7.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-7.png" alt="Unknown-7.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-8.png" title="Unknown-8.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-8.png" alt="Unknown-8.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown-9.png" title="Unknown-9.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown-9.png" alt="Unknown-9.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/Unknown.png" title="Unknown.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/Unknown.png" alt="Unknown.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/adidas.png" title="adidas.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/adidas.png" alt="adidas.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/delivery.png" title="delivery.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/delivery.png" alt="delivery.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/esc_icon.png" title="esc_icon.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/esc_icon.png" alt="esc_icon.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/mobile.png" title="mobile.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/mobile.png" alt="mobile.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/mobile_cms.png" title="mobile_cms.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/mobile_cms.png" alt="mobile_cms.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/notice.png" title="notice.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/notice.png" alt="notice.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/tip.png" title="tip.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/tip.png" alt="tip.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/tvshow.png" title="tvshow.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/tvshow.png" alt="tvshow.png">
+                                    </a>
+                                    <a class="" href="img/portfolio/tvshow_v1.png" title="tvshow_v1.png" data-gallery>
+                                        <img src="img/portfolio/thumbnail/tvshow_v1.png" alt="tvshow_v1.png">
                                     </a>
                                 </div>
+
                             </div>
 
                             <div class="stats col-md-12 col-xl-8">
@@ -280,9 +324,9 @@
                             </div>
                         </div>
 
-                        <div class="education">
+                        <div>
                             <h2><span class="glyphicon glyphicon-book"></span> Education</h2>
-                            <dl class="dl-horizontal">
+                            <dl class="education dl-horizontal">
                                 <dt>
                                 <a href="http://www.uestc.edu.cn/" target="_blank">
                                     <img src="img/uestc.png" alt="UESTC Logo" class="logo">
@@ -398,16 +442,29 @@
             </div>
         </div>
 
-        <!-- TODO: Enable CDN.
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
-        -->
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/vendor/jquery.inview.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <!-- The Image Gallery lightbox, should be a child element of the document body -->
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-full-screen="false">
+            <!-- The container for the modal slides -->
+            <div class="slides"></div>
+            <!-- Controls for the borderless lightbox -->
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+        </div>
+
+        <!-- TODO: Enable CDN.  -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <!--<script>window.jQuery || document.write('<script src="vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+        <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
+        <script src="vendor/jquery-1.10.2.min.js"></script>
+        <script src="vendor/jquery.inview.min.js"></script>
+        <script src="vendor/gallery-2.11.5/js/jquery.blueimp-gallery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="main.js"></script>
 
         <!-- Google Analytics -->
         <script>
