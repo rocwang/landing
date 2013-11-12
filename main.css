@@ -67,7 +67,7 @@
     .roc-name-container, .vivien-name-container { height: 50%; background-size: auto 100%; background-repeat: no-repeat; }
     .roc-name-container { background-image: url('../img/roc-bg.jpg'); background-position: top right; }
     .vivien-name-container { text-align: right; background-image: url('../img/vivien-bg.jpg'); background-position: top left; position: absolute; }
-    .page { position: absolute; top: 50%; width: 100%; }
+    .info { position: absolute; top: 50%; width: 100%; }
 
     /* Status */
     .show-roc .vivien-name-container, .show-vivien .roc-name-container { opacity: 0; }
@@ -98,71 +98,60 @@
 
 /* Status: */
 
+/* Background */
 .show-both {
     background-position-x: center;
     overflow: hidden;
 }
+.show-roc,
+.show-vivien {
+    /* Set background-position-x by JS */
+}
+
+/* Name */
 .show-both .roc-name {
     right: 0;
-}
-.show-both .roc-info {
-    right: 100%;
-}
-.show-both #hire_roc {
-    display: none;
 }
 .show-both .vivien-name {
     left: 0;
 }
-.show-both .vivien-info {
-    left: 100%;
-}
-.show-both #hire_vivien {
-    display: none;
-}
-
-.show-roc {
-    /* Set background-position-x by JS */
-}
-.show-roc .roc-name {
-    /* Set left or right by JS */
-}
-.show-roc .roc-info {
-    right: auto;
-}
-.show-roc #hire_roc {
-    display: block;
-}
 .show-roc .vivien-name {
     left: 200%;
-}
-.show-roc .vivien-info {
-    left: 100%;
-}
-.show-roc #hire_vivien {
-    display: none;
-}
-
-.show-vivien {
-    /* Set background-position-x by JS */
 }
 .show-vivien .roc-name {
     right: 200%;
 }
+.show-roc .roc-name,
+.show-vivien .vivien-name {
+    /* Set left or right by JS */
+}
+
+/* Info */
+.show-both .roc-info,
 .show-vivien .roc-info {
     right: 100%;
 }
-.show-vivien #hire_roc {
-    display: none;
+.show-both .vivien-info,
+.show-roc .vivien-info {
+    left: 100%;
 }
-.show-vivien .vivien-name {
-    /* Set background-position-x by JS */
+.show-roc .roc-info {
+    right: auto;
 }
 .show-vivien .vivien-info {
     left: auto;
 }
+
+/* Easter Egg */
+.show-roc #hire_roc,
 .show-vivien #hire_vivien {
     display: block;
+}
+.show-roc #hire_vivien,
+.show-vivien #hire_roc,
+.show-both #hire_roc,
+.show-both #hire_vivien {
+    display: none;
 }
 
 /******************************************************************************/
@@ -171,69 +160,42 @@
 
 /* Background */
 
-.both-roc {
-    transition: background-position 1s 1s;
-}
-.roc-both {
-    transition: background-position 1s 0s;
-}
-
+.both-roc,
 .both-vivien {
     transition: background-position 1s 1s;
 }
-.vivien-both {
-    transition: background-position 1s 0s;
-}
 
-.roc-vivien {
-    transition: background-position 1s 0s;
-}
+.roc-both,
+.vivien-both,
+.roc-vivien,
 .vivien-roc {
     transition: background-position 1s 0s;
 }
 
 /* Name */
 
-.both-roc .roc-name {
+.both-roc .roc-name,
+.vivien-both .roc-name,
+.roc-vivien .roc-name,
+.vivien-roc .roc-name {
     transition: right 1s 0s;
 }
-.both-roc .vivien-name {
-    transition: left 1s 1s;
-}
 
-.roc-both .roc-name {
-    transition: right 1s 1s;
-}
-.roc-both .vivien-name {
+.both-vivien .vivien-name,
+.roc-both .vivien-name,
+.roc-vivien .vivien-name,
+.vivien-roc .vivien-name {
     transition: left 1s 0s;
 }
 
-.both-vivien .roc-name {
-    transition: right 1s 1s;
-}
-.both-vivien .vivien-name{
-    transition: left 1s 0s;
-}
-
-.vivien-both .roc-name {
-    transition: right 1s 0s;
-}
+.both-roc .vivien-name,
 .vivien-both .vivien-name {
     transition: left 1s 1s;
 }
 
-.roc-vivien .roc-name {
-    transition: right 1s 0s;
-}
-.roc-vivien .vivien-name {
-    transition: left 1s 0s;
-}
-
-.vivien-roc .roc-name {
-    transition: right 1s 0s;
-}
-.vivien-roc .vivien-name {
-    transition: left 1s 0s;
+.both-vivien .roc-name,
+.roc-both .roc-name {
+    transition: right 1s 1s;
 }
 
 /* Info */
@@ -241,34 +203,21 @@
 .both-roc .roc-info {
     transition: right 1s 1s;
 }
-.roc-both .roc-info {
-    transition: right 1s 0s;
-}
 
 .both-vivien .vivien-info {
     transition: left 1s 1s;
 }
-.vivien-both .vivien-info {
-    transition: left 1s 0s;
-}
 
-.roc-vivien .roc-info {
-    transition: right 1s 0s;
-}
-.roc-vivien .vivien-info {
-    transition: left 1s 0s;
-}
-
+.roc-both .roc-info,
+.roc-vivien .roc-info,
 .vivien-roc .roc-info {
     transition: right 1s 0s;
 }
+
+.vivien-both .vivien-info,
+.roc-vivien .vivien-info,
 .vivien-roc .vivien-info {
     transition: left 1s 0s;
-}
-
-/* Progress Bar */
-.progress-bar {
-    transition-duration: 1s;
 }
 
 /******************************************************************************/
@@ -279,17 +228,8 @@ body {
     color: #fff;
 }
 
-
 .roc-name-container {
     text-align: right;
-}
-
-.page {
-    position: absolute;
-    top: 69px;
-    left: 0;
-    overflow-x: hidden;
-    width: 100%;
 }
 
 .name {
@@ -306,22 +246,12 @@ body {
     text-decoration: none;
 }
 
-.name-container {
-    padding:0 30px;
-}
-
 .fa-stack-2x {
     color: #333;
 }
 
-.portrait {
-    width  : 140px;
-    height : 140px;
-}
-
 .logo {
     width  : 160px;
-    /*float: left;*/
 }
 
 .progress-bar {
@@ -343,7 +273,6 @@ body {
     position: fixed;
 }
 
-/*************/
 .roc-address,
 .vivien-address {
     position:fixed;
@@ -368,7 +297,7 @@ body {
 }
 
 #hire_roc {
-    z-index: 20;
+    z-index: 10;
     position: fixed;
     width: 7%;
     height: 7%;
@@ -382,7 +311,7 @@ body {
 }
 
 #hire_vivien {
-    z-index: 20;
+    z-index: 10;
     position: fixed;
     width: 7%;
     height: 7%;
@@ -390,18 +319,22 @@ body {
     left: 0;
 }
 
-.show-roc .roc-page {
-    z-index: 20;
-}
-.show-vivien .vivien-page {
-    z-index: 20;
-}
-
-.roc-info, .vivien-info {
-    position: relative;
-    padding: 0 30px;
-}
-
 .portfolio {
     font-size: 0;
+}
+
+.info {
+    position: relative;
+    overflow-x: hidden;
+    height: 2000px;
+}
+.roc-info,
+.vivien-info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.global-padding {
+    padding:0 30px;
 }

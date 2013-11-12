@@ -70,7 +70,7 @@ jQuery(function($) {
             $('#hire_roc').width($('#hire_roc').height() * ROC_MOUTH_RATIO);
         }
 
-        if ($('body').scrollTop() == 0) {
+        if ($('body').scrollTop() === 0) {
             show();
         } else {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
@@ -89,7 +89,7 @@ jQuery(function($) {
             $('#hire_vivien').width($('#hire_vivien').height() * VIVIEN_MOUTH_RATIO);
         }
 
-        if ($('body').scrollTop() == 0) {
+        if ($('body').scrollTop() === 0) {
             show();
         } else {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
@@ -107,7 +107,7 @@ jQuery(function($) {
             $('.show-control').removeClass('hidden');
         }
 
-        if ($('body').scrollTop() == 0) {
+        if ($('body').scrollTop() === 0) {
             show();
         } else {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
@@ -128,12 +128,6 @@ jQuery(function($) {
         }
     });
 
-    $('.progress-bar').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-        if (isInView && visiblePartY == 'both') {
-            $(this).width($(this).attr('aria-valuenow')+'%').off('inview');
-        }
-    });
-
     $('.print').click(function(e) {
         e.preventDefault();
         window.print();
@@ -141,9 +135,10 @@ jQuery(function($) {
 
     /*****************************************************************************/
 
-    if (location.hash == '#roc') {
+    /* Main */
+    if (location.hash === '#roc') {
         setTimeout(function(){$('#show-roc-control').click();}, 1000);;
-    } else if (location.hash == '#vivien') {
+    } else if (location.hash === '#vivien') {
         setTimeout(function(){$('#show-vivien-control').click();}, 1000);;
     }
 

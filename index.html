@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html class="no-js">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,28 +11,13 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="author" href="humans.txt">
 
-        <!-- TODO: Enable CDN.  -->
-        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">-->
-        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">-->
-        <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">-->
-        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendor/gallery-2.11.5/css/blueimp-gallery.min.css">
-
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.min.css">
         <link rel="stylesheet" href="main.css">
-
-        <!-- Modernizer.js and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="vendor/modernizr-2.6.2.min.js"></script>
-        <script src="vendor/respond-1.3.0.min.js"></script>
-        <![endif]-->
     </head>
     <body class="show-both">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <a id="show-roc-control" class="show-control both2roc left carousel-control hidden-xs" href="#roc">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -43,8 +25,16 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
 
-        <div class="name-container">
-            <div class="row name">
+        <!--[if lt IE 9]>
+        <div class="browsehappy global-padding">
+            <div class="alert alert-warning">
+                You are using an <strong>outdated</strong> browser. Please <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.
+            </div>
+        </div>
+        <![endif]-->
+
+        <div class="global-padding name">
+            <div class="row">
                 <div class="roc-name-container col-xs-12 col-sm-6">
                     <h1 class="absolute-center"><span class="roc-name">Peng Wang</span></h1>
                 </div>
@@ -54,8 +44,8 @@
             </div>
         </div>
 
-        <div class="page roc-page">
-            <div class="roc-info">
+        <div class="info">
+            <div class="roc-info global-padding">
                 <div class="row">
                     <div class="col-sm-9">
                         <h2><i class="fa fa-road"></i> Why this page</h2>
@@ -218,34 +208,34 @@
                             </div>
                             <div class="stats col-md-6 col-xl-4">
                                 <dl class="dl-horizontal">
-                                    <dt class="hidden-xs">Javascript</dt>
+                                    <dt class="hidden-xs">HTML</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="visible-xs">Javascript</span>
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" style="width: 60%;" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="visible-xs">HTML</span>
                                         </div>
                                     </div>
                                     </dd>
                                     <dt class="hidden-xs">CSS</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" style="width: 40%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">CSS</span>
                                         </div>
                                     </div>
                                     </dd>
-                                    <dt class="hidden-xs">HTML</dt>
+                                    <dt class="hidden-xs">Javascript</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                                            <span class="visible-xs">HTML</span>
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" style="width: 70%;" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="visible-xs">Javascript</span>
                                         </div>
                                     </div>
                                     </dd>
                                     <dt class="hidden-xs">PHP</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" style="width: 80%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">PHP</span>
                                         </div>
                                     </div>
@@ -253,7 +243,7 @@
                                     <dt class="hidden-xs">Objective-C</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="30" style="width: 30%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Objective-C</span>
                                         </div>
                                     </div>
@@ -265,7 +255,7 @@
                                     <dt class="hidden-xs">Bootstrap</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" style="width: 70%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Bootstrap</span>
                                         </div>
                                     </div>
@@ -273,7 +263,7 @@
                                     <dt class="hidden-xs">Yii</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="75" style="width: 75%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Yii</span>
                                         </div>
                                     </div>
@@ -283,7 +273,7 @@
                                     <dt class="hidden-xs">Vim</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" style="width: 80%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Vim</span>
                                         </div>
                                     </div>
@@ -291,7 +281,7 @@
                                     <dt class="hidden-xs">Subversion</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" style="width: 70%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Subversion</span>
                                         </div>
                                     </div>
@@ -299,7 +289,7 @@
                                     <dt class="hidden-xs">Git</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" style="width: 50%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Git</span>
                                         </div>
                                     </div>
@@ -307,7 +297,7 @@
                                     <dt class="hidden-xs">Shell</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="60" style="width: 60%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Shell</span>
                                         </div>
                                     </div>
@@ -315,7 +305,7 @@
                                     <dt class="hidden-xs">Xcode</dt>
                                     <dd>
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" style="width: 40%;" aria-valuemin="0" aria-valuemax="100">
                                             <span class="visible-xs">Xcode</span>
                                         </div>
                                     </div>
@@ -351,7 +341,7 @@
                         </div>
 
                         <div class="video">
-                            <h2><i class="fa fa-video-camera"></i> Video</h2>
+                            <h2><i class="fa fa-video-camera"></i> Personality</h2>
                             <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/2kiB1sds59o?rel=0" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -421,10 +411,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="page vivien-page">
-            <div class="vivien-info">
+            <div class="vivien-info global-padding">
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="vivien-operation operation fa-2x">
@@ -455,15 +442,9 @@
             <ol class="indicator"></ol>
         </div>
 
-        <!-- TODO: Enable CDN.  -->
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-        <!--<script>window.jQuery || document.write('<script src="vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
-        <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>-->
-        <script src="vendor/jquery-1.10.2.min.js"></script>
-        <script src="vendor/jquery.inview.min.js"></script>
-        <script src="vendor/gallery-2.11.5/js/jquery.blueimp-gallery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
+        <script src="bower_components/jquery/jquery.min.js"></script>
+        <script src="bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="main.js"></script>
 
         <!-- Google Analytics -->
