@@ -1,12 +1,30 @@
 # TEAM
 
-    Peng Wang -- Developer -- @rocinwinter
+    Developer: Peng Wang
+    Twitter: @rocinwinter
+    From: Shenzhen, China
 
 # THANKS
 
     Vivienne Chan
+    From: Shenzhen, China
 
 # TECHNOLOGY COLOPHON
 
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr, Bootstrap
+    Languages:
+
+        HTML5
+        CSS3
+        Javascript
+
+    Component:
+
+        jQuery
+        Bootstrap
+        Font Awesome
+        Blueimp-Gallery
+
+    Tools:
+
+        Vim
+        Chrome
