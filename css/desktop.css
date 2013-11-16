@@ -1,0 +1,190 @@
+/* Tablet and desktop style */
+@media (min-width: 768px) {
+    /* Status: */
+
+    /* Background */
+    .show-both {
+        background-position-x: center;
+        overflow: hidden;
+    }
+    .show-roc,
+    .show-vivien {
+        /* Set background-position-x by JS */
+    }
+
+    /* Name */
+    .show-both .roc-name {
+        right: 0;
+    }
+    .show-both .vivien-name {
+        left: 0;
+    }
+    .show-roc .vivien-name {
+        left: 200%;
+    }
+    .show-vivien .roc-name {
+        right: 200%;
+    }
+    .show-roc .roc-name,
+    .show-vivien .vivien-name {
+        /* Set left or right by JS */
+    }
+
+    /* Info */
+    .show-both .roc-info,
+    .show-vivien .roc-info {
+        right: 100%;
+    }
+    .show-both .vivien-info,
+    .show-roc .vivien-info {
+        left: 100%;
+    }
+    .show-roc .roc-info {
+        right: auto;
+    }
+    .show-vivien .vivien-info {
+        left: auto;
+    }
+
+    /* Easter Egg */
+    .show-roc #hire_roc,
+    .show-vivien #hire_vivien {
+        display: block;
+    }
+    .show-roc #hire_vivien,
+    .show-vivien #hire_roc,
+    .show-both #hire_roc,
+    .show-both #hire_vivien {
+        display: none;
+    }
+
+    /* Transition: */
+
+    /* Background */
+
+    .both-roc,
+    .both-vivien {
+        transition: background-position 1s 1s;
+    }
+
+    .roc-both,
+    .vivien-both,
+    .roc-vivien,
+    .vivien-roc {
+        transition: background-position 1s 0s;
+    }
+
+    /* Name */
+
+    .both-roc .roc-name,
+    .vivien-both .roc-name,
+    .roc-vivien .roc-name,
+    .vivien-roc .roc-name {
+        transition: right 1s 0s;
+    }
+
+    .both-vivien .vivien-name,
+    .roc-both .vivien-name,
+    .roc-vivien .vivien-name,
+    .vivien-roc .vivien-name {
+        transition: left 1s 0s;
+    }
+
+    .both-roc .vivien-name,
+    .vivien-both .vivien-name {
+        transition: left 1s 1s;
+    }
+
+    .both-vivien .roc-name,
+    .roc-both .roc-name {
+        transition: right 1s 1s;
+    }
+
+    /* Info */
+
+    .both-roc .roc-info {
+        transition: right 1s 1s;
+    }
+
+    .both-vivien .vivien-info {
+        transition: left 1s 1s;
+    }
+
+    .roc-both .roc-info,
+    .roc-vivien .roc-info,
+    .vivien-roc .roc-info {
+        transition: right 1s 0s;
+    }
+
+    .vivien-both .vivien-info,
+    .roc-vivien .vivien-info,
+    .vivien-roc .vivien-info {
+        transition: left 1s 0s;
+    }
+
+    /********************************/
+
+    /* Body */
+    body {
+        background: url('../img/roc-and-vivien.jpg') no-repeat fixed center top, #000;
+        background-size: auto 100%;
+    }
+
+    .show-control {
+        z-index: 10;
+        position: fixed;
+    }
+
+    /* Name */
+    .roc-name-container {
+        text-align: right;
+    }
+    .roc-name, .vivien-name {
+        position: relative;
+    }
+
+    /* Info */
+    .info {
+        position: relative;
+        height: 2000px;
+    }
+
+    .experience dt,
+    .education dt {
+        text-align: center;
+    }
+
+    /* Sidebar */
+    .roc-address,
+    .vivien-address {
+        position:fixed;
+    }
+    .vivien-address,
+    .vivien-operation {
+        text-align: right;
+    }
+    .operation {
+        position: fixed;
+        bottom: 30px;
+    }
+    .popover {
+        position: fixed;
+        color: #333;
+    }
+    #hire_roc {
+        z-index: 10;
+        position: fixed;
+        width: 7%;
+        height: 7%;
+        top: 59%;
+        right: 0;
+    }
+    #hire_vivien {
+        z-index: 10;
+        position: fixed;
+        width: 7%;
+        height: 7%;
+        top: 59%;
+        left: 0;
+    }
+}

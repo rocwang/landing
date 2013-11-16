@@ -1,0 +1,118 @@
+/* Mobile style */
+@media (max-width: 767px) {
+    /* Name */
+    .name {
+        position : absolute;
+        height   : 100%;
+        width    : 100%;
+        padding  : 0;
+        top      : 0;
+        left     : 0;
+    }
+    .name .row {
+        margin : 0;
+        height : 100%;
+    }
+    .roc-name-container, .vivien-name-container {
+        position          : relative;
+        height            : 50%;
+        background-size   : auto 100%;
+        background-repeat : no-repeat;
+        background-color  : #000;
+    }
+    .roc-name-container {
+        background-image    : url('../img/roc-bg.jpg');
+        background-position : top right;
+    }
+    .vivien-name-container {
+        background-image    : url('../img/vivien-bg.jpg');
+        background-position : top left;
+        text-align          : right;
+        z-index             : 10;
+    }
+    .absolute-center {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    h1.absolute-center {
+        height: 43px;
+        padding: 0 45px;
+    }
+
+    /* Info */
+    .info {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 5000px;
+        width: 100%;
+    }
+
+    /* Skills */
+    .progress-bar {
+        text-align: left;
+    }
+    .progress-bar span {
+        padding-left: 15px;
+    }
+
+    /***********************************************/
+    /* Animation Style */
+
+    /* Status */
+    /* TODO: add status for .xxx-info */
+    .show-both .roc-info {
+    }
+    .show-both .vivien-info {
+    }
+
+    .show-roc .vivien-name-container {
+        bottom : 50%;
+        left   : 100%;
+    }
+    .show-roc .roc-info {
+    }
+    .show-roc .vivien-info {
+    }
+
+    .show-vivien .roc-name-container {
+        right: 100%;
+    }
+    .show-vivien .vivien-name-container {
+        bottom: 50%;
+    }
+    .show-vivien .roc-info {
+    }
+    .show-vivien .vivien-info {
+    }
+
+    /* Transition */
+    .both-roc .vivien-name-container {
+        transition: bottom 0s 1s, left 1s 0s;
+    }
+    .roc-both .vivien-name-container {
+        transition: bottom 0s 0s, left 1s 1s;
+    }
+
+    .both-vivien .roc-name-container {
+        transition: right 1s 0s;
+    }
+    .both-vivien .vivien-name-container {
+        transition: bottom 1s 1s;
+    }
+    .vivien-both .roc-name-container {
+        transition: right 1s 1s;
+    }
+    .vivien-both .vivien-name-container {
+        transition: bottom 1s 0s;
+    }
+
+    .roc-vivien {
+    }
+    .vivien-roc {
+    }
+}
