@@ -157,6 +157,7 @@ jQuery(function($) {
     } else if (location.hash === '#vivien') {
         setTimeout(function(){$('#show-vivien-control').click();}, 1000);;
     }
+    //$(window).trigger('resize');
 
     $('.operation a').tooltip();
     $('#roc-qrcode').popover({
