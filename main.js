@@ -156,7 +156,7 @@ jQuery(function($) {
     } else if (location.hash === '#vivi') {
         setTimeout(function(){$('#show-vivi-control').click();}, 1000);;
     }
-    $(window).trigger('resize');
+    //$(window).trigger('resize');
 
     $('.operation a').tooltip();
     $('#roc-qrcode').popover({
