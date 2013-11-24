@@ -1,34 +1,42 @@
 /* Mobile style */
 @media (max-width: 767px) {
+    /* Nav */
+    .navbar-header {
+        padding-left: 15px;
+    }
+
     /* Name */
     .name {
-        position : absolute;
-        height   : 100%;
-        width    : 100%;
-        padding  : 0;
-        top      : 0;
-        left     : 0;
+        position: absolute;
+        overflow-x: hidden;
+        height:   100%;
+        width:    100%;
+        top:      0;
+        left:     0;
     }
-    .name .row {
-        margin : 0;
-        height : 100%;
-    }
-    .roc-name-container, .vivien-name-container {
-        position          : relative;
+    .roc-name-container,
+    .vivi-name-container {
+        position          : absolute;
         height            : 50%;
+        width             : 100%;
         background-size   : auto 100%;
         background-repeat : no-repeat;
         background-color  : #000;
+        cursor            : pointer;
+        z-index:  10;
     }
     .roc-name-container {
         background-image    : url('../img/roc-bg.jpg');
         background-position : top right;
+        top:0;
+        right:0;
     }
-    .vivien-name-container {
-        background-image    : url('../img/vivien-bg.jpg');
+    .vivi-name-container {
+        background-image    : url('../img/vivi-bg.jpg');
         background-position : top left;
         text-align          : right;
-        z-index             : 10;
+        top:50%;
+        left:0;
     }
     .absolute-center {
         margin: auto;
@@ -40,16 +48,56 @@
     }
     h1.absolute-center {
         height: 43px;
-        padding: 0 45px;
+        padding: 0 30px;
+    }
+
+    /* Contact */
+    address li {
+        display: inline;
+    }
+    .address-text {
+        display: none;
+    }
+    .roc-address,
+    .vivi-address {
+        position:   absolute;
+        z-index: 20;
+
+        font-size: 1.3333333333333333em;
+        line-height: .75em;
+        vertical-align: -15%;
+    }
+    .roc-address {
+        top:      30%;
+        left:     30px;
+    }
+    .vivi-address {
+        top:        80%;
+        right:      30px;
+        text-align: right;
     }
 
     /* Info */
     .info {
         position: absolute;
-        top: 50%;
-        left: 0;
-        height: 5000px;
+        overflow-x: hidden;
+        top:      50%;
+        left:     0;
+        width:    100%;
+    }
+    .roc-info,
+    .vivi-info {
+        position: absolute;
+        top: 0;
         width: 100%;
+    }
+    .roc-info {
+        right: 100%;
+        z-index:  30;
+    }
+    .vivi-info {
+        left: 100%;
+        z-index:  30;
     }
 
     /* Skills */
@@ -64,55 +112,137 @@
     /* Animation Style */
 
     /* Status */
-    /* TODO: add status for .xxx-info */
-    .show-both .roc-info {
+    .show-both .navbar {
+        display: none!important;
     }
-    .show-both .vivien-info {
+    .show-both .info{
+        height: 50%;
     }
 
-    .show-roc .vivien-name-container {
-        bottom : 50%;
+    .show-roc .navbar-header .vivi2both,
+    .show-roc .navbar-header .vivi2roc,
+    .show-roc .vivi-nav-links {
+        display: none;
+    }
+    .show-roc .vivi-name-container {
+        top : 0;
         left   : 100%;
     }
-    .show-roc .roc-info {
+    .show-roc .vivi-address {
+        top: 30%;
+        right: -100%;
     }
-    .show-roc .vivien-info {
+    .show-roc .roc-info {
+        right: 0;
     }
 
-    .show-vivien .roc-name-container {
+    .show-vivi .navbar-header .roc2both,
+    .show-vivi .navbar-header .roc2vivi,
+    .show-vivi .roc-nav-links{
+        display: none;
+    }
+    .show-vivi .roc-name-container {
         right: 100%;
     }
-    .show-vivien .vivien-name-container {
-        bottom: 50%;
+    .show-vivi .roc-address {
+        left: -100%;
     }
-    .show-vivien .roc-info {
+    .show-vivi .vivi-name-container {
+        top: 0;
     }
-    .show-vivien .vivien-info {
+    .show-vivi .vivi-address {
+        top: 30%;
+    }
+    .show-vivi .vivi-info {
+        left: 0;
     }
 
     /* Transition */
-    .both-roc .vivien-name-container {
-        transition: bottom 0s 1s, left 1s 0s;
+    .both-roc .vivi-name-container {
+        transition: top 0s 1s, left 1s 0s;
     }
-    .roc-both .vivien-name-container {
-        transition: bottom 0s 0s, left 1s 1s;
+    .both-roc .vivi-address {
+        transition: top 0s 1s, right 1s 0s;
     }
-
-    .both-vivien .roc-name-container {
+    .both-roc .roc-info {
         transition: right 1s 0s;
     }
-    .both-vivien .vivien-name-container {
-        transition: bottom 1s 1s;
+
+    .roc-both .vivi-name-container {
+        transition: left 1s 0s;
     }
-    .vivien-both .roc-name-container {
-        transition: right 1s 1s;
+    .roc-both .vivi-address {
+        transition: right 1s 0s;
     }
-    .vivien-both .vivien-name-container {
-        transition: bottom 1s 0s;
+    .roc-both .roc-info {
+        transition: right 1s 0s;
+    }
+    .roc-both .info {
+        transition: height 0s 1s;
     }
 
-    .roc-vivien {
+    .both-vivi .roc-name-container {
+        transition: right 1s 0s;
     }
-    .vivien-roc {
+    .both-vivi .roc-address {
+        transition: left 1s 0s;
+    }
+    .both-vivi .vivi-name-container {
+        transition: top 1s 1s;
+    }
+    .both-vivi .vivi-address {
+        transition: top 1s 1s;
+    }
+    .both-vivi .vivi-info {
+        transition: left 1s 2s;
+    }
+
+    .vivi-both .vivi-info {
+        transition: left 1s 0s;
+    }
+    .vivi-both .info {
+        transition: height 0s 1s;
+    }
+    .vivi-both .vivi-name-container {
+        transition: top 1s 1s;
+    }
+    .vivi-both .vivi-address {
+        transition: top 1s 1s;
+    }
+    .vivi-both .roc-name-container {
+        transition: right 1s 2s;
+    }
+    .vivi-both .roc-address {
+        transition: left 1s 2s;
+    }
+
+    .roc-vivi .roc-name-container,
+    .roc-vivi .roc-info{
+        transition: right 1s 0s;
+    }
+    .roc-vivi .vivi-name-container,
+    .roc-vivi .vivi-info{
+        transition: left 1s 0s;
+    }
+    .roc-vivi .roc-address{
+        transition: left 1s 0s;
+    }
+    .roc-vivi .vivi-address{
+        transition: right 1s 0s;
+    }
+
+    .vivi-roc .roc-name-container,
+    .vivi-roc .roc-info{
+        transition: right 1s 0s;
+    }
+    .vivi-roc .vivi-name-container,
+    .vivi-roc .vivi-info{
+        transition: left 1s 0s;
+    }
+    .vivi-roc .roc-address {
+        transition: left 1s 0s;
+    }
+    .vivi-roc .vivi-address{
+        transition: right 1s 0s;
     }
 }

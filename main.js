@@ -23,6 +23,7 @@
 
 jQuery(function($) {
 
+    // Constants
     var ORIGINAL_BG_WIDTH = 1792;
     var ORIGINAL_BG_HEIGHT = 1440;
     var EXATR_SMALL_WIDTH = 768;
@@ -31,30 +32,30 @@ jQuery(function($) {
     var SCROLL_TOP_TIME = 400;
     var NONMOBILE_WIDTH = 768;
 
+    /********************************************************************************/
+
+    // Help functions
+    function adaptInfoHeight(sel) {
+        var targetHeight = $(sel).height();
+        var minHeight = $(window).height() - $('.name').height() - $('.browsehappy').height();
+        var infoHeight = Math.max(targetHeight, minHeight);
+        $('.info').height(infoHeight);
+    }
+
+    /********************************************************************************/
+
     $('body').on('click', '.both2roc', function(e) {
-
-        $('body').removeClass('roc-both vivien-both').addClass('both-roc').trigger('show-roc');
-
-    }).on('click', '.vivien2roc', function(e) {
-
-        $('body').removeClass('both-vivien roc-vivien').addClass('vivien-roc').trigger('show-roc');
-
-    }).on('click', '.both2vivien', function(e) {
-
-        $('body').removeClass('vivien-both roc-both').addClass('both-vivien').trigger('show-vivien');
-
-    }).on('click', '.roc2vivien', function(e) {
-
-        $('body').removeClass('both-roc vivien-roc').addClass('roc-vivien').trigger('show-vivien');
-
+        $('body').removeClass('roc-both vivi-both').addClass('both-roc').trigger('show-roc');
+    }).on('click', '.vivi2roc', function(e) {
+        $('body').removeClass('both-vivi roc-vivi').addClass('vivi-roc').trigger('show-roc');
+    }).on('click', '.both2vivi', function(e) {
+        $('body').removeClass('vivi-both roc-both').addClass('both-vivi').trigger('show-vivi');
+    }).on('click', '.roc2vivi', function(e) {
+        $('body').removeClass('both-roc vivi-roc').addClass('roc-vivi').trigger('show-vivi');
     }).on('click', '.roc2both', function(e) {
-
-        $('body').removeClass('both-roc vivien-roc').addClass('roc-both').trigger('show-both');
-
-    }).on('click', '.vivien2both', function(e) {
-
-        $('body').removeClass('both-vivien roc-vivien').addClass('vivien-both').trigger('show-both');
-
+        $('body').removeClass('both-roc vivi-roc').addClass('roc-both').trigger('show-both');
+    }).on('click', '.vivi2both', function(e) {
+        $('body').removeClass('both-vivi roc-vivi').addClass('vivi-both').trigger('show-both');
     }).on('click', '.show-control', function(e) {
 
         $('.show-control').addClass('hidden');
@@ -67,19 +68,16 @@ jQuery(function($) {
     }).on('show-roc', function(e) {
 
         function show() {
-            $('body').removeClass('show-both show-vivien').addClass('show-roc');
+            $('body').removeClass('show-both show-vivi').addClass('show-roc');
+            adaptInfoHeight('.roc-info');
 
-            if ($(window).width() < NONMOBILE_WIDTH) {
-
-
-            } else {
-
+            if ($(window).width() >= NONMOBILE_WIDTH) {
                 var win_width = $(window).width();
                 var bg_width = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
                 $('body').css('background-position-x',  win_width - bg_width/2);
 
                 $('.roc-name').css('right', $('.roc-name').parent().width() - $('.roc-name').width());
-                $('.vivien-name').css('left', '');
+                $('.vivi-name').css('left', '');
 
                 $('#hire_roc').width($('#hire_roc').height() * ROC_MOUTH_RATIO);
 
@@ -92,24 +90,20 @@ jQuery(function($) {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
         }
 
-    }).on('show-vivien', function(e) {
+    }).on('show-vivi', function(e) {
 
         function show() {
+            $('body').removeClass('show-both show-roc').addClass('show-vivi');
+            adaptInfoHeight('.vivi-info');
 
-            $('body').removeClass('show-both show-roc').addClass('show-vivien');
-
-            if ($(window).width() < NONMOBILE_WIDTH) {
-
-
-            } else {
-
+            if ($(window).width() >= NONMOBILE_WIDTH) {
                 var bg_width = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
                 $('body').css('background-position-x', -bg_width/2);
 
                 $('.roc-name').css('right', '');
-                $('.vivien-name').css('left', $('.vivien-name').parent().width() - $('.vivien-name').width());
+                $('.vivi-name').css('left', $('.vivi-name').parent().width() - $('.vivi-name').width());
 
-                $('#hire_vivien').width($('#hire_vivien').height() * VIVIEN_MOUTH_RATIO);
+                $('#hire_vivi').width($('#hire_vivi').height() * VIVIEN_MOUTH_RATIO);
             }
         }
 
@@ -122,13 +116,17 @@ jQuery(function($) {
     }).on('show-both', function(e) {
 
         function show() {
+            $('body').removeClass('show-roc show-vivi').addClass('show-both');
+            adaptInfoHeight();
 
-            $('body').removeClass('show-roc show-vivien').addClass('show-both').css('background-position-x', '');
+            if ($(window).width() >= NONMOBILE_WIDTH) {
+                $('body').css('background-position-x', '');
 
-            $('.roc-name').css('right', '');
-            $('.vivien-name').css('left', '');
+                $('.roc-name').css('right', '');
+                $('.vivi-name').css('left', '');
 
-            $('.show-control').removeClass('hidden');
+                $('.show-control').removeClass('hidden');
+            }
         }
 
         if ($('body').scrollTop() === 0) {
@@ -139,13 +137,14 @@ jQuery(function($) {
 
     });
 
+    //TODO: Optimize this.
     $(window).resize(function(e) {
-        $('body').removeClass('both-roc both-vivien roc-vivien vivien-roc');
+        $('body').removeClass('both-roc both-vivi roc-vivi vivi-roc');
 
         if ($('body').hasClass('show-roc')) {
             $('body').trigger('show-roc');
-        } else if ($('body').hasClass('show-vivien')) {
-            $('body').trigger('show-vivien');
+        } else if ($('body').hasClass('show-vivi')) {
+            $('body').trigger('show-vivi');
         }
     });
 
@@ -154,10 +153,10 @@ jQuery(function($) {
     /* Main */
     if (location.hash === '#roc') {
         setTimeout(function(){$('#show-roc-control').click();}, 1000);;
-    } else if (location.hash === '#vivien') {
-        setTimeout(function(){$('#show-vivien-control').click();}, 1000);;
+    } else if (location.hash === '#vivi') {
+        setTimeout(function(){$('#show-vivi-control').click();}, 1000);;
     }
-    //$(window).trigger('resize');
+    $(window).trigger('resize');
 
     $('.operation a').tooltip();
     $('#roc-qrcode').popover({
@@ -167,7 +166,7 @@ jQuery(function($) {
         placement: 'top',
         container: 'body',
     });
-    $('#vivien-qrcode').popover({
+    $('#vivi-qrcode').popover({
         html: true,
         content: '<img src="img/roc-qrcode.png" alt="QR Code to this page">',
         trigger: 'hover',
@@ -180,15 +179,10 @@ jQuery(function($) {
         placement: 'left',
         container: 'body',
     });
-    $('#hire_vivien').popover({
+    $('#hire_vivi').popover({
         content: 'HIRE ME PLEASE',
         trigger: 'hover',
         placement: 'right',
         container: 'body',
     });
-
-    if ($(window).width() < NONMOBILE_WIDTH) {
-        $('.roc-name-container').addClass('both2roc');
-        $('.vivien-name-container').addClass('both2vivien');
-    }
 });
