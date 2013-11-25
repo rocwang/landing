@@ -11,6 +11,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="author" href="humans.txt">
 
+        <!-- build:css monolith.css-->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
@@ -18,6 +19,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="css/desktop.css">
+        <!-- endbuild -->
     </head>
     <body class="show-both">
         <!-- Reveal arrow -->
@@ -46,9 +48,9 @@
         <nav class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="btn btn-default navbar-btn roc2both"><i class="fa fa-chevron-up fa-fw"></i></button>
+                <button type="button" class="btn btn-default navbar-btn roc2both"><i class="fa fa-chevron-left fa-fw"></i></button>
                 <button type="button" class="btn btn-default navbar-btn roc2vivi"><i class="fa fa-chevron-right fa-fw"></i></button>
-                <button type="button" class="btn btn-default navbar-btn vivi2both"><i class="fa fa-chevron-up fa-fw"></i></button>
+                <button type="button" class="btn btn-default navbar-btn vivi2both"><i class="fa fa-chevron-right fa-fw"></i></button>
                 <button type="button" class="btn btn-default navbar-btn vivi2roc"><i class="fa fa-chevron-left fa-fw"></i></button>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-operations">
                     <span class="sr-only">Toggle navigation</span>
@@ -112,31 +114,13 @@
                         <span class="address-text">me@rocwang.me</span>
                     </a>
                     </li>
-                    <li>
-                    <a href="https://twitter.com/rocinwinter" target="_balnk">
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <span class="address-text">@rocinwinter</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="http://www.facebook.com/rocinwinter" target="_balnk">
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <span class="address-text">rocinwinter</span>
-                    </a>
-                    </li>
                 </ul>
             </address>
             <address class="vivi-address">
                 <ul class="list-unstyled">
                     <li>
                     <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
-                        <span class="address-text">Shenzhen, Guangdong, China</span>
+                        <span class="address-text">Shenzhen, China</span>
                         <span class="fa-stack">
                             <i class="fa fa-square fa-stack-2x"></i>
                             <i class="fa fa-home fa-stack-1x fa-inverse"></i>
@@ -161,24 +145,6 @@
                         </span>
                     </a>
                     </li>
-                    <li>
-                    <a href="https://twitter.com/gadbee" target="_balnk">
-                        <span class="address-text">@gadbee</span>
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="http://www.facebook.com/vvvvivien" target="_balnk">
-                        <span class="address-text">vvvvivien</span>
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                    </li>
                 </ul>
             </address>
         </div>
@@ -186,7 +152,7 @@
         <!-- Operations -->
         <div class="roc operation fa-2x hidden-xs">
             <div>
-                <a href="#both" data-toggle="tooltip" title="Return" class="roc2both"><i class="fa fa-chevron-up fa-fw"></i></a>
+                <a href="#both" data-toggle="tooltip" title="Return" class="roc2both"><i class="fa fa-chevron-left fa-fw"></i></a>
                 <a href="#vivi" data-toggle="tooltip" title="See Vivienne's profile" class="roc2vivi"><i class="fa fa-chevron-right fa-fw"></i></a>
             </div>
             <div>
@@ -198,7 +164,7 @@
         <div class="vivi operation fa-2x hidden-xs">
             <div>
                 <a href="#roc" data-toggle="tooltip" title="See Peng's profile" class="vivi2roc"><i class="fa fa-chevron-left fa-fw"></i></a>
-                <a href="#both" data-toggle="tooltip" title="Return" class="vivi2both"><i class="fa fa-chevron-up fa-fw"></i></a>
+                <a href="#both" data-toggle="tooltip" title="Return" class="vivi2both"><i class="fa fa-chevron-right fa-fw"></i></a>
             </div>
         </div>
 
@@ -582,10 +548,12 @@
             <ol class="indicator"></ol>
         </div>
 
+        <!-- build:js monolith.js-->
         <script src="bower_components/jquery/jquery.min.js"></script>
         <script src="bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="main.js"></script>
+        <!-- endbuild -->
 
         <!-- Google Analytics -->
         <script>
