@@ -86,7 +86,7 @@ module.exports = function(grunt) {
                         '*.{html,ico,png,txt}',
                         //'*.{ico,png,txt}',
                         '.htaccess',
-                        'img/**/*.webp',
+                        'img/**/*.{svg,webp}',
                         'pdf/*.pdf',
                     ],
                     dest: '<%= rv.dist %>',
