@@ -166,8 +166,7 @@ module.exports = function(grunt) {
 
         'useminPrepare', // Config concat, cssmin & uglify
 
-                         // Add vendor prefix for CSS
-                         // 'autoprefixer',
+        //'autoprefixer', // Add vendor prefix for CSS
 
         'concat',        // Concat CSS & JS
         'cssmin',        // Minify CSS
