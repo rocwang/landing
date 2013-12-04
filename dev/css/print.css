@@ -1,0 +1,67 @@
+@media print {
+    .show-vivi .and-sign,
+    .show-roc .and-sign,
+    .show-roc .vivi-name-container,
+    .show-roc .vivi-address,
+    .show-roc .vivi-info,
+    .show-vivi .roc-name-container,
+    .show-vivi .roc-address,
+    .show-vivi .roc-info,
+    .show-both .info {
+        display: none !important;
+    }
+
+    * {
+        position: static !important;
+    }
+
+    h1.absolute-center {
+        margin: 20px 0;
+        height:auto;
+    }
+
+    address {
+        margin: 0 !important;
+        padding:0 !important;
+    }
+
+    a[href]:after {
+        content: "";
+    }
+
+    address li,
+    .address-text {
+        display: inline;
+    }
+
+    address {
+        width:100% !important;
+        text-align:center !important;
+    }
+
+    .roc-name-container,
+    .vivi-name-container {
+        width:100% !important;
+        text-align:center !important;
+    }
+
+    .roc-info>.row>.col-sm-9,
+    .vivi-info>.row>.col-sm-9 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .app-store-badge {
+        display:inline-block;
+        width:auto;
+        height:auto;
+    }
+
+    .progress {
+        background-color: #f5f5f5 !important;
+    }
+
+    .progress-bar {
+        background-color: #888 !important;
+    }
+}

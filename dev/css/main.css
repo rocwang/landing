@@ -8,8 +8,8 @@ body {
     padding:0 30px;
 }
 
-.fa-stack-2x {
-    color: #333;
+a .fa {
+    color: #fff;
 }
 
 .logo {

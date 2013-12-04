@@ -12,32 +12,33 @@
         <link rel="author" href="humans.txt">
 
         <!-- build:css monolith.css-->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/mobile.css">
         <link rel="stylesheet" href="css/desktop.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
         <!-- endbuild -->
     </head>
     <body class="show-both">
         <!-- Reveal arrow -->
-        <a id="show-roc-control" class="show-control both2roc left carousel-control hidden-xs" href="#roc">
+        <a id="show-roc-control" class="show-control both2roc left carousel-control hidden-xs hidden-print" href="#roc">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
-        <a id="show-vivi-control" class="show-control both2vivi right carousel-control hidden-xs" href="#vivi">
+        <a id="show-vivi-control" class="show-control both2vivi right carousel-control hidden-xs hidden-print" href="#vivi">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
 
-        <div id="hire_roc" class="hidden-xs">
+        <div id="hire_roc" class="hidden-xs hidden-print">
         </div>
-        <div id="hire_vivi" class="hidden-xs">
+        <div id="hire_vivi" class="hidden-xs hidden-print">
         </div>
 
         <!-- Alert to outdated browsers -->
         <!--[if lt IE 9]>
-        <div class="browsehappy global-padding">
+        <div class="browsehappy global-padding hidden-print">
             <div class="alert alert-warning">
                 You are using an <strong>outdated</strong> browser. Please <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.
             </div>
@@ -45,7 +46,7 @@
         <![endif]-->
 
         <!-- Reveal arrows -->
-        <nav class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top visible-xs hidden-print" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="btn btn-default navbar-btn roc2both"><i class="fa fa-chevron-left fa-fw"></i></button>
@@ -79,70 +80,53 @@
                 <h1 class="absolute-center"><span class="roc-name">Peng Wang</span></h1>
             </div>
 
+            <address class="roc-address">
+                <ul class="list-unstyled">
+                    <li>
+                    <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
+                        <i class="fa fa-home fa-lg fa-fw"></i>
+                        <span class="address-text">Shenzhen, China</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="tel:86-186-6589-9116">
+                        <i class="fa fa-phone fa-lg fa-fw"></i>
+                        <span class="address-text">+86 186 6589 9116</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="mailto:me@rocwang.me">
+                        <i class="fa fa-envelope fa-lg fa-fw"></i>
+                        <span class="address-text">me@rocwang.me</span>
+                    </a>
+                    </li>
+                </ul>
+            </address>
+
             <h1 class="and-sign hidden-xs">&amp</h1>
 
             <div class="vivi-name-container both2vivi">
                 <h1 class="absolute-center"><span class="vivi-name">Vivienne Chan</span></h1>
             </div>
 
-            <address class="roc-address">
-                <ul class="list-unstyled">
-                    <li>
-                    <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <span class="address-text">Shenzhen, China</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="tel:86-186-6589-9116">
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <span class="address-text">+86 186 6589 9116</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="mailto:me@rocwang.me">
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <span class="address-text">me@rocwang.me</span>
-                    </a>
-                    </li>
-                </ul>
-            </address>
             <address class="vivi-address">
                 <ul class="list-unstyled">
                     <li>
                     <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
                         <span class="address-text">Shenzhen, China</span>
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-                        </span>
+                        <i class="fa fa-home fa-lg"></i>
                     </a>
                     </li>
                     <li>
                     <a href="tel:86-186-7674-1207">
                         <span class="address-text">+86 186 7674 1207</span>
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-                        </span>
+                        <i class="fa fa-phone fa-lg"></i>
                     </a>
                     </li>
                     <li>
                     <a href="mailto:vvvvivien@gmail.com">
                         <span class="address-text">vvvvivien@gmail.com</span>
-                        <span class="fa-stack">
-                            <i class="fa fa-square fa-stack-2x"></i>
-                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                        </span>
+                        <i class="fa fa-envelope fa-lg"></i>
                     </a>
                     </li>
                 </ul>
@@ -150,7 +134,7 @@
         </div>
 
         <!-- Operations -->
-        <div class="roc operation fa-2x hidden-xs">
+        <div class="roc operation fa-2x hidden-xs hidden-print">
             <div>
                 <a href="#both" data-toggle="tooltip" title="Return" class="roc2both"><i class="fa fa-chevron-left fa-fw"></i></a>
                 <a href="#vivi" data-toggle="tooltip" title="See Vivienne's profile" class="roc2vivi"><i class="fa fa-chevron-right fa-fw"></i></a>
@@ -161,7 +145,7 @@
                 <i id="roc-qrcode" class="fa fa-qrcode fa-fw"></i>
             </div>
         </div>
-        <div class="vivi operation fa-2x hidden-xs">
+        <div class="vivi operation fa-2x hidden-xs hidden-print">
             <div>
                 <a href="#roc" data-toggle="tooltip" title="See Peng's profile" class="vivi2roc"><i class="fa fa-chevron-left fa-fw"></i></a>
                 <a href="#both" data-toggle="tooltip" title="Return" class="vivi2both"><i class="fa fa-chevron-right fa-fw"></i></a>
@@ -184,7 +168,8 @@
                                 <dl class="dl-horizontal">
                                     <dt>
                                     <a href="http://www.tencent.com/en-us/" target="_balnk">
-                                        <img src="img/tencent-white.png" alt="Tencent Logo" class="logo">
+                                        <img src="img/tencent-white.png" alt="Tencent Logo" class="logo hidden-print">
+                                        <img src="img/tencent-black.png" alt="Tencent Logo" class="logo visible-print">
                                     </a><br>
                                     2010.3 - 2013.4
                                     </dt>
@@ -198,7 +183,8 @@
                                     </dd>
                                     <dt>
                                     <a href="http://www.infosys.com/" target="_blank">
-                                        <img src="img/infosys-white.png" alt="Infosys Logo" class="logo">
+                                        <img src="img/infosys-white.png" alt="Infosys Logo" class="logo hidden-print">
+                                        <img src="img/infosys-black.png" alt="Infosys Logo" class="logo visible-print">
                                     </a><br>
                                     2006.9 - 2007.4
                                     </dt>
@@ -489,7 +475,8 @@
                                 <dl class="education dl-horizontal">
                                     <dt>
                                     <a href="http://www.uestc.edu.cn/" target="_blank">
-                                        <img src="img/uestc.png" alt="UESTC Logo" class="logo">
+                                        <img src="img/uestc-white.png" alt="UESTC Logo" class="logo hidden-print">
+                                        <img src="img/uestc-black.png" alt="UESTC Logo" class="logo visible-print">
                                     </a><br>
                                     2007.6 - 2010.6
                                     </dt>
@@ -499,7 +486,8 @@
                                     </dd>
                                     <dt>
                                     <a href="http://www.uestc.edu.cn/" target="_blank">
-                                        <img src="img/uestc.png" alt="UESTC Logo" class="logo">
+                                        <img src="img/uestc-white.png" alt="UESTC Logo" class="logo hidden-print">
+                                        <img src="img/uestc-black.png" alt="UESTC Logo" class="logo visible-print">
                                     </a><br>
                                     2003.6 - 2007.6
                                     </dt>
@@ -512,9 +500,10 @@
 
                             <div class="col-sm-12 col-md-7 col-xl-6">
                                 <h2><i class="fa fa-video-camera"></i> Personality</h2>
-                                <div class="video-wrapper">
+                                <div class="video-wrapper hidden-print">
                                     <iframe class="video" src="//www.youtube-nocookie.com/embed/2kiB1sds59o?rel=0" frameborder="0" allowfullscreen></iframe>
                                 </div>
+                                <p class="visible-print">Brave</p>
                             </div>
                         </div>
                     </div>
