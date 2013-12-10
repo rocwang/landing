@@ -75,6 +75,6 @@
     "commit": "ad04c5be0c8493077131242126253eb5fceb3ee6"
   },
   "_source": "git://github.com/blueimp/Gallery.git",
-  "_target": "^2.12.0",
+  "_target": ">=2.12.0",
   "_originalSource": "blueimp-gallery"
 }

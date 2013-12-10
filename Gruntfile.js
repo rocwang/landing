@@ -45,20 +45,23 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            options: {
-                livereload: true
-            },
             not_injectable: {
+                livereload: true,
                 files: [
                     '<%= rv.dev %>/*.html',
                     '<%= rv.dev %>/main.js',
                 ]
             },
             injectable: {
+                livereload: true,
                 files: [
-                    '<%= rv.dev %>/css/*.css',
+                    '<%= rv.dev %>/*.css',
                     '<%= rv.dev %>/img/**/*.{gif,jpeg,jpg,png,svg,webp}',
                 ]
+            },
+            scss: {
+                files: ['<%= rv.dev %>/scss/*.scss'],
+                tasks: ['compass:dev', 'autoprefixer'],
             },
         },
         useminPrepare: {
@@ -69,13 +72,19 @@ module.exports = function(grunt) {
         },
         usemin: {
             options: {
-                assetsDirs: ['<%= rv.dist %>']
+                assetsDirs: [
+                    '<%= rv.dist %>',
+                    '<%= rv.dist %>/img',
+                    '<%= rv.dist %>/fonts',
+                ]
             },
-            html : ['<%= rv.dist %>/*.html'],
-            css  : ['<%= rv.dist %>/monolith.css'],
+            html : '<%= rv.dist %>/*.html',
+            css  : '<%= rv.dist %>/css/*.css',
         },
         clean: {
-            dist: ['.tmp', 'dist'],
+            temp : ['.tmp', '.sass-cache'],
+            dev  : ['dev/css/*.css'],
+            dist : 'dist',
         },
         copy: {
             dist: {
@@ -95,7 +104,7 @@ module.exports = function(grunt) {
                     cwd: '<%= rv.dev %>',
                     flatten: true,
                     src: [
-                        'bower_components/bootstrap/fonts/*',
+                        'bower_components/bootstrap/dist/fonts/*',
                         'bower_components/font-awesome/fonts/*',
                     ],
                     dest: '<%= rv.dist %>/fonts',
@@ -148,39 +157,72 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    '<%= rv.dist %>/*.js',
-                    '<%= rv.dist %>/*.css',
-                    '<%= rv.dist %>/img/**/*.{gif,jpeg,jpg,png,webp}',
-                    '<%= rv.dist %>/fonts/*',
+                    '<%= rv.dist %>/js/*.js',
+                    '<%= rv.dist %>/css/*.css',
+                    '<%= rv.dist %>/img/**/*.{gif,jpeg,jpg,png,svg,webp}',
+                    //'<%= rv.dist %>/fonts/*',
                 ]
             }
         },
+        compass: {
+            options: {
+                assetCacheBuster : false,
+                cssDir           : '<%= rv.dev %>/css',
+                debugInfo        : false,
+                fontsDir         : '<%= rv.dev %>/fonts',
+                imagesDir        : '<%= rv.dev %>/img',
+                importPath       : '<%= rv.dev %>/bower_components',
+                javascriptsDir   : '<%= rv.dev %>/js',
+                sassDir          : '<%= rv.dev %>/scss',
+            },
+            dev: {
+                options: {
+                    environment    : 'development',
+                }
+            },
+            dist: {
+                options: {
+                    environment    : 'production',
+                }
+            },
+        },
+        autoprefixer: {
+            css: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= rv.dev %>/css',
+                    src: '*.css',
+                    dest: '<%= rv.dev %>/css',
+                }]
+            },
+        },
+        concurrent: {
+            dist: [
+                'imagemin:dist',     // Minify Image
+                'copy:dist',         // Copy relevant files to destination folder
+                'compass:dist',      // Use compass to generate CSS
+            ]
+        }
     });
 
     grunt.registerMultiTask('serve', function () {
         return grunt.task.run(this.data);
     });
 
+    // TODO: Use concurrent
     grunt.registerTask('build', [
-        'clean',         // Clean up generated files
+        'clean',
+        'concurrent:dist',
+        'autoprefixer',    // Add vendor prefix for CSS
 
-        'useminPrepare', // Config concat, cssmin & uglify
+        'useminPrepare',   // Config concat, cssmin & uglify
+        'concat',          // Concat CSS & JS
+        'cssmin',          // Minify CSS
+        'uglify',          // Minify JS
 
-        //'autoprefixer', // Add vendor prefix for CSS
-
-        'concat',        // Concat CSS & JS
-        'cssmin',        // Minify CSS
-        'uglify',        // Minify JS
-
-                         // TODO Use concurrent
-        'imagemin',      // Minify Image
-        'copy',          // Copy relevant files to destination folder
-
-        //'filerev',       // Rename generated files with hash tag;
-
-        'usemin',        // Use generated files
-
-        'htmlmin',       // Minify HTML; Put it after usemin because: https: // github.com/yeoman/grunt-usemin/issues/44
+        'filerev',         // Rename generated files with hash tag;
+        'usemin',          // Use generated files
+        'htmlmin',         // Minify HTML; Put it after usemin because: https: // github.com/yeoman/grunt-usemin/issues/44
     ]);
 
     // Default task

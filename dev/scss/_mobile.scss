@@ -48,7 +48,7 @@
     }
     h1.absolute-center {
         height: 43px;
-        padding: 0 30px;
+        @include global-padding;
     }
 
     /* Contact */

@@ -1,3 +1,6 @@
+.tmp
+.sass-cache
 node_modules
 dist
-.tmp
+Session.vim
+dev/css/main.css
