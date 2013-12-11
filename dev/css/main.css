@@ -58,331 +58,6 @@ a .fa {
   height: 100%;
 }
 
-@media (min-width: 768px) {
-  .browsehappy ~ .name .roc-name-container,
-  .browsehappy ~ .name .vivi-name-container {
-    margin-top: 72px;
-  }
-
-  body {
-    background: url("../img/roc-and-vivi.jpg") center top no-repeat fixed,#000;
-    -webkit-background-size: auto 100%;
-    background-size: auto 100%;
-  }
-
-  .show-control {
-    z-index: 10;
-    position: fixed;
-  }
-
-  .name {
-    overflow-x: hidden;
-  }
-
-  .roc-name-container,
-  .vivi-name-container {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    padding: 0 30px;
-    overflow-x: hidden;
-  }
-
-  .roc-name-container {
-    left: 0;
-    text-align: right;
-  }
-
-  .vivi-name-container {
-    left: 50%;
-    text-align: left;
-  }
-
-  .and-sign {
-    text-align: center;
-    font-family: "Baskerville","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-style: italic;
-    -webkit-transition: opacity 2s;
-    transition: opacity 2s;
-  }
-
-  .roc-name,
-  .vivi-name {
-    position: relative;
-  }
-
-  .info {
-    position: relative;
-    overflow-x: hidden;
-  }
-
-  .roc-info,
-  .vivi-info {
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  .experience dt,
-  .education dt {
-    text-align: center;
-  }
-
-  .roc-address,
-  .vivi-address {
-    position: fixed;
-    top: 69px;
-    width: 25%;
-    z-index: 10;
-  }
-
-  .roc-address {
-    text-align: left;
-    right: 0;
-    padding-right: 30px;
-    padding-left: 10px;
-  }
-
-  .vivi-address {
-    left: 0;
-    padding-right: 10px;
-    padding-left: 30px;
-    text-align: right;
-  }
-
-  .operation {
-    position: fixed;
-    bottom: 30px;
-    width: 25%;
-    z-index: 20;
-  }
-
-  .roc.operation {
-    right: 0;
-    padding-right: 30px;
-    padding-left: 10px;
-  }
-
-  .vivi.operation {
-    padding-left: 30px;
-    padding-right: 10px;
-    left: 0;
-    text-align: right;
-  }
-
-  .popover {
-    position: fixed;
-    color: #333;
-  }
-
-  #hire_roc {
-    z-index: 10;
-    position: fixed;
-    width: 7%;
-    height: 7%;
-    top: 59%;
-    right: 0;
-  }
-
-  #hire_vivi {
-    z-index: 10;
-    position: fixed;
-    width: 7%;
-    height: 7%;
-    top: 59%;
-    left: 0;
-  }
-
-  .show-both {
-    background-position-x: center;
-  }
-
-  .show-both .roc-name {
-    right: 0;
-  }
-
-  .show-both .vivi-name {
-    left: 0;
-  }
-
-  .show-roc .vivi-name {
-    left: 200%;
-  }
-
-  .show-vivi .roc-name {
-    right: 200%;
-  }
-
-  .show-roc .and-sign,
-  .show-vivi .and-sign {
-    opacity: 0;
-  }
-
-  .show-both .roc-address,
-  .show-vivi .roc-address {
-    right: 100%;
-  }
-
-  .show-both .vivi-address,
-  .show-roc .vivi-address {
-    left: 100%;
-  }
-
-  .show-both .roc.operation,
-  .show-vivi .roc.operation {
-    right: 100%;
-  }
-
-  .show-both .vivi.operation,
-  .show-roc .vivi.operation {
-    left: 100%;
-  }
-
-  .show-both .roc-info,
-  .show-vivi .roc-info {
-    right: 100%;
-  }
-
-  .show-both .vivi-info,
-  .show-roc .vivi-info {
-    left: 100%;
-  }
-
-  .show-roc .roc-info {
-    right: auto;
-  }
-
-  .show-vivi .vivi-info {
-    left: auto;
-  }
-
-  .show-roc #hire_roc,
-  .show-vivi #hire_vivi {
-    display: block;
-  }
-
-  .show-roc #hire_vivi,
-  .show-vivi #hire_roc,
-  .show-both #hire_roc,
-  .show-both #hire_vivi {
-    display: none;
-  }
-
-  .both-roc,
-  .both-vivi {
-    -webkit-transition: background-position 1s 1s;
-    transition: background-position 1s 1s;
-  }
-
-  .roc-both,
-  .vivi-both,
-  .roc-vivi,
-  .vivi-roc {
-    -webkit-transition: background-position 1s 0s;
-    transition: background-position 1s 0s;
-  }
-
-  .both-roc .roc-name,
-  .vivi-both .roc-name,
-  .roc-vivi .roc-name,
-  .vivi-roc .roc-name {
-    -webkit-transition: right 1s 0s;
-    transition: right 1s 0s;
-  }
-
-  .both-vivi .vivi-name,
-  .roc-both .vivi-name,
-  .roc-vivi .vivi-name,
-  .vivi-roc .vivi-name {
-    -webkit-transition: left 1s 0s;
-    transition: left 1s 0s;
-  }
-
-  .both-roc .vivi-name,
-  .vivi-both .vivi-name {
-    -webkit-transition: left 1s 1s;
-    transition: left 1s 1s;
-  }
-
-  .both-vivi .roc-name,
-  .roc-both .roc-name {
-    -webkit-transition: right 1s 1s;
-    transition: right 1s 1s;
-  }
-
-  .both-roc .roc-address {
-    -webkit-transition: right 1s 1s;
-    transition: right 1s 1s;
-  }
-
-  .both-vivi .vivi-address {
-    -webkit-transition: left 1s 1s;
-    transition: left 1s 1s;
-  }
-
-  .roc-both .roc-address,
-  .roc-vivi .roc-address,
-  .vivi-roc .roc-address {
-    -webkit-transition: right 1s 0s;
-    transition: right 1s 0s;
-  }
-
-  .vivi-both .vivi-address,
-  .roc-vivi .vivi-address,
-  .vivi-roc .vivi-address {
-    -webkit-transition: left 1s 0s;
-    transition: left 1s 0s;
-  }
-
-  .both-roc .roc.operation {
-    -webkit-transition: right 1s 1s;
-    transition: right 1s 1s;
-  }
-
-  .both-vivi .vivi.operation {
-    -webkit-transition: left 1s 1s;
-    transition: left 1s 1s;
-  }
-
-  .roc-both .roc.operation,
-  .roc-vivi .roc.operation,
-  .vivi-roc .roc.operation {
-    -webkit-transition: right 1s 0s;
-    transition: right 1s 0s;
-  }
-
-  .vivi-both .vivi.operation,
-  .roc-vivi .vivi.operation,
-  .vivi-roc .vivi.operation {
-    -webkit-transition: left 1s 0s;
-    transition: left 1s 0s;
-  }
-
-  .both-roc .roc-info {
-    -webkit-transition: right 1s 1s;
-    transition: right 1s 1s;
-  }
-
-  .both-vivi .vivi-info {
-    -webkit-transition: left 1s 1s;
-    transition: left 1s 1s;
-  }
-
-  .roc-both .roc-info,
-  .roc-vivi .roc-info,
-  .vivi-roc .roc-info {
-    -webkit-transition: right 1s 0s;
-    transition: right 1s 0s;
-  }
-
-  .vivi-both .vivi-info,
-  .roc-vivi .vivi-info,
-  .vivi-roc .vivi-info {
-    -webkit-transition: left 1s 0s;
-    transition: left 1s 0s;
-  }
-}
-
 .col-xl-1,
 .col-xl-2,
 .col-xl-3,
@@ -834,6 +509,358 @@ a .fa {
 
   .col-xxl-offset-11 {
     margin-left: 91.66666666666666%;
+  }
+}
+
+@media (min-width: 768px) {
+  .browsehappy ~ .name .roc-name-container,
+  .browsehappy ~ .name .vivi-name-container {
+    margin-top: 72px;
+  }
+
+  body {
+    background: url("../img/roc-and-vivi.jpg") center top no-repeat fixed,#000;
+    -webkit-background-size: auto 100%;
+    background-size: auto 100%;
+  }
+
+  .show-control {
+    z-index: 10;
+    position: fixed;
+    display: none !important;
+  }
+
+  .name {
+    overflow-x: hidden;
+  }
+
+  .roc-name-container,
+  .vivi-name-container {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    padding: 0 30px;
+    overflow-x: hidden;
+  }
+
+  .roc-name-container {
+    left: 0;
+    text-align: right;
+  }
+
+  .vivi-name-container {
+    left: 50%;
+    text-align: left;
+  }
+
+  .and-sign {
+    text-align: center;
+    font-family: "Baskerville","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-style: italic;
+    -webkit-transition: opacity 2s;
+    transition: opacity 2s;
+  }
+
+  .roc-name,
+  .vivi-name {
+    position: relative;
+  }
+
+  .info {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .roc-info,
+  .vivi-info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .experience dt,
+  .education dt {
+    text-align: center;
+  }
+
+  .roc-address,
+  .vivi-address {
+    position: fixed;
+    top: 69px;
+    width: 25%;
+    z-index: 10;
+  }
+
+  .roc-address {
+    text-align: left;
+    right: 0;
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+
+  .vivi-address {
+    left: 0;
+    padding-right: 10px;
+    padding-left: 30px;
+    text-align: right;
+  }
+
+  .operation {
+    position: fixed;
+    bottom: 30px;
+    width: 25%;
+    z-index: 20;
+  }
+
+  .roc.operation {
+    right: 0;
+    padding-right: 30px;
+    padding-left: 10px;
+  }
+
+  .vivi.operation {
+    padding-left: 30px;
+    padding-right: 10px;
+    left: 0;
+    text-align: right;
+  }
+
+  .popover {
+    position: fixed;
+    color: #333;
+  }
+
+  #hire_roc {
+    z-index: 10;
+    position: fixed;
+    width: 7%;
+    height: 7%;
+    top: 59%;
+    right: 0;
+  }
+
+  #hire_vivi {
+    z-index: 10;
+    position: fixed;
+    width: 7%;
+    height: 7%;
+    top: 59%;
+    left: 0;
+  }
+
+  .show-both {
+    background-position-x: center;
+  }
+
+  .show-both .show-control {
+    display: block !important;
+  }
+
+  .show-both .roc-name {
+    right: 0;
+  }
+
+  .show-both .vivi-name {
+    left: 0;
+  }
+
+  .show-both .roc-info,
+  .show-both .roc.operation,
+  .show-both .roc-address {
+    right: 100%;
+  }
+
+  .show-both .vivi-info,
+  .show-both .vivi.operation,
+  .show-both .vivi-address {
+    left: 100%;
+  }
+
+  .show-both #hire_roc,
+  .show-both #hire_vivi {
+    display: none !important;
+  }
+
+  .show-roc .vivi-name {
+    left: 200%;
+  }
+
+  .show-roc .and-sign {
+    opacity: 0;
+  }
+
+  .show-roc .vivi-address,
+  .show-roc .vivi.operation,
+  .show-roc .vivi-info {
+    left: 100%;
+  }
+
+  .show-roc .roc-info {
+    right: auto;
+  }
+
+  .show-roc #hire_roc {
+    display: block;
+  }
+
+  .show-roc #hire_vivi {
+    display: none;
+  }
+
+  .show-vivi .roc-name {
+    right: 200%;
+  }
+
+  .show-vivi .and-sign {
+    opacity: 0;
+  }
+
+  .show-vivi .roc-address,
+  .show-vivi .roc.operation,
+  .show-vivi .roc-info {
+    right: 100%;
+  }
+
+  .show-vivi .vivi-info {
+    left: auto;
+  }
+
+  .show-vivi #hire_vivi {
+    display: block;
+  }
+
+  .show-vivi #hire_roc {
+    display: none;
+  }
+
+  .both-roc {
+    -webkit-transition: background-position 1s 1s;
+    transition: background-position 1s 1s;
+  }
+
+  .both-roc .roc-name {
+    -webkit-transition: right 1s 0s;
+    transition: right 1s 0s;
+  }
+
+  .both-roc .vivi-name {
+    -webkit-transition: left 1s 1s;
+    transition: left 1s 1s;
+  }
+
+  .both-roc .roc-address,
+  .both-roc .roc.operation,
+  .both-roc .roc-info {
+    -webkit-transition: right 1s 1s;
+    transition: right 1s 1s;
+  }
+
+  .both-vivi {
+    -webkit-transition: background-position 1s 1s;
+    transition: background-position 1s 1s;
+  }
+
+  .both-vivi .vivi-name {
+    -webkit-transition: left 1s 0s;
+    transition: left 1s 0s;
+  }
+
+  .both-vivi .roc-name {
+    -webkit-transition: right 1s 1s;
+    transition: right 1s 1s;
+  }
+
+  .both-vivi .vivi-address,
+  .both-vivi .vivi.operation,
+  .both-vivi .vivi-info {
+    -webkit-transition: left 1s 1s;
+    transition: left 1s 1s;
+  }
+
+  .roc-both {
+    -webkit-transition: background-position 1s 0s;
+    transition: background-position 1s 0s;
+  }
+
+  .roc-both .vivi-name {
+    -webkit-transition: left 1s 0s;
+    transition: left 1s 0s;
+  }
+
+  .roc-both .roc-name {
+    -webkit-transition: right 1s 1s;
+    transition: right 1s 1s;
+  }
+
+  .roc-both .roc-address,
+  .roc-both .roc.operation,
+  .roc-both .roc-info {
+    -webkit-transition: right 1s 0s;
+    transition: right 1s 0s;
+  }
+
+  .vivi-both {
+    -webkit-transition: background-position 1s 0s;
+    transition: background-position 1s 0s;
+  }
+
+  .vivi-both .roc-name {
+    -webkit-transition: right 1s 0s;
+    transition: right 1s 0s;
+  }
+
+  .vivi-both .vivi-name {
+    -webkit-transition: left 1s 1s;
+    transition: left 1s 1s;
+  }
+
+  .vivi-both .vivi-info,
+  .vivi-both .vivi.operation,
+  .vivi-both .vivi-address {
+    -webkit-transition: left 1s 0s;
+    transition: left 1s 0s;
+  }
+
+  .roc-vivi {
+    -webkit-transition: background-position 1s 0s;
+    transition: background-position 1s 0s;
+  }
+
+  .roc-vivi .vivi-address,
+  .roc-vivi .vivi-info,
+  .roc-vivi .vivi-name,
+  .roc-vivi .vivi.operation {
+    -webkit-transition: left 1s 0s;
+    transition: left 1s 0s;
+  }
+
+  .roc-vivi .roc-address,
+  .roc-vivi .roc-info,
+  .roc-vivi .roc-name,
+  .roc-vivi .roc.operation {
+    -webkit-transition: right 1s 0s;
+    transition: right 1s 0s;
+  }
+
+  .vivi-roc {
+    -webkit-transition: background-position 1s 0s;
+    transition: background-position 1s 0s;
+  }
+
+  .vivi-roc .roc-address,
+  .vivi-roc .roc-info,
+  .vivi-roc .roc-name,
+  .vivi-roc .roc.operation {
+    -webkit-transition: right 1s 0s;
+    transition: right 1s 0s;
+  }
+
+  .vivi-roc .vivi-address,
+  .vivi-roc .vivi-info,
+  .vivi-roc .vivi-name,
+  .vivi-roc .vivi.operation {
+    -webkit-transition: left 1s 0s;
+    transition: left 1s 0s;
   }
 }
 

@@ -215,7 +215,7 @@ module.exports = function(grunt) {
 
     // TODO: Use concurrent
     grunt.registerTask('build', [
-        'clean',
+        'clean:dist',
         'concurrent:dist',
         'autoprefixer',    // Add vendor prefix for CSS
 

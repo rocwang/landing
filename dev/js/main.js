@@ -56,10 +56,6 @@ jQuery(function($) {
         $('body').removeClass('both-roc vivi-roc').addClass('roc-both').trigger('show-both');
     }).on('click', '.vivi2both', function(e) {
         $('body').removeClass('both-vivi roc-vivi').addClass('vivi-both').trigger('show-both');
-    }).on('click', '.show-control', function(e) {
-
-        $('.show-control').addClass('hidden');
-
     }).on('click', '.print', function(e) {
 
         e.preventDefault();
@@ -124,8 +120,6 @@ jQuery(function($) {
 
                 $('.roc-name').css('right', '');
                 $('.vivi-name').css('left', '');
-
-                $('.show-control').removeClass('hidden');
             }
         }
 
