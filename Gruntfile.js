@@ -46,16 +46,20 @@ module.exports = function(grunt) {
         },
         watch: {
             not_injectable: {
-                livereload: true,
+                options: {
+                    livereload: true,
+                },
                 files: [
                     '<%= rv.dev %>/*.html',
-                    '<%= rv.dev %>/main.js',
+                    '<%= rv.dev %>/js/*.js',
                 ]
             },
             injectable: {
-                livereload: true,
+                options: {
+                    livereload: true,
+                },
                 files: [
-                    '<%= rv.dev %>/*.css',
+                    '<%= rv.dev %>/css/*.css',
                     '<%= rv.dev %>/img/**/*.{gif,jpeg,jpg,png,svg,webp}',
                 ]
             },

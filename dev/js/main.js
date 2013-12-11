@@ -159,20 +159,6 @@ jQuery(function($) {
     //$(window).trigger('resize');
 
     $('.operation a').tooltip();
-    $('#roc-qrcode').popover({
-        html: true,
-        content: '<img src="img/roc-qrcode.png" alt="QR Code to this page">',
-        trigger: 'hover',
-        placement: 'top',
-        container: 'body',
-    });
-    $('#vivi-qrcode').popover({
-        html: true,
-        content: '<img src="img/roc-qrcode.png" alt="QR Code to this page">',
-        trigger: 'hover',
-        placement: 'top',
-        container: 'body',
-    });
     $('#hire_roc').popover({
         content: 'HIRE ME PLEASE',
         trigger: 'hover',
