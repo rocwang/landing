@@ -1,33 +1,49 @@
+/* line 5, ../scss/main.scss */
+
 body {
   color: #fff;
   background-color: #000;
 }
 
+/* line 12, ../scss/main.scss */
+
 .roc-info,
 .vivi-info,
 .browsehappy {
-  padding: 0 30px;
+  padding: 0 45px;
 }
+
+/* line 16, ../scss/main.scss */
 
 a .fa {
   color: #fff;
 }
 
+/* line 20, ../scss/main.scss */
+
 .logo {
   width: 160px;
 }
+
+/* line 24, ../scss/main.scss */
 
 .operation a {
   color: #fff;
 }
 
+/* line 27, ../scss/main.scss */
+
 .operation a .fa-fw {
   width: 1em;
 }
 
+/* line 32, ../scss/main.scss */
+
 .portfolio {
   font-size: 0;
 }
+
+/* line 36, ../scss/main.scss */
 
 .app-store-badge {
   display: inline-block;
@@ -38,17 +54,26 @@ a .fa {
 }
 
 @media only screen {
+  /* line 44, ../scss/main.scss */
+
   .app-store-badge {
     background-image: url(../img/badge_appstore-lrg.svg);
   }
 }
 
+/* Adaptive video */
+
+/* line 50, ../scss/main.scss */
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
+  /* 16:9 */
   padding-top: 25px;
   height: 0;
 }
+
+/* line 56, ../scss/main.scss */
 
 .video-wrapper .video {
   position: absolute;
@@ -57,6 +82,64 @@ a .fa {
   width: 100%;
   height: 100%;
 }
+
+/* line 66, ../scss/main.scss */
+
+h2 {
+  position: relative;
+  color: #801111;
+  color: #420000;
+  text-shadow: #d65c5c 0 1px 0;
+  background: #d64b4b;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 1px;
+  float: left;
+  clear: both;
+  padding: 10px 10px 10px 20px;
+  margin-left: -20px;
+  margin-bottom: 15px;
+}
+
+/* line 83, ../scss/main.scss */
+
+h2:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 0px;
+  border-width: 6px 6px;
+  border-style: solid;
+  border-color: #871616 #871616 transparent transparent;
+}
+
+/* line 94, ../scss/main.scss */
+
+h2:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-width: 26px 26px 27px 0;
+  border-style: solid;
+  border-color: #d64b4b;
+  border-right-color: transparent;
+}
+
+/* line 107, ../scss/main.scss */
+
+h2 + * {
+  clear: both;
+}
+
+/* Tablet and desktop style */
+
+/* Extented bootstrap grid */
+
+/* line 3, ../scss/_bootstrap-ext.scss */
 
 .col-xl-1,
 .col-xl-2,
@@ -88,10 +171,16 @@ a .fa {
   padding-left: 15px;
 }
 
+/* XL Grid */
+
 @media (min-width: 1653px) {
+  /* line 9, ../scss/_bootstrap-ext.scss */
+
   .container {
     width: 1630px;
   }
+
+  /* line 10, ../scss/_bootstrap-ext.scss */
 
   .col-xl-1,
   .col-xl-2,
@@ -107,203 +196,305 @@ a .fa {
     float: left;
   }
 
+  /* line 11, ../scss/_bootstrap-ext.scss */
+
   .col-xl-1 {
     width: 8.333333333333332%;
   }
+
+  /* line 12, ../scss/_bootstrap-ext.scss */
 
   .col-xl-2 {
     width: 16.666666666666664%;
   }
 
+  /* line 13, ../scss/_bootstrap-ext.scss */
+
   .col-xl-3 {
     width: 25%;
   }
+
+  /* line 14, ../scss/_bootstrap-ext.scss */
 
   .col-xl-4 {
     width: 33.33333333333333%;
   }
 
+  /* line 15, ../scss/_bootstrap-ext.scss */
+
   .col-xl-5 {
     width: 41.66666666666667%;
   }
+
+  /* line 16, ../scss/_bootstrap-ext.scss */
 
   .col-xl-6 {
     width: 50%;
   }
 
+  /* line 17, ../scss/_bootstrap-ext.scss */
+
   .col-xl-7 {
     width: 58.333333333333336%;
   }
+
+  /* line 18, ../scss/_bootstrap-ext.scss */
 
   .col-xl-8 {
     width: 66.66666666666666%;
   }
 
+  /* line 19, ../scss/_bootstrap-ext.scss */
+
   .col-xl-9 {
     width: 75%;
   }
+
+  /* line 20, ../scss/_bootstrap-ext.scss */
 
   .col-xl-10 {
     width: 83.33333333333334%;
   }
 
+  /* line 21, ../scss/_bootstrap-ext.scss */
+
   .col-xl-11 {
     width: 91.66666666666666%;
   }
+
+  /* line 22, ../scss/_bootstrap-ext.scss */
 
   .col-xl-12 {
     width: 100%;
   }
 
+  /* line 23, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-0 {
     left: auto;
   }
+
+  /* line 24, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-1 {
     left: 8.333333333333332%;
   }
 
+  /* line 25, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-2 {
     left: 16.666666666666664%;
   }
+
+  /* line 26, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-3 {
     left: 25%;
   }
 
+  /* line 27, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-4 {
     left: 33.33333333333333%;
   }
+
+  /* line 28, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-5 {
     left: 41.66666666666667%;
   }
 
+  /* line 29, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-6 {
     left: 50%;
   }
+
+  /* line 30, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-7 {
     left: 58.333333333333336%;
   }
 
+  /* line 31, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-8 {
     left: 66.66666666666666%;
   }
+
+  /* line 32, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-9 {
     left: 75%;
   }
 
+  /* line 33, ../scss/_bootstrap-ext.scss */
+
   .col-xl-push-10 {
     left: 83.33333333333334%;
   }
+
+  /* line 34, ../scss/_bootstrap-ext.scss */
 
   .col-xl-push-11 {
     left: 91.66666666666666%;
   }
 
+  /* line 35, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-0 {
     right: auto;
   }
+
+  /* line 36, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-1 {
     right: 8.333333333333332%;
   }
 
+  /* line 37, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-2 {
     right: 16.666666666666664%;
   }
+
+  /* line 38, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-3 {
     right: 25%;
   }
 
+  /* line 39, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-4 {
     right: 33.33333333333333%;
   }
+
+  /* line 40, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-5 {
     right: 41.66666666666667%;
   }
 
+  /* line 41, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-6 {
     right: 50%;
   }
+
+  /* line 42, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-7 {
     right: 58.333333333333336%;
   }
 
+  /* line 43, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-8 {
     right: 66.66666666666666%;
   }
+
+  /* line 44, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-9 {
     right: 75%;
   }
 
+  /* line 45, ../scss/_bootstrap-ext.scss */
+
   .col-xl-pull-10 {
     right: 83.33333333333334%;
   }
+
+  /* line 46, ../scss/_bootstrap-ext.scss */
 
   .col-xl-pull-11 {
     right: 91.66666666666666%;
   }
 
+  /* line 47, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-0 {
     margin-left: 0;
   }
+
+  /* line 48, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-1 {
     margin-left: 8.333333333333332%;
   }
 
+  /* line 49, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-2 {
     margin-left: 16.666666666666664%;
   }
+
+  /* line 50, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-3 {
     margin-left: 25%;
   }
 
+  /* line 51, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-4 {
     margin-left: 33.33333333333333%;
   }
+
+  /* line 52, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-5 {
     margin-left: 41.66666666666667%;
   }
 
+  /* line 53, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-6 {
     margin-left: 50%;
   }
+
+  /* line 54, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-7 {
     margin-left: 58.333333333333336%;
   }
 
+  /* line 55, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-8 {
     margin-left: 66.66666666666666%;
   }
+
+  /* line 56, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-9 {
     margin-left: 75%;
   }
 
+  /* line 57, ../scss/_bootstrap-ext.scss */
+
   .col-xl-offset-10 {
     margin-left: 83.33333333333334%;
   }
+
+  /* line 58, ../scss/_bootstrap-ext.scss */
 
   .col-xl-offset-11 {
     margin-left: 91.66666666666666%;
   }
 }
 
+/* XXL Grid */
+
 @media (min-width: 2106px) {
+  /* line 63, ../scss/_bootstrap-ext.scss */
+
   .container {
     width: 2080px;
   }
+
+  /* line 64, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-1,
   .col-xxl-2,
@@ -319,193 +510,289 @@ a .fa {
     float: left;
   }
 
+  /* line 65, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-1 {
     width: 8.333333333333332%;
   }
+
+  /* line 66, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-2 {
     width: 16.666666666666664%;
   }
 
+  /* line 67, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-3 {
     width: 25%;
   }
+
+  /* line 68, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-4 {
     width: 33.33333333333333%;
   }
 
+  /* line 69, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-5 {
     width: 41.66666666666667%;
   }
+
+  /* line 70, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-6 {
     width: 50%;
   }
 
+  /* line 71, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-7 {
     width: 58.333333333333336%;
   }
+
+  /* line 72, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-8 {
     width: 66.66666666666666%;
   }
 
+  /* line 73, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-9 {
     width: 75%;
   }
+
+  /* line 74, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-10 {
     width: 83.33333333333334%;
   }
 
+  /* line 75, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-11 {
     width: 91.66666666666666%;
   }
+
+  /* line 76, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-12 {
     width: 100%;
   }
 
+  /* line 77, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-0 {
     left: auto;
   }
+
+  /* line 78, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-1 {
     left: 8.333333333333332%;
   }
 
+  /* line 79, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-2 {
     left: 16.666666666666664%;
   }
+
+  /* line 80, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-3 {
     left: 25%;
   }
 
+  /* line 81, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-4 {
     left: 33.33333333333333%;
   }
+
+  /* line 82, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-5 {
     left: 41.66666666666667%;
   }
 
+  /* line 83, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-6 {
     left: 50%;
   }
+
+  /* line 84, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-7 {
     left: 58.333333333333336%;
   }
 
+  /* line 85, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-8 {
     left: 66.66666666666666%;
   }
+
+  /* line 86, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-9 {
     left: 75%;
   }
 
+  /* line 87, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-push-10 {
     left: 83.33333333333334%;
   }
+
+  /* line 88, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-push-11 {
     left: 91.66666666666666%;
   }
 
+  /* line 89, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-0 {
     right: auto;
   }
+
+  /* line 90, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-1 {
     right: 8.333333333333332%;
   }
 
+  /* line 91, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-2 {
     right: 16.666666666666664%;
   }
+
+  /* line 92, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-3 {
     right: 25%;
   }
 
+  /* line 93, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-4 {
     right: 33.33333333333333%;
   }
+
+  /* line 94, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-5 {
     right: 41.66666666666667%;
   }
 
+  /* line 95, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-6 {
     right: 50%;
   }
+
+  /* line 96, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-7 {
     right: 58.333333333333336%;
   }
 
+  /* line 97, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-8 {
     right: 66.66666666666666%;
   }
+
+  /* line 98, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-9 {
     right: 75%;
   }
 
+  /* line 99, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-pull-10 {
     right: 83.33333333333334%;
   }
+
+  /* line 100, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-pull-11 {
     right: 91.66666666666666%;
   }
 
+  /* line 101, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-0 {
     margin-left: 0;
   }
+
+  /* line 102, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-1 {
     margin-left: 8.333333333333332%;
   }
 
+  /* line 103, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-2 {
     margin-left: 16.666666666666664%;
   }
+
+  /* line 104, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-3 {
     margin-left: 25%;
   }
 
+  /* line 105, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-4 {
     margin-left: 33.33333333333333%;
   }
+
+  /* line 106, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-5 {
     margin-left: 41.66666666666667%;
   }
 
+  /* line 107, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-6 {
     margin-left: 50%;
   }
+
+  /* line 108, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-7 {
     margin-left: 58.333333333333336%;
   }
 
+  /* line 109, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-8 {
     margin-left: 66.66666666666666%;
   }
+
+  /* line 110, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-9 {
     margin-left: 75%;
   }
 
+  /* line 111, ../scss/_bootstrap-ext.scss */
+
   .col-xxl-offset-10 {
     margin-left: 83.33333333333334%;
   }
+
+  /* line 112, ../scss/_bootstrap-ext.scss */
 
   .col-xxl-offset-11 {
     margin-left: 91.66666666666666%;
@@ -513,16 +800,26 @@ a .fa {
 }
 
 @media (min-width: 768px) {
+  /* Outdated browser alert */
+
+  /* line 7, ../scss/_desktop.scss */
+
   .browsehappy ~ .name .roc-name-container,
   .browsehappy ~ .name .vivi-name-container {
     margin-top: 72px;
   }
 
+  /* Body */
+
+  /* line 12, ../scss/_desktop.scss */
+
   body {
-    background: url("../img/roc-and-vivi.jpg") center top no-repeat fixed,#000;
+    background: url("../img/roc-and-vivi.jpg") center top no-repeat fixed, black;
     -webkit-background-size: auto 100%;
     background-size: auto 100%;
   }
+
+  /* line 17, ../scss/_desktop.scss */
 
   .show-control {
     z-index: 10;
@@ -530,28 +827,40 @@ a .fa {
     display: none !important;
   }
 
+  /* Name */
+
+  /* line 24, ../scss/_desktop.scss */
+
   .name {
     overflow-x: hidden;
   }
+
+  /* line 28, ../scss/_desktop.scss */
 
   .roc-name-container,
   .vivi-name-container {
     position: absolute;
     top: 0;
     width: 50%;
-    padding: 0 30px;
+    padding: 0 45px;
     overflow-x: hidden;
   }
+
+  /* line 35, ../scss/_desktop.scss */
 
   .roc-name-container {
     left: 0;
     text-align: right;
   }
 
+  /* line 39, ../scss/_desktop.scss */
+
   .vivi-name-container {
     left: 50%;
     text-align: left;
   }
+
+  /* line 43, ../scss/_desktop.scss */
 
   .and-sign {
     text-align: center;
@@ -561,15 +870,23 @@ a .fa {
     transition: opacity 2s;
   }
 
+  /* line 49, ../scss/_desktop.scss */
+
   .roc-name,
   .vivi-name {
     position: relative;
   }
 
+  /* Info */
+
+  /* line 54, ../scss/_desktop.scss */
+
   .info {
     position: relative;
     overflow-x: hidden;
   }
+
+  /* line 59, ../scss/_desktop.scss */
 
   .roc-info,
   .vivi-info {
@@ -578,10 +895,16 @@ a .fa {
     width: 100%;
   }
 
+  /* line 66, ../scss/_desktop.scss */
+
   .experience dt,
   .education dt {
     text-align: center;
   }
+
+  /* Contact */
+
+  /* line 72, ../scss/_desktop.scss */
 
   .roc-address,
   .vivi-address {
@@ -591,12 +914,16 @@ a .fa {
     z-index: 10;
   }
 
+  /* line 78, ../scss/_desktop.scss */
+
   .roc-address {
     text-align: left;
     right: 0;
     padding-right: 30px;
     padding-left: 10px;
   }
+
+  /* line 84, ../scss/_desktop.scss */
 
   .vivi-address {
     left: 0;
@@ -605,6 +932,10 @@ a .fa {
     text-align: right;
   }
 
+  /* Operation */
+
+  /* line 92, ../scss/_desktop.scss */
+
   .operation {
     position: fixed;
     bottom: 30px;
@@ -612,11 +943,15 @@ a .fa {
     z-index: 20;
   }
 
+  /* line 98, ../scss/_desktop.scss */
+
   .roc.operation {
     right: 0;
     padding-right: 30px;
     padding-left: 10px;
   }
+
+  /* line 103, ../scss/_desktop.scss */
 
   .vivi.operation {
     padding-left: 30px;
@@ -625,10 +960,14 @@ a .fa {
     text-align: right;
   }
 
+  /* line 109, ../scss/_desktop.scss */
+
   .popover {
     position: fixed;
     color: #333;
   }
+
+  /* line 114, ../scss/_desktop.scss */
 
   #hire_roc {
     z-index: 10;
@@ -639,6 +978,8 @@ a .fa {
     right: 0;
   }
 
+  /* line 122, ../scss/_desktop.scss */
+
   #hire_vivi {
     z-index: 10;
     position: fixed;
@@ -648,21 +989,37 @@ a .fa {
     left: 0;
   }
 
+  /*********************************************/
+
+  /* Animation Style Start */
+
+  /* Status: */
+
+  /* line 135, ../scss/_desktop.scss */
+
   .show-both {
     background-position-x: center;
   }
+
+  /* line 138, ../scss/_desktop.scss */
 
   .show-both .show-control {
     display: block !important;
   }
 
+  /* line 142, ../scss/_desktop.scss */
+
   .show-both .roc-name {
     right: 0;
   }
 
+  /* line 146, ../scss/_desktop.scss */
+
   .show-both .vivi-name {
     left: 0;
   }
+
+  /* line 152, ../scss/_desktop.scss */
 
   .show-both .roc-info,
   .show-both .roc.operation,
@@ -670,24 +1027,46 @@ a .fa {
     right: 100%;
   }
 
+  /* line 158, ../scss/_desktop.scss */
+
   .show-both .vivi-info,
   .show-both .vivi.operation,
   .show-both .vivi-address {
     left: 100%;
   }
 
+  /* line 163, ../scss/_desktop.scss */
+
   .show-both #hire_roc,
   .show-both #hire_vivi {
     display: none !important;
   }
 
+  /* line 168, ../scss/_desktop.scss */
+
+  .show-roc {
+    /* Set background-position-x by JS */
+  }
+
+  /* line 171, ../scss/_desktop.scss */
+
   .show-roc .vivi-name {
     left: 200%;
   }
 
+  /* line 175, ../scss/_desktop.scss */
+
+  .show-roc .roc-name {
+    /* Set left or right by JS */
+  }
+
+  /* line 179, ../scss/_desktop.scss */
+
   .show-roc .and-sign {
     opacity: 0;
   }
+
+  /* line 185, ../scss/_desktop.scss */
 
   .show-roc .vivi-address,
   .show-roc .vivi.operation,
@@ -695,25 +1074,49 @@ a .fa {
     left: 100%;
   }
 
+  /* line 189, ../scss/_desktop.scss */
+
   .show-roc .roc-info {
     right: auto;
   }
+
+  /* line 193, ../scss/_desktop.scss */
 
   .show-roc #hire_roc {
     display: block;
   }
 
+  /* line 197, ../scss/_desktop.scss */
+
   .show-roc #hire_vivi {
     display: none;
   }
+
+  /* line 203, ../scss/_desktop.scss */
+
+  .show-vivi {
+    /* Set background-position-x by JS */
+  }
+
+  /* line 206, ../scss/_desktop.scss */
 
   .show-vivi .roc-name {
     right: 200%;
   }
 
+  /* line 210, ../scss/_desktop.scss */
+
+  .show-vivi .vivi-name {
+    /* Set left or right by JS */
+  }
+
+  /* line 214, ../scss/_desktop.scss */
+
   .show-vivi .and-sign {
     opacity: 0;
   }
+
+  /* line 220, ../scss/_desktop.scss */
 
   .show-vivi .roc-address,
   .show-vivi .roc.operation,
@@ -721,32 +1124,50 @@ a .fa {
     right: 100%;
   }
 
+  /* line 224, ../scss/_desktop.scss */
+
   .show-vivi .vivi-info {
     left: auto;
   }
+
+  /* line 228, ../scss/_desktop.scss */
 
   .show-vivi #hire_vivi {
     display: block;
   }
 
+  /* line 232, ../scss/_desktop.scss */
+
   .show-vivi #hire_roc {
     display: none;
   }
+
+  /* Transition: */
+
+  /* Background */
+
+  /* line 240, ../scss/_desktop.scss */
 
   .both-roc {
     -webkit-transition: background-position 1s 1s;
     transition: background-position 1s 1s;
   }
 
+  /* line 243, ../scss/_desktop.scss */
+
   .both-roc .roc-name {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
 
+  /* line 247, ../scss/_desktop.scss */
+
   .both-roc .vivi-name {
     -webkit-transition: left 1s 1s;
     transition: left 1s 1s;
   }
+
+  /* line 253, ../scss/_desktop.scss */
 
   .both-roc .roc-address,
   .both-roc .roc.operation,
@@ -755,20 +1176,28 @@ a .fa {
     transition: right 1s 1s;
   }
 
+  /* line 258, ../scss/_desktop.scss */
+
   .both-vivi {
     -webkit-transition: background-position 1s 1s;
     transition: background-position 1s 1s;
   }
+
+  /* line 261, ../scss/_desktop.scss */
 
   .both-vivi .vivi-name {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 265, ../scss/_desktop.scss */
+
   .both-vivi .roc-name {
     -webkit-transition: right 1s 1s;
     transition: right 1s 1s;
   }
+
+  /* line 271, ../scss/_desktop.scss */
 
   .both-vivi .vivi-address,
   .both-vivi .vivi.operation,
@@ -777,20 +1206,28 @@ a .fa {
     transition: left 1s 1s;
   }
 
+  /* line 277, ../scss/_desktop.scss */
+
   .roc-both {
     -webkit-transition: background-position 1s 0s;
     transition: background-position 1s 0s;
   }
+
+  /* line 280, ../scss/_desktop.scss */
 
   .roc-both .vivi-name {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 284, ../scss/_desktop.scss */
+
   .roc-both .roc-name {
     -webkit-transition: right 1s 1s;
     transition: right 1s 1s;
   }
+
+  /* line 290, ../scss/_desktop.scss */
 
   .roc-both .roc-address,
   .roc-both .roc.operation,
@@ -799,20 +1236,28 @@ a .fa {
     transition: right 1s 0s;
   }
 
+  /* line 295, ../scss/_desktop.scss */
+
   .vivi-both {
     -webkit-transition: background-position 1s 0s;
     transition: background-position 1s 0s;
   }
+
+  /* line 298, ../scss/_desktop.scss */
 
   .vivi-both .roc-name {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
 
+  /* line 302, ../scss/_desktop.scss */
+
   .vivi-both .vivi-name {
     -webkit-transition: left 1s 1s;
     transition: left 1s 1s;
   }
+
+  /* line 308, ../scss/_desktop.scss */
 
   .vivi-both .vivi-info,
   .vivi-both .vivi.operation,
@@ -821,10 +1266,14 @@ a .fa {
     transition: left 1s 0s;
   }
 
+  /* line 313, ../scss/_desktop.scss */
+
   .roc-vivi {
     -webkit-transition: background-position 1s 0s;
     transition: background-position 1s 0s;
   }
+
+  /* line 319, ../scss/_desktop.scss */
 
   .roc-vivi .vivi-address,
   .roc-vivi .vivi-info,
@@ -834,6 +1283,8 @@ a .fa {
     transition: left 1s 0s;
   }
 
+  /* line 326, ../scss/_desktop.scss */
+
   .roc-vivi .roc-address,
   .roc-vivi .roc-info,
   .roc-vivi .roc-name,
@@ -842,10 +1293,14 @@ a .fa {
     transition: right 1s 0s;
   }
 
+  /* line 331, ../scss/_desktop.scss */
+
   .vivi-roc {
     -webkit-transition: background-position 1s 0s;
     transition: background-position 1s 0s;
   }
+
+  /* line 337, ../scss/_desktop.scss */
 
   .vivi-roc .roc-address,
   .vivi-roc .roc-info,
@@ -855,6 +1310,8 @@ a .fa {
     transition: right 1s 0s;
   }
 
+  /* line 344, ../scss/_desktop.scss */
+
   .vivi-roc .vivi-address,
   .vivi-roc .vivi-info,
   .vivi-roc .vivi-name,
@@ -862,12 +1319,24 @@ a .fa {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
+
+  /* Animation Style End */
 }
 
+/* Mobile style */
+
 @media (max-width: 767px) {
+  /* Nav */
+
+  /* line 4, ../scss/_mobile.scss */
+
   .navbar-header {
     padding-left: 15px;
   }
+
+  /* Name */
+
+  /* line 9, ../scss/_mobile.scss */
 
   .name {
     position: absolute;
@@ -877,6 +1346,8 @@ a .fa {
     top: 0;
     left: 0;
   }
+
+  /* line 18, ../scss/_mobile.scss */
 
   .roc-name-container,
   .vivi-name-container {
@@ -891,12 +1362,16 @@ a .fa {
     z-index: 10;
   }
 
+  /* line 28, ../scss/_mobile.scss */
+
   .roc-name-container {
     background-image: url("../img/roc-bg.jpg");
     background-position: top right;
     top: 0;
     right: 0;
   }
+
+  /* line 34, ../scss/_mobile.scss */
 
   .vivi-name-container {
     background-image: url("../img/vivi-bg.jpg");
@@ -905,6 +1380,8 @@ a .fa {
     top: 50%;
     left: 0;
   }
+
+  /* line 41, ../scss/_mobile.scss */
 
   .absolute-center {
     margin: auto;
@@ -915,18 +1392,28 @@ a .fa {
     right: 0;
   }
 
+  /* line 49, ../scss/_mobile.scss */
+
   h1.absolute-center {
     height: 43px;
-    padding: 0 30px;
+    padding: 0 45px;
   }
+
+  /* Contact */
+
+  /* line 55, ../scss/_mobile.scss */
 
   address li {
     display: inline;
   }
 
+  /* line 58, ../scss/_mobile.scss */
+
   .address-text {
     display: none;
   }
+
+  /* line 62, ../scss/_mobile.scss */
 
   .roc-address,
   .vivi-address {
@@ -937,16 +1424,24 @@ a .fa {
     vertical-align: -15%;
   }
 
+  /* line 70, ../scss/_mobile.scss */
+
   .roc-address {
     top: 30%;
     left: 30px;
   }
+
+  /* line 74, ../scss/_mobile.scss */
 
   .vivi-address {
     top: 80%;
     right: 30px;
     text-align: right;
   }
+
+  /* Info */
+
+  /* line 81, ../scss/_mobile.scss */
 
   .info {
     position: absolute;
@@ -956,6 +1451,8 @@ a .fa {
     width: 100%;
   }
 
+  /* line 89, ../scss/_mobile.scss */
+
   .roc-info,
   .vivi-info {
     position: absolute;
@@ -963,31 +1460,53 @@ a .fa {
     width: 100%;
   }
 
+  /* line 94, ../scss/_mobile.scss */
+
   .roc-info {
     right: 100%;
     z-index: 30;
   }
+
+  /* line 98, ../scss/_mobile.scss */
 
   .vivi-info {
     left: 100%;
     z-index: 30;
   }
 
+  /* Skills */
+
+  /* line 104, ../scss/_mobile.scss */
+
   .progress-bar {
     text-align: left;
   }
+
+  /* line 107, ../scss/_mobile.scss */
 
   .progress-bar span {
     padding-left: 15px;
   }
 
+  /***********************************************/
+
+  /* Animation Style */
+
+  /* Status */
+
+  /* line 115, ../scss/_mobile.scss */
+
   .show-both .navbar {
     display: none !important;
   }
 
+  /* line 118, ../scss/_mobile.scss */
+
   .show-both .info {
     height: 50%;
   }
+
+  /* line 124, ../scss/_mobile.scss */
 
   .show-roc .navbar-header .vivi2both,
   .show-roc .navbar-header .vivi2roc,
@@ -995,19 +1514,27 @@ a .fa {
     display: none;
   }
 
+  /* line 127, ../scss/_mobile.scss */
+
   .show-roc .vivi-name-container {
     top: 0;
     left: 100%;
   }
+
+  /* line 131, ../scss/_mobile.scss */
 
   .show-roc .vivi-address {
     top: 30%;
     right: -100%;
   }
 
+  /* line 135, ../scss/_mobile.scss */
+
   .show-roc .roc-info {
     right: 0;
   }
+
+  /* line 141, ../scss/_mobile.scss */
 
   .show-vivi .navbar-header .roc2both,
   .show-vivi .navbar-header .roc2vivi,
@@ -1015,115 +1542,165 @@ a .fa {
     display: none;
   }
 
+  /* line 144, ../scss/_mobile.scss */
+
   .show-vivi .roc-name-container {
     right: 100%;
   }
+
+  /* line 147, ../scss/_mobile.scss */
 
   .show-vivi .roc-address {
     left: -100%;
   }
 
+  /* line 150, ../scss/_mobile.scss */
+
   .show-vivi .vivi-name-container {
     top: 0;
   }
+
+  /* line 153, ../scss/_mobile.scss */
 
   .show-vivi .vivi-address {
     top: 30%;
   }
 
+  /* line 156, ../scss/_mobile.scss */
+
   .show-vivi .vivi-info {
     left: 0;
   }
+
+  /* Transition */
+
+  /* line 161, ../scss/_mobile.scss */
 
   .both-roc .vivi-name-container {
     -webkit-transition: top 0s 1s, left 1s 0s;
     transition: top 0s 1s, left 1s 0s;
   }
 
+  /* line 164, ../scss/_mobile.scss */
+
   .both-roc .vivi-address {
     -webkit-transition: top 0s 1s, right 1s 0s;
     transition: top 0s 1s, right 1s 0s;
   }
+
+  /* line 167, ../scss/_mobile.scss */
 
   .both-roc .roc-info {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
 
+  /* line 171, ../scss/_mobile.scss */
+
   .roc-both .vivi-name-container {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
+
+  /* line 174, ../scss/_mobile.scss */
 
   .roc-both .vivi-address {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
 
+  /* line 177, ../scss/_mobile.scss */
+
   .roc-both .roc-info {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
+
+  /* line 180, ../scss/_mobile.scss */
 
   .roc-both .info {
     -webkit-transition: height 0s 1s;
     transition: height 0s 1s;
   }
 
+  /* line 184, ../scss/_mobile.scss */
+
   .both-vivi .roc-name-container {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
+
+  /* line 187, ../scss/_mobile.scss */
 
   .both-vivi .roc-address {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 190, ../scss/_mobile.scss */
+
   .both-vivi .vivi-name-container {
     -webkit-transition: top 1s 1s;
     transition: top 1s 1s;
   }
+
+  /* line 193, ../scss/_mobile.scss */
 
   .both-vivi .vivi-address {
     -webkit-transition: top 1s 1s;
     transition: top 1s 1s;
   }
 
+  /* line 196, ../scss/_mobile.scss */
+
   .both-vivi .vivi-info {
     -webkit-transition: left 1s 2s;
     transition: left 1s 2s;
   }
+
+  /* line 200, ../scss/_mobile.scss */
 
   .vivi-both .vivi-info {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 203, ../scss/_mobile.scss */
+
   .vivi-both .info {
     -webkit-transition: height 0s 1s;
     transition: height 0s 1s;
   }
+
+  /* line 206, ../scss/_mobile.scss */
 
   .vivi-both .vivi-name-container {
     -webkit-transition: top 1s 1s;
     transition: top 1s 1s;
   }
 
+  /* line 209, ../scss/_mobile.scss */
+
   .vivi-both .vivi-address {
     -webkit-transition: top 1s 1s;
     transition: top 1s 1s;
   }
+
+  /* line 212, ../scss/_mobile.scss */
 
   .vivi-both .roc-name-container {
     -webkit-transition: right 1s 2s;
     transition: right 1s 2s;
   }
 
+  /* line 215, ../scss/_mobile.scss */
+
   .vivi-both .roc-address {
     -webkit-transition: left 1s 2s;
     transition: left 1s 2s;
   }
+
+  /* line 220, ../scss/_mobile.scss */
 
   .roc-vivi .roc-name-container,
   .roc-vivi .roc-info {
@@ -1131,21 +1708,29 @@ a .fa {
     transition: right 1s 0s;
   }
 
+  /* line 224, ../scss/_mobile.scss */
+
   .roc-vivi .vivi-name-container,
   .roc-vivi .vivi-info {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 227, ../scss/_mobile.scss */
+
   .roc-vivi .roc-address {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 230, ../scss/_mobile.scss */
+
   .roc-vivi .vivi-address {
     -webkit-transition: right 1s 0s;
     transition: right 1s 0s;
   }
+
+  /* line 235, ../scss/_mobile.scss */
 
   .vivi-roc .roc-name-container,
   .vivi-roc .roc-info {
@@ -1153,16 +1738,22 @@ a .fa {
     transition: right 1s 0s;
   }
 
+  /* line 239, ../scss/_mobile.scss */
+
   .vivi-roc .vivi-name-container,
   .vivi-roc .vivi-info {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
 
+  /* line 242, ../scss/_mobile.scss */
+
   .vivi-roc .roc-address {
     -webkit-transition: left 1s 0s;
     transition: left 1s 0s;
   }
+
+  /* line 245, ../scss/_mobile.scss */
 
   .vivi-roc .vivi-address {
     -webkit-transition: right 1s 0s;
@@ -1171,6 +1762,8 @@ a .fa {
 }
 
 @media print {
+  /* line 10, ../scss/_print.scss */
+
   .show-vivi .and-sign,
   .show-roc .and-sign,
   .show-roc .vivi-name-container,
@@ -1183,33 +1776,47 @@ a .fa {
     display: none !important;
   }
 
+  /* line 14, ../scss/_print.scss */
+
   * {
     position: static !important;
   }
+
+  /* line 18, ../scss/_print.scss */
 
   h1.absolute-center {
     margin: 20px 0;
     height: auto;
   }
 
+  /* line 23, ../scss/_print.scss */
+
   address {
     margin: 0 !important;
     padding: 0 !important;
   }
 
+  /* line 28, ../scss/_print.scss */
+
   a[href]:after {
     content: "";
   }
+
+  /* line 33, ../scss/_print.scss */
 
   address li,
   .address-text {
     display: inline;
   }
 
+  /* line 37, ../scss/_print.scss */
+
   address {
     width: 100% !important;
     text-align: center !important;
   }
+
+  /* line 43, ../scss/_print.scss */
 
   .roc-name-container,
   .vivi-name-container {
@@ -1217,11 +1824,15 @@ a .fa {
     text-align: center !important;
   }
 
-  .roc-info>.row>.col-sm-9,
-  .vivi-info>.row>.col-sm-9 {
+  /* line 49, ../scss/_print.scss */
+
+  .roc-info > .row > .col-sm-9,
+  .vivi-info > .row > .col-sm-9 {
     width: 100%;
     margin-left: 0;
   }
+
+  /* line 54, ../scss/_print.scss */
 
   .app-store-badge {
     display: inline-block;
@@ -1229,9 +1840,13 @@ a .fa {
     height: auto;
   }
 
+  /* line 60, ../scss/_print.scss */
+
   .progress {
     background-color: #f5f5f5 !important;
   }
+
+  /* line 64, ../scss/_print.scss */
 
   .progress-bar {
     background-color: #888 !important;
