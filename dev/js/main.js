@@ -1,3 +1,5 @@
+'use strict';
+
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;
@@ -26,7 +28,6 @@ jQuery(function($) {
     // Constants
     var ORIGINAL_BG_WIDTH = 1792;
     var ORIGINAL_BG_HEIGHT = 1440;
-    var EXATR_SMALL_WIDTH = 768;
     var ROC_MOUTH_RATIO = 1.2467;
     var VIVIEN_MOUTH_RATIO = 1.2467;
     var SCROLL_TOP_TIME = 400;
@@ -44,33 +45,33 @@ jQuery(function($) {
 
     /********************************************************************************/
 
-    $('body').on('click', '.both2roc', function(e) {
+    $('body').on('click', '.both2roc', function() {
         $('body').removeClass('roc-both vivi-both').addClass('both-roc').trigger('show-roc');
-    }).on('click', '.vivi2roc', function(e) {
+    }).on('click', '.vivi2roc', function() {
         $('body').removeClass('both-vivi roc-vivi').addClass('vivi-roc').trigger('show-roc');
-    }).on('click', '.both2vivi', function(e) {
+    }).on('click', '.both2vivi', function() {
         $('body').removeClass('vivi-both roc-both').addClass('both-vivi').trigger('show-vivi');
-    }).on('click', '.roc2vivi', function(e) {
+    }).on('click', '.roc2vivi', function() {
         $('body').removeClass('both-roc vivi-roc').addClass('roc-vivi').trigger('show-vivi');
-    }).on('click', '.roc2both', function(e) {
+    }).on('click', '.roc2both', function() {
         $('body').removeClass('both-roc vivi-roc').addClass('roc-both').trigger('show-both');
-    }).on('click', '.vivi2both', function(e) {
+    }).on('click', '.vivi2both', function() {
         $('body').removeClass('both-vivi roc-vivi').addClass('vivi-both').trigger('show-both');
     }).on('click', '.print', function(e) {
 
         e.preventDefault();
         window.print();
 
-    }).on('show-roc', function(e) {
+    }).on('show-roc', function() {
 
         function show() {
             $('body').removeClass('show-both show-vivi').addClass('show-roc');
             adaptInfoHeight('.roc-info');
 
             if ($(window).width() >= NONMOBILE_WIDTH) {
-                var win_width = $(window).width();
-                var bg_width = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
-                $('body').css('background-position-x',  win_width - bg_width/2);
+                var winWidth = $(window).width();
+                var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
+                $('body').css('background-position-x',  winWidth - bgWidth/2);
 
                 $('.roc-name').css('right', $('.roc-name').parent().width() - $('.roc-name').width());
                 $('.vivi-name').css('left', '');
@@ -86,15 +87,15 @@ jQuery(function($) {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
         }
 
-    }).on('show-vivi', function(e) {
+    }).on('show-vivi', function() {
 
         function show() {
             $('body').removeClass('show-both show-roc').addClass('show-vivi');
             adaptInfoHeight('.vivi-info');
 
             if ($(window).width() >= NONMOBILE_WIDTH) {
-                var bg_width = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
-                $('body').css('background-position-x', -bg_width/2);
+                var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
+                $('body').css('background-position-x', -bgWidth/2);
 
                 $('.roc-name').css('right', '');
                 $('.vivi-name').css('left', $('.vivi-name').parent().width() - $('.vivi-name').width());
@@ -109,7 +110,7 @@ jQuery(function($) {
             $('body').animate({scrollTop:0}, SCROLL_TOP_TIME, show);
         }
 
-    }).on('show-both', function(e) {
+    }).on('show-both', function() {
 
         function show() {
             $('body').removeClass('show-roc show-vivi').addClass('show-both');
@@ -132,7 +133,7 @@ jQuery(function($) {
     });
 
     //TODO: Optimize this.
-    $(window).resize(function(e) {
+    $(window).resize(function() {
         $('body').removeClass('both-roc both-vivi roc-vivi vivi-roc');
 
         if ($('body').hasClass('show-roc')) {
@@ -146,9 +147,9 @@ jQuery(function($) {
 
     /* Main */
     if (location.hash === '#roc') {
-        setTimeout(function(){$('#show-roc-control').click();}, 1000);;
+        setTimeout(function(){$('#show-roc-control').click();}, 1000);
     } else if (location.hash === '#vivi') {
-        setTimeout(function(){$('#show-vivi-control').click();}, 1000);;
+        setTimeout(function(){$('#show-vivi-control').click();}, 1000);
     }
     //$(window).trigger('resize');
 

@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            not_injectable: {
+            notInjectable: {
                 options: {
                     livereload: true,
                 },
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= rv.dev %>',
                     src: [
-                        '*.{html,ico,png,txt}',
+                        '*.{html,ico,txt}',
                         //'*.{ico,png,txt}',
                         '.htaccess',
                         'img/**/*.{svg,webp}',
@@ -127,9 +127,12 @@ module.exports = function(grunt) {
         imagemin: {
             dist: {
                 expand: true,
-                cwd: '<%= rv.dev %>/img',
-                src: '**/*.{gif,jpeg,jpg,png}',
-                dest: '<%= rv.dist %>/img',
+                cwd: '<%= rv.dev %>',
+                src: [
+                        'img/**/*.{gif,jpeg,jpg,png}',
+                        'apple-touch-icon.png',
+                ],
+                dest: '<%= rv.dist %>',
             }
         },
         //TODO Study the options
@@ -206,7 +209,17 @@ module.exports = function(grunt) {
                 'copy:dist',         // Copy relevant files to destination folder
                 'compass:dist',      // Use compass to generate CSS
             ]
-        }
+        },
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
+            },
+            all: [
+                'Gruntfile.js',
+                '<%= rv.dev %>/js/*.js',
+            ]
+        },
     });
 
     grunt.registerMultiTask('serve', function () {
@@ -231,6 +244,7 @@ module.exports = function(grunt) {
 
     // Default task
     grunt.registerTask('default', [
-        'build'
+        'jshint',
+        'build',
     ]);
 };
