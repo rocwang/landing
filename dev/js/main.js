@@ -44,14 +44,15 @@ jQuery(function($) {
     }
 
     function scrollBackAndTrigger(sel) {
-        if ($('body').scrollTop() === 0) {
-            $('body').trigger(sel);
-        } else {
-            $('body').animate(
+        var scrollTop = $('html').scrollTop() || $('body').scrollTop();
+        if (scrollTop) {
+            $('html, body').animate(
                 {scrollTop:0},
                 SCROLL_TOP_TIME,
                 function() {$('body').trigger(sel);}
             );
+        } else {
+            $('body').trigger(sel);
         }
     }
 

@@ -53,7 +53,7 @@
     /* Info */
     .info {
         position: relative;
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .roc-info,
     .vivi-info {
@@ -133,7 +133,7 @@
 
     /* Status: */
     .show-both {
-        background-position-x: center;
+        background-position: center top;
 
         .show-control {
             display:block !important;
