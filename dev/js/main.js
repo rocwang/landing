@@ -88,10 +88,10 @@ jQuery(function($) {
         if ($(window).width() >= NONMOBILE_WIDTH) {
             var winWidth = $(window).width();
             var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
-            $('body').css('background-position-x',  winWidth - bgWidth/2);
+            $('body').css('background-position',  (winWidth - bgWidth/2) + 'px top, 0 0');
 
             $('.roc-name').css('right', $('.roc-name').parent().width() - $('.roc-name').width());
-            $('.vivi-name').css('left', '');
+            $('.vivi-name').css('left', '200%');
 
             $('#hire_roc').width($('#hire_roc').height() * ROC_MOUTH_RATIO);
         }
@@ -103,9 +103,9 @@ jQuery(function($) {
 
         if ($(window).width() >= NONMOBILE_WIDTH) {
             var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
-            $('body').css('background-position-x', -bgWidth/2);
+            $('body').css('background-position', (-bgWidth/2) + 'px top, 0 0');
 
-            $('.roc-name').css('right', '');
+            $('.roc-name').css('right', '200%');
             $('.vivi-name').css('left', $('.vivi-name').parent().width() - $('.vivi-name').width());
 
             $('#hire_vivi').width($('#hire_vivi').height() * VIVIEN_MOUTH_RATIO);
@@ -117,10 +117,10 @@ jQuery(function($) {
         adaptInfoHeight();
 
         if ($(window).width() >= NONMOBILE_WIDTH) {
-            $('body').css('background-position-x', '');
+            $('body').css('background-position', 'center top, 0 0');
 
-            $('.roc-name').css('right', '');
-            $('.vivi-name').css('left', '');
+            $('.roc-name').css('right', 0);
+            $('.vivi-name').css('left', 0);
         }
     });
 
@@ -137,6 +137,10 @@ jQuery(function($) {
     /*****************************************************************************/
 
     /* Main */
+    //XXX: Firefox seems buggy when dealing transitions from a value set in external style to another one set in inline style,
+    // so set the initial value in inline style first.
+    $('body').trigger('show-both');
+
     if (location.hash === '#roc') {
         setTimeout(function(){$('#show-roc-control').click();}, 1000);
     } else if (location.hash === '#vivi') {
