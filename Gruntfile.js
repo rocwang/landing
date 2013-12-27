@@ -222,6 +222,20 @@ module.exports = function(grunt) {
                 '<%= rv.dev %>/js/*.js',
             ]
         },
+        rsync: {
+            deployment: {
+                options: {
+                    args: ['--progress', '-a', '-z'],
+                    recursive: true,
+                    syncDest: true,
+                    src: '<%= rv.dist %>/',
+                    host: 'roc@rocwang.me',
+                    dest: '/var/www/rocandvivien/',
+                    onStdout: function (data) { console.log(data) },
+                    onStderr: function (data) { console.log(data) },
+                }
+            }
+        }
     });
 
     grunt.registerMultiTask('serve', function () {
@@ -242,6 +256,10 @@ module.exports = function(grunt) {
         'filerev',         // Rename generated files with hash tag;
         'usemin',          // Use generated files
         'htmlmin',         // Minify HTML; Put it after usemin because: https: // github.com/yeoman/grunt-usemin/issues/44
+    ]);
+
+    grunt.registerTask('deploy', [
+        'rsync:deployment',
     ]);
 
     // Default task
