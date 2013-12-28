@@ -23,6 +23,9 @@
     }
 }());
 
+// Load and show humans.txt
+jQuery.get('/humans.txt', function(data) { console.log(data); });
+
 jQuery(function($) {
 
     // Constants
@@ -58,24 +61,31 @@ jQuery(function($) {
 
     /********************************************************************************/
 
-    $('body').on('click', '.both2roc', function() {
+    // Event handling
+    $('body').on('both-roc', function() {
         $('body').removeClass('roc-both vivi-both').addClass('both-roc');
         scrollBackAndTrigger('show-roc');
-    }).on('click', '.vivi2roc', function() {
+    }).on('vivi-roc', function() {
         $('body').removeClass('both-vivi roc-vivi').addClass('vivi-roc');
         scrollBackAndTrigger('show-roc');
-    }).on('click', '.both2vivi', function() {
+    }).on('both-vivi', function() {
         $('body').removeClass('vivi-both roc-both').addClass('both-vivi');
         scrollBackAndTrigger('show-vivi');
-    }).on('click', '.roc2vivi', function() {
+    }).on('roc-vivi', function() {
         $('body').removeClass('both-roc vivi-roc').addClass('roc-vivi');
         scrollBackAndTrigger('show-vivi');
-    }).on('click', '.roc2both', function() {
+    }).on('roc-both', function() {
         $('body').removeClass('both-roc vivi-roc').addClass('roc-both');
         scrollBackAndTrigger('show-both');
-    }).on('click', '.vivi2both', function() {
+    }).on('vivi-both', function() {
         $('body').removeClass('both-vivi roc-vivi').addClass('vivi-both');
         scrollBackAndTrigger('show-both');
+    }).on('click', '.to-both', function() {
+        location.hash = '#both';
+    }).on('click', '.to-roc', function() {
+        location.hash = '#roc';
+    }).on('click', '.to-vivi', function() {
+        location.hash = '#vivi';
     }).on('click', '.print', function(e) {
 
         e.preventDefault();
@@ -133,6 +143,28 @@ jQuery(function($) {
         } else if ($('body').hasClass('show-vivi')) {
             $('body').trigger('show-vivi');
         }
+    }).on('hashchange', function(e, transition) {
+        if (!transition) {
+            var oldMatch = /#(.*)$/.exec(e.originalEvent.oldURL);
+            var newMatch = /#(.*)$/.exec(e.originalEvent.newURL);
+            var oldHash, newHash;
+
+            if (oldMatch) {
+                oldHash = oldMatch[1];
+            } else {
+                oldHash = 'both';
+            }
+
+            if (newMatch) {
+                newHash = newMatch[1];
+            } else {
+                newHash = 'both';
+            }
+
+            transition = oldHash+'-'+newHash;
+        }
+
+        $('body').trigger(transition);
     });
 
     /*****************************************************************************/
@@ -142,11 +174,7 @@ jQuery(function($) {
     // so set the initial value in inline style first.
     $('body').trigger('show-both');
 
-    if (location.hash === '#roc') {
-        setTimeout(function(){$('#show-roc-control').click();}, 1000);
-    } else if (location.hash === '#vivi') {
-        setTimeout(function(){$('#show-vivi-control').click();}, 1000);
-    }
+    $(window).trigger('hashchange', 'both-'+location.hash.substring(1));
 
     $('.operation a').tooltip();
     $('#hire_roc').popover({

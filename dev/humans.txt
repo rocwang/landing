@@ -1,12 +1,11 @@
 # TEAM
 
     Developer: Peng Wang
-    Twitter: @rocinwinter
+    Email: me@rocwang.me
     From: Shenzhen, China
 
-# THANKS
-
     Vivienne Chan
+    Email: vvvvivien@gmail.com
     From: Shenzhen, China
 
 # TECHNOLOGY COLOPHON
@@ -27,4 +26,8 @@
     Tools:
 
         Vim
+        Grunt
+        Compass
+        Safari
         Chrome
+        Firefox
