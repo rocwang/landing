@@ -22,18 +22,8 @@
         <!-- endbuild -->
     </head>
     <body class="show-both">
-        <!-- Reveal arrow -->
-        <a id="show-roc-control" class="show-control left carousel-control hidden-xs hidden-print" href="#roc">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-        </a>
-        <a id="show-vivi-control" class="show-control right carousel-control hidden-xs hidden-print" href="#vivi">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
-
-        <div id="hire_roc" class="hidden-xs hidden-print">
-        </div>
-        <div id="hire_vivi" class="hidden-xs hidden-print">
-        </div>
+        <div id="hire_roc" class="hidden-xs hidden-print"></div>
+        <div id="hire_vivi" class="hidden-xs hidden-print"></div>
 
         <!-- Alert to outdated browsers -->
         <!--[if lt IE 9]>
@@ -44,7 +34,6 @@
         </div>
         <![endif]-->
 
-        <!-- Reveal arrows -->
         <nav class="navbar navbar-inverse navbar-fixed-top visible-xs hidden-print" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -72,64 +61,68 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <!-- Name & Contact -->
-        <div class="name">
-            <div class="roc-name-container to-roc">
-                <h1 class="absolute-center"><a href="#roc" class="roc-name">Peng Wang</a></h1>
-            </div>
+        <!-- Name -->
+        <h1 class="name">
+            <a href="#roc" class="roc-name">
+                <span class="absolute-center roc-name-text">
+                    Peng Wang
+                </span>
+            </a>
 
-            <address class="roc-address">
-                <ul class="list-unstyled">
-                    <li>
-                    <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
-                        <i class="fa fa-home fa-lg fa-fw"></i>
-                        <span class="address-text">Shenzhen, China</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="tel:86-186-6589-9116">
-                        <i class="fa fa-phone fa-lg fa-fw"></i>
-                        <span class="address-text">+86 186 6589 9116</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="mailto:me@rocwang.me">
-                        <i class="fa fa-envelope fa-lg fa-fw"></i>
-                        <span class="address-text">me@rocwang.me</span>
-                    </a>
-                    </li>
-                </ul>
-            </address>
+            <span class="and-sign hidden-xs">&amp</span>
 
-            <h1 class="and-sign hidden-xs">&amp</h1>
+            <a href="#vivi" class="vivi-name">
+                <span class="absolute-center vivi-name-text">
+                    Vivienne Chan
+                </span>
+            </a>
+        </h1>
 
-            <div class="vivi-name-container to-vivi">
-                <h1 class="absolute-center"><a href="#vivi" class="vivi-name">Vivienne Chan</a></h1>
-            </div>
-
-            <address class="vivi-address">
-                <ul class="list-unstyled">
-                    <li>
-                    <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
-                        <span class="address-text">Shenzhen, China</span>
-                        <i class="fa fa-home fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="tel:86-186-7674-1207">
-                        <span class="address-text">+86 186 7674 1207</span>
-                        <i class="fa fa-phone fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="mailto:vvvvivien@gmail.com">
-                        <span class="address-text">vvvvivien@gmail.com</span>
-                        <i class="fa fa-envelope fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                </ul>
-            </address>
-        </div>
+        <!-- Contact -->
+        <address class="roc-address">
+            <ul class="list-unstyled">
+                <li>
+                <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
+                    <i class="fa fa-home fa-lg fa-fw"></i>
+                    <span class="address-text">Shenzhen, China</span>
+                </a>
+                </li>
+                <li>
+                <a href="tel:86-186-6589-9116">
+                    <i class="fa fa-phone fa-lg fa-fw"></i>
+                    <span class="address-text">+86 186 6589 9116</span>
+                </a>
+                </li>
+                <li>
+                <a href="mailto:me@rocwang.me">
+                    <i class="fa fa-envelope fa-lg fa-fw"></i>
+                    <span class="address-text">me@rocwang.me</span>
+                </a>
+                </li>
+            </ul>
+        </address>
+        <address class="vivi-address">
+            <ul class="list-unstyled">
+                <li>
+                <a href="http://maps.apple.com/?lsp=7618&sll=22.567897,113.877958&q=22.567897,113.877958" target="_blank">
+                    <span class="address-text">Shenzhen, China</span>
+                    <i class="fa fa-home fa-lg fa-fw"></i>
+                </a>
+                </li>
+                <li>
+                <a href="tel:86-186-7674-1207">
+                    <span class="address-text">+86 186 7674 1207</span>
+                    <i class="fa fa-phone fa-lg fa-fw"></i>
+                </a>
+                </li>
+                <li>
+                <a href="mailto:vvvvivien@gmail.com">
+                    <span class="address-text">vvvvivien@gmail.com</span>
+                    <i class="fa fa-envelope fa-lg fa-fw"></i>
+                </a>
+                </li>
+            </ul>
+        </address>
 
         <!-- Operations -->
         <div class="roc operation fa-2x hidden-xs hidden-print">
@@ -500,12 +493,12 @@
                                 <h2><i class="fa fa-video-camera"></i> Trivia</h2>
 
                                 <div class="video-wrapper hidden-print">
-                                    <iframe class="video" src="//www.youtube.com/embed/2kiB1sds59o?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    <!--<iframe class="video" src="//www.youtube.com/embed/2kiB1sds59o?rel=0" frameborder="0" allowfullscreen></iframe>-->
                                 </div>
                                 <h3 class="visible-print">Brave</h3>
 
                                 <div class="video-wrapper hidden-print">
-                                    <iframe class="video" src="//www.youtube.com/embed/wmAoW4zdHkc?rel=0" frameborder="0" allowfullscreen></iframe>
+                                    <!--<iframe class="video" src="//www.youtube.com/embed/wmAoW4zdHkc?rel=0" frameborder="0" allowfullscreen></iframe>-->
                                 </div>
                                 <h3 class="visible-print">Patient</h3>
                             </div>

@@ -94,36 +94,38 @@ module.exports = function(grunt) {
         },
         copy: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= rv.dev %>',
-                    src: [
-                        '*.{html,ico,txt}',
-                        //'*.{ico,png,txt}',
-                        '.htaccess',
-                        'img/**/*.{svg,webp}',
-                        'pdf/*.pdf',
-                    ],
-                    dest: '<%= rv.dist %>',
-                }, {
-                    expand: true,
-                    cwd: '<%= rv.dev %>',
-                    flatten: true,
-                    src: [
-                        'bower_components/bootstrap/dist/fonts/*',
-                        'bower_components/font-awesome/fonts/*',
-                    ],
-                    dest: '<%= rv.dist %>/fonts',
-                }, {
-                    expand: true,
-                    cwd: '<%= rv.dev %>',
-                    flatten: true,
-                    src: [
-                        //TODO imagemin these ?
-                        'bower_components/blueimp-gallery/img/*',
-                    ],
-                    dest: '<%= rv.dist %>/img/',
-                }],
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= rv.dev %>',
+                        src: [
+                            '*.{html,ico,txt}',
+                            //'*.{ico,png,txt}',
+                            '.htaccess',
+                            'img/**/*.{svg,webp}',
+                            'pdf/*.pdf',
+                        ],
+                        dest: '<%= rv.dist %>',
+                    }, {
+                        expand: true,
+                        cwd: '<%= rv.dev %>',
+                        flatten: true,
+                        src: [
+                            'bower_components/bootstrap/dist/fonts/*',
+                            'bower_components/font-awesome/fonts/*',
+                        ],
+                        dest: '<%= rv.dist %>/fonts',
+                    }, {
+                        expand: true,
+                        cwd: '<%= rv.dev %>',
+                        flatten: true,
+                        src: [
+                            //TODO imagemin these ?
+                            'bower_components/blueimp-gallery/img/*',
+                        ],
+                        dest: '<%= rv.dist %>/img/',
+                    }
+                ],
             },
         },
         imagemin: {
@@ -131,8 +133,8 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: '<%= rv.dev %>',
                 src: [
-                        'img/**/*.{gif,jpeg,jpg,png}',
-                        'apple-touch-icon.png',
+                    'img/**/*.{gif,jpeg,jpg,png}',
+                    'apple-touch-icon.png',
                 ],
                 dest: '<%= rv.dist %>',
             }
@@ -231,8 +233,8 @@ module.exports = function(grunt) {
                     src: '<%= rv.dist %>/',
                     host: 'roc@rocwang.me',
                     dest: '/var/www/rocandvivien/',
-                    onStdout: function (data) { console.log(data) },
-                    onStderr: function (data) { console.log(data) },
+                    onStdout: function (data) { console.log(data); },
+                    onStderr: function (data) { console.log(data); },
                 }
             }
         }

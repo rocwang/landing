@@ -1,10 +1,10 @@
 @media print {
     .show-vivi .and-sign,
     .show-roc .and-sign,
-    .show-roc .vivi-name-container,
+    .show-roc .vivi-name,
     .show-roc .vivi-address,
     .show-roc .vivi-info,
-    .show-vivi .roc-name-container,
+    .show-vivi .roc-name,
     .show-vivi .roc-address,
     .show-vivi .roc-info,
     .show-both .info {
@@ -13,11 +13,6 @@
 
     * {
         position: static !important;
-    }
-
-    h1.absolute-center {
-        margin: 20px 0;
-        height:auto;
     }
 
     address {
@@ -39,8 +34,8 @@
         text-align:center !important;
     }
 
-    .roc-name-container,
-    .vivi-name-container {
+    .roc-name,
+    .vivi-name {
         width:100% !important;
         text-align:center !important;
     }

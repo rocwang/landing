@@ -35,6 +35,7 @@ jQuery(function($) {
     var VIVIEN_MOUTH_RATIO = 1.2467;
     var SCROLL_TOP_TIME = 400;
     var NONMOBILE_WIDTH = 768;
+    var PAGE_PADDING_X = 35;
 
     /********************************************************************************/
 
@@ -101,8 +102,10 @@ jQuery(function($) {
             var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
             $('body').css('background-position',  (winWidth - bgWidth/2) + 'px top, 0 0');
 
-            $('.roc-name').css('right', $('.roc-name').parent().width() - $('.roc-name').width());
-            $('.vivi-name').css('left', '200%');
+            $('.roc-name-text').css('right', $('.roc-name').width() - $('.roc-name-text').width() - PAGE_PADDING_X);
+
+            // FIXME: Manually set for Firefox
+            $('.vivi-name-text').css('left', '100%');
 
             $('#hire_roc').width($('#hire_roc').height() * ROC_MOUTH_RATIO);
         }
@@ -116,8 +119,10 @@ jQuery(function($) {
             var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
             $('body').css('background-position', (-bgWidth/2) + 'px top, 0 0');
 
-            $('.roc-name').css('right', '200%');
-            $('.vivi-name').css('left', $('.vivi-name').parent().width() - $('.vivi-name').width());
+            $('.roc-name-text').css('right', '100%');
+
+            // FIXME: Manually set for Firefox
+            $('.vivi-name-text').css('left', $('.vivi-name').width() - $('.vivi-name-text').width() - PAGE_PADDING_X);
 
             $('#hire_vivi').width($('#hire_vivi').height() * VIVIEN_MOUTH_RATIO);
         }
@@ -128,10 +133,10 @@ jQuery(function($) {
         adaptInfoHeight();
 
         if ($(window).width() >= NONMOBILE_WIDTH) {
+            // FIXME: Manually set for Firefox
             $('body').css('background-position', 'center top, 0 0');
-
-            $('.roc-name').css('right', 0);
-            $('.vivi-name').css('left', 0);
+            $('.roc-name-text').css('right', 0);
+            $('.vivi-name-text').css('left', 0);
         }
     });
 
@@ -170,7 +175,7 @@ jQuery(function($) {
     /*****************************************************************************/
 
     /* Main */
-    //XXX: Firefox seems buggy when dealing transitions from a value set in external style to another one set in inline style,
+    //FIXME: Firefox seems buggy when dealing transitions from a value set in external style to another one set in inline style,
     // so set the initial value in inline style first.
     $('body').trigger('show-both');
 
