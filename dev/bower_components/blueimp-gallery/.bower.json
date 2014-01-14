@@ -1,6 +1,6 @@
 {
   "name": "blueimp-gallery",
-  "version": "2.12.1",
+  "version": "2.12.5",
   "title": "blueimp Gallery",
   "description": "blueimp Gallery is a touch-enabled, responsive and customizable image and video gallery, carousel and lightbox, optimized for both mobile and desktop web browsers. It features swipe, mouse and keyboard navigation, transition effects, slideshow functionality, fullscreen support and on-demand content loading and can be extended to display additional content types.",
   "keywords": [
@@ -68,11 +68,11 @@
     "css/demo.css",
     "js/demo.js"
   ],
-  "_release": "2.12.1",
+  "_release": "2.12.5",
   "_resolution": {
     "type": "version",
-    "tag": "2.12.1",
-    "commit": "ad04c5be0c8493077131242126253eb5fceb3ee6"
+    "tag": "2.12.5",
+    "commit": "16f64dd149cdf2a1ee0990577a43dbec442f3c9e"
   },
   "_source": "git://github.com/blueimp/Gallery.git",
   "_target": ">=2.12.0",
