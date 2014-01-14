@@ -20,7 +20,6 @@ module.exports = function(grunt) {
                 'watch'
             ],
             dist: [
-                'build',
                 'connect:dist'
             ]
         },
@@ -212,6 +211,7 @@ module.exports = function(grunt) {
                 'imagemin:dist',     // Minify Image
                 'copy:dist',         // Copy relevant files to destination folder
                 'compass:dist',      // Use compass to generate CSS
+                'jshint',            // Lint JS files
             ]
         },
         jshint: {
@@ -266,7 +266,6 @@ module.exports = function(grunt) {
 
     // Default task
     grunt.registerTask('default', [
-        'jshint',
         'build',
     ]);
 };
