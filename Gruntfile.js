@@ -206,14 +206,6 @@ module.exports = function(grunt) {
                 }]
             },
         },
-        concurrent: {
-            dist: [
-                'imagemin:dist',     // Minify Image
-                'copy:dist',         // Copy relevant files to destination folder
-                'compass:dist',      // Use compass to generate CSS
-                'jshint',            // Lint JS files
-            ]
-        },
         jshint: {
             options: {
                 jshintrc: '.jshintrc',
@@ -244,20 +236,25 @@ module.exports = function(grunt) {
         return grunt.task.run(this.data);
     });
 
-    // TODO: Use concurrent
     grunt.registerTask('build', [
-        'clean:dist',
-        'concurrent:dist',
-        'autoprefixer',    // Add vendor prefix for CSS
+        'clean:dist',    // Clean up the dist folder
 
-        'useminPrepare',   // Config concat, cssmin & uglify
-        'concat',          // Concat CSS & JS
-        'cssmin',          // Minify CSS
-        'uglify',          // Minify JS
+        'compass:dist',
+        'autoprefixer',
 
-        'filerev',         // Rename generated files with hash tag;
-        'usemin',          // Use generated files
-        'htmlmin',         // Minify HTML; Put it after usemin because: https: // github.com/yeoman/grunt-usemin/issues/44
+        'jshint',        // Lint JS files
+
+        'copy:dist',     // Copy relevant files to destination folder
+        'imagemin:dist', // Minify Image
+
+        'useminPrepare', // Config concat, cssmin & uglify
+        'concat',        // Concat CSS & JS
+        'cssmin',        // Minify CSS
+        'uglify',        // Minify JS
+
+        'filerev',       // Rename generated files with hash tag;
+        'usemin',        // Use generated files
+        'htmlmin',       // Minify HTML; Put it after usemin because: https: // github.com/yeoman/grunt-usemin/issues/44
     ]);
 
     grunt.registerTask('deploy', [
