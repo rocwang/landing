@@ -44,6 +44,10 @@ a .fa {
     }
 }
 
+.cv-link {
+    display: none;
+}
+
 .portfolio {
     font-size: 0;
 }
@@ -79,6 +83,7 @@ a .fa {
     }
 }
 
+/* Ribbon */
 $ribbon-color: #d64b4b;
 h2{
     position: relative;
@@ -123,6 +128,13 @@ h2:after {
 }
 h2+* {
     clear:both;
+}
+/* Ribbon END */
+
+.vivi-work {
+    max-width: 49%;
+    float: left;
+    margin: 0 1% 1% 0;
 }
 
 @import 'desktop';

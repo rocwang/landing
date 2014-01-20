@@ -119,9 +119,9 @@ jQuery(function($) {
             var bgWidth = $(window).height() * ORIGINAL_BG_WIDTH / ORIGINAL_BG_HEIGHT;
             $('body').css('background-position', (-bgWidth/2) + 'px top, 0 0');
 
+            // FIXME: Manually set for Firefox
             $('.roc-name-text').css('right', '100%');
 
-            // FIXME: Manually set for Firefox
             $('.vivi-name-text').css('left', $('.vivi-name').width() - $('.vivi-name-text').width() - PAGE_PADDING_X);
 
             $('#hire_vivi').width($('#hire_vivi').height() * VIVIEN_MOUTH_RATIO);
