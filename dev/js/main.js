@@ -33,7 +33,6 @@ jQuery(function($) {
     var ORIGINAL_BG_HEIGHT = 1440;
     var ROC_MOUTH_RATIO = 1.2467;
     var VIVIEN_MOUTH_RATIO = 1.2467;
-    var SCROLL_TOP_TIME = 400;
     var NONMOBILE_WIDTH = 768;
     var PAGE_PADDING_X = 35;
 
@@ -49,15 +48,13 @@ jQuery(function($) {
 
     function scrollBackAndTrigger(sel) {
         var scrollTop = $('html').scrollTop() || $('body').scrollTop();
-        if (scrollTop) {
-            $('html, body').animate(
-                {scrollTop:0},
-                SCROLL_TOP_TIME,
-                function() {$('body').trigger(sel);}
-            );
-        } else {
-            $('body').trigger(sel);
-        }
+        var height    = $('html').height()    || $('body').height();
+
+        $('html, body').animate(
+            {scrollTop:0},
+            scrollTop / height * 1000,
+            function() {$('body').trigger(sel);}
+        );
     }
 
     /********************************************************************************/
