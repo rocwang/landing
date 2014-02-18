@@ -22,12 +22,14 @@
         Bootstrap
         Font Awesome
         Blueimp-Gallery
+        Isotope
 
     Tools:
 
-        Vim
-        Grunt
-        Compass
-        Safari
+        Bower
         Chrome
+        Compass
         Firefox
+        Grunt
+        Safari
+        Vim

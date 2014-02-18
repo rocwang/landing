@@ -213,7 +213,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= rv.dev %>/js/*.js',
+                '<%= rv.dev %>/js/main.js',
             ]
         },
         rsync: {

@@ -25,6 +25,8 @@
     "bootstrap": ">=3.0.2",
     "blueimp-gallery": ">=2.12.0",
     "font-awesome": ">=4.0.3",
-    "jquery": ">=2.0.3"
+    "jquery": ">=2.0.3",
+    "isotope": ">=2.0.0-beta",
+    "imagesloaded": ">3.0.0"
   }
 }

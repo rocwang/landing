@@ -135,16 +135,21 @@ jQuery(function($) {
             $('.roc-name-text').css('right', 0);
             $('.vivi-name-text').css('left', 0);
         }
-    });
 
-    $(window).resize(function() {
+    }).on('layout', function() {
         $('body').removeClass('both-roc both-vivi roc-vivi vivi-roc');
 
         if ($('body').hasClass('show-roc')) {
             $('body').trigger('show-roc');
         } else if ($('body').hasClass('show-vivi')) {
             $('body').trigger('show-vivi');
+        } else if ($('body').hasClass('show-both')) {
+            $('body').trigger('show-both');
         }
+    });
+
+    $(window).resize(function() {
+        $('body').trigger('layout');
     }).on('hashchange', function(e, transition) {
         if (!transition) {
             var oldMatch = /#(.*)$/.exec(e.originalEvent.oldURL);
@@ -190,5 +195,16 @@ jQuery(function($) {
         trigger: 'hover',
         placement: 'right',
         container: 'body',
+    });
+
+    var viviWorks = $('.vivi-work-container').isotope({
+        itemSelector : 'a',
+        layoutMode   : 'masonry',
+    });
+    viviWorks.isotope('on', 'layoutComplete', function() {
+        $('body').trigger('layout');
+    });
+    $('.vivi-work-container').imagesLoaded(function() {
+        viviWorks.isotope('layout');
     });
 });

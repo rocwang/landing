@@ -131,10 +131,18 @@ h2+* {
 }
 /* Ribbon END */
 
-.vivi-work {
-    max-width: 49%;
-    float: left;
-    margin: 0 1% 1% 0;
+.vivi-work-container a {
+    margin: 0 3% 3% 0;
+}
+
+.address-container {
+    position : absolute;
+    height   : 100%;
+    width    : 100%;
+    top      : 0;
+    left     : 0;
+    overflow : hidden;
+    margin   : 0;
 }
 
 @import 'desktop';
