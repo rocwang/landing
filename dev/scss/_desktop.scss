@@ -1,7 +1,7 @@
 /* Tablet and desktop style */
 @import 'bootstrap-ext';
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     /* Outdated browser alert */
     .browsehappy~.name .roc-name,
     .browsehappy~.name .vivi-name {
@@ -12,6 +12,10 @@
     body {
         background      : url('../img/roc-and-vivi.jpg') center top no-repeat fixed, #000;
         background-size : auto 100%;
+    }
+
+    h3 {
+        margin-top: 5px;
     }
 
     /* Name */
@@ -66,11 +70,6 @@
         width: 100%;
     }
 
-    .experience dt,
-    .education dt {
-        text-align: center;
-    }
-
     /* Contact */
     .roc-address,
     .vivi-address {
@@ -93,18 +92,18 @@
     }
 
     /* Operation */
-    .operation {
+    .roc-operation, .vivi-operation {
         position: fixed;
         bottom: 30px;
         width:25%;
         z-index:20;
     }
-    .roc.operation {
+    .roc-operation {
         right:0;
         padding-right:30px;
         padding-left:10px;
     }
-    .vivi.operation {
+    .vivi-operation {
         padding-left:30px;
         padding-right:10px;
         left:0;
@@ -157,13 +156,13 @@
         }
 
         .roc-info,
-        .roc.operation,
+        .roc-operation,
         .roc-address {
             right: 100%;
         }
 
         .vivi-info,
-        .vivi.operation,
+        .vivi-operation,
         .vivi-address {
             left: 100%;
         }
@@ -196,7 +195,7 @@
         }
 
         .vivi-address,
-        .vivi.operation,
+        .vivi-operation,
         .vivi-info {
             left: 100%;
         }
@@ -237,7 +236,7 @@
         }
 
         .roc-address,
-        .roc.operation,
+        .roc-operation,
         .roc-info {
             right: 100%;
         }
@@ -270,7 +269,7 @@
         }
 
         .roc-address ,
-        .roc.operation ,
+        .roc-operation ,
         .roc-info {
             transition: right 1s 1s;
         }
@@ -288,7 +287,7 @@
         }
 
         .vivi-address,
-        .vivi.operation,
+        .vivi-operation,
         .vivi-info {
             transition: left 1s 1s;
         }
@@ -307,7 +306,7 @@
         }
 
         .roc-address,
-        .roc.operation,
+        .roc-operation,
         .roc-info {
             transition: right 1s 0s;
         }
@@ -325,7 +324,7 @@
         }
 
         .vivi-info,
-        .vivi.operation,
+        .vivi-operation,
         .vivi-address {
             transition: left 1s 0s;
         }
@@ -336,7 +335,7 @@
 
         .vivi-address,
         .vivi-info,
-        .vivi.operation {
+        .vivi-operation {
             transition: left 1s 0s;
         }
         .vivi-name-text {
@@ -345,7 +344,7 @@
 
         .roc-address,
         .roc-info,
-        .roc.operation {
+        .roc-operation {
             transition: right 1s 0s;
         }
         .roc-name-text {
@@ -358,7 +357,7 @@
 
         .roc-address,
         .roc-info,
-        .roc.operation {
+        .roc-operation {
             transition: right 1s 0s;
         }
         .roc-name-text {
@@ -367,7 +366,7 @@
 
         .vivi-address,
         .vivi-info,
-        .vivi.operation {
+        .vivi-operation {
             transition: left 1s 0s;
         }
         .vivi-name-text {

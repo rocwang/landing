@@ -1,5 +1,5 @@
 /* Mobile style */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
     /* Nav */
     .navbar-header {
         padding-left: 15px;
@@ -236,7 +236,7 @@
         transition: right 1s 0s;
     }
 
-    .operation {
+    .roc-operation, .vivi-operation {
         display: none;
     }
 }

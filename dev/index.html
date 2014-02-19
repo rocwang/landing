@@ -60,54 +60,6 @@
             </div><!-- /.navbar-collapse -->
         </nav>
 
-        <!-- Contact -->
-        <div class="address-container">
-            <address class="roc-address">
-                <ul class="list-unstyled">
-                    <li>
-                    <a href="http://maps.apple.com/?q=-36.801184,174.739450&sspn=0.002371,0.005250&sll=-36.801301,174.739534" target="_blank">
-                        <i class="fa fa-home fa-lg fa-fw"></i>
-                        <span class="address-text">Northcote, Auckland, Newzealand</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="tel:+64-27-949-1310">
-                        <i class="fa fa-phone fa-lg fa-fw"></i>
-                        <span class="address-text">+64 27 949 1310</span>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="mailto:me@rocwang.me">
-                        <i class="fa fa-envelope fa-lg fa-fw"></i>
-                        <span class="address-text">me@rocwang.me</span>
-                    </a>
-                    </li>
-                </ul>
-            </address>
-            <address class="vivi-address">
-                <ul class="list-unstyled">
-                    <li>
-                    <a href="http://maps.apple.com/?q=-36.801184,174.739450&sspn=0.002371,0.005250&sll=-36.801301,174.739534" target="_blank">
-                        <span class="address-text">Northcote, Auckland, Newzealand</span>
-                        <i class="fa fa-home fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="tel:+64-27-881-9105">
-                        <span class="address-text">+64 27 881 9105</span>
-                        <i class="fa fa-phone fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="mailto:vvvvivien@gmail.com">
-                        <span class="address-text">vvvvivien@gmail.com</span>
-                        <i class="fa fa-envelope fa-lg fa-fw"></i>
-                    </a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-
         <!-- Name -->
         <h1 class="name">
             <a href="#roc" class="roc-name">
@@ -125,19 +77,59 @@
             </a>
         </h1>
 
+        <!-- Contact -->
+        <div class="address-container">
+            <address class="roc-address">
+                <ul class="list-unstyled">
+                    <li>
+                    <a href="tel:+64-27-949-1310">
+                        <i class="fa fa-phone fa-lg fa-fw"></i>
+                        <span class="address-text">+64 27 949 1310</span>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="mailto:me@rocwang.me">
+                        <i class="fa fa-envelope fa-lg fa-fw"></i>
+                        <span class="address-text">me@rocwang.me</span>
+                    </a>
+                    </li>
+                    <li class="cv-link">
+                        <i class="fa fa-link fa-lg fa-fw"></i>
+                        <span class="address-text">http://cv.rocwang.me</span>
+                    </li>
+                </ul>
+            </address>
+            <address class="vivi-address">
+                <ul class="list-unstyled">
+                    <li>
+                    <a href="tel:+64-27-881-9105">
+                        <span class="address-text">+64 27 881 9105</span>
+                        <i class="fa fa-phone fa-lg fa-fw"></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="mailto:vvvvivien@gmail.com">
+                        <span class="address-text">vvvvivien@gmail.com</span>
+                        <i class="fa fa-envelope fa-lg fa-fw"></i>
+                    </a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+
         <!-- Operations -->
-        <div class="roc operation fa-2x">
-            <div class="hidden-print hidden-xs">
+        <div class="roc-operation fa-2x">
+            <div class="hidden-print">
                 <a href="#both" data-toggle="tooltip" title="Return"><i class="fa fa-undo fa-fw"></i></a>
                 <a href="#vivi" data-toggle="tooltip" title="See Vivienne's profile"><i class="fa fa-chevron-right fa-fw"></i></a>
             </div>
-            <div class="hidden-print hidden-xs">
+            <div class="hidden-print">
                 <a href="pdf/pengwang_resume.pdf" data-toggle="tooltip" title="Download Peng's CV"><i class="fa fa-download fa-fw"></i></a>
                 <a class="print" href="#" data-toggle="tooltip" title="Print Peng's CV"><i class="fa fa-print fa-fw"></i></a>
             </div>
-            <img src="img/roc-qrcode.png" alt="QR Code to this page">
+            <img id="roc-qrcode" src="img/roc-qrcode.png" alt="QR Code to this page">
         </div>
-        <div class="vivi operation fa-2x hidden-xs hidden-print">
+        <div class="vivi-operation fa-2x hidden-print">
             <div>
                 <a href="#roc" data-toggle="tooltip" title="See Peng's profile"><i class="fa fa-chevron-left fa-fw"></i></a>
                 <a href="#both" data-toggle="tooltip" title="Return"><i class="fa fa-undo fa-fw"></i></a>
@@ -150,24 +142,30 @@
                 <div class="row">
                     <div class="col-sm-9">
                         <div class="row">
-                            <div class="col-sm-12 col-xl-3">
+                            <div class="col-sm-12 col-xl-3 hidden-print">
                                 <h2><i class="fa fa-road"></i> Why this page</h2>
                                 <p>I'm trying to get a web development job in New Zealand, so I created this page to do marketing for myself. It's also a skill provement per se.</p>
+                            </div>
+
+                            <div class="col-sm-12 visible-print">
+                                <h2>Objective</h2>
+                                <p>To obtain a web development position building the front-end and/or back-end of web sites.</p>
                             </div>
 
                             <div class="experience col-sm-12 col-xl-9">
                                 <h2><i class="fa fa-briefcase"></i> Experience</h2>
                                 <dl class="dl-horizontal">
                                     <dt>
-                                    <div>
                                         <a href="http://www.tencent.com/en-us/" target="_blank">
-                                            <img src="img/tencent-white.png" alt="Tencent Logo" class="logo hidden-print">
-                                            <img src="img/tencent-black.png" alt="Tencent Logo" class="logo visible-print">
-                                        </a>
-                                    </div>
-                                    2010.3 - 2013.4
+                                            <img src="img/tencent-white.png" alt="Tencent Logo" class="logo white-logo">
+                                            <img src="img/tencent-black.png" alt="Tencent Logo" class="logo black-logo">
+                                        </a><br>
+                                        Mar 2010 – Apr 2013<br>
+                                        Tencent<br>
+                                        Shenzhen, China
                                     </dt>
                                     <dd>
+                                    <h3>Web Developer</h3>
                                     <ul>
                                         <li>Responsible for the development and maintenance of QQ VIP sites: vip.qq.com and m.vip.qq.com.</li>
                                         <li>Developed loads of activity and promotion pages on vip.qq.com.</li>
@@ -176,15 +174,16 @@
                                     </ul>
                                     </dd>
                                     <dt>
-                                    <div>
                                         <a href="http://www.infosys.com/" target="_blank">
-                                            <img src="img/infosys-white.png" alt="Infosys Logo" class="logo hidden-print">
-                                            <img src="img/infosys-black.png" alt="Infosys Logo" class="logo visible-print">
-                                        </a>
-                                    </div>
-                                    2006.9 - 2007.4
+                                            <img src="img/infosys-white.png" alt="Infosys Logo" class="logo white-logo">
+                                            <img src="img/infosys-black.png" alt="Infosys Logo" class="logo black-logo">
+                                        </a><br>
+                                        Sep 2006 – Apr 2007<br>
+                                        Infosys<br>
+                                        Mysore, India
                                     </dt>
                                     <dd>
+                                    <h3>Intern</h3>
                                     <ul>
                                         <li>Trained in the Mainframe stream class for 3 months, which taught JCL, COBOL, CICS, DB2, VSAM File Processing and Quality Assurance.</li>
                                         <li>Worked in the Data Mining Team of SETLabs for 4 months, and participated in the project "Using Text Tagging and Annotation Engine Java Libraries in .NET Applications".</li>
@@ -193,7 +192,7 @@
                                 </dl>
                             </div>
 
-                            <div class="col-sm-12">
+                            <div class="col-sm-12 hidden-print">
                                 <h2><i class="fa fa-picture-o"></i> Portfolio</h2>
                                 <div class="row">
                                     <div class="col-sm-6 col-md-5 col-xl-3 col-xxl-2">
@@ -341,23 +340,37 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-xl-4">
-                                <h2><i class="fa fa-tasks"></i> iOS Project</h2>
-                                <h3>
-                                    <img class="img-rounded" src="img/doless.png" alt="Do Less Logo">
-                                    Do Less
-                                </h3>
+                            <div class="col-sm-12 col-xl-4 personal-projects">
+                                <h2><i class="fa fa-tasks"></i> Personal Projects</h2>
+                                <dl class="dl-horizontal">
+                                    <dt>
+                                    <img class="img-rounded" src="img/doless.png" alt="Do Less Logo"><br>
+                                    Apr 2013 – Present<br>
+                                    </dt>
+                                    <dd>
+                                    <h3>Do Less</h3>
+                                    Do Less is a companion app for the native Reminders app on iOS, by which you could choose the three most important tasks to do at a time.
+                                    Do Less helps you focus and accomplish more by doing less.<br>
+                                    Github: <a href="https://github.com/rocwang/Do-Less" target="_blank">https://github.com/rocwang/Do-Less</a><br>
+                                    <a class="app-store-badge" href="https://itunes.apple.com/us/app/do-less/id687301889?mt=8&amp;uo=4" target="itunes_store"></a>
+                                    </dd>
+                                    <dt>
+                                    <img class="img-rounded" src="img/tilda.png" alt="Tilda Logo"><br>
+                                    Aug 2008 – Sep 2008<br>
+                                    </dt>
+                                    <dd>
+                                    <h3>Tilda</h3>
+                                    Created a patch which implemented the palette feature and got accepted by the Tilda project – a drop-down Linux terminal emulator for GTK+.
+                                    </dd>
+                                </dl>
                                 <p>
-                                Do Less is a companion app for the native Reminders app on iOS, by which you could choose the three most important tasks to do at a time.
-                                Do Less helps you focus and accomplish more by doing less.
                                 </p>
-                                <a class="app-store-badge" href="https://itunes.apple.com/us/app/do-less/id687301889?mt=8&amp;uo=4" target="itunes_store"></a>
                             </div>
 
                             <div class="col-sm-12 col-xl-8">
                                 <h2><i class="fa fa-tasks"></i> Skills</h2>
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-xs-6 col-lg-6">
                                         <dl class="dl-horizontal">
                                             <dt class="hidden-xs">HTML</dt>
                                             <dd>
@@ -399,10 +412,6 @@
                                                 </div>
                                             </div>
                                             </dd>
-                                        </dl>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <dl class="dl-horizontal">
                                             <dt class="hidden-xs">Bootstrap</dt>
                                             <dd>
                                             <div class="progress">
@@ -411,6 +420,10 @@
                                                 </div>
                                             </div>
                                             </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="col-xs-6 col-lg-6">
+                                        <dl class="dl-horizontal">
                                             <dt class="hidden-xs">Yii</dt>
                                             <dd>
                                             <div class="progress">
@@ -419,8 +432,6 @@
                                                 </div>
                                             </div>
                                             </dd>
-                                        </dl>
-                                        <dl class="dl-horizontal">
                                             <dt class="hidden-xs">Vim</dt>
                                             <dd>
                                             <div class="progress">
@@ -466,48 +477,71 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-12 col-xl-6">
-                                <h2><span class="fa fa-book"></span> Education</h2>
-                                <dl class="education dl-horizontal">
+                            <div class="col-sm-12 col-xl-6 education">
+                                <h2><i class="fa fa-book"></i> Education</h2>
+                                <dl class="dl-horizontal">
                                     <dt>
-                                    <div>
                                         <a href="http://www.uestc.edu.cn/" target="_blank">
-                                            <img src="img/uestc-white.png" alt="UESTC Logo" class="logo hidden-print">
-                                            <img src="img/uestc-black.png" alt="UESTC Logo" class="logo visible-print">
-                                        </a>
-                                    </div>
-                                    2007.6 - 2010.6
+                                            <img src="img/uestc-white.png" alt="UESTC Logo" class="logo white-logo">
+                                            <img src="img/uestc-black.png" alt="UESTC Logo" class="logo black-logo">
+                                        </a><br>
+                                        Sep 2007 – Jun 2010<br>
+                                        Chengdu, China
                                     </dt>
                                     <dd>
-                                    Master of Engineering, Computer System Architecture<br>
+                                    <h3>Master of Engineering</h3>
+                                    Computer System Architecture, GPA: 3.54/4<br>
                                     University of Electronic Science and Technology of China
                                     </dd>
                                     <dt>
-                                    <div>
                                         <a href="http://www.uestc.edu.cn/" target="_blank">
-                                            <img src="img/uestc-white.png" alt="UESTC Logo" class="logo hidden-print">
-                                            <img src="img/uestc-black.png" alt="UESTC Logo" class="logo visible-print">
-                                        </a>
-                                    </div>
-                                    2003.6 - 2007.6
+                                            <img src="img/uestc-white.png" alt="UESTC Logo" class="logo white-logo">
+                                            <img src="img/uestc-black.png" alt="UESTC Logo" class="logo black-logo">
+                                        </a><br>
+                                        Sep 2003 – Jun 2007<br>
+                                        Chengdu, China
                                     </dt>
                                     <dd>
-                                    Bachelor of Engineering, Computer Science &amp; Technology<br>
+                                    <h3>Bachelor of Engineering</h3>
+                                    Computer Science &amp; Technology, GPA: 3.47/4<br>
                                     University of Electronic Science and Technology of China
                                     </dd>
                                 </dl>
                             </div>
 
-                            <div class="col-sm-12 col-md-7 col-xl-6 hidden-print">
+                            <div class="col-sm-12 hidden-print">
                                 <h2><i class="fa fa-video-camera"></i> Trivia</h2>
 
-                                <div class="video-wrapper">
-                                    <iframe class="video" src="//www.youtube.com/embed/2kiB1sds59o" seamless allowfullscreen></iframe>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="video-wrapper">
+                                            <iframe class="video" src="//www.youtube.com/embed/2kiB1sds59o" seamless allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="video-wrapper">
+                                            <iframe class="video" src="//www.youtube.com/embed/eua_Gwenx8c" seamless allowfullscreen></iframe>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div class="video-wrapper">
-                                    <iframe class="video" src="//www.youtube.com/embed/eua_Gwenx8c" seamless allowfullscreen></iframe>
-                                </div>
+                            <div class="col-xs-12 visible-print certificates">
+                                <h2>Certificates</h2>
+                                <ul>
+                                    <li>IELTS (Band 7.5/9)<span>Jul 2013</span></li>
+                                    <li>IBM Certified Database Associate – DB2 9 Fundamentals<span>Dec 2008</span></li>
+                                    <li>IBM Certified Database Associate – DB2 Universal Database V8.1 Family<span>Jun 2006</span></li>
+                                    <li>IBM eServer Certified Specialist – AIX Basic Operations V5<span>Jun 2006</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-xs-12 visible-print honors">
+                                <h2>Honors</h2>
+                                <ul>
+                                    <li>The outstanding employee of Tencent<span>Mar 2013</span></li>
+                                    <li>The outstanding graduate of UESTC<span>Jun 2007</span></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -617,7 +651,7 @@
                         </a>
                         <a href="img/vivi_work/tulip.jpg" title="Tulip" data-gallery>
                             <img src="img/vivi_work/thumbnail/tulip.jpg" alt="Tulip" class="img-rounded">
-</a>
+                        </a>
                     </div>
                 </div>
             </div>
