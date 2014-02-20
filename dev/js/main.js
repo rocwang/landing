@@ -29,30 +29,30 @@ jQuery.get('/humans.txt', function(data) { console.log(data); });
 jQuery(function($) {
 
     // Constants
-    var ORIGINAL_BG_WIDTH = 1792;
+    var ORIGINAL_BG_WIDTH  = 1792;
     var ORIGINAL_BG_HEIGHT = 1440;
-    var ROC_MOUTH_RATIO = 1.2467;
+    var ROC_MOUTH_RATIO    = 1.2467;
     var VIVIEN_MOUTH_RATIO = 1.2467;
-    var NONMOBILE_WIDTH = 768;
-    var PAGE_PADDING_X = 35;
+    var NONMOBILE_WIDTH    = 768;
+    var PAGE_PADDING_X     = 35;
+    var SCROLLING_FACTOR   = 100;
 
     /********************************************************************************/
 
     // Help functions
     function adaptInfoHeight(sel) {
         var targetHeight = $(sel).height();
-        var minHeight = $(window).height() - $('.name').height() - $('.browsehappy').height();
+        var minHeight = $(window).height() - parseInt( $('.info').css('top') );
         var infoHeight = Math.max(targetHeight, minHeight);
         $('.info').height(infoHeight);
     }
 
     function scrollBackAndTrigger(sel) {
         var scrollTop = $('html').scrollTop() || $('body').scrollTop();
-        var height    = $('html').height()    || $('body').height();
 
         $('html, body').animate(
             {scrollTop:0},
-            scrollTop / height * 1000,
+            scrollTop / $(window).height() * SCROLLING_FACTOR,
             function() {$('body').trigger(sel);}
         );
     }
