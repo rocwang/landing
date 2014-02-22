@@ -11,7 +11,8 @@ $page-padding-x: 35px;
     }
 
     dt {
-        white-space: normal;
+        white-space: normal !important;
+        font-weight: normal;
     }
 
     .name {
@@ -104,45 +105,45 @@ $page-padding-x: 35px;
     /* Ribbon */
     $ribbon-color: #d64b4b;
     h2{
-        position: relative;
+        position      : relative;
 
-        color: #801111;
-        color: #420000;
-        text-shadow: #d65c5c 0 1px 0;
+        color         : #801111;
+        color         : #420000;
+        text-shadow   : #d65c5c 0 1px 0;
 
-        background: $ribbon-color;
-        box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+        background    : $ribbon-color;
+        box-shadow    : rgba(0,0,0,0.3) 0 1px 1px;
 
-        float:left;
-        clear:both;
+        float         : left;
+        clear         : both;
 
-        padding:10px 10px 10px 20px;
-        margin-left:-20px;
-        margin-bottom: 15px;
+        padding       : 6px 10px 7px 20px;
+        margin-left   : -20px;
+        margin-bottom : 15px;
     }
     h2:before {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        top: 100%;
-        left: 0px;
-        border-width: 6px 6px;
-        border-style: solid;
-        border-color: #871616 #871616 transparent transparent;
+        content      : ' ';
+        position     : absolute;
+        width        : 0;
+        height       : 0;
+        top          : 100%;
+        left         : 0px;
+        border-width : 6px 6px;
+        border-style : solid;
+        border-color : #871616 #871616 transparent transparent;
     }
     h2:after {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 100%;
-        width: 0;
-        height: 0;
+        content            : ' ';
+        position           : absolute;
+        top                : 0;
+        left               : 100%;
+        width              : 0;
+        height             : 0;
 
-        border-width: 26px 26px 27px 0;
-        border-style: solid;
-        border-color: $ribbon-color;
-        border-right-color: transparent;
+        border-width       : 23px 23px 23px 0;
+        border-style       : solid;
+        border-color       : $ribbon-color;
+        border-right-color : transparent;
     }
     h2+* {
         clear:both;
@@ -161,6 +162,13 @@ $page-padding-x: 35px;
         left     : 0;
         overflow : hidden;
         margin   : 0;
+    }
+
+    // List column layout
+    .certificates, .honors {
+        ul li span {
+            float: right;
+        }
     }
 }
 
