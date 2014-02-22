@@ -120,6 +120,9 @@ $page-padding-x: 35px;
         padding       : 6px 10px 7px 20px;
         margin-left   : -20px;
         margin-bottom : 15px;
+
+        white-space   : nowrap;
+        text-overflow : ellipsis;
     }
     h2:before {
         content      : ' ';
