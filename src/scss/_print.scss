@@ -1,0 +1,181 @@
+$print-page-padding-x : 30px;
+
+@media print {
+  // Hide irrelevant contents
+  .show-roc .and-sign,
+  .show-roc .vivi-name,
+  .show-roc .vivi-address,
+  .show-roc .vivi-info,
+  .show-roc .vivi-operation,
+  .show-vivi .and-sign,
+  .show-vivi .roc-name,
+  .show-vivi .roc-address,
+  .show-vivi .roc-info,
+  .show-vivi .roc-operation,
+  .show-both address,
+  .show-both .info {
+    display : none !important;
+  }
+
+  // Expand info section to full width
+  .roc-info > .row > div {
+    width : 100%;
+  }
+
+  // Remove icons
+  .info i {
+    display : none;
+  }
+
+  // Do not show hyperlink text
+  a[href]:after {
+    content : '';
+  }
+
+  // Title
+  h1 {
+    margin     : 0 0 30px;
+    text-align : center;
+  }
+
+  h2 {
+    margin-top : 0;
+  }
+
+  h3 {
+    font-size : 16px;
+    margin    : 0 0 10px;
+  }
+
+  // Contact info
+  address {
+    margin-bottom : 0;
+    text-align    : center !important;
+  }
+
+  address li {
+    display     : inline;
+    margin-left : 10px;
+  }
+
+  // QR Code
+  .roc-qrcode {
+    height   : 60px;
+    margin   : 0;
+    padding  : 0 !important;
+    position : absolute !important;
+    right    : $print-page-padding-x !important;
+    top      : 0;
+    width    : 60px;
+  }
+
+  // Show the link to online CV
+  .cv-link {
+    display : inline;
+  }
+
+  // Show black logos only
+  .white-logo {
+    display : none;
+  }
+
+  .black-logo {
+    display : inline;
+  }
+
+  // Set Definition list
+  dl {
+    margin-bottom : 10px;
+  }
+
+  dt {
+    font-weight : normal;
+  }
+
+  // Employer logo
+  .logo {
+    width : 160px;
+  }
+
+  // Horizontally layout certain sections
+  .personal-projects,
+  .education {
+    .dl-horizontal dt {
+      clear         : left;
+      float         : left;
+      overflow      : hidden;
+      text-align    : right;
+      text-overflow : ellipsis;
+      white-space   : nowrap;
+      width         : 160px;
+    }
+
+    .dl-horizontal dd {
+      margin-left : 180px;
+    }
+
+    .dl-horizontal dd:before,
+    .dl-horizontal dd:after {
+      content : ' ';
+      display : table;
+    }
+
+    .dl-horizontal dd:after {
+      clear : both;
+    }
+
+  }
+
+  // Do not show the App Store link
+  .app-store-badge:before {
+    content : 'Avaliable in App Store: ';
+  }
+
+  .app-store-badge:after {
+    content : attr(href);
+  }
+
+  // Adjust the skill bars
+  $progress-bg : #f5f5f5;
+  $progress-bar-bg : #888;
+
+  .progress {
+    background-color : $progress-bg !important;
+  }
+
+  .progress-bar {
+    background-color : $progress-bar-bg !important;
+    text-align       : left;
+  }
+
+  .progress-bar span {
+    padding-left : 15px;
+  }
+
+  // Images in personal projects
+  .personal-projects img {
+    filter : grayscale(1);
+  }
+
+  // Indentation
+  body {
+    padding : 0 $print-page-padding-x;
+  }
+
+  h2 ~ * {
+    margin-left : 30px !important;
+  }
+
+  h2 ~ ul {
+    padding-left : 20px;
+  }
+
+  // List column layout
+  .certificates,
+  .honors {
+    span {
+      float : right;
+    }
+  }
+}
+

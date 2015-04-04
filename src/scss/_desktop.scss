@@ -1,0 +1,405 @@
+//  Tablet and desktop style
+@import 'bootstrap-ext';
+
+$popover-color : #333;
+
+@media screen and (min-width : 768px) {
+  //  Outdated browser alert
+  .browsehappy ~ .name .roc-name,
+  .browsehappy ~ .name .vivi-name {
+    margin-top : 72px;
+  }
+
+  //  Body
+  body {
+    background      : url('../img/roc-and-vivi.jpg') center top no-repeat fixed, $black;
+    background-size : auto 100%;
+  }
+
+  h3 {
+    margin-top : 5px;
+  }
+
+  //  Name
+  .roc-name,
+  .vivi-name {
+    display     : block;
+    height      : 100%;
+    overflow-x  : hidden;
+    padding-top : 20px;
+    position    : absolute;
+    top         : 0;
+    transition  : background-color 1s;
+    width       : 50%;
+  }
+
+  .roc-name {
+    padding-right : $page-padding-x;
+    right         : 50%;
+    text-align    : right;
+  }
+
+  .roc-name-text,
+  .vivi-name-text {
+    position : relative;
+  }
+
+  .vivi-name {
+    left         : 50%;
+    padding-left : $page-padding-x;
+    text-align   : left;
+  }
+
+  .and-sign {
+    display     : block;
+    font-family : "Baskerville", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style  : italic;
+    left        : 50%;
+    margin-left : -15.5px;
+    margin-top  : 20px;
+    position    : absolute;
+    text-align  : center;
+    transition  : opacity 2s;
+    z-index     : 10;
+  }
+
+  //  Info
+  .info {
+    overflow : hidden;
+    position : relative;
+    top      : 70px;
+  }
+
+  .roc-info,
+  .vivi-info {
+    position : absolute;
+    top      : 0;
+    width    : 100%;
+  }
+
+  //  Contact
+  .roc-address,
+  .vivi-address {
+    position : fixed;
+    top      : 69px;
+    width    : 25%;
+    z-index  : 10;
+  }
+
+  .roc-address {
+    padding-left  : 10px;
+    padding-right : 30px;
+    right         : 0;
+    text-align    : left;
+  }
+
+  .vivi-address {
+    left          : 0;
+    padding-left  : 30px;
+    padding-right : 10px;
+    text-align    : right;
+  }
+
+  //  Operation
+  .roc-operation,
+  .vivi-operation {
+    bottom   : 30px;
+    position : fixed;
+    width    : 25%;
+    z-index  : 20;
+  }
+
+  .roc-operation {
+    padding-left  : 10px;
+    padding-right : 30px;
+    right         : 0;
+  }
+
+  .vivi-operation {
+    left          : 0;
+    padding-left  : 30px;
+    padding-right : 10px;
+    text-align    : right;
+  }
+
+  .popover {
+    color    : $popover-color;
+    position : fixed;
+  }
+
+  .hire-roc {
+    height   : 7%;
+    position : fixed;
+    right    : 0;
+    top      : 59%;
+    width    : 7%;
+    z-index  : 10;
+  }
+
+  .hire-vivi {
+    height   : 7%;
+    left     : 0;
+    position : fixed;
+    top      : 59%;
+    width    : 7%;
+    z-index  : 10;
+  }
+
+  // *******************************************
+  //  Animation Style Start
+  //  Status:
+  .show-both {
+    background-position : center top;
+
+    .roc-name-text {
+      right : 0;
+    }
+
+    .vivi-name-text {
+      left : 0;
+    }
+
+    .roc-name,
+    .vivi-name {
+      background-color : rgba(0, 0, 0, .5);
+    }
+
+    .roc-name:hover,
+    .roc-name:focus,
+    .vivi-name:hover,
+    .vivi-name:focus {
+      background-color : rgba(0, 0, 0, 0);
+    }
+
+    .roc-info,
+    .roc-operation,
+    .roc-address {
+      right : 100%;
+    }
+
+    .vivi-info,
+    .vivi-operation,
+    .vivi-address {
+      left : 100%;
+    }
+
+    .hire-roc,
+    .hire-vivi {
+      display : none !important;
+    }
+
+  }
+
+  .show-roc {
+    //  Set background-position-x by JS
+
+    .roc-name-text {
+      //  Set right by JS
+    }
+
+    .vivi-name-text {
+      left : 100%;
+    }
+
+    .roc-name,
+    .vivi-name {
+      background-color : rgba(0, 0, 0, 0);
+      cursor           : default;
+    }
+
+    .and-sign {
+      opacity : 0;
+    }
+
+    .vivi-address,
+    .vivi-operation,
+    .vivi-info {
+      left : 100%;
+    }
+
+    .roc-info {
+      right : 0;
+    }
+
+    .hire-roc {
+      display : block !important;
+    }
+
+    .hire-vivi {
+      display : none !important;
+    }
+
+  }
+
+  .show-vivi {
+    //  Set background-position-x by JS
+
+    .roc-name-text {
+      right : 100%;
+    }
+
+    .vivi-name-text {
+      //  Set left by JS
+    }
+
+    .roc-name,
+    .vivi-name {
+      background-color : rgba(0, 0, 0, 0);
+      cursor           : default;
+    }
+
+    .and-sign {
+      opacity : 0;
+    }
+
+    .roc-address,
+    .roc-operation,
+    .roc-info {
+      right : 100%;
+    }
+
+    .vivi-info {
+      left : 0;
+    }
+
+    .hire-vivi {
+      display : block !important;
+    }
+
+    .hire-roc {
+      display : none !important;
+    }
+
+  }
+
+  //  Transition:
+  //  Background
+  .both-roc {
+    transition : background-position 1s 1s;
+
+    .roc-name-text {
+      transition : right 1s 0s;
+    }
+
+    .vivi-name-text {
+      transition : left 1s 1s;
+    }
+
+    .roc-address,
+    .roc-operation,
+    .roc-info {
+      transition : right 1s 1s;
+    }
+
+  }
+
+  .both-vivi {
+    transition : background-position 1s 1s;
+
+    .vivi-name-text {
+      transition : left 1s 0s;
+    }
+
+    .roc-name-text {
+      transition : right 1s 1s;
+    }
+
+    .vivi-address,
+    .vivi-operation,
+    .vivi-info {
+      transition : left 1s 1s;
+    }
+
+  }
+
+  .roc-both {
+    transition : background-position 1s 0s;
+
+    .vivi-name-text {
+      transition : left 1s 0s;
+    }
+
+    .roc-name-text {
+      transition : right 1s 1s;
+    }
+
+    .roc-address,
+    .roc-operation,
+    .roc-info {
+      transition : right 1s 0s;
+    }
+
+  }
+
+  .vivi-both {
+    transition : background-position 1s 0s;
+
+    .roc-name-text {
+      transition : right 1s 0s;
+    }
+
+    .vivi-name-text {
+      transition : left 1s 1s;
+    }
+
+    .vivi-info,
+    .vivi-operation,
+    .vivi-address {
+      transition : left 1s 0s;
+    }
+
+  }
+
+  .roc-vivi {
+    transition : background-position 1s 0s;
+
+    .vivi-address,
+    .vivi-info,
+    .vivi-operation {
+      transition : left 1s 0s;
+    }
+
+    .vivi-name-text {
+      transition : left 1s 0s;
+    }
+
+    .roc-address,
+    .roc-info,
+    .roc-operation {
+      transition : right 1s 0s;
+    }
+
+    .roc-name-text {
+      transition : right 1s 0s;
+    }
+
+  }
+
+  .vivi-roc {
+    transition : background-position 1s 0s;
+
+    .roc-address,
+    .roc-info,
+    .roc-operation {
+      transition : right 1s 0s;
+    }
+
+    .roc-name-text {
+      transition : right 1s 0s;
+    }
+
+    .vivi-address,
+    .vivi-info,
+    .vivi-operation {
+      transition : left 1s 0s;
+    }
+
+    .vivi-name-text {
+      transition : left 1s 0s;
+    }
+
+  }
+
+  //  Animation Style End
+}
+
