@@ -1,18 +1,5 @@
-$page-padding-x : 35px;
-$black : #000;
-$white : #fff;
-
-// Ribbon
-$ribbon-color : #d64b4b;
-$text-shadow-color : #d65c5c;
-$h2-color : #420000;
-$h2-before-border-color : #871616;
-
-@mixin global-padding {
-  padding : 0 $page-padding-x;
-}
-
 @media screen {
+  // Body
   body {
     background-color : $black;
     color            : $white;
@@ -23,91 +10,9 @@ $h2-before-border-color : #871616;
     white-space : normal !important;
   }
 
-  .name {
-    height     : 100%;
-    left       : 0;
-    margin     : 0;
-    overflow-x : hidden;
-    position   : absolute;
-    top        : 0;
-    width      : 100%;
-  }
-
-  .name a {
-    color           : $white;
-    text-decoration : none;
-  }
-
-  .show-both .name { z-index : 10; }
-
-  .roc-info,
-  .vivi-info,
-  .browsehappy {
-    @include global-padding;
-  }
+  h3 { margin-top : 5px; }
 
   a .fa { color : $white; }
-
-  .logo { width : 160px; }
-
-  .roc-operation,
-  .vivi-operation {
-    a {
-      color : $white;
-
-      .fa-fw {
-        width : 1em;
-      }
-    }
-  }
-
-  .cv-link {
-    display : none;
-  }
-
-  .white-logo {
-    display : inline;
-  }
-
-  .black-logo {
-    display : none;
-  }
-
-  .portfolio {
-    font-size : 0;
-  }
-
-  .app-store-badge {
-    background : url('../img/badge_appstore-lrg.png') no-repeat;
-    display    : inline-block;
-    height     : 40px;
-    overflow   : hidden;
-    width      : 135px;
-  }
-
-  @media only screen {
-    .app-store-badge {
-      background-image : url('../img/badge_appstore-lrg.svg');
-    }
-  }
-
-  // Adaptive video
-  .video-wrapper {
-    height         : 0;
-    margin-bottom  : 20px; // 16:9
-    padding-bottom : 56.25%;
-    padding-top    : 25px;
-    position       : relative;
-
-    .video {
-      border   : 0;
-      height   : 100%;
-      left     : 0;
-      position : absolute;
-      top      : 0;
-      width    : 100%;
-    }
-  }
 
   // Ribbon
   h2 {
@@ -123,49 +28,112 @@ $h2-before-border-color : #871616;
     text-overflow : ellipsis;
     text-shadow   : $text-shadow-color 0 1px 0;
     white-space   : nowrap;
+
+    &::before {
+      border-color : $h2-before-border-color $h2-before-border-color transparent transparent;
+      border-style : solid;
+      border-width : 6px;
+      content      : ' ';
+      height       : 0;
+      left         : 0;
+      position     : absolute;
+      top          : 100%;
+      width        : 0;
+    }
+
+    &::after {
+      border             : 23px solid $ribbon-color;
+      border-left-width  : 0;
+      border-right-color : transparent;
+      content            : ' ';
+      height             : 0;
+      left               : 100%;
+      position           : absolute;
+      top                : 0;
+      width              : 0;
+    }
+
+    + * { clear : both; }
   }
 
-  h2:before {
-    border-color : $h2-before-border-color $h2-before-border-color transparent transparent;
-    border-style : solid;
-    border-width : 6px;
-    content      : ' ';
-    height       : 0;
-    left         : 0;
-    position     : absolute;
-    top          : 100%;
-    width        : 0;
+  .logo { width : 160px; }
+
+  .white-logo {
+    display : inline;
   }
 
-  h2:after {
-    border             : 23px solid $ribbon-color;
-    border-left-width  : 0;
-    border-right-color : transparent;
-    content            : ' ';
-    height             : 0;
-    left               : 100%;
-    position           : absolute;
-    top                : 0;
-    width              : 0;
+  .black-logo {
+    display : none;
   }
 
-  h2 + * {
-    clear : both;
-  }
-  // Ribbon END
-
-  .vivi-work-container a {
-    margin : 0 3% 3% 0;
+  .portfolio {
+    font-size : 0;
   }
 
-  .address-container {
-    height   : 100%;
-    left     : 0;
-    margin   : 0;
-    overflow : hidden;
-    position : absolute;
-    top      : 0;
-    width    : 100%;
+  .app-store-badge {
+    background : url('../img/badge_appstore-lrg.svg') no-repeat;
+    display    : inline-block;
+    height     : 40px;
+    overflow   : hidden;
+    width      : 135px;
+  }
+
+  // Adaptive video
+  .embed-responsive {
+    margin-bottom : 20px;
+  }
+
+  // Skills
+  .progress-bar span {
+    padding-left : 15px;
+  }
+
+  //  Contact
+  .roc-address {
+    padding-left  : 10px;
+    padding-right : 30px;
+    position      : fixed;
+    right         : 0;
+    text-align    : left;
+    top           : 69px;
+    width         : 25%;
+    z-index       : 10;
+
+    .cv-link { display : none; }
+  }
+
+  //  Operation
+  .roc-operation {
+    bottom        : 30px;
+    padding-left  : 10px;
+    padding-right : 30px;
+    position      : fixed;
+    right         : 0;
+    width         : 25%;
+    z-index       : 20;
+
+    a {
+      color : $white;
+
+      .fa-fw {
+        width : 1em;
+      }
+    }
+  }
+
+  .popover {
+    color    : $popover-color;
+    position : fixed;
+  }
+
+  .hire-roc {
+    display  : block !important;
+    height   : 7%;
+    position : fixed;
+    right    : 0;
+    top      : 59%;
+    width    : 7%;
+    z-index  : 10;
   }
 
   // List column layout
@@ -176,6 +144,3 @@ $h2-before-border-color : #871616;
     }
   }
 }
-
-@import 'desktop';
-@import 'mobile';

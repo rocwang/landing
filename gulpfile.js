@@ -42,7 +42,8 @@ var basePaths = {
 
 // paths definitions
 var srcFiles = {
-  less: [
+  scss: [
+    'scss/vendor.scss',
     'scss/app.scss'
   ],
   js  : [
@@ -54,7 +55,6 @@ var srcFiles = {
     'bower_components/blueimp-gallery/img/**'
   ],
   font: [
-    'bootstrap/dist/fonts/*',
     'font-awesome/fonts/*'
   ],
   html: [
@@ -78,22 +78,7 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('css', function () {
-  var vendor = gulp.src([
-    'bootstrap/dist/css/bootstrap.css',
-    'bootstrap/dist/css/bootstrap-theme.css',
-    'font-awesome/css/font-awesome.css',
-    'blueimp-gallery/css/blueimp-gallery.css'
-  ], {
-    cwd: basePaths.vendor
-  }).pipe(plumber({errorHandler: onError}))
-    .pipe(isProduction ? util.noop() : sourcemaps.init())
-    .pipe(concat('vendor.css'))
-    .pipe(minifyCss())
-    .pipe(isProduction ? util.noop() : sourcemaps.write('.'))
-    .pipe(gulp.dest(basePaths.dest + 'css'));
-
-
-  var app = gulp.src(srcFiles.less, {cwd: basePaths.src})
+  return gulp.src(srcFiles.scss, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? util.noop() : sourcemaps.init())
     .pipe(sass({
@@ -114,8 +99,6 @@ gulp.task('css', function () {
 
     .pipe(isProduction ? util.noop() : sourcemaps.write('.'))
     .pipe(gulp.dest(basePaths.dest + 'css'));
-
-  return merge(vendor).add(app);
 });
 
 // Todo: Add jshint support
@@ -194,17 +177,17 @@ gulp.task('default', ['css', 'js', 'img', 'font', 'misc', 'html']);
 
 // Watch task
 gulp.task('watch', ['default'], function () {
-  gulp.watch('less/**', {cwd: basePaths.src}, ['css']);
+  gulp.watch('scss/**', {cwd: basePaths.src}, ['css']);
   gulp.watch('js/**', {cwd: basePaths.src}, ['js']);
   gulp.watch('img/**', {cwd: basePaths.src}, ['img']);
+  gulp.watch('*.html', {cwd: basePaths.src}, ['html']);
   gulp.watch(srcFiles.misc, {cwd: basePaths.src}, ['misc']);
 
   gulp.watch([
-//      'js/*.js',
-//      'css/*.css',
-//      'img/**',
-//      '*.html',
-      '**'
+      'js/*.js',
+      'css/*.css',
+      'img/**',
+      '*.html',
     ], {
       cwd: basePaths.dest
     },

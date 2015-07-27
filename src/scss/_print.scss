@@ -1,22 +1,4 @@
-$print-page-padding-x : 30px;
-
 @media print {
-  // Hide irrelevant contents
-  .show-roc .and-sign,
-  .show-roc .vivi-name,
-  .show-roc .vivi-address,
-  .show-roc .vivi-info,
-  .show-roc .vivi-operation,
-  .show-vivi .and-sign,
-  .show-vivi .roc-name,
-  .show-vivi .roc-address,
-  .show-vivi .roc-info,
-  .show-vivi .roc-operation,
-  .show-both address,
-  .show-both .info {
-    display : none !important;
-  }
-
   // Expand info section to full width
   .roc-info > .row > div {
     width : 100%;

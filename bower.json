@@ -23,11 +23,9 @@
     ],
     "dependencies": {
         "modernizr"      : "2.x",
-        "bootstrap"      : "3.x",
+        "bootstrap-sass" : "3.x",
         "blueimp-gallery": "2.x",
         "font-awesome"   : "4.x",
-        "jquery"         : "2.x",
-        "isotope"        : "2.x",
-        "imagesloaded"   : "3.x"
+        "jquery"         : "2.x"
     }
 }
