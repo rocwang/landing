@@ -1,60 +1,10 @@
 @media screen {
-  // Body
-  body {
-    background-color : $black;
-    color            : $white;
-  }
-
   dt {
     font-weight : normal;
     white-space : normal !important;
   }
 
   h3 { margin-top : 5px; }
-
-  a .fa { color : $white; }
-
-  // Ribbon
-  h2 {
-    background    : $ribbon-color;
-    box-shadow    : rgba(0, 0, 0, .3) 0 1px 1px;
-    clear         : both;
-    color         : $h2-color;
-    float         : left;
-    margin-bottom : 15px;
-    margin-left   : -20px;
-    padding       : 6px 10px 7px 20px;
-    position      : relative;
-    text-overflow : ellipsis;
-    text-shadow   : $text-shadow-color 0 1px 0;
-    white-space   : nowrap;
-
-    &::before {
-      border-color : $h2-before-border-color $h2-before-border-color transparent transparent;
-      border-style : solid;
-      border-width : 6px;
-      content      : ' ';
-      height       : 0;
-      left         : 0;
-      position     : absolute;
-      top          : 100%;
-      width        : 0;
-    }
-
-    &::after {
-      border             : 23px solid $ribbon-color;
-      border-left-width  : 0;
-      border-right-color : transparent;
-      content            : ' ';
-      height             : 0;
-      left               : 100%;
-      position           : absolute;
-      top                : 0;
-      width              : 0;
-    }
-
-    + * { clear : both; }
-  }
 
   .logo { width : 160px; }
 
@@ -111,14 +61,6 @@
     right         : 0;
     width         : 25%;
     z-index       : 20;
-
-    a {
-      color : $white;
-
-      .fa-fw {
-        width : 1em;
-      }
-    }
   }
 
   .popover {
