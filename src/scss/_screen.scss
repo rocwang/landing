@@ -1,36 +1,129 @@
 @media screen {
-  dt {
-    font-weight : normal;
-    white-space : normal !important;
+  .browser-happy {
+    position : absolute;
+    top      : 0;
+    left     : $grid-gutter-width/2;
+    right    : $grid-gutter-width/2;
   }
 
-  h3 { margin-top : 5px; }
-
-  .logo { width : 160px; }
-
-  .white-logo {
-    display : inline;
+  // Home Page
+  .container--contact {
+    height          : 100vh;
+    background      : url('../img/bg.jpg') top right no-repeat;
+    background-size : cover;
   }
 
-  .black-logo {
-    display : none;
+  .contact {
+    position  : absolute;
+    top       : 50%;
+    transform : translateY(-50%);
+  }
+
+  //  Contact
+  .address {
+    @include breakpoint($screen-lg) {
+      padding-left  : 10px;
+      padding-right : 30px;
+      position      : fixed;
+      right         : 0;
+      text-align    : left;
+      top           : 69px;
+      width         : 25%;
+      z-index       : 10;
+    }
+
+    &__list {
+      @include list-unstyled;
+    }
+  }
+
+  // Operation
+  .operation {
+    @include breakpoint($screen-lg) {
+      bottom        : 30px;
+      padding-left  : 10px;
+      padding-right : 30px;
+      position      : fixed;
+      right         : 0;
+      width         : 25%;
+      z-index       : 20;
+    }
+
+    &__list {
+      @include list-unstyled;
+    }
+  }
+
+  // QR Code
+  .qr-code {
+    fill : $color-gold;
+  }
+
+  // Experience
+  .experience {
+    &__company {
+      color       : $text-muted;
+      text-align  : center;
+      font-weight : normal;
+    }
+
+    &__company-link {
+      display : block;
+    }
+
+    &__logo {
+      @include center-block;
+      max-width     : 200px;
+      fill          : currentColor;
+      margin-bottom : $line-height-computed/2;
+
+      @include breakpoint($screen-md) {
+        max-width : 100%;
+      }
+    }
+
+    &__description:not(:last-child) {
+      padding-bottom : $line-height-computed/2;
+      border-bottom  : 2px solid $color-dark-gray;
+      margin-bottom  : $line-height-computed;
+    }
   }
 
   .portfolio {
-    font-size : 0;
+
+    &__list {
+      @include list-unstyled;
+      display         : flex;
+      flex-flow       : row wrap;
+      justify-content : space-around;
+      align-items     : center;
+    }
+
+    &__list-item {
+      flex          : 1 1 130px;
+      display       : block;
+      max-width     : 130px;
+      max-height    : 50px;
+      margin-top    : $line-height-computed;
+      margin-bottom : $line-height-computed;
+    }
+
+    &__logo-link {
+      display : block;
+    }
+
+    &__logo {
+      display    : block;
+      fill       : currentColor;
+      max-height : 50px;
+    }
   }
 
-  .app-store-badge {
-    background : url('../img/badge_appstore-lrg.svg') no-repeat;
-    display    : inline-block;
-    height     : 40px;
-    overflow   : hidden;
-    width      : 135px;
-  }
+  .education {
 
-  // Adaptive video
-  .embed-responsive {
-    margin-bottom : 20px;
+    &__logo {
+      @include img-responsive;
+    }
   }
 
   // Skills
@@ -38,33 +131,12 @@
     padding-left : 15px;
   }
 
-  //  Contact
-  .roc-address {
-    padding-left  : 10px;
-    padding-right : 30px;
-    position      : fixed;
-    right         : 0;
-    text-align    : left;
-    top           : 69px;
-    width         : 25%;
-    z-index       : 10;
-
-    .cv-link { display : none; }
-  }
-
-  //  Operation
-  .roc-operation {
-    bottom        : 30px;
-    padding-left  : 10px;
-    padding-right : 30px;
-    position      : fixed;
-    right         : 0;
-    width         : 25%;
-    z-index       : 20;
+  // Adaptive video
+  .embed-responsive {
+    margin-bottom : 20px;
   }
 
   .popover {
-    color    : $popover-color;
     position : fixed;
   }
 
@@ -85,4 +157,5 @@
       float : right;
     }
   }
+
 }

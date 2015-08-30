@@ -15,10 +15,11 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-primary:         $color-red !default; // #337ab7
+
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
-$brand-warning:         $c-kiwi-light-green !default;
+$brand-warning: $color-gold !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -27,12 +28,12 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               $c-kiwi-green !default;
+$body-bg:               $color-black !default;
 //** Global text color on `<body>`.
-$text-color:            $c-kiwi-dark-brown !default;
+$text-color:            white !default;
 
 //** Global textual link color.
-$link-color:            $c-kiwi-brown !default;
+$link-color:            #d9cb9e !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -853,7 +854,7 @@ $pre-scrollable-max-height:   340px !default;
 //** Horizontal offset for forms and lists.
 $component-offset-horizontal: 180px !default;
 //** Text muted color
-$text-muted:                  $gray-light !default;
+$text-muted: $color-light-gray !default;
 //** Abbreviations and acronyms border color
 $abbr-border-color:           $gray-light !default;
 //** Headings small color

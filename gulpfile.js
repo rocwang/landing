@@ -1,5 +1,10 @@
 'use strict';
 
+// Todo: file rev
+// Todo: Add html validation support
+// Todo: Add scss-lint support
+// Todo: Add jshint support
+
 // Load plugins
 var gulp                = require('gulp'),
 
@@ -28,56 +33,57 @@ var gulp                = require('gulp'),
     concat              = require('gulp-concat'),
 
     // Image plugins
-    imagemin            = require('gulp-imagemin');
+    imagemin            = require('gulp-imagemin'),
+    svgSprite           = require('gulp-svg-sprite');
 
 // Allows gulp --dist to be run for production compilation
 var isProduction = util.env.dist ? true : false;
 
+var onError = notify.onError("Error: <%= error.message %>");
+
 // Base paths
 var basePaths = {
-  vendor: './src/bower_components/',
+  vendor: './node_modules/',
   src   : './src/',
   dest  : './dist/'
 };
 
 // paths definitions
 var srcFiles = {
-  scss: [
-    'scss/vendor.scss',
-    'scss/app.scss'
+  scss  : [
+    'scss/app.scss',
   ],
-  js  : [
+  js    : [
     'js/vendor.js',
-    'js/app.js'
+    'js/app.js',
   ],
-  img : [
+  img   : [
     'img/**',
-    'bower_components/blueimp-gallery/img/**'
+    '../node_modules/photoswipe/dist/default-skin/default-skin.png',
+    '../node_modules/photoswipe/dist/default-skin/default-skin.svg',
+    '../node_modules/photoswipe/dist/default-skin/preloader.gif',
   ],
-  font: [
-    'font-awesome/fonts/*'
+  sprite: [
+    'sprite/*.svg',
   ],
-  html: [
+  html  : [
     'index.html',
-    '404.html'
   ],
-  misc: [
+  misc  : [
     'pdf/*.pdf',
     '.htaccess',
     'apple-touch-icon.png',
     'favicon.ico',
     'humans.txt',
-    'robots.txt'
+    'robots.txt',
   ]
 };
-
-var onError = notify.onError("Error: <%= error.message %>");
 
 gulp.task('clean', function (cb) {
   del('./dist/', cb);
 });
 
-gulp.task('css', function () {
+gulp.task('scss', function () {
   return gulp.src(srcFiles.scss, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? util.noop() : sourcemaps.init())
@@ -101,18 +107,8 @@ gulp.task('css', function () {
     .pipe(gulp.dest(basePaths.dest + 'css'));
 });
 
-// Todo: Add jshint support
 gulp.task('js', function () {
-  // Modernizr.js
-  var modernizr = gulp.src(basePaths.vendor + 'modernizr/modernizr.js')
-
-    .pipe(plumber({errorHandler: onError}))
-    .pipe(isProduction ? util.noop() : sourcemaps.init())
-    .pipe(uglify())
-    .pipe(isProduction ? util.noop() : sourcemaps.write('./'))
-    .pipe(gulp.dest(basePaths.dest + 'js'));
-
-  var mergedStream = merge(modernizr);
+  var mergedStream = merge();
 
   srcFiles.js.forEach(function (val) {
     var src = require(basePaths.src + val);
@@ -137,10 +133,20 @@ gulp.task('img', function () {
     .pipe(gulp.dest(basePaths.dest + 'img'));
 });
 
-gulp.task('font', function () {
-  return gulp.src(srcFiles.font, {cwd: basePaths.vendor})
+gulp.task('sprite', function () {
+  return gulp.src(srcFiles.sprite, {cwd: basePaths.src})
+
     .pipe(plumber({errorHandler: onError}))
-    .pipe(gulp.dest(basePaths.dest + 'fonts'));
+    .pipe(svgSprite({
+      mode: {
+        symbol: {
+          dest   : '.',
+          sprite : 'sprite.svg',
+          example: false
+        }
+      }
+    }))
+    .pipe(gulp.dest(basePaths.dest + 'img'));
 });
 
 gulp.task('html', function () {
@@ -170,33 +176,35 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(basePaths.dest));
 });
 
-// Todo: file rev
-
 // Default task
-gulp.task('default', ['css', 'js', 'img', 'font', 'misc', 'html']);
+gulp.task('default', Object.keys(srcFiles));
 
 // Watch task
 gulp.task('watch', ['default'], function () {
-  gulp.watch('scss/**', {cwd: basePaths.src}, ['css']);
-  gulp.watch('js/**', {cwd: basePaths.src}, ['js']);
-  gulp.watch('img/**', {cwd: basePaths.src}, ['img']);
-  gulp.watch('*.html', {cwd: basePaths.src}, ['html']);
-  gulp.watch(srcFiles.misc, {cwd: basePaths.src}, ['misc']);
 
-  gulp.watch([
-      'js/*.js',
-      'css/*.css',
-      'img/**',
-      '*.html',
-    ], {
-      cwd: basePaths.dest
-    },
-    browserSync.reload
-  );
+  Object.keys(srcFiles).forEach(function (element) {
+    var watchedFiles;
+    switch (element) {
+      case 'scss':
+        watchedFiles = 'scss/**';
+        break;
+      case 'js':
+        watchedFiles = 'js/**';
+        break;
+      default :
+        watchedFiles = srcFiles[element];
+        break;
+    }
+
+    gulp.watch(watchedFiles, {cwd: basePaths.src}, [element]);
+  });
+
+  gulp.watch(['js/*.js', 'css/*.css', 'img/**', '*.html'], {cwd: basePaths.dest}, browserSync.reload);
 
   browserSync({
     server: {
       baseDir: basePaths.dest
-    }
+    },
+    open  : false
   });
 });
