@@ -1,131 +1,156 @@
 @media screen {
 
-  body {
-    @include breakpoint($screen-xs) {
+  .bg {
+    background-image    : url('../img/roc-small.jpg');
+    background-position : top right;
+    background-repeat   : no-repeat;
+    background-size     : auto 100vh;
+
+    @include breakpoint($screen-sm) {
       background-image      : url('../img/roc-large.jpg');
-      background-position   : top right;
-      background-repeat     : no-repeat;
-      background-size       : auto 100vh;
       background-attachment : fixed;
     }
+
+    @include breakpoint($screen-md) {
+      background-image : none;
+    }
+  }
+
+  h2 {
+    margin-top : $line-height-computed*2;
   }
 
   h3:first-child {
     margin-top : 0;
   }
 
+  // Homepage background
+  .video-bg {
+    z-index   : -10;
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    transform : translate(-50%, -50%);
+    width     : 100vw;
+    height    : 100vh;
+    overflow  : hidden;
+    display   : none;
+
+    @include breakpoint($screen-md) {
+      display : block;
+    }
+
+    &::before {
+      content           : '';
+      position          : absolute;
+      width             : 100%;
+      height            : 100%;
+      background-repeat : repeat;
+      background-image  : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
+      //background-repeat : no-repeat, repeat;
+      //background-image  : linear-gradient(to bottom, transparent 0%, transparent 80%, #{$color-black} 100%), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
+      //background-size   : 100% 100%, auto auto;
+    }
+
+    &__video {
+      min-width  : 100%;
+      min-height : 100%;
+    }
+  }
+
   .browser-happy {
     position : absolute;
-    top      : 0;
-    left     : 0;
-    right    : 0;
-    margin   : $line-height-computed/2 $grid-gutter-width/2 0;
-
-    @include breakpoint($screen-xs) {
-      position : static;
-    }
+    top      : $line-height-computed/2;
+    left     : $grid-gutter-width/2;
+    right    : $grid-gutter-width/2;
   }
 
   // Hire Me
   .hire-me {
-    position   : absolute;
-    top        : 59%;
-    right      : 0;
-    width      : 7%;
-    height     : 7%;
-    z-index    : 10;
-    background : $color-red;
-
-    @include breakpoint($screen-xs) {
-      position : fixed;
-    }
-  }
-
-  // Home Page
-  .container--contact {
-    height          : 100vh;
-    background      : url('../img/roc-small.jpg') top right no-repeat;
-    background-size : cover;
+    position : absolute;
+    top      : 59%;
+    right    : 0;
+    width    : 7%;
+    height   : 7%;
+    z-index  : 10;
+    //background-color : $color-light-gray;
 
     @include breakpoint($screen-sm) {
-      background : none;
-    }
-  }
-
-  .contact {
-    position  : absolute;
-    top       : 50%;
-    transform : translateY(-50%);
-  }
-
-  //  Contact
-  .address {
-    @include breakpoint($screen-lg) {
-      padding-left  : 10px;
-      padding-right : 30px;
-      position      : fixed;
-      right         : 0;
-      text-align    : left;
-      top           : 69px;
-      width         : 25%;
-      z-index       : 10;
-    }
-
-    &__list {
-      @include list-unstyled;
-    }
-  }
-
-  // Operation
-  .operation {
-    @include breakpoint($screen-lg) {
-      bottom        : 30px;
-      padding-left  : 10px;
-      padding-right : 30px;
-      position      : fixed;
-      right         : 0;
-      width         : 25%;
-      z-index       : 20;
-    }
-
-    &__list {
-      @include list-unstyled;
+      position : fixed;
     }
   }
 
   // QR Code
   .qr-code {
-    fill     : $color-gold;
-    position : absolute;
-    top      : 60px;
-    right    : 30px;
-    display  : none;
+    display : none;
+  }
 
-    @include breakpoint($screen-md) {
-      display : block;
+  //  Contact
+  .contact {
+    position  : absolute;
+    top       : 50%;
+    transform : translateY(-50%);
+
+    // Name
+    &__name {
+      font-weight   : 300;
+      margin-bottom : $line-height-computed;
+
+      @include breakpoint($screen-sm) {
+        font-size : $font-size-base *6;
+      }
+
+      @include breakpoint($screen-md) {
+        font-weight : 100;
+        font-size   : $font-size-base *10;
+      }
+    }
+
+    // Address
+    &__address {
+      @include list-unstyled;
+
+      @include breakpoint($screen-sm) {
+        @include oneline-list;
+      }
+    }
+
+    // Operation
+    &__operation {
+      @include list-unstyled;
+
+      @include breakpoint($screen-sm) {
+        @include oneline-list;
+      }
+    }
+
+    // Leave the one screen sapce
+    & + * {
+      margin-top : calc(100vh + #{$line-height-computed});
     }
   }
 
   // Experience
   .experience {
     &__company {
-      color       : $text-muted;
-      text-align  : center;
-      font-weight : normal;
+      color         : $text-muted;
+      text-align    : center;
+      font-weight   : normal;
+      margin-bottom : $line-height-computed;
     }
 
     &__company-link {
-      display : block;
+      display       : inline-block;
+      margin-bottom : $line-height-computed/2;
     }
 
     &__logo {
-      @include center-block;
-      max-width     : 200px;
-      fill          : currentColor;
-      margin-bottom : $line-height-computed/2;
+      display : block;
+      width   : 200px;
+      fill    : currentColor;
 
-      @include breakpoint($screen-md) {
-        max-width : 100%;
+      @include breakpoint($screen-sm) {
+        width : 160px;
       }
     }
 
@@ -133,6 +158,11 @@
       padding-bottom : $line-height-computed/2;
       border-bottom  : 2px solid $color-dark-gray;
       margin-bottom  : $line-height-computed;
+
+      @include breakpoint($screen-sm) {
+        padding-bottom : 0;
+        border-bottom  : none;
+      }
     }
   }
 
@@ -150,9 +180,13 @@
       display       : block;
       flex          : 1 1 40%;
       max-width     : 40%;
-      max-height    : 50px;
       margin-top    : $line-height-computed;
       margin-bottom : $line-height-computed;
+
+      @include breakpoint($screen-sm) {
+        flex-basis : 30%;
+        max-width  : 30%;
+      }
     }
 
     &__logo-link {
@@ -160,23 +194,32 @@
     }
 
     &__logo {
-      display    : block;
-      fill       : currentColor;
-      max-height : 50px;
+      display      : block;
+      fill         : currentColor;
+      margin-left  : auto;
+      margin-right : auto;
+      max-width    : 200px;
+      max-height   : 50px;
     }
   }
 
   // Personal Projects
   .personal-projects {
     &__logo-container {
-      text-align  : center;
-      font-weight : normal;
-      color       : $text-muted;
+      text-align    : center;
+      font-weight   : normal;
+      color         : $text-muted;
+      margin-bottom : $line-height-computed;
+    }
+
+    &__logo-link {
+      display       : inline-block;
+      margin-bottom : $line-height-computed/2;
     }
 
     &__logo {
-      @include center-block;
-      margin-bottom : $line-height-computed/2;
+      display : block;
+      width   : 58px;
     }
   }
 
@@ -190,19 +233,23 @@
       margin-bottom : $line-height-computed/2;
     }
 
-    &__logo {
-      @include center-block;
-      max-width     : 200px;
-      fill          : currentColor;
-      margin-bottom : $line-height-computed/2;
-
-      @include breakpoint($screen-md) {
-        max-width : 100%;
-      }
-    }
-
     &__description {
       margin-bottom : $line-height-computed;
+    }
+
+    &__logo-link {
+      display       : inline-block;
+      margin-bottom : $line-height-computed/2;
+    }
+
+    &__logo {
+      display : block;
+      width   : 200px;
+      fill    : currentColor;
+
+      @include breakpoint($screen-sm) {
+        width : 160px;
+      }
     }
   }
 
@@ -216,37 +263,82 @@
     }
 
     &__list-item {
-      text-align : center;
-      flex       : 1 1 100%;
-      max-width  : 100%;
+      flex        : 1 1 100%;
+      max-width   : 100%;
+      display     : flex;
+      flex-flow   : column nowrap;
+      align-items : center;
 
       &:not(:last-child) {
         margin-bottom : $line-height-computed * 2;
+
+        @include breakpoint($screen-sm) {
+          margin-bottom : $line-height-computed;
+        }
       }
 
-      @include breakpoint($screen-md) {
-        max-width : 25%;
+      @include breakpoint($screen-sm) {
+        flex-direction : row;
+      }
+
+      @include breakpoint($screen-lg) {
+        flex-direction : column;
+        flex-basis     : 33%;
+        max-width      : 33%;
       }
     }
 
     &__logo-container {
       margin-bottom : $line-height-computed;
+      flex          : 0 0 auto;
+
+      @include breakpoint($screen-sm) {
+        margin-bottom : 0;
+        margin-right  : $grid-gutter-width;
+        width         : 207px;
+        position      : relative;
+
+        > .certificates__link,
+        > .certificates__logo {
+          float : right;
+        }
+      }
 
       @include breakpoint($screen-md) {
-        @include center-block;
-        width    : 207px;
-        height   : 116px;
-        position : relative;
+        height : 116px;
+
+        > .certificates__link,
+        > .certificates__logo {
+          float     : none;
+          position  : absolute;
+          top       : 50%;
+          left      : 50%;
+          transform : translate(-50%, -50%);
+        }
+      }
+
+      @include breakpoint($screen-lg) {
+        margin-bottom : $line-height-computed;
+        margin-right  : 0;
       }
     }
 
-    &__logo {
-      @include breakpoint($screen-md) {
-        position  : absolute;
-        top       : 50%;
-        left      : 50%;
-        transform : translate(-50%, -50%);
+    &__description {
+      flex       : 1 0 auto;
+      text-align : center;
+
+      @include breakpoint($screen-sm) {
+        text-align : left;
       }
+
+      @include breakpoint($screen-lg) {
+        text-align : center;
+      }
+    }
+
+    &__link,
+    &__logo {
+      display : block;
     }
   }
 
@@ -254,4 +346,5 @@
   .trivia .embed-responsive {
     margin-bottom : 20px;
   }
+
 }

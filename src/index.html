@@ -11,307 +11,308 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="author" href="humans.txt">
 
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,300,100'>
   <link rel="stylesheet" href="css/app.css">
 </head>
-<body>
+<body class="bg">
 
 <!-- Alert to outdated browsers -->
 <!--[if lte IE 9]>
-<![endif]-->
 <div class="alert alert-warning hidden-print browser-happy">
   You are using an <strong>outdated</strong> browser. Please
   <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a>
   to improve your experience.
 </div>
+<![endif]-->
 
-<!--<video width="320" height="240" autoplay>
-  <source src="/bungy-jump.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>-->
+<div class="video-bg">
+  <video autoplay muted loop class="video-bg__video">
+    <source src="/bungy-jump.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 <div id="hire-me" class="hire-me hidden-print"></div>
 
-<svg class="qr-code">
+<svg class="qr-code" viewBox="0 0 100 100">
   <use xlink:href="img/sprite.svg#qr-code"/>
 </svg>
 
-<div class="container container--contact">
-
-  <div class="contact">
-    <!-- Name -->
-    <h1 class="name">Roc Wang</h1>
-
-    <!-- Contact -->
-    <address class="address">
-      <ul class="address__list">
-        <li>
-          <a href="tel:+64-027-949-1310" title="Telphone">
-            <svg class="icon">
-              <use xlink:href="img/sprite.svg#icon-phone"/>
-            </svg>
-            +64 027 949 1310
-          </a>
-        </li>
-        <li>
-          <a href="mailto:roc@kiwiberry.nz">
-            <svg class="icon">
-              <use xlink:href="img/sprite.svg#icon-envelope"/>
-            </svg>
-            roc@kiwiberry.nz
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <svg class="icon">
-              <use xlink:href="img/sprite.svg#icon-globe"/>
-            </svg>
-            http://cv.rocwang.me
-          </a>
-        </li>
-      </ul>
-    </address>
-
-    <!-- Operations -->
-    <aside class="operation">
-      <ul class="operation__list hidden-print">
-        <li>
-          <a href="pdf/pengwang_resume.pdf" data-toggle="tooltip" title="Download Roc's CV">
-            <svg class="icon">
-              <use xlink:href="img/sprite.svg#icon-download"/>
-            </svg>
-            Download
-          </a>
-        </li>
-        <li>
-          <a class="print js-print" href="#" data-toggle="tooltip" title="Print Roc's CV">
-            <svg class="icon">
-              <use xlink:href="img/sprite.svg#icon-print"/>
-            </svg>
-            Print
-          </a>
-        </li>
-      </ul>
-    </aside>
-  </div>
-</div>
 
 <div class="container">
 
-  <section class="about-me hidden-print">
-    <h2>About Me</h2>
+  <!-- Contact -->
+  <section class="contact">
+    <!-- Name -->
+    <h1 class="contact__name">Roc Wang</h1>
 
-    <p>Hi, I'm Roc. I build websites at Moustache Republic, an digital agency focusing on e-commerce in Auckland, New
-      Zealand.</p>
-  </section>
-
-  <section class="objective">
-    <h2>Objective</h2>
-
-    <p>To obtain a web development position building the front-end and/or back-end of web sites.</p>
-  </section>
-
-  <section class="experience">
-    <h2>Experience</h2>
-
-    <dl class="dl-horizontal">
-      <dt class="experience__company">
-        <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 230 115" class="experience__logo">
-            <use xlink:href="img/sprite.svg#moustache-republic"/>
+    <!-- Address -->
+    <ul class="contact__address">
+      <li>
+        <a href="tel:+64-027-949-1310" title="Telphone">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-phone"/>
           </svg>
-        </a>
-
-        Feb 2014 – Present<br>
-        Moustache Republic<br>
-        Auckland, New Zealand
-      </dt>
-      <dd class="experience__description">
-        <h3>Magento Web Developer</h3>
-        <ul>
-          <li>Build cutting edge e-commerce websites from end to end. Responsible for both front-end and back-end
-            development, site deployment and on-going maintenance.
-          </li>
-
-          <li>Develop high quality commercial Magento extensions like “NZ Post Address Autocomplete”, “MR Ajax
-            Cart”.
-          </li>
-
-          <li>Provide professional technical support and custom development for existing e-commerce sites, including
-            troubleshooting , re-theming and new feature implementation and so on.
-          </li>
-
-          <li>Organise training program in the company and lecture several tutorial on CLI, git, vim, modern Magento
-            workflow, front-end performance etc.
-          </li>
-        </ul>
-      </dd>
-
-      <dt class="experience__company">
-        <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 208.741 27.991" class="experience__logo">
-            <use xlink:href="img/sprite.svg#tencent"/>
-          </svg>
-        </a>
-
-        Mar 2010 – Apr 2013<br>
-        Tencent<br>
-        Shenzhen, China
-      </dt>
-      <dd class="experience__description">
-        <h3>Web Developer</h3>
-        <ul>
-          <li>Led a team to create a custimized PHP framework called Vii, which is based on Yii framework; wrote
-            a whole set of API documents and unit tests by Markdown, PHPDocumentor and PHPUnit, remarkably
-            improve the developing efficiency.
-          </li>
-          <li>Independently constructed <a href="http://m.vip.qq.com" target="_blank">the mobile site</a> for QQ
-            VIP and its accompanying CMS from scrach via Bootstrap, SQLite etc., brought the user experience on
-            mobile devices to the next level.
-          </li>
-          <li>Implemented <strong>more than 30 activity/promotion mini sites</strong> utilizing jQuery,
-            backbone.js, mustache.js and PHP, which boosted ARPU and total revenue.
-          </li>
-          <li>Designed and developed a brand new refined marketing system end to end, dramatically improved the
-            accuracy of advertisements.
-          <li>Built several operation support systems and in-house tools: User Notification, Prize Delivery,
-            Activity Management, etc., which increase the productivity enormously for the dev team and the
-            prodcution team.
-          </li>
-          <li>As a mentor, worked closely with a intern to help her implement loads of requirements, and got
-            highly commented.
-          </li>
-          <li>Published <strong>6 open source projects</strong> in the company, honored with the most active
-            developer on 2013.
-          </li>
-          <li>Maintained the main site of <a href="http://vip.qq.com" target="_blank">QQ VIP</a>, the biggest
-            online value add-on service in China, successfully fulfilled the daily visits from more than
-            <strong>27 millions members</strong>.
-          </li>
-        </ul>
-        <small class="text-muted">* Tencent is the fourth-largest Internet company in the world after Google,
-          Amazon, and Ebay, as of August 2012.
-        </small>
-      </dd>
-
-      <dt class="experience__company">
-        <a href="http://www.infosys.com/" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 96.771 37.686" class="experience__logo">
-            <use xlink:href="img/sprite.svg#infosys"/>
-          </svg>
-        </a>
-
-        Sep 2006 – Apr 2007<br>
-        Infosys<br>
-        Mysore, India
-      </dt>
-      <dd class="experience__description">
-        <h3>Intern</h3>
-        <ul>
-          <li>Admitted to the Infosys Chinese Student Internship of 100 students selected from Top 20
-            universities all over China; ranked No. 1 among the candidates of uestcC
-          </li>
-          <li>Graduated from the Mainframe stream class, whth grade A for all the courses, which were JCL,
-            COBOL, CICS, DB2, VSAM File Processing and Quality Assurance, etc.
-          </li>
-          <li>With the MVC design pattern in mind, implemented a simulated Banking System which handled basic
-            transactions, such as Withdrawal, Deposit and Transfer
-          </li>
-          <li>Involved in the project "Using Text Tagging and Annotation Engine Java Libraries in .NET
-            Applications" in the Data Mining Team of SETLabs, studied and achieved 2 ways to accomplish
-            interoperability between .NET and Java platforms.
-          </li>
-        </ul>
-        <small class="text-muted">* Infosys is the third-largest India-based IT services company by 2012
-          revenues.
-        </small>
-      </dd>
-    </dl>
-  </section>
-
-  <section class="portfolio hidden-print">
-    <h2>Portfolio</h2>
-
-    <ul class="portfolio__list">
-      <li class="portfolio__list-item">
-        <a href="http://www.superette.co.nz/" target="_blank" class="portfolio__logo-link" title="Superette">
-          <svg viewBox="0 0 129.271 20.029" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#superette"/>
-          </svg>
+          +64 027 949 1310
         </a>
       </li>
-      <li class="portfolio__list-item">
-        <a href="http://www.trishpeng.com/" target="_blank" class="portfolio__logo-link" title="Trishpeng">
-          <svg viewBox="0 0 150 49" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#trishpeng"/>
+      <li>
+        <a href="mailto:roc@kiwiberry.nz">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-envelope"/>
           </svg>
+          roc@kiwiberry.nz
         </a>
       </li>
-      <li class="portfolio__list-item">
-        <a href="http://theliquoriceland.rocwang.me/"
-           target="_blank"
-           class="portfolio__logo-link"
-           title="The Liquoriceland">
-          <svg viewBox="0 0 881.4 271.6" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#theliquoriceland"/>
+      <li>
+        <a href="/">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-globe"/>
           </svg>
+          http://cv.rocwang.me
         </a>
       </li>
-      <li class="portfolio__list-item">
-        <a href="http://www.huckleberry.nz/" target="_blank" class="portfolio__logo-link" title="Huckleberry">
-          <svg viewBox="0 0 580.3 104.1" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#huckleberry"/>
+    </ul>
+
+    <!-- Operations -->
+    <ul class="contact__operation hidden-print">
+      <li>
+        <a href="pdf/pengwang_resume.pdf" title="Download Roc's CV">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-download"/>
           </svg>
+          Download
         </a>
       </li>
-      <li class="portfolio__list-item">
-        <a href="http://shop.aucklandnz.com/" target="_blank" class="portfolio__logo-link" title="ATEED">
-          <svg viewBox="0 0 444.2 394.9" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#ateed"/>
+      <li>
+        <a class="print js-print" href="#" title="Print Roc's CV">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-print"/>
           </svg>
-        </a>
-      </li>
-      <li class="portfolio__list-item">
-        <a href="http://vip.qq.com/"
-           target="_blank"
-           class="portfolio__logo-link"
-           title="QQ VIP"
-           id="portfolio__logo-link--qq">
-          <svg viewBox="0 0 174.7 191.9" class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#qq"/>
-          </svg>
+          Print
         </a>
       </li>
     </ul>
   </section>
 
-  <section class="personal-projects">
-    <h2>Personal Projects</h2>
+  <div class="row">
+    <div class="col-sm-9 col-md-12">
 
-    <dl class="dl-horizontal">
-      <dt class="personal-projects__logo-container">
-        <img src="img/doless.png" alt="Do Less Logo" class="personal-projects__logo img-rounded">
-        Apr 2013 – Present
-      </dt>
-      <dd>
-        <h3>Do Less</h3>
-        Do Less is a companion app for the native Reminders app on iOS, by which you could choose the three most
-        important tasks to do at a time.
-        Do Less helps you focus and accomplish more by doing less.<br>
-        <a href="https://github.com/rocwang/Do-Less" target="_blank">View the source code</a>
-      </dd>
-    </dl>
-  </section>
+      <section class="about-me hidden-print">
+        <h2>About Me</h2>
 
-  <section class="skills">
-    <h2>Skills</h2>
+        <p>Hi, I'm Roc. I build websites at Moustache Republic, an digital agency focusing on e-commerce in Auckland,
+          New
+          Zealand.</p>
+      </section>
 
-    <div class="row">
-      <div class="col-sm-4">
-        <h3>Language</h3>
+      <section class="objective">
+        <h2>Objective</h2>
+
+        <p>To obtain a web development position building the front-end and/or back-end of web sites.</p>
+      </section>
+
+      <section class="experience">
+        <h2>Experience</h2>
 
         <dl class="dl-horizontal">
-          <dt class="hidden-xs">HTML</dt>
+          <dt class="experience__company">
+            <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
+              <svg viewBox="0 0 230 115" class="experience__logo">
+                <use xlink:href="img/sprite.svg#moustache-republic"/>
+              </svg>
+            </a><br>
+
+            Feb 2014 – Present<br>
+            Moustache Republic<br>
+            Auckland, New Zealand
+          </dt>
+          <dd class="experience__description">
+            <h3>Magento Web Developer</h3>
+            <ul>
+              <li>Build cutting edge e-commerce websites from end to end. Responsible for both front-end and back-end
+                development, site deployment and on-going maintenance.
+              </li>
+
+              <li>Develop high quality commercial Magento extensions like “NZ Post Address Autocomplete”, “MR Ajax
+                Cart”.
+              </li>
+
+              <li>Provide professional technical support and custom development for existing e-commerce sites, including
+                troubleshooting , re-theming and new feature implementation and so on.
+              </li>
+
+              <li>Organise training program in the company and lecture several tutorial on CLI, git, vim, modern Magento
+                workflow, front-end performance etc.
+              </li>
+            </ul>
+          </dd>
+
+          <dt class="experience__company">
+            <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
+              <svg viewBox="0 0 208.741 27.991" class="experience__logo">
+                <use xlink:href="img/sprite.svg#tencent"/>
+              </svg>
+            </a><br>
+
+            Mar 2010 – Apr 2013<br>
+            Tencent<br>
+            Shenzhen, China
+          </dt>
+          <dd class="experience__description">
+            <h3>Web Developer</h3>
+            <ul>
+              <li>Led a team to create a custimized PHP framework called Vii, which is based on Yii framework; wrote
+                a whole set of API documents and unit tests by Markdown, PHPDocumentor and PHPUnit, remarkably
+                improve the developing efficiency.
+              </li>
+              <li>Independently constructed <a href="http://m.vip.qq.com" target="_blank">the mobile site</a> for QQ
+                VIP and its accompanying CMS from scrach via Bootstrap, SQLite etc., brought the user experience on
+                mobile devices to the next level.
+              </li>
+              <li>Implemented <strong>more than 30 activity/promotion mini sites</strong> utilizing jQuery,
+                backbone.js, mustache.js and PHP, which boosted ARPU and total revenue.
+              </li>
+              <li>Designed and developed a brand new refined marketing system end to end, dramatically improved the
+                accuracy of advertisements.
+              <li>Built several operation support systems and in-house tools: User Notification, Prize Delivery,
+                Activity Management, etc., which increase the productivity enormously for the dev team and the
+                prodcution team.
+              </li>
+              <li>As a mentor, worked closely with a intern to help her implement loads of requirements, and got
+                highly commented.
+              </li>
+              <li>Published <strong>6 open source projects</strong> in the company, honored with the most active
+                developer on 2013.
+              </li>
+              <li>Maintained the main site of <a href="http://vip.qq.com" target="_blank">QQ VIP</a>, the biggest
+                online value add-on service in China, successfully fulfilled the daily visits from more than
+                <strong>27 millions members</strong>.
+              </li>
+            </ul>
+            <small class="text-muted">* Tencent is the fourth-largest Internet company in the world after Google,
+              Amazon, and Ebay, as of August 2012.
+            </small>
+          </dd>
+
+          <dt class="experience__company">
+            <a href="http://www.infosys.com/" target="_blank" class="experience__company-link">
+              <svg viewBox="0 0 96.771 37.686" class="experience__logo">
+                <use xlink:href="img/sprite.svg#infosys"/>
+              </svg>
+            </a><br>
+
+            Sep 2006 – Apr 2007<br>
+            Infosys<br>
+            Mysore, India
+          </dt>
+          <dd class="experience__description">
+            <h3>Intern</h3>
+            <ul>
+              <li>Admitted to the Infosys Chinese Student Internship of 100 students selected from Top 20
+                universities all over China; ranked No. 1 among the candidates of uestcC
+              </li>
+              <li>Graduated from the Mainframe stream class, whth grade A for all the courses, which were JCL,
+                COBOL, CICS, DB2, VSAM File Processing and Quality Assurance, etc.
+              </li>
+              <li>With the MVC design pattern in mind, implemented a simulated Banking System which handled basic
+                transactions, such as Withdrawal, Deposit and Transfer
+              </li>
+              <li>Involved in the project "Using Text Tagging and Annotation Engine Java Libraries in .NET
+                Applications" in the Data Mining Team of SETLabs, studied and achieved 2 ways to accomplish
+                interoperability between .NET and Java platforms.
+              </li>
+            </ul>
+            <small class="text-muted">* Infosys is the third-largest India-based IT services company by 2012
+              revenues.
+            </small>
+          </dd>
+        </dl>
+      </section>
+
+      <section class="portfolio hidden-print">
+        <h2>Portfolio</h2>
+
+        <ul class="portfolio__list">
+          <li class="portfolio__list-item">
+            <a href="http://www.superette.co.nz/" target="_blank" class="portfolio__logo-link" title="Superette">
+              <svg viewBox="0 0 129.271 20.029" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#superette"/>
+              </svg>
+            </a>
+          </li>
+          <li class="portfolio__list-item">
+            <a href="http://www.trishpeng.com/" target="_blank" class="portfolio__logo-link" title="Trishpeng">
+              <svg viewBox="0 0 150 49" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#trishpeng"/>
+              </svg>
+            </a>
+          </li>
+          <li class="portfolio__list-item">
+            <a href="http://theliquoriceland.rocwang.me/"
+               target="_blank"
+               class="portfolio__logo-link"
+               title="The Liquoriceland">
+              <svg viewBox="0 0 881.4 271.6" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#theliquoriceland"/>
+              </svg>
+            </a>
+          </li>
+          <li class="portfolio__list-item">
+            <a href="http://www.huckleberry.nz/" target="_blank" class="portfolio__logo-link" title="Huckleberry">
+              <svg viewBox="0 0 580.3 104.1" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#huckleberry"/>
+              </svg>
+            </a>
+          </li>
+          <li class="portfolio__list-item">
+            <a href="http://shop.aucklandnz.com/" target="_blank" class="portfolio__logo-link" title="ATEED">
+              <svg viewBox="0 0 444.2 394.9" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#ateed"/>
+              </svg>
+            </a>
+          </li>
+          <li class="portfolio__list-item">
+            <a href="http://vip.qq.com/"
+               target="_blank"
+               class="portfolio__logo-link"
+               title="QQ VIP"
+               id="portfolio__logo-link--qq">
+              <svg viewBox="0 0 174.7 191.9" class="portfolio__logo">
+                <use xlink:href="img/sprite.svg#qq"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="personal-projects">
+        <h2>Personal Projects</h2>
+
+        <dl class="dl-horizontal">
+          <dt class="personal-projects__logo-container">
+            <a href="https://github.com/rocwang/Do-Less" class="personal-projects__logo-link">
+              <img src="img/doless.png" alt="Do Less Logo" class="personal-projects__logo img-rounded">
+            </a><br>
+            Apr 2013 – Present
+          </dt>
           <dd>
+            <h3>Do Less</h3>
+            Do Less is a companion app for the native Reminders app on iOS, by which you could choose the three most
+            important tasks to do at a time.
+            Do Less helps you focus and accomplish more by doing less.<br>
+            <a href="https://github.com/rocwang/Do-Less" target="_blank">View the source code</a>
+          </dd>
+        </dl>
+      </section>
+
+      <section class="skills">
+        <h2>Skills</h2>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Language</h3>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -319,12 +320,10 @@
                    style="width: 90%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">HTML</span>
+                <span>HTML</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">CSS (Sass / Less )</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -332,12 +331,10 @@
                    style="width: 80%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">CSS (Sass / Less )</span>
+                <span>CSS (Sass / Less )</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Javascript</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -345,12 +342,10 @@
                    style="width: 80%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Javascript</span>
+                <span>Javascript</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">PHP</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -358,12 +353,10 @@
                    style="width: 90%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">PHP</span>
+                <span>PHP</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Objective-C</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -371,19 +364,14 @@
                    style="width: 33%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Objective-C</span>
+                <span>Objective-C</span>
               </div>
             </div>
-          </dd>
-        </dl>
-      </div>
+          </div>
 
-      <div class="col-sm-4">
-        <h3>Framework</h3>
+          <div class="col-md-4">
+            <h3>Framework</h3>
 
-        <dl class="dl-horizontal">
-          <dt class="hidden-xs">jQuery</dt>
-          <dd>
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -391,12 +379,10 @@
                    style="width: 90%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">jQuery</span>
+                <span>jQuery</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Bootstrap</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -404,12 +390,10 @@
                    style="width: 90%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Bootstrap</span>
+                <span>Bootstrap</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Magento</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -417,12 +401,10 @@
                    style="width: 80%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Magento</span>
+                <span>Magento</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Yii</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -430,32 +412,14 @@
                    style="width: 50%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Yii</span>
+                <span>Yii</span>
               </div>
             </div>
-          </dd>
-        </dl>
-      </div>
+          </div>
 
-      <div class="col-sm-4">
-        <h3>Tools</h3>
+          <div class="col-md-4">
+            <h3>Tools</h3>
 
-        <dl class="dl-horizontal">
-          <dt class="hidden-xs">Vim</dt>
-          <dd>
-            <div class="progress">
-              <div class="progress-bar"
-                   role="progressbar"
-                   aria-valuenow="80"
-                   style="width: 80%;"
-                   aria-valuemin="0"
-                   aria-valuemax="100">
-                <span class="visible-xs">Vim</span>
-              </div>
-            </div>
-          </dd>
-          <dt class="hidden-xs">Git</dt>
-          <dd>
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -463,12 +427,10 @@
                    style="width: 80%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Git</span>
+                <span>Git</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Shell</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -476,12 +438,21 @@
                    style="width: 60%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Shell</span>
+                <span>Shell</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Xcode</dt>
-          <dd>
+
+            <div class="progress">
+              <div class="progress-bar"
+                   role="progressbar"
+                   aria-valuenow="80"
+                   style="width: 80%;"
+                   aria-valuemin="0"
+                   aria-valuemax="100">
+                <span>Vim</span>
+              </div>
+            </div>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -489,12 +460,10 @@
                    style="width: 33%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Xcode</span>
+                <span>Photoshop</span>
               </div>
             </div>
-          </dd>
-          <dt class="hidden-xs">Photoshop</dt>
-          <dd>
+
             <div class="progress">
               <div class="progress-bar"
                    role="progressbar"
@@ -502,126 +471,112 @@
                    style="width: 33%;"
                    aria-valuemin="0"
                    aria-valuemax="100">
-                <span class="visible-xs">Photoshop</span>
+                <span>Xcode</span>
               </div>
             </div>
-          </dd>
-        </dl>
-      </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <dl class="dl-horizontal">
+              <dt class="education__logo-container">
+                <a href="http://www.uestc.edu.cn/" target="_blank" class="education__logo-link">
+                  <svg class="" viewBox="0 0 564 97.2" class="education__logo">
+                    <use xlink:href="img/sprite.svg#uestc"/>
+                  </svg>
+                </a><br>
+
+                Sep 2007 – Jun 2010<br>
+                Chengdu, China
+              </dt>
+              <dd class="education__description">
+                <h3>Master of Engineering</h3>
+                Computer System Architecture, GPA: 3.54/4<br>
+                University of Electronic Science and Technology of China
+              </dd>
+            </dl>
+          </div>
+          <div class="col-lg-6">
+            <dl class="dl-horizontal">
+              <dt class="education__logo-container">
+                <a href="http://www.uestc.edu.cn/" target="_blank" class="education__logo-link">
+                  <svg class="" viewBox="0 0 564 97.2" class="education__logo">
+                    <use xlink:href="img/sprite.svg#uestc"/>
+                  </svg>
+                </a><br>
+
+                Sep 2003 – Jun 2007<br>
+                Chengdu, China
+              </dt>
+              <dd class="education__description">
+                <h3>Bachelor of Engineering</h3>
+                Computer Science &amp; Technology, GPA: 3.47/4<br>
+                University of Electronic Science and Technology of China
+              </dd>
+            </dl>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="certificates hidden-print">
+        <h2>Certificates</h2>
+
+        <ul class="certificates__list">
+          <li class="certificates__list-item">
+
+            <div class="certificates__logo-container">
+              <a href="http://www.magentocommerce.com/certification/directory/dev/1711726/"
+                 title="Magento Certified Developer"
+                 class="certificates__link"
+                 target="_blank"
+                >
+                <img src="img/magento-middle.png" alt="Magento Certified Developer" class="certificates__logo">
+              </a>
+            </div>
+
+            <div class="certificates__description">
+              <h4 class="media-heading">Magento Certified Developer</h4>
+              <span class="text-muted">May 2014</span>
+            </div>
+          </li>
+
+          <li class="certificates__list-item">
+
+            <div class="certificates__logo-container">
+              <img src="img/ibm-db2.jpg" alt="IMB DB2 Certified" class="certificates__logo">
+            </div>
+
+            <div class="certificates__description">
+              <h4>IBM Certified Database Associate</h4>
+              DB2 9 Fundamentals / DB2 Universal Database V8.1 Family<br>
+              <span class="text-muted">Dec 2008 / Jun 2006</span>
+            </div>
+          </li>
+
+          <li class="certificates__list-item">
+
+            <div class="certificates__logo-container">
+              <img src="img/ibm-aix.jpg" alt="IMB AIX Certified" class="certificates__logo">
+            </div>
+
+            <div class="certificates__description">
+              <h4 class="media-heading">IBM eServer Certified Specialist</h4>
+              AIX Basic Operations V5<br>
+              <span class="text-muted">Jun 2006</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
     </div>
-  </section>
-
-  <section class="education">
-    <h2>Education</h2>
-
-    <div class="row">
-      <div class="col-md-6">
-        <dl class="dl-horizontal">
-          <dt class="education__logo-container">
-            <a href="http://www.uestc.edu.cn/" target="_blank" class="education__link">
-              <svg class="" viewBox="0 0 564 97.2" class="education__logo">
-                <use xlink:href="img/sprite.svg#uestc"/>
-              </svg>
-            </a>
-
-            Sep 2007 – Jun 2010<br>
-            Chengdu, China
-          </dt>
-          <dd class="education__description">
-            <h3>Master of Engineering</h3>
-            Computer System Architecture, GPA: 3.54/4<br>
-            University of Electronic Science and Technology of China
-          </dd>
-        </dl>
-      </div>
-
-      <div class="col-md-6">
-        <dl class="dl-horizontal">
-          <dt class="education__logo-container">
-            <a href="http://www.uestc.edu.cn/" target="_blank" class="education__link">
-              <svg class="" viewBox="0 0 564 97.2" class="education__logo">
-                <use xlink:href="img/sprite.svg#uestc"/>
-              </svg>
-            </a>
-
-            Sep 2003 – Jun 2007<br>
-            Chengdu, China
-          </dt>
-          <dd class="education__description">
-            <h3>Bachelor of Engineering</h3>
-            Computer Science &amp; Technology, GPA: 3.47/4<br>
-            University of Electronic Science and Technology of China
-          </dd>
-        </dl>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="certificates hidden-print">
-    <h2>Certificates</h2>
-
-    <ul class="certificates__list">
-      <li class="certificates__list-item">
-
-        <div class="certificates__logo-container">
-          <a href="http://www.magentocommerce.com/certification/directory/dev/1711726/"
-             title="Magento Certified Developer"
-             class="certificates__link"
-             target="_blank"
-            >
-            <img src="img/magento-middle.png" alt="Magento Certified Developer" class="certificates__logo">
-          </a>
-        </div>
-
-        <h4 class="media-heading">Magento Certified Developer</h4>
-
-        <span class="text-muted">May 2014</span>
-      </li>
-
-      <li class="certificates__list-item">
-
-        <div class="certificates__logo-container">
-          <img src="img/ibm-db2.jpg" alt="IMB DB2 Certified" class="certificates__logo">
-        </div>
-
-        <h4>IBM Certified Database Associate</h4>
-        DB2 9 Fundamentals / DB2 Universal Database V8.1 Family<br>
-        <span class="text-muted">Dec 2008 / Jun 2006</span>
-
-      </li>
-
-      <li class="certificates__list-item">
-
-        <div class="certificates__logo-container">
-          <img src="img/ibm-aix.jpg" alt="IMB AIX Certified" class="certificates__logo">
-        </div>
-
-        <h4 class="media-heading">IBM eServer Certified Specialist</h4>
-        AIX Basic Operations V5<br>
-        <span class="text-muted">Jun 2006</span>
-
-      </li>
-    </ul>
-  </section>
-
-  <section class="trivia hidden-print">
-    <h2>Trivia</h2>
-
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="video" src="//www.youtube.com/embed/2kiB1sds59o" seamless allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="video" src="//www.youtube.com/embed/eua_Gwenx8c" seamless allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  </div>
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->

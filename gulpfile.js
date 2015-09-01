@@ -76,6 +76,7 @@ var srcFiles = {
     'favicon.ico',
     'humans.txt',
     'robots.txt',
+    'bungy-jump.mp4',
   ]
 };
 
