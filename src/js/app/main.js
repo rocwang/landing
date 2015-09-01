@@ -51,7 +51,7 @@ jQuery(function ($) {
     {src: 'img/portfolio/tip.jpg', w: 659, h: 600, title: 'In-house Tools - Refined Marketing System'},
   ];
 
-  $('#portfolio__logo-link--qq').click(function(e) {
+  $('#portfolio__logo-link--qq').click(function (e) {
     e.preventDefault();
 
     // Initializes and opens PhotoSwipe
@@ -70,10 +70,20 @@ jQuery(function ($) {
 
   $('[data-toggle="tooltip"]').tooltip();
 
-  $('#hire_roc').popover({
-    content  : 'HIRE ME :)',
-    trigger  : 'hover',
+  $('#hire-me').popover({
+    content  : 'Hire me &#x1f603;',
+    trigger  : 'hover focus',
     placement: 'left',
-    container: 'body'
+    html     : true,
+    container: 'body',
+  });
+
+  $(window).load(function () {
+    setTimeout(function () {
+      $('#hire-me').popover('show');
+      setTimeout(function () {
+        $('#hire-me').popover('hide');
+      }, 3000);
+    }, 3000);
   });
 });

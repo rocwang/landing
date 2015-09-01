@@ -104,7 +104,9 @@ gulp.task('scss', function () {
     }))
 
     .pipe(isProduction ? util.noop() : sourcemaps.write('.'))
-    .pipe(gulp.dest(basePaths.dest + 'css'));
+    .pipe(gulp.dest(basePaths.dest + 'css'))
+    .pipe(browserSync.stream({match: '**/*.css'}));
+
 });
 
 gulp.task('js', function () {
@@ -199,7 +201,7 @@ gulp.task('watch', ['default'], function () {
     gulp.watch(watchedFiles, {cwd: basePaths.src}, [element]);
   });
 
-  gulp.watch(['js/*.js', 'css/*.css', 'img/**', '*.html'], {cwd: basePaths.dest}, browserSync.reload);
+  gulp.watch(['js/*.js', 'img/**', '*.html'], {cwd: basePaths.dest}, browserSync.reload);
 
   browserSync({
     server: {

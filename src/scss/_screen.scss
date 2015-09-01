@@ -1,4 +1,15 @@
 @media screen {
+
+  body {
+    @include breakpoint($screen-xs) {
+      background-image      : url('../img/roc-large.jpg');
+      background-position   : top right;
+      background-repeat     : no-repeat;
+      background-size       : auto 100vh;
+      background-attachment : fixed;
+    }
+  }
+
   h3:first-child {
     margin-top : 0;
   }
@@ -6,15 +17,39 @@
   .browser-happy {
     position : absolute;
     top      : 0;
-    left     : $grid-gutter-width/2;
-    right    : $grid-gutter-width/2;
+    left     : 0;
+    right    : 0;
+    margin   : $line-height-computed/2 $grid-gutter-width/2 0;
+
+    @include breakpoint($screen-xs) {
+      position : static;
+    }
+  }
+
+  // Hire Me
+  .hire-me {
+    position   : absolute;
+    top        : 59%;
+    right      : 0;
+    width      : 7%;
+    height     : 7%;
+    z-index    : 10;
+    background : $color-red;
+
+    @include breakpoint($screen-xs) {
+      position : fixed;
+    }
   }
 
   // Home Page
   .container--contact {
     height          : 100vh;
-    background      : url('../img/bg.jpg') top right no-repeat;
+    background      : url('../img/roc-small.jpg') top right no-repeat;
     background-size : cover;
+
+    @include breakpoint($screen-sm) {
+      background : none;
+    }
   }
 
   .contact {
@@ -64,6 +99,11 @@
     position : absolute;
     top      : 60px;
     right    : 30px;
+    display  : none;
+
+    @include breakpoint($screen-md) {
+      display : block;
+    }
   }
 
   // Experience
@@ -107,9 +147,9 @@
     }
 
     &__list-item {
-      flex          : 1 1 130px;
       display       : block;
-      max-width     : 150px;
+      flex          : 1 1 40%;
+      max-width     : 40%;
       max-height    : 50px;
       margin-top    : $line-height-computed;
       margin-bottom : $line-height-computed;
@@ -126,16 +166,28 @@
     }
   }
 
-  // Skills
-  .progress-bar span {
-    padding-left : 15px;
+  // Personal Projects
+  .personal-projects {
+    &__logo-container {
+      text-align  : center;
+      font-weight : normal;
+      color       : $text-muted;
+    }
+
+    &__logo {
+      @include center-block;
+      margin-bottom : $line-height-computed/2;
+    }
   }
 
+  // Skills
   // Education
   .education {
-    &__university {
-      color       : $text-muted;
-      font-weight : normal;
+    &__logo-container {
+      color         : $text-muted;
+      font-weight   : normal;
+      text-align    : center;
+      margin-bottom : $line-height-computed/2;
     }
 
     &__logo {
@@ -148,6 +200,10 @@
         max-width : 100%;
       }
     }
+
+    &__description {
+      margin-bottom : $line-height-computed;
+    }
   }
 
   // Certificates
@@ -155,50 +211,47 @@
     &__list {
       @include list-unstyled;
       display         : flex;
-      flex-flow       : row nowrap;
+      flex-flow       : row wrap;
       justify-content : space-around;
     }
 
     &__list-item {
       text-align : center;
-      flex       : 1 1 auto;
-      max-width  : 25%;
+      flex       : 1 1 100%;
+      max-width  : 100%;
+
+      &:not(:last-child) {
+        margin-bottom : $line-height-computed * 2;
+      }
+
+      @include breakpoint($screen-md) {
+        max-width : 25%;
+      }
     }
 
     &__logo-container {
-      @include center-block;
-      width         : 207px;
-      height        : 116px;
-      position      : relative;
       margin-bottom : $line-height-computed;
+
+      @include breakpoint($screen-md) {
+        @include center-block;
+        width    : 207px;
+        height   : 116px;
+        position : relative;
+      }
     }
 
     &__logo {
-      @include center-block;
-      position  : absolute;
-      top       : 50%;
-      left      : 50%;
-      transform : translate(-50%, -50%);
+      @include breakpoint($screen-md) {
+        position  : absolute;
+        top       : 50%;
+        left      : 50%;
+        transform : translate(-50%, -50%);
+      }
     }
   }
 
   // Trivia
   .trivia .embed-responsive {
     margin-bottom : 20px;
-  }
-
-  // Hire Me
-  .popover {
-    position : fixed;
-  }
-
-  .hire-roc {
-    display  : block !important;
-    height   : 7%;
-    position : fixed;
-    right    : 0;
-    top      : 59%;
-    width    : 7%;
-    z-index  : 10;
   }
 }
