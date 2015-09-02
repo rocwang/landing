@@ -69,6 +69,7 @@ jQuery(function ($) {
   });
 
   // Hire me
+  /*
   $('#hire-me').popover({
     content  : 'Hire me &#x1f603;',
     trigger  : 'hover',
@@ -77,12 +78,13 @@ jQuery(function ($) {
     container: 'body',
   });
 
-/*  $(window).load(function () {
+ $(window).load(function () {
     setTimeout(function () {
       $('#hire-me').popover('show');
       setTimeout(function () {
         $('#hire-me').popover('hide');
       }, 3000);
     }, 3000);
-  });*/
+  });
+  */
 });

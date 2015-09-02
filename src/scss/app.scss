@@ -1,20 +1,18 @@
+@import 'variables';
+@import 'mixin';
+
 // Break point management
 @import 'breakpoint-sass/stylesheets/breakpoint.scss';
 
 // Photo Swipe
-@import 'photoswipe-settings';
+@import 'vendor-setting/photoswipe';
 @import 'photoswipe/src/css/main.scss';
 @import 'photoswipe/src/css/default-skin/default-skin.scss';
 
-@import 'variables';
-
 // Bootstrap
-@import 'bootstrap/bootstrap';
-
-@import 'mixin';
+@import 'vendor-setting/bootstrap';
 
 // Component
 @import 'component/icon';
-
-@import 'screen';
-@import 'print';
+@import 'component/screen';
+@import 'component/print';

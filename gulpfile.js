@@ -17,6 +17,7 @@ var gulp                = require('gulp'),
     path                = require('path'),
     sourcemaps          = require('gulp-sourcemaps'),
     browserSync         = require('browser-sync'),
+    pdf                 = require('gulp-html-pdf'),
 
     // HTML plugins
     htmlmin             = require('gulp-htmlmin'),
@@ -70,13 +71,8 @@ var srcFiles = {
     'index.html',
   ],
   misc  : [
-    'pdf/*.pdf',
+    '*.*',
     '.htaccess',
-    'apple-touch-icon.png',
-    'favicon.ico',
-    'humans.txt',
-    'robots.txt',
-    'bungy-jump.mp4',
   ]
 };
 
@@ -176,6 +172,13 @@ gulp.task('misc', function () {
     base: basePaths.src
   })
     .pipe(plumber({errorHandler: onError}))
+    .pipe(gulp.dest(basePaths.dest));
+});
+
+// Todo: PDF generating doesn't work yet.
+gulp.task('pdf', ['default'], function () {
+  return gulp.src(srcFiles.misc, {cwd: basePaths.src})
+    .pipe(pdf())
     .pipe(gulp.dest(basePaths.dest));
 });
 
