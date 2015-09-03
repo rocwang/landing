@@ -71,6 +71,7 @@ var srcFiles = {
     'index.html',
   ],
   misc  : [
+    'video/*',
     '*.*',
     '.htaccess',
   ]
