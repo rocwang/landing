@@ -1,62 +1,10 @@
 @media screen {
-
-  .bg {
-    background-image    : url('../img/roc-small.jpg');
-    background-position : top right;
-    background-repeat   : no-repeat;
-    background-size     : auto 100vh;
-    padding-bottom      : $line-height-computed*2;
-
-    @include breakpoint($screen-sm) {
-      background-image      : url('../img/roc-large.jpg');
-      background-attachment : fixed;
-    }
-
-    @include breakpoint($screen-md) {
-      background-image : none;
-    }
-  }
-
   h2 {
     margin-top : $line-height-computed*2;
   }
 
   h3:first-child {
     margin-top : 0;
-  }
-
-  // Homepage background
-  .video-bg {
-    z-index   : -10;
-    position  : absolute;
-    top       : 50%;
-    left      : 50%;
-    transform : translate(-50%, -50%);
-    width     : 100vw;
-    height    : 100vh;
-    overflow  : hidden;
-    display   : none;
-
-    @include breakpoint($screen-md) {
-      display : block;
-    }
-
-    &::before {
-      content           : '';
-      position          : absolute;
-      width             : 100%;
-      height            : 100%;
-      background-repeat : repeat;
-      background-image  : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
-      //background-repeat : no-repeat, repeat;
-      //background-image  : linear-gradient(to bottom, transparent 0%, transparent 80%, #{$color-black} 100%), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
-      //background-size   : 100% 100%, auto auto;
-    }
-
-    &__video {
-      min-width  : 100%;
-      min-height : 100%;
-    }
   }
 
   .browser-happy {
@@ -84,59 +32,6 @@
   // QR Code
   .qr-code {
     display : none;
-  }
-
-  //  Contact
-  .contact {
-    position  : absolute;
-    top       : 50%;
-    transform : translateY(-50%);
-
-    // Name
-    &__name {
-      font-weight   : 300;
-      margin-bottom : $line-height-computed;
-      color         : white;
-      line-height   : 0.8;
-
-      @include breakpoint($screen-sm) {
-        font-size : $font-size-base *6;
-      }
-
-      @include breakpoint($screen-md) {
-        font-weight : 100;
-        font-size   : $font-size-base *10;
-      }
-    }
-
-    &__tag-line {
-      color        : $brand-primary;
-      font-weight  : 100;
-      font-size    : 38.2%;
-    }
-
-    // Address
-    &__address {
-      @include list-unstyled;
-
-      @include breakpoint($screen-sm) {
-        @include list-oneline;
-      }
-    }
-
-    // Operation
-    &__operation {
-      @include list-unstyled;
-
-      @include breakpoint($screen-sm) {
-        @include list-oneline;
-      }
-    }
-
-    // Leave the one screen sapce
-    & + * {
-      margin-top : calc(100vh + #{$line-height-computed});
-    }
   }
 
   .objective { display : none; }

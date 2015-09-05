@@ -12,7 +12,7 @@
   <link rel="author" href="humans.txt">
 
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,300,100'>
-  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/above-the-fold.css" inline>
 </head>
 <body class="bg">
 
@@ -34,72 +34,65 @@
   </video>
 </div>
 
-<!-- "Hire Me" popover -->
-<div id="hire-me" class="hire-me"></div>
+<!-- Contact -->
+<section class="contact">
+  <!-- Name -->
+  <h1 class="contact__name">Roc Wang<br>
+    <small class="contact__tag-line">Building artisanal websites.</small>
+  </h1>
 
-<!-- QR Code -->
-<svg class="qr-code" viewBox="0 0 100 100">
-  <use xlink:href="img/sprite.svg#qr-code"/>
-</svg>
+  <!-- Address -->
+  <ul class="contact__address">
+    <li>
+      <a href="tel:+64-027-949-1310" title="Telphone">
+        <svg class="icon">
+          <use xlink:href="img/sprite.svg#icon-phone"/>
+        </svg>
+        +64 027 949 1310
+      </a>
+    </li>
+    <li>
+      <a href="mailto:roc@kiwiberry.nz">
+        <svg class="icon">
+          <use xlink:href="img/sprite.svg#icon-envelope"/>
+        </svg>
+        roc@kiwiberry.nz
+      </a>
+    </li>
+    <li>
+      <a href="/">
+        <svg class="icon">
+          <use xlink:href="img/sprite.svg#icon-globe"/>
+        </svg>
+        http://cv.rocwang.me
+      </a>
+    </li>
+  </ul>
 
+  <!-- Operations -->
+  <ul class="contact__operation">
+    <li>
+      <a href="rocwang.pdf" title="Download Roc's CV" target="_blank">
+        <svg class="icon">
+          <use xlink:href="img/sprite.svg#icon-download"/>
+        </svg>
+        Download
+      </a>
+    </li>
+    <li>
+      <a class="print js-print" href="#" title="Print Roc's CV">
+        <svg class="icon">
+          <use xlink:href="img/sprite.svg#icon-print"/>
+        </svg>
+        Print
+      </a>
+    </li>
+  </ul>
+</section>
 
 <div class="container">
 
-  <!-- Contact -->
-  <section class="contact">
-    <!-- Name -->
-    <h1 class="contact__name">Roc Wang<br>
-      <small class="contact__tag-line">Building artisanal websites.</small>
-    </h1>
-
-    <!-- Address -->
-    <ul class="contact__address">
-      <li>
-        <a href="tel:+64-027-949-1310" title="Telphone">
-          <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-phone"/>
-          </svg>
-          +64 027 949 1310
-        </a>
-      </li>
-      <li>
-        <a href="mailto:roc@kiwiberry.nz">
-          <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-envelope"/>
-          </svg>
-          roc@kiwiberry.nz
-        </a>
-      </li>
-      <li>
-        <a href="/">
-          <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-globe"/>
-          </svg>
-          http://cv.rocwang.me
-        </a>
-      </li>
-    </ul>
-
-    <!-- Operations -->
-    <ul class="contact__operation">
-      <li>
-        <a href="rocwang.pdf" title="Download Roc's CV" target="_blank">
-          <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-download"/>
-          </svg>
-          Download
-        </a>
-      </li>
-      <li>
-        <a class="print js-print" href="#" title="Print Roc's CV">
-          <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-print"/>
-          </svg>
-          Print
-        </a>
-      </li>
-    </ul>
-  </section>
+  <link rel="stylesheet" href="css/below-the-fold.css">
 
   <div class="row">
     <div class="col-sm-9 col-md-12">
@@ -523,6 +516,14 @@
     </div>
   </div>
 </div>
+
+<!-- "Hire Me" popover -->
+<div id="hire-me" class="hire-me"></div>
+
+<!-- QR Code -->
+<svg class="qr-code" viewBox="0 0 100 100">
+  <use xlink:href="img/sprite.svg#qr-code"/>
+</svg>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">

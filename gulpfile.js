@@ -21,6 +21,7 @@ var gulp                = require('gulp'),
 
     // HTML plugins
     htmlmin             = require('gulp-htmlmin'),
+    inlineSource        = require('gulp-inline-source'),
 
     // CSS plugins
     sass                = require('gulp-sass'),
@@ -52,7 +53,8 @@ var basePaths = {
 // paths definitions
 var srcFiles = {
   scss  : [
-    'scss/app.scss',
+    'scss/above-the-fold.scss',
+    'scss/below-the-fold.scss',
   ],
   js    : [
     'js/vendor.js',
@@ -72,8 +74,12 @@ var srcFiles = {
   ],
   misc  : [
     'video/*',
-    '*.*',
     '.htaccess',
+    'apple-touch-icon.png',
+    'favicon.ico',
+    'humans.txt',
+    'robots.txt',
+    'rocwang.pdf',
   ]
 };
 
@@ -149,9 +155,12 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(basePaths.dest + 'img'));
 });
 
-gulp.task('html', function () {
+gulp.task('html', ['scss'], function () {
   return gulp.src(srcFiles.html, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
+    .pipe(inlineSource({
+      rootpath: basePaths.dest
+    }))
     .pipe(htmlmin({
       collapseBooleanAttributes   : true,
       collapseWhitespace          : true,
