@@ -1,35 +1,9 @@
 # TEAM
 
-    Developer: Peng Wang
-    Email: me@rocwang.me
-    From: Shenzhen, China
+    Roc Wang
+    Email: roc@kiwiberry.nz
+    From: Auckland, New Zealand
 
-    Vivienne Chan
-    Email: vvvvivien@gmail.com
-    From: Shenzhen, China
-
-# TECHNOLOGY COLOPHON
-
-    Languages:
-
-        HTML5
-        CSS3
-        Javascript
-
-    Component:
-
-        jQuery
-        Bootstrap
-        Font Awesome
-        Blueimp-Gallery
-        Isotope
-
-    Tools:
-
-        Bower
-        Chrome
-        Compass
-        Firefox
-        Grunt
-        Safari
-        Vim
+    Vivien Chen
+    Email: vivien@kiwiberry.nz
+    From: Auckland, New Zealand

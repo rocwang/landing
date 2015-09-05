@@ -1,11 +1,7 @@
 @media screen {
-  h2 {
-    margin-top : $line-height-computed*2;
-  }
+  h2 { margin-top : $line-height-computed*2; }
 
-  h3:first-child {
-    margin-top : 0;
-  }
+  h3:first-child { margin-top : 0; }
 
   .browser-happy {
     position : absolute;
@@ -71,10 +67,9 @@
   }
 
   // QR Code
-  .qr-code {
-    display : none;
-  }
+  .qr-code { display : none; }
 
+  // Objective
   .objective { display : none; }
 
   // Experience
@@ -309,9 +304,19 @@
     }
   }
 
-  // Trivia
-  .trivia .embed-responsive {
-    margin-bottom : 20px;
+  .page-footer {
+    margin-top : $line-height-computed;
+  }
+
+  .humans-txt {
+    @include center-block;
+    width : 44px;
+
+    &__img {
+      display : block;
+      width   : 100%;
+      fill    : currentColor;
+    }
   }
 
 }
