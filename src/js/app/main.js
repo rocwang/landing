@@ -74,6 +74,9 @@
 
   // Hire me
   var hireMe = document.getElementById('hire-me');
+  hireMe.addEventListener('touchstart', function () {
+    document.getElementById('hire-me__popover').classList.toggle('hire-me__popover--js-visible');
+  });
   hireMe.addEventListener('mouseenter', function () {
     document.getElementById('hire-me__popover').classList.add('hire-me__popover--js-visible');
   });
