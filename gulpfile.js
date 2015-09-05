@@ -1,10 +1,5 @@
 'use strict';
 
-// Todo: file rev
-// Todo: Add html validation support
-// Todo: Add scss-lint support
-// Todo: Add jshint support
-
 // Load plugins
 var gulp                = require('gulp'),
 
@@ -18,6 +13,8 @@ var gulp                = require('gulp'),
     sourcemaps          = require('gulp-sourcemaps'),
     browserSync         = require('browser-sync'),
     pdf                 = require('gulp-html-pdf'),
+    RevAll              = require('gulp-rev-all'),
+
 
     // HTML plugins
     htmlmin             = require('gulp-htmlmin'),
@@ -45,9 +42,10 @@ var onError = notify.onError("Error: <%= error.message %>");
 
 // Base paths
 var basePaths = {
-  vendor: './node_modules/',
-  src   : './src/',
-  dest  : './dist/'
+  vendor : './node_modules/',
+  src    : './src/',
+  test   : './test/',
+  release: './release/',
 };
 
 // paths definitions
@@ -74,7 +72,6 @@ var srcFiles = {
   ],
   misc  : [
     'video/*',
-    '.htaccess',
     'apple-touch-icon.png',
     'favicon.ico',
     'humans.txt',
@@ -84,7 +81,10 @@ var srcFiles = {
 };
 
 gulp.task('clean', function (cb) {
-  del('./dist/', cb);
+  del([
+    basePaths.test,
+    basePaths.release,
+  ], cb);
 });
 
 gulp.task('scss', function () {
@@ -108,7 +108,7 @@ gulp.task('scss', function () {
     }))
 
     .pipe(isProduction ? util.noop() : sourcemaps.write('.'))
-    .pipe(gulp.dest(basePaths.dest + 'css'))
+    .pipe(gulp.dest(basePaths.test + 'css'))
     .pipe(browserSync.stream({match: '**/*.css'}));
 
 });
@@ -124,7 +124,7 @@ gulp.task('js', function () {
       .pipe(concat(path.basename(val)))
       .pipe(uglify())
       .pipe(isProduction ? util.noop() : sourcemaps.write('./'))
-      .pipe(gulp.dest(basePaths.dest + 'js'));
+      .pipe(gulp.dest(basePaths.test + 'js'));
 
     mergedStream.add(stream);
   });
@@ -136,7 +136,7 @@ gulp.task('img', function () {
   return gulp.src(srcFiles.img, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(imagemin())
-    .pipe(gulp.dest(basePaths.dest + 'img'));
+    .pipe(gulp.dest(basePaths.test + 'img'));
 });
 
 gulp.task('sprite', function () {
@@ -152,14 +152,14 @@ gulp.task('sprite', function () {
         }
       }
     }))
-    .pipe(gulp.dest(basePaths.dest + 'img'));
+    .pipe(gulp.dest(basePaths.test + 'img'));
 });
 
 gulp.task('html', ['scss'], function () {
   return gulp.src(srcFiles.html, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(inlineSource({
-      rootpath: basePaths.dest
+      rootpath: basePaths.test
     }))
     .pipe(htmlmin({
       collapseBooleanAttributes   : true,
@@ -173,7 +173,7 @@ gulp.task('html', ['scss'], function () {
       removeRedundantAttributes   : true,
       useShortDoctype             : true
     }))
-    .pipe(gulp.dest(basePaths.dest));
+    .pipe(gulp.dest(basePaths.test));
 });
 
 gulp.task('misc', function () {
@@ -182,18 +182,46 @@ gulp.task('misc', function () {
     base: basePaths.src
   })
     .pipe(plumber({errorHandler: onError}))
-    .pipe(gulp.dest(basePaths.dest));
+    .pipe(gulp.dest(basePaths.test));
 });
 
 // Todo: PDF generating doesn't work yet.
 gulp.task('pdf', ['default'], function () {
   return gulp.src(srcFiles.misc, {cwd: basePaths.src})
     .pipe(pdf())
-    .pipe(gulp.dest(basePaths.dest));
+    .pipe(gulp.dest(basePaths.test));
 });
 
 // Default task
 gulp.task('default', Object.keys(srcFiles));
+
+gulp.task('revise', ['default'], function () {
+  // Revise all files
+  var revAll = new RevAll({
+    dontGlobal    : [
+      'humans.txt',
+      'robots.txt',
+      'rocwang.pdf',
+      'favicon.ico',
+    ],
+    dontRenameFile: [
+      'index.html',
+    ]
+  });
+
+  var stream = gulp.src(basePaths.test + '**')
+    .pipe(revAll.revision())
+    .pipe(gulp.dest(basePaths.release));
+
+  browserSync({
+    server: {
+      baseDir: basePaths.release
+    },
+    open  : false
+  });
+
+  return stream;
+});
 
 // Watch task
 gulp.task('watch', ['default'], function () {
@@ -215,11 +243,11 @@ gulp.task('watch', ['default'], function () {
     gulp.watch(watchedFiles, {cwd: basePaths.src}, [element]);
   });
 
-  gulp.watch(['js/*.js', 'img/**', '*.html'], {cwd: basePaths.dest}, browserSync.reload);
+  gulp.watch(['js/*.js', 'img/**', '*.html'], {cwd: basePaths.test}, browserSync.reload);
 
   browserSync({
     server: {
-      baseDir: basePaths.dest
+      baseDir: basePaths.test
     },
     open  : false
   });
