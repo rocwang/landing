@@ -78,6 +78,7 @@
       color         : white;
       line-height   : 0.8;
 
+
       @include breakpoint($screen-sm) {
         margin-bottom : $line-height-computed*2;
         line-height   : 0.6;
@@ -94,6 +95,7 @@
       color       : $brand-primary;
       font-weight : 300;
       font-size   : $font-size-base;
+
 
       @include breakpoint($screen-sm) {
         font-weight : 100;
@@ -124,6 +126,11 @@
     // Leave the one screen sapce
     & + * {
       margin-top : calc(100vh + #{$line-height-computed});
+    }
+
+    // Hide while web font loading
+    .wf-loading & {
+      visibility : hidden;
     }
   }
 
