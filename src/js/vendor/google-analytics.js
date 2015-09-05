@@ -10,5 +10,4 @@
 }(window, document, 'script', 'ga'));
 
 ga('create', 'UA-45572950-2', 'auto');
-ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');

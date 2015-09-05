@@ -1,4 +1,3 @@
-'use strict';
 window.$zopim || (function (d, s) {
   var z = window.$zopim = function (c) {z._.push(c)}, $ = z.s =
     d.createElement(s), e = d.getElementsByTagName(s)[0];
