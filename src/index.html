@@ -80,7 +80,7 @@
       </a>
     </li>
     <li>
-      <a class="print js-print" href="#" title="Print Roc's CV">
+      <a id="print" class="print" href="#" title="Print Roc's CV">
         <svg class="icon">
           <use xlink:href="img/sprite.svg#icon-print"/>
         </svg>
@@ -518,7 +518,9 @@
 </div>
 
 <!-- "Hire Me" popover -->
-<div id="hire-me" class="hire-me"></div>
+<div id="hire-me" class="hire-me">
+  <div id="hire-me__popover" class="hire-me__popover">Hire me &#x1f603;</div>
+</div>
 
 <!-- QR Code -->
 <svg class="qr-code" viewBox="0 0 100 100">
@@ -526,7 +528,7 @@
 </svg>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+<div id="photo-swipe" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
   <!-- Background of PhotoSwipe.
        It's a separate element as animating opacity is faster than rgba(). -->
@@ -589,7 +591,7 @@
   </div>
 </div>
 
-<script src="js/vendor.js"></script>
+<script src="js/vendor.js" defer></script>
 <script src="js/app.js" inline></script>
 
 </body>

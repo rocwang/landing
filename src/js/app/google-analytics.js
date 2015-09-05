@@ -8,5 +8,7 @@
   e.src = '//www.google-analytics.com/analytics.js';
   r.parentNode.insertBefore(e, r)
 }(window, document, 'script', 'ga'));
-ga('create', 'UA-45572950-2', 'rocwang.me');
+
+ga('create', 'UA-45572950-2', 'auto');
+ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');

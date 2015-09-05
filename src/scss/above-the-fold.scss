@@ -18,14 +18,14 @@
 @media screen {
 
   .bg {
-    background-image    : url('../img/roc-small.jpg');
+    background-image    : url('/img/roc-small.jpg');
     background-position : top right;
     background-repeat   : no-repeat;
     background-size     : auto 100vh;
     padding-bottom      : $line-height-computed*2;
 
     @include breakpoint($screen-sm) {
-      background-image      : url('../img/roc-large.jpg');
+      background-image      : url('/img/roc-large.jpg');
       background-attachment : fixed;
     }
 

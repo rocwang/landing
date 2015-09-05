@@ -4,6 +4,7 @@
 }
 
 @media print {
+
   :last-child { margin-bottom : 0; }
 
   // Title
@@ -61,6 +62,7 @@
   }
 
   // Horizontally layout certain sections
+  $print-dl-horizontal-offset : 140px;
   .experience,
   .personal-projects,
   .education {

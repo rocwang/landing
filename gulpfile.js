@@ -155,12 +155,12 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(basePaths.test + 'img'));
 });
 
-gulp.task('html', ['scss'], function () {
+gulp.task('html', ['scss', 'js'], function () {
   return gulp.src(srcFiles.html, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
-    .pipe(inlineSource({
+    .pipe(isProduction ? inlineSource({
       rootpath: basePaths.test
-    }))
+    }) : util.noop())
     .pipe(htmlmin({
       collapseBooleanAttributes   : true,
       collapseWhitespace          : true,
@@ -195,7 +195,7 @@ gulp.task('pdf', ['default'], function () {
 // Default task
 gulp.task('default', Object.keys(srcFiles));
 
-gulp.task('revise', ['default'], function () {
+gulp.task('release', ['default'], function () {
   // Revise all files
   var revAll = new RevAll({
     dontGlobal    : [
