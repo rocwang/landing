@@ -28,7 +28,7 @@
 
   // Homepage background
   .video-bg {
-    z-index   : -10;
+    z-index   : 10;
     position  : absolute;
     top       : 50%;
     left      : 50%;
@@ -69,6 +69,7 @@
     left      : 0;
     right     : 0;
     transform : translateY(-50%);
+    z-index   : 20;
 
     // Name
     &__name {

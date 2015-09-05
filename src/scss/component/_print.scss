@@ -5,14 +5,9 @@
 
 @media print {
 
-  :last-child { margin-bottom : 0; }
-
   // Title
-  h2 { margin-top : $line-height-computed/2; }
-
   h3 {
     font-size     : 20px;
-    margin-bottom : $line-height-computed/2;
 
     &:first-child { margin-top : 0; }
   }
@@ -39,6 +34,7 @@
   .hire-me,
   .video-bg,
   .contact__tag-line,
+  .humans-txt,
   .browser-happy { display : none; }
 
   // QR Code
@@ -76,6 +72,7 @@
       text-align  : right;
       font-size   : $font-size-small;
       font-weight : 300;
+      margin-bottom: $line-height-computed;
       @include text-overflow;
     }
     dd { margin-left : $print-dl-horizontal-offset; }
@@ -141,6 +138,11 @@
 
     &__link,
     &__logo { display : block; }
+
+    &__logo--magento {
+      width  : 64px;
+      height : 116px;
+    }
   }
 }
 
