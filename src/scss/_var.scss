@@ -3,3 +3,9 @@ $color-gold : #D9CB9E;
 $color-light-gray : #374140;
 $color-dark-gray : #2A2C2B;
 $color-black : #1E1E20;
+
+// Photo Swipe
+@import 'vendor-var/photoswipe';
+
+// Bootstrap
+@import "vendor-var/bootstrap";

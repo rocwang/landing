@@ -3,6 +3,19 @@
 
   h3:first-child { margin-top : 0; }
 
+  // Container widths
+  //
+  // Set the container width, and override it for fixed navbars in media queries.
+
+  .container {
+    @include container;
+
+    @include breakpoint($screen-sm $screen-sm-max) {
+      padding-right : 15%;
+    }
+
+  }
+
   .browser-happy {
     position : absolute;
     top      : $line-height-computed/2;
@@ -186,15 +199,33 @@
 
   // Education
   .education {
+    &__list {
+      @include breakpoint($screen-lg) {
+        display   : flex;
+        flex-flow : row wrap;
+      }
+    }
+
     &__logo-container {
       color         : $text-muted;
       font-weight   : normal;
       text-align    : center;
       margin-bottom : $line-height-computed/2;
+
+      @include breakpoint($screen-lg) {
+        flex : 0 0 auto;
+      }
     }
 
     &__description {
       margin-bottom : $line-height-computed;
+
+      @include breakpoint($screen-lg) {
+        margin-left   : 0 !important;
+        padding-left  : 20px;
+        padding-right : 40px;
+        flex          : 1 1 calc(50% - #{$dl-horizontal-offset} - 20px);
+      }
     }
 
     &__logo-link {

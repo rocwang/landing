@@ -1,31 +1,19 @@
-@import 'variables';
+@import 'var';
 @import 'mixin';
 
 // Break point management
 @import 'breakpoint-sass/stylesheets/breakpoint.scss';
 
+// Bootstrap Print
+@import "bootstrap-sass/assets/stylesheets/bootstrap/print";
+
+// Bootstrap Components
+@import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+
 // Photo Swipe
-@import 'vendor-setting/photoswipe';
 @import 'photoswipe/src/css/main.scss';
 @import 'photoswipe/src/css/default-skin/default-skin.scss';
-
-// Bootstrap {{
-
-  // Core variables and mixins
-  @import "vendor-setting/bs-var";
-  @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-
-  // Core CSS
-  @import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
-
-  // Reset and dependencies
-  @import "bootstrap-sass/assets/stylesheets/bootstrap/print";
-
-  // Components
-  @import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
-  @import "bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
-
-//}}}
 
 // Component
 @import 'component/screen';

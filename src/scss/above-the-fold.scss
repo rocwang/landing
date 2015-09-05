@@ -1,17 +1,9 @@
-@import 'variables';
+@import 'var';
 @import 'mixin';
-// Break point management
-@import 'breakpoint-sass/stylesheets/breakpoint.scss';
-// Bootstrap {{
-// Core variables and mixins
-@import "vendor-setting/bs-var";
-@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
-// Reset and dependencies
+// Bootstrap
 @import "bootstrap-sass/assets/stylesheets/bootstrap/normalize";
-// Core CSS
 @import "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/type";
-//}}}
 // Component
 @import 'component/icon';
 
@@ -71,11 +63,7 @@
 
   //  Contact
   .contact {
-    @include container-fixed;
-    @include breakpoint($screen-sm) { width : $container-sm; }
-    @include breakpoint($screen-md) { width : $container-md; }
-    @include breakpoint($screen-lg) { width : $container-lg; }
-
+    @include container;
     position  : absolute;
     top       : 50%;
     left      : 0;
@@ -90,7 +78,9 @@
       line-height   : 0.8;
 
       @include breakpoint($screen-sm) {
-        font-size : $font-size-base *6;
+        margin-bottom : $line-height-computed*2;
+        line-height   : 0.6;
+        font-size     : $font-size-base *6;
       }
 
       @include breakpoint($screen-md) {
@@ -104,7 +94,7 @@
       font-weight : 300;
       font-size   : $font-size-base;
 
-      @include breakpoint($screen-md) {
+      @include breakpoint($screen-sm) {
         font-weight : 100;
         font-size   : 38.2%;
       }
@@ -118,12 +108,16 @@
 
       @include breakpoint($screen-sm) {
         @include list-oneline;
+        margin-bottom : $line-height-computed/2;
       }
     }
 
     &__address-item,
     &__operation-item {
       margin-bottom : $line-height-computed/2;
+      @include breakpoint($screen-sm) {
+        margin-bottom : 0;
+      }
     }
 
     // Leave the one screen sapce

@@ -1,3 +1,9 @@
+// Break point management
+@import 'breakpoint-sass/stylesheets/breakpoint.scss';
+
+// Bootstrap
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
 @mixin list-oneline {
   margin-left : -5px;
 
@@ -11,4 +17,12 @@
 @mixin list-unstyled {
   padding-left: 0;
   list-style: none;
+}
+
+@mixin container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) { width: $container-sm; }
+  @media (min-width: $screen-md-min) { width: $container-md; }
+  @media (min-width: $screen-lg-min) { width: $container-lg; }
 }
