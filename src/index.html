@@ -50,69 +50,69 @@
 </div>
 <![endif]-->
 
-<!-- Video background -->
-<div class="video-bg">
-  <video autoplay muted loop class="video-bg__video">
+<section class="contact">
+  <!-- Video background -->
+  <video autoplay muted loop class="contact__video-bg">
     <source src="video/bungy-jump.webm" type="video/webm">
     <source src="video/bungy-jump.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-</div>
 
-<!-- Contact -->
-<section class="contact">
-  <!-- Name -->
-  <h1 class="contact__name">Roc Wang<br>
-    <small class="contact__tag-line">Building artisanal websites.</small>
-  </h1>
+  <!-- Contact -->
+  <div class="contact__text">
+    <!-- Name -->
+    <h1 class="contact__name">Roc Wang<br>
+      <small class="contact__tag-line">Building artisanal websites.</small>
+    </h1>
 
-  <!-- Address -->
-  <ul class="contact__address">
-    <li class="contact__address-item">
-      <a href="tel:+64-027-949-1310" title="Telphone">
-        <svg class="icon">
-          <use xlink:href="img/sprite.svg#icon-phone"/>
-        </svg>
-        +64 027 949 1310
-      </a>
-    </li>
-    <li class="contact__address-item">
-      <a href="mailto:roc@kiwiberry.nz">
-        <svg class="icon">
-          <use xlink:href="img/sprite.svg#icon-envelope"/>
-        </svg>
-        roc@kiwiberry.nz
-      </a>
-    </li>
-    <li class="contact__address-item">
-      <a href="/">
-        <svg class="icon">
-          <use xlink:href="img/sprite.svg#icon-globe"/>
-        </svg>
-        http://cv.rocwang.me
-      </a>
-    </li>
-  </ul>
+    <!-- Address -->
+    <ul class="contact__address">
+      <li class="contact__address-item">
+        <a href="tel:+64-027-949-1310" title="Telphone">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-phone"/>
+          </svg>
+          +64 027 949 1310
+        </a>
+      </li>
+      <li class="contact__address-item">
+        <a href="mailto:roc@kiwiberry.nz">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-envelope"/>
+          </svg>
+          roc@kiwiberry.nz
+        </a>
+      </li>
+      <li class="contact__address-item">
+        <a href="/">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-globe"/>
+          </svg>
+          http://cv.rocwang.me
+        </a>
+      </li>
+    </ul>
 
-  <!-- Operations -->
-  <ul class="contact__operation">
-    <li class="contact__operation-item">
-      <a href="rocwang.pdf" title="Download Roc's CV" target="_blank">
-        <svg class="icon">
-          <use xlink:href="img/sprite.svg#icon-download"/>
-        </svg>
-        Download
-      </a>
-    </li>
-    <li class="contact__operation-item">
-      <a id="print" class="print" href="#" title="Print Roc's CV">
-        <svg class="icon">
-          <use xlink:href="img/sprite.svg#icon-print"/>
-        </svg>
-        Print
-      </a>
-    </li>
-  </ul>
+    <!-- Operations -->
+    <ul class="contact__operation">
+      <li class="contact__operation-item">
+        <a href="rocwang.pdf" title="Download Roc's CV" target="_blank">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-download"/>
+          </svg>
+          Download
+        </a>
+      </li>
+      <li class="contact__operation-item">
+        <a id="print" class="print" href="#" title="Print Roc's CV">
+          <svg class="icon">
+            <use xlink:href="img/sprite.svg#icon-print"/>
+          </svg>
+          Print
+        </a>
+      </li>
+    </ul>
+  </div>
 </section>
 
 <div class="container">
@@ -131,7 +131,7 @@
     <dl class="dl-horizontal">
       <dt class="experience__company">
         <a href="http://www.moustacherepublic.com" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 230 115" class="experience__logo">
+          <svg class="experience__logo experience__logo--mr">
             <use xlink:href="img/sprite.svg#moustache-republic"/>
           </svg>
         </a><br>
@@ -167,7 +167,7 @@
 
       <dt class="experience__company">
         <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 208.741 27.991" class="experience__logo">
+          <svg class="experience__logo experience__logo--tencent">
             <use xlink:href="img/sprite.svg#tencent"/>
           </svg>
         </a><br>
@@ -215,7 +215,7 @@
 
       <dt class="experience__company">
         <a href="http://www.infosys.com/" target="_blank" class="experience__company-link">
-          <svg viewBox="0 0 96.771 37.686" class="experience__logo">
+          <svg class="experience__logo experience__logo--infosys">
             <use xlink:href="img/sprite.svg#infosys"/>
           </svg>
         </a><br>
@@ -254,14 +254,14 @@
     <ul class="portfolio__list">
       <li class="portfolio__list-item">
         <a href="http://www.superette.co.nz/" target="_blank" class="portfolio__logo-link" title="Superette">
-          <svg viewBox="0 0 129.271 20.029" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#superette"/>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://www.trishpeng.com/" target="_blank" class="portfolio__logo-link" title="Trishpeng">
-          <svg viewBox="0 0 150 49" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#trishpeng"/>
           </svg>
         </a>
@@ -271,21 +271,21 @@
            target="_blank"
            class="portfolio__logo-link"
            title="The Liquoriceland">
-          <svg viewBox="0 0 881.4 271.6" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#theliquoriceland"/>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://www.huckleberry.nz/" target="_blank" class="portfolio__logo-link" title="Huckleberry">
-          <svg viewBox="0 0 580.3 104.1" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#huckleberry"/>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://shop.aucklandnz.com/" target="_blank" class="portfolio__logo-link" title="ATEED">
-          <svg viewBox="0 0 444.2 394.9" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#ateed"/>
           </svg>
         </a>
@@ -296,7 +296,7 @@
            class="portfolio__logo-link"
            title="QQ VIP"
            id="portfolio__logo-link--qq">
-          <svg viewBox="0 0 174.7 191.9" class="portfolio__logo">
+          <svg class="portfolio__logo">
             <use xlink:href="img/sprite.svg#qq"/>
           </svg>
         </a>
@@ -310,7 +310,7 @@
     <dl class="dl-horizontal">
       <dt class="personal-projects__logo-container">
         <a href="https://github.com/rocwang/Do-Less" class="personal-projects__logo-link">
-          <svg viewBox="0 0 100 100" class="personal-projects__logo img-rounded">
+          <svg class="personal-projects__logo img-rounded">
             <use xlink:href="img/sprite.svg#do-less"/>
           </svg>
         </a><br>
@@ -445,7 +445,7 @@
     <dl class="dl-horizontal education__list">
       <dt class="education__logo-container">
         <a href="http://www.uestc.edu.cn/" target="_blank" class="education__logo-link">
-          <svg viewBox="0 0 564 97.2" class="education__logo">
+          <svg class="education__logo">
             <use xlink:href="img/sprite.svg#uestc"/>
           </svg>
         </a><br>
@@ -460,7 +460,7 @@
       </dd>
       <dt class="education__logo-container">
         <a href="http://www.uestc.edu.cn/" target="_blank" class="education__logo-link">
-          <svg viewBox="0 0 564 97.2" class="education__logo">
+          <svg class="education__logo">
             <use xlink:href="img/sprite.svg#uestc"/>
           </svg>
         </a><br>
@@ -533,7 +533,7 @@
 
 <footer class="page-footer">
   <a href="humans.txt" class="humans-txt" target="_blank">
-    <svg viewBox="0 0 71 60" class="humans-txt__img">
+    <svg class="humans-txt__img">
       <use xlink:href="img/sprite.svg#humans-txt"/>
     </svg>
   </a>
@@ -545,7 +545,7 @@
 </div>
 
 <!-- QR Code -->
-<svg class="qr-code" viewBox="0 0 100 100">
+<svg class="qr-code">
   <use xlink:href="img/sprite.svg#qr-code"/>
 </svg>
 

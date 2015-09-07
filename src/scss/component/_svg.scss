@@ -1,0 +1,46 @@
+$screen-logo-width : 160px;
+$print-logo-width : 120px;
+
+.experience__logo {
+  width : $screen-logo-width;
+  &--mr { height : $screen-logo-width * 115 / 230; }
+  &--tencent { height : $screen-logo-width * 27.991 / 208.741; }
+  &--infosys { height : $screen-logo-width * 37.686 / 96.771; }
+
+  @media print {
+    width : $print-logo-width;
+    &--mr { height : $print-logo-width * 115 / 230; }
+    &--tencent { height : $print-logo-width * 27.991 / 208.741; }
+    &--infosys { height : $print-logo-width * 37.686 / 96.771; }
+  }
+}
+
+.portfolio__logo {
+  max-width  : 100%;
+  max-height : 50px;
+
+  @include breakpoint($screen-sm) { max-width : 200px; }
+}
+
+.personal-projects__logo {
+  width  : 58px;
+  height : 58px;
+  @media print {
+    width  : 40px;
+    height : 40px;
+  }
+}
+
+.education__logo {
+  width  : $screen-logo-width;
+  height : $screen-logo-width * 97.2 / 564;
+  @media print {
+    width  : $print-logo-width;
+    height : $print-logo-width * 97.2 / 564;
+  }
+}
+
+.humans-txt__img {
+  width  : 44px;
+  height : 44px * 60 / 71;
+}
