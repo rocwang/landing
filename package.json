@@ -8,6 +8,7 @@
         "bootstrap-sass"            : "3.x",
         "breakpoint-sass"           : "2.x",
         "browser-sync"              : "latest",
+        "chart.js"                  : "1.x",
         "del"                       : "latest",
         "gulp"                      : "latest",
         "gulp-autoprefixer"         : "latest",

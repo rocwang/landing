@@ -72,7 +72,7 @@
     window.print();
   });
 
-  // Hire me
+  // Hire me {{{
   var hireMe = document.getElementById('hire-me');
   hireMe.addEventListener('touchstart', function () {
     document.getElementById('hire-me__popover').classList.toggle('hire-me__popover--js-visible');
@@ -92,10 +92,12 @@
       }, 3000);
     }, 3000);
   });
+  // }}}
 
+  // Load vendor.js
   window.addEventListener('load', function () {
     function loadJsOnLoad(src) {
-      var element = document.createElement("script");
+      var element = document.createElement('script');
       element.src = src;
       element.async = true;
       document.body.appendChild(element);

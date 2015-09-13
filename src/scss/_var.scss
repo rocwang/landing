@@ -1,11 +1,19 @@
-$color-red : #DC3522;
-$color-gold : #D9CB9E;
+$color-red : #dc3522;
+$color-gold : #d9cb9e;
 $color-light-gray : #374140;
-$color-dark-gray : #2A2C2B;
-$color-black : #1E1E20;
+$color-dark-gray : #2a2c2b;
+$color-black : #1e1e20;
 
 // Photo Swipe
 @import 'vendor-var/photoswipe';
 
 // Bootstrap
 @import "vendor-var/bootstrap";
+
+// z-index management
+$zindex--contact__video-bg : 10;
+$zindex--contact__video-bg-overlay : 11;
+$zindex--contact__text : 20;
+$zindex--broswer-happy : 30;
+$zindex--hire-me : 30;
+$zindex--hire-me__popover-arrow : 31;
