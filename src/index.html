@@ -14,30 +14,7 @@
 
   <link rel="stylesheet" href="css/above-the-fold.css" inline>
 
-  <script>
-    (function (d) {
-      var config = {
-            kitId        : 'mqz2yfz',
-            scriptTimeout: 3000,
-            async        : true
-          },
-          h      = d.documentElement, t = setTimeout(function () {h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";}, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a;
-      h.className += " wf-loading";
-      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
-      tk.async = true;
-      tk.onload = tk.onreadystatechange = function () {
-        a = this.readyState;
-        if (f || a && a != "complete" && a != "loaded")return;
-        f = true;
-        clearTimeout(t);
-        try {
-          Typekit.load(config)
-        } catch (e) {
-        }
-      };
-      s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
+  <script src="js/typekit.js" inline></script>
 </head>
 <body class="bg">
 
@@ -122,7 +99,7 @@
   <section class="objective">
     <h2>Objective</h2>
 
-    <p>To obtain a middle to senior web development position, building front end and/or back end of web sites.</p>
+    <p>To obtain a medium to senior web development position, building front end and/or back end of web sites.</p>
   </section>
 
   <section class="experience">
@@ -143,15 +120,15 @@
       <dd class="experience__description">
         <h3>Magento Web Developer</h3>
         <ul>
-          <li>Built cutting edge e-commerce websites from end to end. Responsible for both front-end and back-end
-            development, site deployment and on-going maintenance.
+          <li>Built cutting edge e-commerce websites from end to end in an agile team. Responsible for both front-end
+            and back-end development, site deployment and on-going maintenance.
           </li>
 
           <li>Developed high quality commercial Magento extensions e.g.
             <a href="http://www.moustacherepublic.com/shop/nz-post-autocomplete.html" target="_blank">NZ Post
               Address Autocomplete
             </a>,
-            <a href="https://bitbucket.org/moustacherepublic/ext_mr_ajaxcart" target="_blank">MR Ajax Cart</a>.
+            <a href="https://bitbucket.org/moustacherepublic/ext_mr_ajaxcart" target="_blank">Ajax Cart</a>.
           </li>
 
           <li>Provided professional technical support and custom development for existing e-commerce sites,
@@ -179,7 +156,7 @@
       <dd class="experience__description">
         <h3>Web Developer</h3>
         <ul>
-          <li>Led a team to create a custimized PHP framework called Vii, which is based on Yii framework; wrote
+          <li>Led a team to build a custimized PHP framework called Vii, which is based on Yii framework; wrote
             a whole set of API documents and unit tests by Markdown, PHPDocumentor and PHPUnit, remarkably
             improve the developing efficiency.
           </li>
@@ -190,20 +167,20 @@
           <li>Implemented <strong>more than 30 activity/promotion mini sites</strong> utilizing jQuery,
             backbone.js, mustache.js and PHP, which boosted ARPU and total revenue.
           </li>
-          <li>Designed and developed a brand new refined marketing system end to end, dramatically improved the
-            accuracy of advertisements.
+          <li>Designed and developed a brand new refined marketing system end to end, dramatically improved the accuracy
+            of advertisements.
           </li>
-          <li>Built several operation support systems and in-house tools: User Notification, Prize Delivery,
+          <li>Built several operation support systems and in-house tools, e.g. User Notification, Prize Delivery,
             Activity Management, etc., which increased the productivity enormously for the dev team and the
-            prodcution team.
+            production team.
           </li>
-          <li>As a mentor, worked closely with a intern to help her implement loads of requirements, and got
+          <li>As a mentor, worked closely with a intern to help her implement requirements and features, and got
             highly commented.
           </li>
           <li>Published <strong>6 open source projects</strong> in the company, honored with the most active
-            developer on 2013.
+            developer in 2013.
           </li>
-          <li>Maintained the main site of <a href="http://vip.qq.com" target="_blank">QQ VIP</a>, the biggest
+          <li>Maintained the portal site of <a href="http://vip.qq.com" target="_blank">QQ VIP</a>, the biggest
             online value add-on service in China, successfully fulfilled the daily visits from more than
             <strong>27 millions members</strong>.
           </li>
@@ -228,13 +205,13 @@
         <h3>Intern</h3>
         <ul>
           <li>Admitted to the Infosys Chinese Student Internship of 100 students selected from Top 20
-            universities all over China; ranked No. 1 among the candidates of UESTC
+            universities all over China; ranked No. 1 among the candidates of UESTC.
           </li>
           <li>Graduated from the Mainframe stream class, with grade A for all the courses, which were JCL,
             COBOL, CICS, DB2, VSAM File Processing and Quality Assurance, etc.
           </li>
           <li>With the MVC design pattern in mind, implemented a simulated Banking System which handled basic
-            transactions, such as Withdrawal, Deposit and Transfer
+            transactions, such as Withdrawal, Deposit and Transfer.
           </li>
           <li>Involved in the project "Using Text Tagging and Annotation Engine Java Libraries in .NET
             Applications" in the Data Mining Team of SETLabs, studied and achieved 2 ways to accomplish
@@ -455,7 +432,7 @@
 
 <!-- "Hire Me" popover -->
 <div id="hire-me" class="hire-me">
-  <div id="hire-me__popover" class="hire-me__popover">Hire me &#x1f603;</div>
+  <div id="hire-me__popover" class="hire-me__popover">Hire me, please &#x1f603;</div>
 </div>
 
 <!-- QR Code -->

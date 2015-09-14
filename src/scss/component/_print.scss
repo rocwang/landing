@@ -4,10 +4,9 @@
 }
 
 @media print {
-
   // Title
   h3 {
-    font-size     : 20px;
+    font-size : 20px;
 
     &:first-child { margin-top : 0; }
   }
@@ -28,12 +27,11 @@
   }
 
   // Hide something for printing
-  .contact__tagline,
-  .contact__operation,
   .portfolio,
   .hire-me,
-  .video-bg,
+  .contact__video-bg,
   .contact__tag-line,
+  .contact__operation,
   .humans-txt,
   .browser-happy { display : none; }
 
@@ -66,13 +64,13 @@
       margin-bottom : $line-height-computed/2;
     }
     dt {
-      float       : left;
-      width       : ($print-dl-horizontal-offset - 20);
-      clear       : left;
-      text-align  : right;
-      font-size   : $font-size-small;
-      font-weight : 300;
-      margin-bottom: $line-height-computed;
+      float         : left;
+      width         : ($print-dl-horizontal-offset - 20);
+      clear         : left;
+      text-align    : right;
+      font-size     : $font-size-small;
+      font-weight   : 300;
+      margin-bottom : $line-height-computed;
       @include text-overflow;
     }
     dd { margin-left : $print-dl-horizontal-offset; }

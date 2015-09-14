@@ -57,6 +57,7 @@ var srcFiles = {
   js    : [
     'js/vendor.js',
     'js/app.js',
+    'js/typekit.js',
   ],
   img   : [
     'img/**',
