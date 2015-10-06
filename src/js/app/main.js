@@ -4,7 +4,7 @@
   // Portfolio Gallery {{{
 
   // Build gallery items array
-  var tencetnPortfolio = [
+  var tencentPortfolio = [
     {src: 'img/portfolio/adidas.jpg', w: 1002, h: 1772, title: 'Adidas Neo'},
     {src: 'img/portfolio/cmb.jpg', w: 1200, h: 900, title: 'China Merchants Bank'},
     {src: 'img/portfolio/uni_president.jpg', w: 960, h: 600, title: 'Uni President'},
@@ -57,7 +57,7 @@
     var tencentPortfolioGallery = new PhotoSwipe(
       document.getElementById('photo-swipe'),
       PhotoSwipeUI_Default,
-      tencetnPortfolio,
+      tencentPortfolio,
       {}
     );
 
