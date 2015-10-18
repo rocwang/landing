@@ -14,7 +14,4 @@ module.exports = [
 
   // Google analytics
   'vendor/google-analytics.js',
-
-  // Zopim live chat
-  'vendor/zopim.js',
 ];

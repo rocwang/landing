@@ -13,18 +13,17 @@ var gulp                = require('gulp'),
     sourcemaps          = require('gulp-sourcemaps'),
     browserSync         = require('browser-sync'),
     pdf                 = require('gulp-html-pdf'),
-    RevAll              = require('gulp-rev-all'),
 
 
     // HTML plugins
     htmlmin             = require('gulp-htmlmin'),
     inlineSource        = require('gulp-inline-source'),
+    RevAll              = require('gulp-rev-all'),
 
     // CSS plugins
     sass                = require('gulp-sass'),
     minifyCss           = require('gulp-minify-css'),
     autoprefixer        = require('gulp-autoprefixer'),
-    combineMediaQueries = require('gulp-combine-media-queries'),
 
     // JS plugins
     jshint              = require('gulp-jshint'),
@@ -36,7 +35,7 @@ var gulp                = require('gulp'),
     svgSprite           = require('gulp-svg-sprite');
 
 // Allows gulp --dist to be run for production compilation
-var isProduction = util.env.dist ? true : false;
+var isProduction = util.env.dist;
 
 var onError = notify.onError("Error: <%= error.message %>");
 
@@ -97,14 +96,9 @@ gulp.task('scss', function () {
         basePaths.vendor
       ]
     }))
-    .pipe(combineMediaQueries({log: true}))
     .pipe(minifyCss())
-
-    // These 2 lines is for working around the source map issue with autoprefixer
-    //.pipe(sourcemaps.write())
-    //.pipe(sourcemaps.init({loadMaps: true}))
     .pipe(autoprefixer({
-      browsers: 'last 2 version',
+      browsers: ['last 2 versions', 'ie >= 9'],
       cascade : false
     }))
 

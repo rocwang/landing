@@ -12,7 +12,6 @@
         "del"                       : "latest",
         "gulp"                      : "latest",
         "gulp-autoprefixer"         : "latest",
-        "gulp-combine-media-queries": "latest",
         "gulp-concat"               : "latest",
         "gulp-html-pdf"             : "latest",
         "gulp-htmlmin"              : "latest",
