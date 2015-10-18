@@ -71,11 +71,6 @@
       right     : 0;
       transform : translateY(-50%);
       z-index   : $zindex--contact__text;
-
-      // Hide while web font loading
-      .wf-loading & {
-        visibility : hidden;
-      }
     }
 
     // Name
