@@ -20,9 +20,9 @@
 
 <!-- Alert to outdated browsers -->
 <!--[if lte IE 9]>
-<div class="alert alert-warning browser-happy">
+<div class="browser-happy">
   You are using an <strong>outdated</strong> browser. Please
-  <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a>
+  <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a>
   to improve your experience.
 </div>
 <![endif]-->
@@ -559,10 +559,9 @@
              class="certificates__link"
              target="_blank"
             >
-            <img src="img/magento-middle.png"
-                 alt="Magento Certified Developer"
-                 class="certificates__logo certificates__logo--magento"
-                 srcset="img/magento-middle.png 1x, img/magento-large.png 2x">
+            <svg class="certificates__logo certificates__logo--magento">
+              <use xlink:href="img/sprite.svg#magento"/>
+            </svg>
           </a>
         </div>
 
@@ -575,7 +574,9 @@
       <li class="certificates__list-item">
 
         <div class="certificates__logo-container">
-          <img src="img/ibm-db2.jpg" alt="IMB DB2 Certified" class="certificates__logo">
+          <svg class="certificates__logo certificates__logo--ibm">
+            <use xlink:href="img/sprite.svg#ibm"/>
+          </svg>
         </div>
 
         <div class="certificates__description">
@@ -588,7 +589,9 @@
       <li class="certificates__list-item">
 
         <div class="certificates__logo-container">
-          <img src="img/ibm-aix.jpg" alt="IMB AIX Certified" class="certificates__logo">
+          <svg class="certificates__logo certificates__logo--ibm">
+            <use xlink:href="img/sprite.svg#ibm"/>
+          </svg>
         </div>
 
         <div class="certificates__description">

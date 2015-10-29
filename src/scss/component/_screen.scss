@@ -18,11 +18,14 @@
   }
 
   .browser-happy {
-    position : absolute;
-    top      : $line-height-computed/2;
-    left     : $grid-gutter-width/2;
-    right    : $grid-gutter-width/2;
-    z-index  : $zindex--broswer-happy;
+    position       : absolute;
+    top            : $line-height-computed/2;
+    left           : $grid-gutter-width/2;
+    right          : $grid-gutter-width/2;
+    z-index        : $zindex--broswer-happy;
+    text-align     : center;
+    text-transform : uppercase;
+    color          : $color-red;
   }
 
   // Hire Me
@@ -218,10 +221,18 @@
       margin-bottom : $line-height-computed;
       flex          : 0 0 auto;
 
+      .certificates__logo {
+        fill : currentColor;
+      }
+
+      .certificates__logo--ibm {
+        fill : $link-color;
+      }
+
       @include breakpoint($screen-sm) {
         margin-bottom : 0;
-        margin-right  : $grid-gutter-width;
-        width         : 207px;
+        margin-right  : 20px;
+        width         : $dl-horizontal-offset - 20px;
         position      : relative;
 
         > .certificates__link,
@@ -233,7 +244,7 @@
       @include breakpoint($screen-lg) {
         margin-bottom : $line-height-computed;
         margin-right  : 0;
-        height        : 116px;
+        height        : 80px;
 
         > .certificates__link,
         > .certificates__logo {
@@ -244,11 +255,6 @@
           transform : translate(-50%, -50%);
         }
       }
-    }
-
-    &__logo--magento {
-      width  : 64px;
-      height : 116px;
     }
 
     &__description {

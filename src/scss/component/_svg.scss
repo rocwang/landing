@@ -40,6 +40,16 @@ $print-logo-width : 120px;
   }
 }
 
+.certificates__logo--magento {
+  width  : $screen-logo-width;
+  height : $screen-logo-width * 91.3 / 312.5;
+}
+
+.certificates__logo--ibm {
+  width  : 30px * 1000 / 400;
+  height : 30px;
+}
+
 .page-footer__humans-txt-img {
   width  : 44px;
   height : 44px * 60 / 71;
