@@ -3,3 +3,4 @@ node_modules/
 test/
 release/
 resource/
+js/head/modernizr.js

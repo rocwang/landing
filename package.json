@@ -28,6 +28,7 @@
         "gulp-uglify"       : "latest",
         "gulp-util"         : "latest",
         "merge-stream"      : "latest",
-        "svg4everybody"     : "2.x"
+        "svg4everybody"     : "2.x",
+        "modernizr"         : "3.x"
     }
 }

@@ -1,38 +1,41 @@
 'use strict';
 
 // Load plugins
-var gulp                = require('gulp'),
+var gulp         = require('gulp'),
 
     // Utility plugins
-    util                = require('gulp-util'),
-    del                 = require('del'),
-    merge               = require('merge-stream'),
-    plumber             = require('gulp-plumber'),
-    notify              = require('gulp-notify'),
-    path                = require('path'),
-    sourcemaps          = require('gulp-sourcemaps'),
-    browserSync         = require('browser-sync'),
-    pdf                 = require('gulp-html-pdf'),
+    util         = require('gulp-util'),
+    del          = require('del'),
+    merge        = require('merge-stream'),
+    plumber      = require('gulp-plumber'),
+    notify       = require('gulp-notify'),
+    path         = require('path'),
+    sourcemaps   = require('gulp-sourcemaps'),
+    browserSync  = require('browser-sync'),
+    pdf          = require('gulp-html-pdf'),
+    fs           = require('fs'),
 
 
     // HTML plugins
-    htmlmin             = require('gulp-htmlmin'),
-    inlineSource        = require('gulp-inline-source'),
-    RevAll              = require('gulp-rev-all'),
+    htmlmin      = require('gulp-htmlmin'),
+    inlineSource = require('gulp-inline-source'),
+    RevAll       = require('gulp-rev-all'),
 
     // CSS plugins
-    sass                = require('gulp-sass'),
-    minifyCss           = require('gulp-minify-css'),
-    autoprefixer        = require('gulp-autoprefixer'),
+    sass         = require('gulp-sass'),
+    minifyCss    = require('gulp-minify-css'),
+    autoprefixer = require('gulp-autoprefixer'),
 
     // JS plugins
-    jshint              = require('gulp-jshint'),
-    uglify              = require('gulp-uglify'),
-    concat              = require('gulp-concat'),
+    jshint       = require('gulp-jshint'),
+    uglify       = require('gulp-uglify'),
+    concat       = require('gulp-concat'),
+    modernizr    = require("modernizr"),
+
 
     // Image plugins
-    imagemin            = require('gulp-imagemin'),
-    svgSprite           = require('gulp-svg-sprite');
+    imagemin     = require('gulp-imagemin'),
+    svgSprite    = require('gulp-svg-sprite');
 
 // Allows gulp --dist to be run for production compilation
 var isProduction = util.env.dist;
@@ -56,7 +59,7 @@ var srcFiles = {
   js    : [
     'js/vendor.js',
     'js/app.js',
-    'js/typekit.js',
+    'js/head.js',
   ],
   img   : [
     'img/**',
@@ -108,7 +111,7 @@ gulp.task('scss', function () {
 
 });
 
-gulp.task('js', function () {
+gulp.task('js', ['modernizr'], function () {
   var mergedStream = merge();
 
   srcFiles.js.forEach(function (val) {
@@ -142,7 +145,7 @@ gulp.task('sprite', function () {
       mode: {
         symbol: {
           dest   : '.',
-          sprite : 'sprite.svg',
+          sprite: 'sprite.svg',
           example: false
         }
       }
@@ -158,8 +161,8 @@ gulp.task('html', ['scss', 'js'], function () {
     }) : util.noop())
     .pipe(htmlmin({
       collapseBooleanAttributes   : true,
-      collapseWhitespace          : true,
-      removeAttributeQuotes       : true,
+      collapseWhitespace       : true,
+      removeAttributeQuotes    : true,
       removeCDATASectionsFromCDATA: true,
       removeComments              : true,
       removeCommentsFromCDATA     : true,
@@ -173,9 +176,9 @@ gulp.task('html', ['scss', 'js'], function () {
 
 gulp.task('misc', function () {
   return gulp.src(srcFiles.misc, {
-    cwd : basePaths.src,
-    base: basePaths.src
-  })
+      cwd : basePaths.src,
+      base: basePaths.src
+    })
     .pipe(plumber({errorHandler: onError}))
     .pipe(gulp.dest(basePaths.test));
 });
@@ -185,6 +188,23 @@ gulp.task('pdf', ['default'], function () {
   return gulp.src(srcFiles.misc, {cwd: basePaths.src})
     .pipe(pdf())
     .pipe(gulp.dest(basePaths.test));
+});
+
+gulp.task('modernizr', function (cb) {
+  modernizr.build({
+    'classPrefix'    : "",
+    'options'        : [],
+    'feature-detects': []
+  }, function (result) {
+    fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function (err) {
+      if (err) {
+        return cb(err);
+      }
+
+      console.log('modernizr.js is generated');
+      cb();
+    });
+  });
 });
 
 // Default task
