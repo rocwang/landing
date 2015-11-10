@@ -13,7 +13,6 @@
         "gulp"              : "latest",
         "gulp-autoprefixer" : "latest",
         "gulp-concat"       : "latest",
-        "gulp-html-pdf"     : "latest",
         "gulp-htmlmin"      : "latest",
         "gulp-imagemin"     : "latest",
         "gulp-inline-source": "latest",

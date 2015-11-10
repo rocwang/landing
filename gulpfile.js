@@ -12,7 +12,6 @@ var gulp         = require('gulp'),
     path         = require('path'),
     sourcemaps   = require('gulp-sourcemaps'),
     browserSync  = require('browser-sync'),
-    pdf          = require('gulp-html-pdf'),
     fs           = require('fs'),
 
 
@@ -97,11 +96,14 @@ gulp.task('scss', function () {
     .pipe(sass({
       includePaths: [
         basePaths.vendor
-      ]
+      ],
+      outputStyle : 'compressed'
     }))
-    .pipe(minifyCss())
+    .pipe(minifyCss({
+      'keepSpecialComments': 0
+    }))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie >= 9'],
+      browsers: ['last 2 versions', 'ie >= 10'],
       cascade : false
     }))
 
@@ -183,18 +185,15 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(basePaths.test));
 });
 
-// Todo: PDF generating doesn't work yet.
-gulp.task('pdf', ['default'], function () {
-  return gulp.src(srcFiles.misc, {cwd: basePaths.src})
-    .pipe(pdf())
-    .pipe(gulp.dest(basePaths.test));
-});
-
 gulp.task('modernizr', function (cb) {
   modernizr.build({
-    'classPrefix'    : "",
-    'options'        : [],
-    'feature-detects': []
+    'classPrefix'    : '',
+    'options'        : [
+      'setClasses',
+    ],
+    'feature-detects': [
+      'css/flexbox'
+    ]
   }, function (result) {
     fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function (err) {
       if (err) {

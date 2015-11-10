@@ -26,6 +26,11 @@
     text-align     : center;
     text-transform : uppercase;
     color          : $color-red;
+    display        : none;
+
+    .no-flexbox & {
+      display : block;
+    }
   }
 
   // Hire Me
