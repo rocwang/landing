@@ -3,11 +3,11 @@ server {
   # listen 80 accept_filter=httpready; # for FreeBSD
   # listen [::]:80 deferred; # for Linux
   # listen 80 deferred; # for Linux
-  listen [::]:80;
-  listen 80;
+  listen [::]:80 default_server;
+  listen 80 default_server;
 
   # The host name to respond to
-  server_name cv.rocwang.me cv2.rocwang.me docker.dev;
+  # server_name cv.rocwang.me;
 
   # Path for static files
   root /usr/share/nginx/html;
