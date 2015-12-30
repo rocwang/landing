@@ -22,14 +22,13 @@ var gulp         = require('gulp'),
 
     // CSS plugins
     sass         = require('gulp-sass'),
-    minifyCss    = require('gulp-minify-css'),
+    nano         = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
 
     // JS plugins
-    jshint       = require('gulp-jshint'),
     uglify       = require('gulp-uglify'),
     concat       = require('gulp-concat'),
-    modernizr    = require("modernizr"),
+    modernizr    = require('modernizr'),
 
 
     // Image plugins
@@ -99,8 +98,8 @@ gulp.task('scss', function () {
       ],
       outputStyle : 'compressed'
     }))
-    .pipe(minifyCss({
-      'keepSpecialComments': 0
+    .pipe(nano({
+      discardComments: {removeAll: true}
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 10'],
@@ -147,7 +146,7 @@ gulp.task('sprite', function () {
       mode: {
         symbol: {
           dest   : '.',
-          sprite: 'sprite.svg',
+          sprite : 'sprite.svg',
           example: false
         }
       }
@@ -162,16 +161,18 @@ gulp.task('html', ['scss', 'js'], function () {
       rootpath: basePaths.test
     }) : util.noop())
     .pipe(htmlmin({
-      collapseBooleanAttributes   : true,
-      collapseWhitespace       : true,
-      removeAttributeQuotes    : true,
-      removeCDATASectionsFromCDATA: true,
-      removeComments              : true,
-      removeCommentsFromCDATA     : true,
-      removeEmptyAttributes       : true,
-      removeOptionalTags          : false,
-      removeRedundantAttributes   : true,
-      useShortDoctype             : true
+      collapseBooleanAttributes    : true,
+      collapseWhitespace           : true,
+      removeAttributeQuotes        : true,
+      removeCDATASectionsFromCDATA : true,
+      removeComments               : true,
+      removeCommentsFromCDATA      : true,
+      removeEmptyAttributes        : true,
+      removeOptionalTags           : true,
+      removeRedundantAttributes    : true,
+      removeScriptTypeAttributes   : true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype              : false
     }))
     .pipe(gulp.dest(basePaths.test));
 });

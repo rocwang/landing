@@ -1,6 +1,7 @@
-.idea/
-node_modules/
-test/
-release/
-resource/
-js/head/modernizr.js
+/.idea/
+/node_modules/
+/nginx/ssl/rocwang.me.key
+/test/
+/release/
+/resource/
+/src/js/head/modernizr.js

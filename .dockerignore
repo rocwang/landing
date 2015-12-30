@@ -1,0 +1,13 @@
+node_modules
+resource
+src
+test
+.dockerignore
+.editorconfig
+.gitignore
+.jshintrc
+.scss-lint.yml
+Dockerfile
+gulpfile.js
+package.json
+README.md
