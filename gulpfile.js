@@ -61,9 +61,6 @@ var srcFiles = {
   ],
   img   : [
     'img/**',
-    '../node_modules/photoswipe/dist/default-skin/default-skin.png',
-    '../node_modules/photoswipe/dist/default-skin/default-skin.svg',
-    '../node_modules/photoswipe/dist/default-skin/preloader.gif',
   ],
   sprite: [
     'sprite/*.svg',
@@ -78,6 +75,7 @@ var srcFiles = {
     'humans.txt',
     'robots.txt',
     'rocwang.pdf',
+    'sitemap.txt',
   ]
 };
 
@@ -99,7 +97,8 @@ gulp.task('scss', function () {
       outputStyle : 'compressed'
     }))
     .pipe(nano({
-      discardComments: {removeAll: true}
+      discardComments: {removeAll: true},
+      discardUnused  : {fontFace: false},
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 10'],
@@ -218,6 +217,7 @@ gulp.task('release', ['default'], function () {
       'robots.txt',
       'rocwang.pdf',
       'favicon.ico',
+      'sitemap.txt',
     ],
     dontRenameFile: [
       'index.html',
