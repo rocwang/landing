@@ -3,6 +3,7 @@ $print-logo-width : 120px;
 
 .experience__logo {
   width : $screen-logo-width;
+  &--lero9 { height : $screen-logo-width * 81.1 / 296.7; }
   &--mr { height : $screen-logo-width * 115 / 230; }
   &--tencent { height : $screen-logo-width * 27.991 / 208.741; }
   &--infosys { height : $screen-logo-width * 37.686 / 96.771; }
