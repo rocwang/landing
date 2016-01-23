@@ -20,7 +20,7 @@ Please see [https://rocwang.me](https://rocwang.me)
 
 4. Build the Docker image and push it to Docker Hub
 
-        $ docker build -t rocwang.me/cv
+        $ docker build -t rocwang.me/cv .
         $ docker push rocwang.me/cv
 
 5. Deploy to live server
