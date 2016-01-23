@@ -12,7 +12,7 @@ Please see [https://rocwang.me](https://rocwang.me)
 
 1. Compile
 
-        $ gulp release
+        $ gulp release --dist
 
 2. Save the PDF version by printing in Chrome, overwriting "rocwang.pdf"
 
