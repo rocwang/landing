@@ -28,3 +28,5 @@ curl -X DELETE \
     -H "Content-Type: application/json" \
     --data '{"files":["https://rocwang.me/", "https://rocwang.me/index.html"]}' \
     "https://api.cloudflare.com/client/v4/zones/48a5ff753ce70f5261c0762c6bd03c34/purge_cache"
+
+open https://rocwang.me/
