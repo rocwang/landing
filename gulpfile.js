@@ -224,18 +224,9 @@ gulp.task('release', ['default'], function () {
     ]
   });
 
-  var stream = gulp.src(basePaths.test + '**')
+  return gulp.src(basePaths.test + '**')
     .pipe(revAll.revision())
     .pipe(gulp.dest(basePaths.release));
-
-  browserSync({
-    server: {
-      baseDir: basePaths.release
-    },
-    open  : false
-  });
-
-  return stream;
 });
 
 // Watch task
