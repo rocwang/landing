@@ -20,13 +20,14 @@ Please see [https://rocwang.me](https://rocwang.me)
 
 4. Build the Docker image and push it to Docker Hub
 
-        $ docker build -t rocwang.me/cv .
-        $ docker push rocwang.me/cv
+        $ docker build -t rocwang/cv .
+        $ docker push rocwang/cv
 
 5. Deploy to live server
 
         $ docker pull rocwang/cv
-        $ docker run -e VIRTUAL_HOST=cv.rocwang.me,rocwang.me,www.rocwang.me -e VIRTUAL_PROTO=https -e VIRTUAL_PORT=443 -e CERT_NAME=www.rocwang.me --name cv2 rocwang/cv
+        $ docker rm -f cv
+        $ docker run -d -e VIRTUAL_HOST=cv.rocwang.me,rocwang.me,www.rocwang.me -e VIRTUAL_PROTO=https -e VIRTUAL_PORT=443 -e CERT_NAME=www.rocwang.me --name cv rocwang/cv
 
 6. Purge Cloudflare cache
 
