@@ -115,6 +115,10 @@
       }
     }
 
+    .no-js &__operation {
+      display : none;
+    }
+
     &__address-item,
     &__operation-item {
       margin-bottom : $line-height-computed/2;
