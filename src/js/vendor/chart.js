@@ -56,10 +56,11 @@
 
         pointHighlightFill  : '#db3522',
         pointHighlightStroke: '#db3522',
-      }]
+      }],
     };
 
     // Skills radar charts
+    /*global Chart:true*/
     new Chart(context).Radar(data, options);
   });
 

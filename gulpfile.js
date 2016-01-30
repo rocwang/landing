@@ -29,6 +29,7 @@ var gulp         = require('gulp'),
     uglify       = require('gulp-uglify'),
     concat       = require('gulp-concat'),
     modernizr    = require('modernizr'),
+    eslint       = require('gulp-eslint'),
 
 
     // Image plugins
@@ -76,7 +77,7 @@ var srcFiles = {
     'robots.txt',
     'rocwang.pdf',
     'sitemap.txt',
-  ]
+  ],
 };
 
 gulp.task('clean', function (cb) {
@@ -91,10 +92,8 @@ gulp.task('scss', function () {
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? util.noop() : sourcemaps.init())
     .pipe(sass({
-      includePaths: [
-        basePaths.vendor
-      ],
-      outputStyle : 'compressed'
+      includePaths: [basePaths.vendor],
+      outputStyle : 'compressed',
     }))
     .pipe(nano({
       discardComments: {removeAll: true},
@@ -102,7 +101,7 @@ gulp.task('scss', function () {
     }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 10'],
-      cascade : false
+      cascade : false,
     }))
 
     .pipe(isProduction ? util.noop() : sourcemaps.write('.'))
@@ -146,9 +145,9 @@ gulp.task('sprite', function () {
         symbol: {
           dest   : '.',
           sprite : 'sprite.svg',
-          example: false
-        }
-      }
+          example: false,
+        },
+      },
     }))
     .pipe(gulp.dest(basePaths.test + 'img'));
 });
@@ -157,7 +156,7 @@ gulp.task('html', ['scss', 'js'], function () {
   return gulp.src(srcFiles.html, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? inlineSource({
-      rootpath: basePaths.test
+      rootpath: basePaths.test,
     }) : util.noop())
     .pipe(htmlmin({
       collapseBooleanAttributes    : true,
@@ -171,7 +170,7 @@ gulp.task('html', ['scss', 'js'], function () {
       removeRedundantAttributes    : true,
       removeScriptTypeAttributes   : true,
       removeStyleLinkTypeAttributes: true,
-      useShortDoctype              : false
+      useShortDoctype              : false,
     }))
     .pipe(gulp.dest(basePaths.test));
 });
@@ -179,7 +178,7 @@ gulp.task('html', ['scss', 'js'], function () {
 gulp.task('misc', function () {
   return gulp.src(srcFiles.misc, {
       cwd : basePaths.src,
-      base: basePaths.src
+      base: basePaths.src,
     })
     .pipe(plumber({errorHandler: onError}))
     .pipe(gulp.dest(basePaths.test));
@@ -192,14 +191,15 @@ gulp.task('modernizr', function (cb) {
       'setClasses',
     ],
     'feature-detects': [
-      'css/flexbox'
-    ]
+      'css/flexbox',
+    ],
   }, function (result) {
     fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function (err) {
       if (err) {
         return cb(err);
       }
 
+      /*eslint no-console: 0*/
       console.log('modernizr.js is generated');
       cb();
     });
@@ -221,7 +221,7 @@ gulp.task('release', ['default'], function () {
     ],
     dontRenameFile: [
       'index.html',
-    ]
+    ],
   });
 
   return gulp.src(basePaths.test + '**')
@@ -253,8 +253,19 @@ gulp.task('watch', ['default'], function () {
 
   browserSync({
     server: {
-      baseDir: basePaths.test
+      baseDir: basePaths.test,
     },
-    open  : false
+    open  : false,
   });
+});
+
+gulp.task('lint', function () {
+  return gulp.src([
+      'gulpfile.js',
+      basePaths.src + 'js/**/*.js',
+      '!' + basePaths.src + 'js/head/modernizr.js',
+    ])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
