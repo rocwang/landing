@@ -1,6 +1,6 @@
 @media screen {
 
-  h2 { margin-top : $line-height-computed*2; }
+  h2 { margin-top : $line-height-computed * 2; }
 
   h3:first-child { margin-top : 0; }
 
@@ -19,9 +19,9 @@
 
   .browser-happy {
     position       : absolute;
-    top            : $line-height-computed/2;
-    left           : $grid-gutter-width/2;
-    right          : $grid-gutter-width/2;
+    top            : $line-height-computed / 2;
+    left           : $grid-gutter-width / 2;
+    right          : $grid-gutter-width / 2;
     z-index        : $zindex--broswer-happy;
     text-align     : center;
     text-transform : uppercase;
@@ -51,6 +51,7 @@
     }
 
     $popover-background-color : $color-black;
+
     &__popover {
       position         : absolute;
       top              : 0;
@@ -106,7 +107,7 @@
 
     &__company-link {
       display       : inline-block;
-      margin-bottom : $line-height-computed/2;
+      margin-bottom : $line-height-computed / 2;
     }
 
     &__logo {
@@ -115,13 +116,13 @@
     }
 
     &__description:not(:last-child) {
-      padding-bottom : $line-height-computed/2;
+      padding-bottom : $line-height-computed / 2;
       border-bottom  : 2px solid $color-dark-gray;
       margin-bottom  : $line-height-computed;
 
       @include breakpoint($screen-sm) {
         padding-bottom : 0;
-        border-bottom  : none;
+        border-bottom  : 0;
       }
     }
   }
@@ -137,7 +138,7 @@
 
     &__logo-link {
       display       : inline-block;
-      margin-bottom : $line-height-computed/2;
+      margin-bottom : $line-height-computed / 2;
     }
 
     &__logo { display : block; }
@@ -156,7 +157,7 @@
       color         : $text-muted;
       font-weight   : normal;
       text-align    : center;
-      margin-bottom : $line-height-computed/2;
+      margin-bottom : $line-height-computed / 2;
 
       @include breakpoint($screen-lg) {
         flex : 0 0 auto;
@@ -178,7 +179,7 @@
 
     &__logo-link {
       display       : inline-block;
-      margin-bottom : $line-height-computed/2;
+      margin-bottom : $line-height-computed / 2;
     }
 
     &__logo {

@@ -22,6 +22,7 @@
         "gulp-plumber"      : "latest",
         "gulp-rev-all"      : "latest",
         "gulp-sass"         : "latest",
+        "gulp-scss-lint"    : "latest",
         "gulp-sourcemaps"   : "latest",
         "gulp-svg-sprite"   : "latest",
         "gulp-uglify"       : "latest",

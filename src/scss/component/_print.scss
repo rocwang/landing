@@ -56,12 +56,14 @@
 
   // Horizontally layout certain sections
   $print-dl-horizontal-offset : 140px;
+
   .experience,
   .personal-projects,
   .education {
     dl {
-      margin-bottom : $line-height-computed/2;
+      margin-bottom : $line-height-computed / 2;
     }
+
     dt {
       float         : left;
       width         : ($print-dl-horizontal-offset - 20);
@@ -70,8 +72,10 @@
       font-size     : $font-size-small;
       font-weight   : 300;
       margin-bottom : $line-height-computed;
+
       @include text-overflow;
     }
+
     dd { margin-left : $print-dl-horizontal-offset; }
   }
 

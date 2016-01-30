@@ -24,6 +24,7 @@ var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     nano         = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
+    scsslint     = require('gulp-scss-lint'),
 
     // JS plugins
     uglify       = require('gulp-uglify'),
@@ -87,7 +88,7 @@ gulp.task('clean', function (cb) {
   ], cb);
 });
 
-gulp.task('scss', function () {
+gulp.task('scss', ['scsslint'], function () {
   return gulp.src(srcFiles.scss, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? util.noop() : sourcemaps.init())
@@ -110,7 +111,7 @@ gulp.task('scss', function () {
 
 });
 
-gulp.task('js', ['modernizr'], function () {
+gulp.task('js', ['modernizr', 'eslint'], function () {
   var mergedStream = merge();
 
   srcFiles.js.forEach(function (val) {
@@ -259,7 +260,7 @@ gulp.task('watch', ['default'], function () {
   });
 });
 
-gulp.task('lint', function () {
+gulp.task('eslint', function () {
   return gulp.src([
       'gulpfile.js',
       basePaths.src + 'js/**/*.js',
@@ -268,4 +269,13 @@ gulp.task('lint', function () {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+gulp.task('scsslint', function () {
+  return gulp.src([
+      basePaths.src + 'scss/**/*.scss',
+      '!' + basePaths.src + 'scss/vendor-var/_bootstrap.scss',
+    ])
+    .pipe(scsslint())
+    .pipe(scsslint.failReporter())
 });

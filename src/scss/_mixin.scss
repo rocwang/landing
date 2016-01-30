@@ -1,8 +1,8 @@
 // Break point management
-@import 'breakpoint-sass/stylesheets/breakpoint.scss';
+@import 'breakpoint-sass/stylesheets/breakpoint';
 
 // Bootstrap
-@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import 'bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 
 @mixin list-oneline {
   margin-left : -5px;

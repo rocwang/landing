@@ -3,9 +3,10 @@ $color-gold : #d9cb9e;
 $color-light-gray : #374140;
 $color-dark-gray : #2a2c2b;
 $color-black : #1e1e20;
+$color-white : white;
 
 // Bootstrap
-@import "vendor-var/bootstrap";
+@import 'vendor-var/bootstrap';
 
 // z-index management
 $zindex--contact__video-bg : 10;
