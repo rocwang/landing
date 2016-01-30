@@ -19,6 +19,7 @@ var gulp         = require('gulp'),
     htmlmin      = require('gulp-htmlmin'),
     inlineSource = require('gulp-inline-source'),
     RevAll       = require('gulp-rev-all'),
+    html5lint    = require('gulp-html5-lint'),
 
     // CSS plugins
     sass         = require('gulp-sass'),
@@ -279,3 +280,9 @@ gulp.task('scsslint', function () {
     .pipe(scsslint())
     .pipe(scsslint.failReporter())
 });
+
+gulp.task('html5lint', function () {
+  return gulp.src(basePaths.release + srcFiles.html)
+    .pipe(html5lint());
+});
+
