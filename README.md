@@ -5,6 +5,7 @@ Please see [https://rocwang.me](https://rocwang.me)
 
 ## Setup development environment
 
+    $ sudo gem install scss_lint
     $ npm install
     $ gulp watch
 
