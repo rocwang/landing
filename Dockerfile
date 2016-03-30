@@ -1,5 +1,5 @@
-FROM nginx
+FROM nginx:alpine
 COPY release /usr/share/nginx/html
 COPY nginx /etc/nginx
 
-RUN chown -R www-data:www-data /usr/share/nginx/html
+RUN chown -R nginx:nginx /usr/share/nginx/html
