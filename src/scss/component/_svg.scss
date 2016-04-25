@@ -3,16 +3,43 @@ $print-logo-width : 120px;
 
 .experience__logo {
   width : $screen-logo-width;
-  &--lero9 { height : $screen-logo-width * 81.1 / 296.7; }
-  &--mr { height : $screen-logo-width * 115 / 230; }
-  &--tencent { height : $screen-logo-width * 27.991 / 208.741; }
-  &--infosys { height : $screen-logo-width * 37.686 / 96.771; }
+
+  &--pocket-square {
+    width  : 100px;
+    height : 100px;
+  }
+
+  &--lero9 {
+    width  : 120px;
+    height : 120px * 81.1 / 296.7;
+  }
+
+  &--mr {
+    height : $screen-logo-width * 115 / 230;
+  }
+
+  &--tencent {
+    height : $screen-logo-width * 27.991 / 208.741;
+  }
+
+  &--infosys {
+    height : $screen-logo-width * 37.686 / 96.771;
+  }
 
   @media print {
     width : $print-logo-width;
-    &--mr { height : $print-logo-width * 115 / 230; }
-    &--tencent { height : $print-logo-width * 27.991 / 208.741; }
-    &--infosys { height : $print-logo-width * 37.686 / 96.771; }
+
+    &--mr {
+      height : $print-logo-width * 115 / 230;
+    }
+
+    &--tencent {
+      height : $print-logo-width * 27.991 / 208.741;
+    }
+
+    &--infosys {
+      height : $print-logo-width * 37.686 / 96.771;
+    }
   }
 }
 
@@ -20,7 +47,9 @@ $print-logo-width : 120px;
   max-width  : 100%;
   max-height : 50px;
 
-  @include breakpoint($screen-sm) { max-width : 200px; }
+  @include breakpoint($screen-sm) {
+    max-width : 200px;
+  }
 }
 
 .personal-projects__logo {
