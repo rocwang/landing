@@ -82,14 +82,14 @@ var srcFiles = {
   ],
 };
 
-gulp.task('clean', function (cb) {
+gulp.task('clean', function(cb) {
   del([
     basePaths.test,
     basePaths.release,
   ], cb);
 });
 
-gulp.task('scss', ['scsslint'], function () {
+gulp.task('scss', ['scsslint'], function() {
   return gulp.src(srcFiles.scss, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? util.noop() : sourcemaps.init())
@@ -112,11 +112,11 @@ gulp.task('scss', ['scsslint'], function () {
 
 });
 
-gulp.task('js', ['modernizr', 'eslint'], function () {
+gulp.task('js', ['modernizr', 'eslint'], function() {
   var mergedStream = merge();
 
-  srcFiles.js.forEach(function (val) {
-    var src = require(basePaths.src + val);
+  srcFiles.js.forEach(function(val) {
+    var src    = require(basePaths.src + val);
     var stream = gulp.src(src, {cwd: basePaths.src + 'js'})
       .pipe(plumber({errorHandler: onError}))
       .pipe(isProduction ? util.noop() : sourcemaps.init())
@@ -131,14 +131,14 @@ gulp.task('js', ['modernizr', 'eslint'], function () {
   return mergedStream;
 });
 
-gulp.task('img', function () {
+gulp.task('img', function() {
   return gulp.src(srcFiles.img, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(imagemin())
     .pipe(gulp.dest(basePaths.test + 'img'));
 });
 
-gulp.task('sprite', function () {
+gulp.task('sprite', function() {
   return gulp.src(srcFiles.sprite, {cwd: basePaths.src})
 
     .pipe(plumber({errorHandler: onError}))
@@ -154,12 +154,12 @@ gulp.task('sprite', function () {
     .pipe(gulp.dest(basePaths.test + 'img'));
 });
 
-gulp.task('html', ['scss', 'js'], function () {
+gulp.task('html', ['scss', 'js'], function() {
   return gulp.src(srcFiles.html, {cwd: basePaths.src})
     .pipe(plumber({errorHandler: onError}))
     .pipe(isProduction ? inlineSource({
-      rootpath: basePaths.test,
-    }) : util.noop())
+        rootpath: basePaths.test,
+      }) : util.noop())
     .pipe(htmlmin({
       collapseBooleanAttributes    : true,
       collapseWhitespace           : true,
@@ -177,16 +177,16 @@ gulp.task('html', ['scss', 'js'], function () {
     .pipe(gulp.dest(basePaths.test));
 });
 
-gulp.task('misc', function () {
+gulp.task('misc', function() {
   return gulp.src(srcFiles.misc, {
-      cwd : basePaths.src,
-      base: basePaths.src,
-    })
+    cwd : basePaths.src,
+    base: basePaths.src,
+  })
     .pipe(plumber({errorHandler: onError}))
     .pipe(gulp.dest(basePaths.test));
 });
 
-gulp.task('modernizr', function (cb) {
+gulp.task('modernizr', function(cb) {
   modernizr.build({
     'classPrefix'    : '',
     'options'        : [
@@ -195,8 +195,8 @@ gulp.task('modernizr', function (cb) {
     'feature-detects': [
       'css/flexbox',
     ],
-  }, function (result) {
-    fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function (err) {
+  }, function(result) {
+    fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function(err) {
       if (err) {
         return cb(err);
       }
@@ -211,30 +211,30 @@ gulp.task('modernizr', function (cb) {
 // Default task
 gulp.task('default', Object.keys(srcFiles));
 
-gulp.task('release', ['default'], function () {
-  // Revise all files
-  var revAll = new RevAll({
-    dontGlobal    : [
-      'humans.txt',
-      'robots.txt',
-      'rocwang.pdf',
-      'favicon.ico',
-      'sitemap.txt',
-    ],
-    dontRenameFile: [
-      'index.html',
-    ],
-  });
+gulp.task('release', ['default'], function() {
 
   return gulp.src(basePaths.test + '**')
-    .pipe(revAll.revision())
+  // Revise all files
+    .pipe(RevAll.revision({
+        dontGlobal    : [
+          'humans.txt',
+          'robots.txt',
+          'rocwang.pdf',
+          'favicon.ico',
+          'sitemap.txt',
+        ],
+        dontRenameFile: [
+          'index.html',
+        ],
+      }
+    ))
     .pipe(gulp.dest(basePaths.release));
 });
 
 // Watch task
-gulp.task('watch', ['default'], function () {
+gulp.task('watch', ['default'], function() {
 
-  Object.keys(srcFiles).forEach(function (element) {
+  Object.keys(srcFiles).forEach(function(element) {
     var watchedFiles;
     switch (element) {
       case 'scss':
@@ -261,27 +261,27 @@ gulp.task('watch', ['default'], function () {
   });
 });
 
-gulp.task('eslint', function () {
+gulp.task('eslint', function() {
   return gulp.src([
-      'gulpfile.js',
-      basePaths.src + 'js/**/*.js',
-      '!' + basePaths.src + 'js/head/modernizr.js',
-    ])
+    'gulpfile.js',
+    basePaths.src + 'js/**/*.js',
+    '!' + basePaths.src + 'js/head/modernizr.js',
+  ])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('scsslint', function () {
+gulp.task('scsslint', function() {
   return gulp.src([
-      basePaths.src + 'scss/**/*.scss',
-      '!' + basePaths.src + 'scss/vendor-var/_bootstrap.scss',
-    ])
+    basePaths.src + 'scss/**/*.scss',
+    '!' + basePaths.src + 'scss/vendor-var/_bootstrap.scss',
+  ])
     .pipe(scsslint())
     .pipe(scsslint.failReporter())
 });
 
-gulp.task('html5lint', function () {
+gulp.task('html5lint', function() {
   return gulp.src(basePaths.release + srcFiles.html)
     .pipe(html5lint());
 });
