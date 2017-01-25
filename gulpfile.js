@@ -79,6 +79,7 @@ var srcFiles = {
     'robots.txt',
     'rocwang.pdf',
     'sitemap.txt',
+    'google3945080f16c90e1d.html',
   ],
 };
 
@@ -222,6 +223,7 @@ gulp.task('release', ['default'], function() {
           'rocwang.pdf',
           'favicon.ico',
           'sitemap.txt',
+          'google3945080f16c90e1d.html',
         ],
         dontRenameFile: [
           'index.html',
