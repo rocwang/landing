@@ -28,7 +28,6 @@
         "gulp-svg-sprite"   : "latest",
         "gulp-uglify"       : "2.x",
         "gulp-util"         : "latest",
-        "merge-stream"      : "latest",
-        "svg4everybody"     : "2.x"
+        "merge-stream"      : "latest"
     }
 }
