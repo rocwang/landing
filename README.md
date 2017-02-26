@@ -1,7 +1,7 @@
 # Roc's CV Site
 
 This is the source code of my CV site.
-Please see [https://rocwang.me](https://rocwang.me)
+Please see [https://www.rocwang.me](https://www.rocwang.me)
 
 ## Setup development environment
 

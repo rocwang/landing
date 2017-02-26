@@ -1,7 +1,7 @@
 {
     "name"           : "cv",
     "version"        : "2.0.0",
-    "author"         : "Roc <me@rocwang.me>",
+    "author"         : "Roc <roc@kiwiberry.nz>",
     "private"        : true,
     "description"    : "Roc's CV",
     "devDependencies": {

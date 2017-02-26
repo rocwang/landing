@@ -1,7 +1,5 @@
 /.idea/
 /node_modules/
-/nginx/ssl/rocwang.me.key
 /test/
 /resource/
-/src/js/head/modernizr.js
 /cloudflare-api-key
