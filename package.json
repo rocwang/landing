@@ -7,7 +7,7 @@
     "devDependencies": {
         "bootstrap-sass"    : "3.x",
         "breakpoint-sass"   : "2.x",
-        "browser-sync"      : "latest",
+        "browser-sync"      : "2.x",
         "chart.js"          : "1.x",
         "del"               : "latest",
         "gulp"              : "latest",
@@ -19,17 +19,16 @@
         "gulp-htmlmin"      : "latest",
         "gulp-imagemin"     : "latest",
         "gulp-inline-source": "latest",
-        "gulp-notify"       : "latest",
+        "gulp-notify"       : "3.x",
         "gulp-plumber"      : "latest",
         "gulp-rev-all"      : "latest",
         "gulp-sass"         : "latest",
         "gulp-scss-lint"    : "latest",
-        "gulp-sourcemaps"   : "latest",
+        "gulp-sourcemaps"   : "2.x",
         "gulp-svg-sprite"   : "latest",
-        "gulp-uglify"       : "latest",
+        "gulp-uglify"       : "2.x",
         "gulp-util"         : "latest",
         "merge-stream"      : "latest",
-        "modernizr"         : "3.x",
         "svg4everybody"     : "2.x"
     }
 }

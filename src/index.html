@@ -10,12 +10,14 @@
 
   <link rel="shortcut icon" href="favicon.ico?v=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="canonical" href="https://www.rocwang.me/" />
+  <link rel="canonical" href="https://www.rocwang.me/"/>
   <link rel="author" href="humans.txt">
 
   <link rel="stylesheet" href="css/above-the-fold.css" inline>
 
-  <script src="js/head.js" inline></script>
+  <link rel="preload" href="css/below-the-fold.css" as="style">
+  <link rel="preload" href="js/app.js" as="script">
+  <link rel="preload" href="js/vendor.js" as="script">
 </head>
 <body class="bg">
 
@@ -31,7 +33,7 @@
   <div class="contact__text">
     <!-- Name -->
     <h1 class="contact__name">Roc Wang<br>
-      <small class="contact__tag-line">&mdash; Building artisanal websites.</small>
+      <small class="contact__tag-line">&mdash; Builds artisanal websites.</small>
     </h1>
 
     <!-- Address -->
@@ -52,20 +54,16 @@
           roc@kiwiberry.nz
         </a>
       </li>
-      <li class="contact__address-item">
-        <a href="https://rocwang.me/">
+      <li class="contact__address-item contact__website">
+        <a href="https://www.rocwang.me/">
           <svg class="icon">
             <use xlink:href="img/sprite.svg#icon-globe"/>
           </svg>
           https://rocwang.me
         </a>
       </li>
-    </ul>
-
-    <!-- Operations -->
-    <ul class="contact__operation">
-      <li class="contact__operation-item">
-        <a id="print" class="print" href="#" title="Print Roc's CV">
+      <li class="contact__address-item contact__print">
+        <a id="print" href="#" title="Print Roc's CV">
           <svg class="icon">
             <use xlink:href="img/sprite.svg#icon-print"/>
           </svg>
@@ -103,6 +101,25 @@
       </dt>
       <dd class="experience__description">
         <h3>Senior Web Developer</h3>
+        <ul>
+          <li>
+            Maintain the Magento websites for
+            <a href="https://www.superette.co.nz/">Superette</a>,
+            <a href="https://www.stolengirlfriendsclub.com/">Stolen Girlfriends Club</a>
+            and
+            <a href="http://www.mrvintage.co.nz/">Mr Vintage</a>
+          </li>
+          <li>
+            Develop features for Shopify based E-Commerce websites, e.g.
+            <a href="https://www.walkerandhall.co.nz/">Walker & Hall</a>,
+            <a href="https://wholesale.kowtowclothing.com/">Kowtow</a>
+          </li>
+          <li>
+            Develop WordPress based sites for
+            <a href="http://www.artofperformancetour.nz/">Jaguar Land Rover</a>,
+            <a href="https://www.blackliststore.com.au/">The Blacklist</a>
+          </li>
+        </ul>
       </dd>
 
       <dt class="experience__company">
@@ -331,7 +348,7 @@
     <h2 class="skills__title">Skills</h2>
 
     <section class="skills__group">
-      <h3 class="skills__chart-title">Language</h3>
+      <h3 class="skills__chart-title">Languages</h3>
 
       <div class="skills__chart-container">
         <canvas id="skills__chart--language" class="skills__chart"></canvas>
@@ -394,7 +411,7 @@
                aria-valuenow="60"
                aria-valuemin="0"
                aria-valuemax="100"
-               style="width: 60%;">
+               style="width: 50%;">
             Objective-C
           </div>
         </div>
@@ -402,7 +419,7 @@
     </section>
 
     <section class="skills__group">
-      <h3 class="skills__chart-title">Framework / Platform</h3>
+      <h3 class="skills__chart-title">Frameworks / Platforms</h3>
 
       <div class="skills__chart-container">
         <canvas id="skills__chart--framework" class="skills__chart"></canvas>
@@ -416,47 +433,7 @@
                aria-valuemin="0"
                aria-valuemax="100"
                style="width: 90%;">
-            jQuery
-          </div>
-        </div>
-        <div class="bar-chart__bg">
-          <div class="bar-chart__bar js-bar-chart__bar"
-               role="progressbar"
-               aria-valuenow="90"
-               aria-valuemin="0"
-               aria-valuemax="100"
-               style="width: 90%;">
-            Bootstrap
-          </div>
-        </div>
-        <div class="bar-chart__bg">
-          <div class="bar-chart__bar js-bar-chart__bar"
-               role="progressbar"
-               aria-valuenow="80"
-               aria-valuemin="0"
-               aria-valuemax="100"
-               style="width: 80%;">
             Magento 1
-          </div>
-        </div>
-        <div class="bar-chart__bg">
-          <div class="bar-chart__bar js-bar-chart__bar"
-               role="progressbar"
-               aria-valuenow="50"
-               aria-valuemin="0"
-               aria-valuemax="100"
-               style="width: 50%;">
-            Angular 2
-          </div>
-        </div>
-        <div class="bar-chart__bg">
-          <div class="bar-chart__bar js-bar-chart__bar"
-               role="progressbar"
-               aria-valuenow="50"
-               aria-valuemin="0"
-               aria-valuemax="100"
-               style="width: 50%;">
-            Wordpress
           </div>
         </div>
         <div class="bar-chart__bg">
@@ -467,6 +444,46 @@
                aria-valuemax="100"
                style="width: 30%;">
             Magento 2
+          </div>
+        </div>
+        <div class="bar-chart__bg">
+          <div class="bar-chart__bar js-bar-chart__bar"
+               role="progressbar"
+               aria-valuenow="70"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               style="width: 70%;">
+            Wordpress
+          </div>
+        </div>
+        <div class="bar-chart__bg">
+          <div class="bar-chart__bar js-bar-chart__bar"
+               role="progressbar"
+               aria-valuenow="60"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               style="width: 60%;">
+            Shopify
+          </div>
+        </div>
+        <div class="bar-chart__bg">
+          <div class="bar-chart__bar js-bar-chart__bar"
+               role="progressbar"
+               aria-valuenow="50"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               style="width: 50%;">
+            Vue.js
+          </div>
+        </div>
+        <div class="bar-chart__bg">
+          <div class="bar-chart__bar js-bar-chart__bar"
+               role="progressbar"
+               aria-valuenow="50"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               style="width: 50%;">
+            Angular 2
           </div>
         </div>
       </div>
@@ -487,7 +504,7 @@
                aria-valuemin="0"
                aria-valuemax="100"
                style="width: 90%;">
-            Shell/CLI
+            Shell / CLI
           </div>
         </div>
         <div class="bar-chart__bg">
@@ -652,18 +669,6 @@
     </svg>
   </a>
 </footer>
-
-<!-- Alert for outdated browsers without flexbox support-->
-<div class="browser-happy">
-  You are using an <strong>outdated</strong> browser. Please
-  <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a>
-  to improve your experience.
-</div>
-
-<!-- "Hire Me" popover -->
-<div id="hire-me" class="hire-me">
-  <div id="hire-me__popover" class="hire-me__popover">Hi there!</div>
-</div>
 
 <!-- QR Code -->
 <svg class="qr-code">

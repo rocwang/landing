@@ -12,7 +12,6 @@ var gulp         = require('gulp'),
     path         = require('path'),
     sourcemaps   = require('gulp-sourcemaps'),
     browserSync  = require('browser-sync'),
-    fs           = require('fs'),
 
 
     // HTML plugins
@@ -30,7 +29,6 @@ var gulp         = require('gulp'),
     // JS plugins
     uglify       = require('gulp-uglify'),
     concat       = require('gulp-concat'),
-    modernizr    = require('modernizr'),
     eslint       = require('gulp-eslint'),
 
 
@@ -60,7 +58,6 @@ var srcFiles = {
   js    : [
     'js/vendor.js',
     'js/app.js',
-    'js/head.js',
   ],
   img   : [
     'img/**',
@@ -113,7 +110,7 @@ gulp.task('scss', ['scsslint'], function() {
 
 });
 
-gulp.task('js', ['modernizr', 'eslint'], function() {
+gulp.task('js', ['eslint'], function() {
   var mergedStream = merge();
 
   srcFiles.js.forEach(function(val) {
@@ -185,28 +182,6 @@ gulp.task('misc', function() {
   })
     .pipe(plumber({errorHandler: onError}))
     .pipe(gulp.dest(basePaths.test));
-});
-
-gulp.task('modernizr', function(cb) {
-  modernizr.build({
-    'classPrefix'    : '',
-    'options'        : [
-      'setClasses',
-    ],
-    'feature-detects': [
-      'css/flexbox',
-    ],
-  }, function(result) {
-    fs.writeFile(basePaths.src + 'js/head/modernizr.js', result, function(err) {
-      if (err) {
-        return cb(err);
-      }
-
-      /*eslint no-console: 0*/
-      console.log('modernizr.js is generated');
-      cb();
-    });
-  });
 });
 
 // Default task

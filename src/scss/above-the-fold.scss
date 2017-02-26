@@ -42,7 +42,9 @@
       z-index    : $zindex--contact__video-bg;
       display    : none;
 
-      @include breakpoint($screen-md) { display : block; }
+      @include breakpoint($screen-md) {
+        display : block;
+      }
     }
 
     &::before {
@@ -59,7 +61,9 @@
       z-index             : $zindex--contact__video-bg-overlay;
       display             : none;
 
-      @include breakpoint($screen-md) { display : block; }
+      @include breakpoint($screen-md) {
+        display : block;
+      }
     }
 
     //  Contact
@@ -103,9 +107,8 @@
       }
     }
 
-    // Address & Operation
-    &__address,
-    &__operation {
+    // Address
+    &__address {
       @include list-unstyled;
       margin-bottom : $line-height-computed;
 
@@ -115,18 +118,17 @@
       }
     }
 
-    .no-js &__operation {
-      display : none;
-    }
-
-    &__address-item,
-    &__operation-item {
+    &__address-item {
       margin-bottom : $line-height-computed / 2;
 
       @include breakpoint($screen-sm) {
         margin-bottom : 0;
       }
     }
+  }
+
+  .contact__address > .contact__website {
+    display : none;
   }
 }
 

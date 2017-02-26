@@ -27,12 +27,15 @@
   }
 
   // Hide something for printing
-  .hire-me,
   .contact__video-bg,
   .contact__tag-line,
-  .contact__operation,
+  .contact__address > .contact__print,
   .page-footer__humans-txt,
   .browser-happy { display : none; }
+
+  .contact__website {
+    display: inline-block;
+  }
 
   // QR Code
   .qr-code {

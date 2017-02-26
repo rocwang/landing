@@ -11,6 +11,4 @@ Please see [https://rocwang.me](https://rocwang.me)
 
 ## Release Procedure
 
-1. Put the site private key `rocwang.me.key` in `nginx/ssl`
-2. Put the Cloudflare API key into `cloudflare-api-key`
-3. Run `deploy.sh` in project root
+    $ gulp release --dist

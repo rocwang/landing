@@ -7,7 +7,6 @@
   // Container widths
   //
   // Set the container width, and override it for fixed navbars in media queries.
-
   .container {
     @include container;
 
@@ -15,79 +14,6 @@
       padding-right : 15%;
     }
 
-  }
-
-  .browser-happy {
-    position       : absolute;
-    top            : $line-height-computed / 2;
-    left           : $grid-gutter-width / 2;
-    right          : $grid-gutter-width / 2;
-    z-index        : $zindex--broswer-happy;
-    text-align     : center;
-    text-transform : uppercase;
-    color          : $color-red;
-    display        : none;
-
-    .no-flexbox & {
-      display : block;
-    }
-  }
-
-  // Hire Me
-  .hire-me {
-    position : absolute;
-    top      : 60%;
-    right    : 0;
-    width    : 9vh;
-    height   : 6vh;
-    z-index  : $zindex--hire-me;
-
-    @include breakpoint($screen-sm) {
-      position : fixed;
-    }
-
-    @include breakpoint($screen-md) {
-      display : none;
-    }
-
-    $popover-background-color : $color-black;
-
-    &__popover {
-      position         : absolute;
-      top              : 0;
-      right            : 100%;
-      text-align       : right;
-      background-color : $popover-background-color;
-      border-radius    : 5px;
-      font-size        : $font-size-large;
-      font-weight      : 300;
-      line-height      : 1;
-      padding          : 10px;
-      white-space      : nowrap;
-      color            : $color-gold;
-      transition       : visibility .3s ease-out, opacity .3s ease-out;
-      visibility       : hidden;
-      opacity          : 0;
-
-      &--js-visible {
-        visibility : visible;
-        opacity    : 1;
-      }
-
-      &::after {
-        content      : '';
-        position     : absolute;
-        border-style : solid;
-        border-width : 10px 0 10px 10px;
-        border-color : transparent $popover-background-color;
-        display      : block;
-        width        : 0;
-        z-index      : $zindex--hire-me__popover-arrow;
-        left         : 100%;
-        top          : 50%;
-        transform    : translateY(-50%);
-      }
-    }
   }
 
   // QR Code
