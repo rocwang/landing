@@ -1,13 +1,11 @@
 @import 'var';
 @import 'mixin';
-// Break point management
-@import 'breakpoint-sass/stylesheets/breakpoint';
 // Bootstrap Print
 @import 'bootstrap-sass/assets/stylesheets/bootstrap/print';
 // Component
-@import 'component/svg';
-@import 'component/screen';
-@import 'component/print';
+@import 'svg';
+@import 'screen';
+@import 'print';
 
 // Portfolio
 .portfolio {

@@ -252,7 +252,7 @@ gulp.task('eslint', function() {
 gulp.task('scsslint', function() {
   return gulp.src([
     basePaths.src + 'scss/**/*.scss',
-    '!' + basePaths.src + 'scss/vendor-var/_bootstrap.scss',
+    '!' + basePaths.src + 'scss/_bootstrap-variables.scss',
   ])
     .pipe(scsslint())
     .pipe(scsslint.failReporter())

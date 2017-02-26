@@ -6,12 +6,9 @@ $color-black : #1e1e20;
 $color-white : white;
 
 // Bootstrap
-@import 'vendor-var/bootstrap';
+@import 'bootstrap-variables';
 
 // z-index management
 $zindex--contact__video-bg : 10;
 $zindex--contact__video-bg-overlay : 11;
 $zindex--contact__text : 20;
-$zindex--broswer-happy : 30;
-$zindex--hire-me : 30;
-$zindex--hire-me__popover-arrow : 31;
