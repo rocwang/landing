@@ -8,20 +8,7 @@
 @media screen {
 
   .bg {
-    background-image    : url('/img/roc-small.jpg');
-    background-position : top right;
-    background-repeat   : no-repeat;
-    background-size     : auto 100vh;
     padding-bottom      : $line-height-computed * 2;
-
-    @include breakpoint($screen-sm) {
-      background-image      : url('/img/roc-large.jpg');
-      background-attachment : fixed;
-    }
-
-    @include breakpoint($screen-md) {
-      background-image : none;
-    }
   }
 
   // Homepage background
@@ -40,11 +27,6 @@
       min-width  : 100%;
       min-height : 100%;
       z-index    : $zindex--contact__video-bg;
-      display    : none;
-
-      @include breakpoint($screen-md) {
-        display : block;
-      }
     }
 
     &::before {
@@ -59,11 +41,6 @@
       background-position : left bottom, left top;
       background-repeat   : no-repeat, repeat;
       z-index             : $zindex--contact__video-bg-overlay;
-      display             : none;
-
-      @include breakpoint($screen-md) {
-        display : block;
-      }
     }
 
     //  Contact
