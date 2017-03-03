@@ -1,5 +1,5 @@
 'use strict';
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
 
   var options = {
     // Global defaults:
@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var barCharts = document.querySelectorAll('.js-bar-chart');
 
-  Array.prototype.forEach.call(barCharts, function (chart) {
+  barCharts.forEach(function (chart) {
 
     var skill = chart.getAttribute('data-label');
     var bars = chart.querySelectorAll('.js-bar-chart__bar');
     var labels = [];
     var values = [];
 
-    Array.prototype.forEach.call(bars, function (bar) {
+    bars.forEach(function (bar) {
       labels.push(bar.textContent);
       values.push(bar.getAttribute('aria-valuenow'));
     });
