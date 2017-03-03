@@ -1,1 +1,0 @@
-"use strict";!function(){document.documentElement.className=document.documentElement.className.replace("no-js","js"),document.getElementById("print").addEventListener("click",function(e){e.preventDefault(),window.print()})}();

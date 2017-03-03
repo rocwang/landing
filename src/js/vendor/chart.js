@@ -1,5 +1,5 @@
 'use strict';
-window.addEventListener('load', function () {
+(function () {
 
   var options = {
     // Global defaults:
@@ -64,4 +64,4 @@ window.addEventListener('load', function () {
     new Chart(context).Radar(data, options);
   });
 
-});
+})();
