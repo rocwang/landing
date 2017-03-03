@@ -15,7 +15,6 @@
 
   <link rel="stylesheet" href="css/above-the-fold.css" inline>
 
-  <link rel="preload" href="video/bungy-jump.webm" as="video">
   <link rel="preload" href="css/below-the-fold.css" as="style">
   <link rel="preload" href="js/sprite.svg.js" as="script">
   <link rel="preload" href="js/vendor.js" as="script">
@@ -27,7 +26,7 @@
 
 <header class="contact">
   <!-- Video background -->
-  <video autoplay muted loop playsinline class="contact__video-bg">
+  <video autoplay muted loop playsinline class="contact__video-bg" preload="auto">
     <source src="video/bungy-jump.webm" type="video/webm">
     <source src="video/bungy-jump.mp4" type="video/mp4">
     Your browser does not support the video tag.
