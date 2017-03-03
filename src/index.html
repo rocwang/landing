@@ -14,9 +14,12 @@
   <link rel="author" href="humans.txt">
 
   <link rel="stylesheet" href="css/above-the-fold.css" inline>
-
   <link rel="preload" href="css/below-the-fold.css" as="style">
+  <link rel="preload" href="js/sprite.svg.js" as="script">
   <link rel="preload" href="js/vendor.js" as="script">
+
+  <script src="js/sprite.svg.js" async></script>
+  <script src="js/vendor.js" async></script>
 </head>
 <body class="bg">
 
@@ -40,7 +43,7 @@
       <li class="contact__address-item">
         <a href="tel:+64-027-949-1310" title="Telphone">
           <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-phone"/>
+            <use xlink:href="#icon-phone"></use>
           </svg>
           +64 027 949 1310
         </a>
@@ -48,7 +51,7 @@
       <li class="contact__address-item">
         <a href="mailto:roc@kiwiberry.nz">
           <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-envelope"/>
+            <use xlink:href="#icon-envelope"></use>
           </svg>
           roc@kiwiberry.nz
         </a>
@@ -56,7 +59,7 @@
       <li class="contact__address-item contact__website">
         <a href="https://www.rocwang.me/">
           <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-globe"/>
+            <use xlink:href="#icon-globe"></use>
           </svg>
           https://www.rocwang.me
         </a>
@@ -64,7 +67,7 @@
       <li class="contact__address-item contact__print">
         <a id="print" href="#" title="Print Roc's CV">
           <svg class="icon">
-            <use xlink:href="img/sprite.svg#icon-print"/>
+            <use xlink:href="#icon-print"></use>
           </svg>
           Print
         </a>
@@ -90,7 +93,7 @@
       <dt class="experience__company">
         <a href="http://lero9.co.nz/" target="_blank" class="experience__company-link">
           <svg class="experience__logo experience__logo--pocket-square">
-            <use xlink:href="img/sprite.svg#pocket-square"/>
+            <use xlink:href="#pocket-square"></use>
           </svg>
         </a><br>
 
@@ -124,7 +127,7 @@
       <dt class="experience__company">
         <a href="http://lero9.co.nz/" target="_blank" class="experience__company-link">
           <svg class="experience__logo experience__logo--lero9">
-            <use xlink:href="img/sprite.svg#lero9"/>
+            <use xlink:href="#lero9"></use>
           </svg>
         </a><br>
 
@@ -148,7 +151,7 @@
       <dt class="experience__company">
         <a href="http://www.moustacherepublic.com" target="_blank" class="experience__company-link">
           <svg class="experience__logo experience__logo--mr">
-            <use xlink:href="img/sprite.svg#moustache-republic"/>
+            <use xlink:href="#moustache-republic"></use>
           </svg>
         </a><br>
 
@@ -190,7 +193,7 @@
       <dt class="experience__company">
         <a href="http://www.tencent.com/en-us/" target="_blank" class="experience__company-link">
           <svg class="experience__logo experience__logo--tencent">
-            <use xlink:href="img/sprite.svg#tencent"/>
+            <use xlink:href="#tencent"></use>
           </svg>
         </a><br>
 
@@ -238,7 +241,7 @@
       <dt class="experience__company">
         <a href="http://www.infosys.com/" target="_blank" class="experience__company-link">
           <svg class="experience__logo experience__logo--infosys">
-            <use xlink:href="img/sprite.svg#infosys"/>
+            <use xlink:href="#infosys"></use>
           </svg>
         </a><br>
 
@@ -277,14 +280,14 @@
       <li class="portfolio__list-item">
         <a href="http://www.superette.co.nz/" target="_blank" class="portfolio__logo-link" title="Superette">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#superette"/>
+            <use xlink:href="#superette"></use>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://www.trishpeng.com/" target="_blank" class="portfolio__logo-link" title="Trishpeng">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#trishpeng"/>
+            <use xlink:href="#trishpeng"></use>
           </svg>
         </a>
       </li>
@@ -294,28 +297,28 @@
            class="portfolio__logo-link"
            title="The Liquoriceland">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#theliquoriceland"/>
+            <use xlink:href="#theliquoriceland"></use>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://www.huckleberry.nz/" target="_blank" class="portfolio__logo-link" title="Huckleberry">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#huckleberry"/>
+            <use xlink:href="#huckleberry"></use>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://shop.aucklandnz.com/" target="_blank" class="portfolio__logo-link" title="ATEED">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#ateed"/>
+            <use xlink:href="#ateed"></use>
           </svg>
         </a>
       </li>
       <li class="portfolio__list-item">
         <a href="http://www.customerservicesaudit.com/" target="_blank" class="portfolio__logo-link" title="Snapshotz">
           <svg class="portfolio__logo">
-            <use xlink:href="img/sprite.svg#snapshotz"/>
+            <use xlink:href="#snapshotz"></use>
           </svg>
         </a>
       </li>
@@ -329,7 +332,7 @@
       <dt class="personal-projects__logo-container">
         <a href="https://github.com/rocwang/Do-Less" class="personal-projects__logo-link">
           <svg class="personal-projects__logo img-rounded">
-            <use xlink:href="img/sprite.svg#do-less"/>
+            <use xlink:href="#do-less"></use>
           </svg>
         </a><br>
         Apr 2013 &mdash; Nov 2013
@@ -567,7 +570,7 @@
       <dt class="education__logo-container">
         <a href="http://en.uestc.edu.cn/" target="_blank" class="education__logo-link">
           <svg class="education__logo">
-            <use xlink:href="img/sprite.svg#uestc"/>
+            <use xlink:href="#uestc"></use>
           </svg>
         </a><br>
 
@@ -582,7 +585,7 @@
       <dt class="education__logo-container">
         <a href="http://en.uestc.edu.cn/" target="_blank" class="education__logo-link">
           <svg class="education__logo">
-            <use xlink:href="img/sprite.svg#uestc"/>
+            <use xlink:href="#uestc"></use>
           </svg>
         </a><br>
 
@@ -610,7 +613,7 @@
              target="_blank"
           >
             <svg class="certificates__logo certificates__logo--magento">
-              <use xlink:href="img/sprite.svg#magento"/>
+              <use xlink:href="#magento"></use>
             </svg>
           </a>
         </div>
@@ -625,7 +628,7 @@
 
         <div class="certificates__logo-container">
           <svg class="certificates__logo certificates__logo--ibm">
-            <use xlink:href="img/sprite.svg#ibm"/>
+            <use xlink:href="#ibm"></use>
           </svg>
         </div>
 
@@ -640,7 +643,7 @@
 
         <div class="certificates__logo-container">
           <svg class="certificates__logo certificates__logo--ibm">
-            <use xlink:href="img/sprite.svg#ibm"/>
+            <use xlink:href="#ibm"></use>
           </svg>
         </div>
 
@@ -658,20 +661,20 @@
 <footer class="page-footer">
   <a href="humans.txt" class="page-footer__humans-txt" target="_blank">
     <svg class="page-footer__humans-txt-img">
-      <use xlink:href="img/sprite.svg#humans-txt"/>
+      <use xlink:href="#humans-txt"></use>
     </svg>
   </a>
 
   <a href="https://github.com/rocwang/cv" class="page-footer__github" target="_blank">
     <svg class="page-footer__github-img">
-      <use xlink:href="img/sprite.svg#github"/>
+      <use xlink:href="#github"></use>
     </svg>
   </a>
 </footer>
 
 <!-- QR Code -->
 <svg class="qr-code">
-  <use xlink:href="img/sprite.svg#qr-code"/>
+  <use xlink:href="#qr-code"></use>
 </svg>
 
 <script src="js/app.js" inline></script>

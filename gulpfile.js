@@ -34,7 +34,8 @@ var gulp         = require('gulp'),
 
     // Image plugins
     imagemin     = require('gulp-imagemin'),
-    svgSprite    = require('gulp-svg-sprite');
+    svgSprite    = require('gulp-svg-sprite'),
+    transform    = require('gulp-transform');
 
 // Allows gulp --dist to be run for production compilation
 var isProduction = util.env.dist;
@@ -144,12 +145,23 @@ gulp.task('sprite', function() {
       mode: {
         symbol: {
           dest   : '.',
-          sprite : 'sprite.svg',
+          sprite : 'sprite.svg.js',
           example: false,
         },
       },
     }))
-    .pipe(gulp.dest(basePaths.test + 'img'));
+    .pipe(transform(function(contents) {
+        // Wrap svg sprites file in js for pre-loading
+        return "(function(){var sprites = '" + contents + "';"
+          + "var div = document.createElement('div');"
+          + "div.style.display='none';"
+          + "div.innerHTML = sprites;"
+          + "document.body.insertBefore(div, document.body.childNodes[0]);})();"
+      },
+      {encoding: 'utf8'}
+    ))
+    .pipe(uglify())
+    .pipe(gulp.dest(basePaths.test + 'js'));
 });
 
 gulp.task('html', ['scss', 'js'], function() {
@@ -195,7 +207,6 @@ gulp.task('release', ['default'], function() {
         dontGlobal    : [
           'humans.txt',
           'robots.txt',
-          'rocwang.pdf',
           'favicon.ico',
           'sitemap.txt',
           'google3945080f16c90e1d.html',

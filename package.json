@@ -26,6 +26,7 @@
         "gulp-scss-lint"    : "latest",
         "gulp-sourcemaps"   : "2.x",
         "gulp-svg-sprite"   : "latest",
+        "gulp-transform"    : "1.1.0",
         "gulp-uglify"       : "2.x",
         "gulp-util"         : "latest",
         "merge-stream"      : "latest"
