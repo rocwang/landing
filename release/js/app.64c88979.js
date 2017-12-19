@@ -1,0 +1,1 @@
+"use strict";!function(){document.documentElement.className=document.documentElement.className.replace("no-js","js"),window.addEventListener("load",function(){!function(e){var n=document.createElement("script");n.src=e,n.async=!0,document.body.appendChild(n)}("js/vendor.7f0eba72.js")})}();

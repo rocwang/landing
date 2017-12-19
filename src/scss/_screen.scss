@@ -1,8 +1,12 @@
 @media screen {
 
-  h2 { margin-top : $line-height-computed * 2; }
+  h2 {
+    margin-top : $line-height-computed * 2;
+  }
 
-  h3:first-child { margin-top : 0; }
+  h3:first-child {
+    margin-top : 0;
+  }
 
   // Container widths
   //
@@ -17,10 +21,9 @@
   }
 
   // QR Code
-  .qr-code { display : none; }
-
-  // Objective
-  .objective { display : none; }
+  .qr-code {
+    display : none;
+  }
 
   // Experience
   .experience {
@@ -54,20 +57,11 @@
   }
 
   // Personal Projects
-  .personal-projects {
-    &__logo-container {
-      text-align    : center;
-      font-weight   : normal;
-      color         : $text-muted;
-      margin-bottom : $line-height-computed;
-    }
-
-    &__logo-link {
-      display       : inline-block;
-      margin-bottom : $line-height-computed / 2;
-    }
-
-    &__logo { display : block; }
+  .personal-projects__logo-container {
+    text-align    : center;
+    font-weight   : normal;
+    color         : $text-muted;
+    margin-bottom : $line-height-computed;
   }
 
   // Education
