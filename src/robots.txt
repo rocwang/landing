@@ -1,4 +1,4 @@
 # robotstxt.org/
 
 User-agent: *
-Sitemap: https://www.rocwang.me/sitemap.txt
+Sitemap: https://kiwiberry.nz/sitemap.txt

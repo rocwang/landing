@@ -7,31 +7,29 @@
     "devDependencies": {
         "bootstrap-sass": "3.x",
         "breakpoint-sass": "2.x",
-        "browser-sync": "^2.18.13",
+        "browser-sync": "^2.23.6",
         "chart.js": "1.x",
         "del": "^3.0.0",
         "gulp": "latest",
-        "gulp-autoprefixer": "^4.0.0",
+        "gulp-autoprefixer": "^4.1.0",
         "gulp-concat": "latest",
         "gulp-cssnano": "latest",
-        "gulp-eslint": "^4.0.0",
+        "gulp-eslint": "^4.0.2",
         "gulp-html5-lint": "latest",
         "gulp-htmlmin": "latest",
-        "gulp-imagemin": "^4.0.0",
+        "gulp-imagemin": "^4.1.0",
         "gulp-inline-source": "^3.1.0",
-        "gulp-notify": "3.x",
+        "gulp-notify": "^3.2.0",
         "gulp-plumber": "latest",
         "gulp-rev-all": "latest",
         "gulp-sass": "latest",
         "gulp-scss-lint": "^0.5.0",
-        "gulp-sourcemaps": "^2.6.1",
+        "gulp-sourcemaps": "^2.6.4",
         "gulp-svg-sprite": "^1.3.7",
         "gulp-transform": "1.1.0",
         "gulp-uglify": "^2.1.2",
         "gulp-util": "latest",
-        "merge-stream": "latest"
-    },
-    "dependencies": {
-        "node-sass": "^4.7.2"
+        "merge-stream": "latest",
+        "node-sass": "^4.8.2"
     }
 }
