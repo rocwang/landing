@@ -8,17 +8,24 @@
   h3 {
     font-size : 20px;
 
-    &:first-child { margin-top : 0; }
+    &:first-child {
+      margin-top : 0;
+    }
   }
 
   // Do not show hyperlink text
   a[href] {
     text-decoration : none;
-    &::after { content : ''; }
+
+    &::after {
+      content : '';
+    }
   }
 
   // Remove color of all images
-  img { filter : grayscale(1); }
+  img {
+    filter : grayscale(1);
+  }
 
   // Icons
   .icon {
@@ -30,10 +37,12 @@
   .contact__video-bg,
   .contact__tag-line,
   .page-footer__humans-txt,
-  .browser-happy { display : none; }
+  .browser-happy {
+    display : none;
+  }
 
   .contact__website {
-    display: inline-block;
+    display : inline-block;
   }
 
   // QR Code
@@ -53,7 +62,9 @@
     margin-top   : $line-height-computed;
     font-size    : $font-size-small;
 
-    a { text-decoration : none; }
+    a {
+      text-decoration : none;
+    }
   }
 
   // Horizontally layout certain sections
@@ -78,10 +89,19 @@
       @include text-overflow;
     }
 
-    dd { margin-left : $print-dl-horizontal-offset; }
+    dd {
+      margin-left : $print-dl-horizontal-offset;
+
+      a::after {
+        content   : ' (' attr(href) ') ';
+        font-size : $font-size-small;
+      }
+    }
   }
 
-  .personal-projects__logo { width : 58px; }
+  .personal-projects__logo {
+    width : 58px;
+  }
 
   .certificates {
     &__list {
@@ -104,13 +124,19 @@
       width         : ($print-dl-horizontal-offset - 20);
 
       > .certificates__link,
-      > .certificates__logo { float : right; }
+      > .certificates__logo {
+        float : right;
+      }
     }
 
-    &__description { flex : 1 0 auto; }
+    &__description {
+      flex : 1 0 auto;
+    }
 
     &__link,
-    &__logo { display : block; }
+    &__logo {
+      display : block;
+    }
 
     &__logo--magento {
       width  : 64px;

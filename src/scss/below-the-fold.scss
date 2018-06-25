@@ -43,6 +43,7 @@
     @media print {
       &::after {
         content    : attr(href) !important;
+        font-size  : $font-size-small;
         display    : block;
         text-align : center;
         margin-top : $line-height-computed / 2;
@@ -149,7 +150,6 @@
       height           : $line-height-computed;
       margin-bottom    : $line-height-computed / 2;
       background-color : $color-light-gray;
-      border-radius    : $progress-border-radius;
     }
 
     &__bar {
@@ -187,6 +187,7 @@
     @media print {
       &::after {
         content      : attr(href) !important;
+        font-size    : $font-size-small;
         display      : block;
         text-align   : center;
         margin-top   : $line-height-computed / 2;
