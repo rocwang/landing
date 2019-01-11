@@ -1,37 +1,36 @@
-// Load plugins
-const {src, dest, series, parallel, watch} = require('gulp'),
+const os = require("os");
+const {src, dest, series, parallel, watch} = require('gulp');
 
-      // Utility plugins
-      util                                 = require('gulp-util'),
-      del                                  = require('del'),
-      merge                                = require('merge-stream'),
-      plumber                              = require('gulp-plumber'),
-      notify                               = require('gulp-notify'),
-      path                                 = require('path'),
-      sourcemaps                           = require('gulp-sourcemaps'),
-      browserSync                          = require('browser-sync'),
-
-
-      // HTML plugins
-      htmlmin                              = require('gulp-htmlmin'),
-      inlineSource                         = require('gulp-inline-source'),
-      RevAll                               = require('gulp-rev-all'),
-
-      // CSS plugins
-      sass                                 = require('gulp-sass'),
-      nano                                 = require('gulp-cssnano'),
-      autoprefixer                         = require('gulp-autoprefixer'),
-
-      // JS plugins
-      uglify                               = require('gulp-uglify-es').default,
-      concat                               = require('gulp-concat'),
-      eslint                               = require('gulp-eslint'),
+// Utility plugins
+const util = require('gulp-util');
+const del = require('del');
+const merge = require('merge-stream');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const path = require('path');
+const sourcemaps = require('gulp-sourcemaps');
+const browserSync = require('browser-sync');
 
 
-      // Image plugins
-      imagemin                             = require('gulp-imagemin'),
-      svgSprite                            = require('gulp-svg-sprite'),
-      transform                            = require('gulp-transform');
+// HTML plugins
+const htmlmin = require('gulp-htmlmin');
+const inlineSource = require('gulp-inline-source');
+const RevAll = require('gulp-rev-all');
+
+// CSS plugins
+const sass = require('gulp-sass');
+const nano = require('gulp-cssnano');
+const autoprefixer = require('gulp-autoprefixer');
+
+// JS plugins
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
+const eslint = require('gulp-eslint');
+
+// Image plugins
+const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
+const transform = require('gulp-transform');
 
 // Allows gulp --dist to be run for production compilation
 const isProduction = util.env.dist;
@@ -219,6 +218,10 @@ const serve = series(build, () => {
   browserSync.init({
     server: {
       baseDir: basePaths.test,
+    },
+    https : {
+      key : os.homedir() + "/.localhost_ssl/server.key",
+      cert: os.homedir() + "/.localhost_ssl/server.crt"
     },
     open  : false,
   });
