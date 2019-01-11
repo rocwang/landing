@@ -221,7 +221,7 @@ const serve = series(build, () => {
     },
     https : {
       key : os.homedir() + "/.localhost_ssl/server.key",
-      cert: os.homedir() + "/.localhost_ssl/server.crt"
+      cert: os.homedir() + "/.localhost_ssl/server.crt",
     },
     open  : false,
   });

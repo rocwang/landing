@@ -75,11 +75,11 @@ $print-logo-width : 120px;
 .certificates__logo--magento {
   width  : $screen-logo-width;
   height : $screen-logo-width * 91.3 / 312.5;
-}
 
-.certificates__logo--ibm {
-  width  : 30px * 1000 / 400;
-  height : 30px;
+  @media print {
+    width  : $print-logo-width;
+    height : $print-logo-width * 91.3 / 312.5;
+  }
 }
 
 .page-footer__humans-txt-img {
