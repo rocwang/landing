@@ -6,7 +6,7 @@ Please see [https://kiwiberry.nz](https://kiwiberry.nz)
 ## Setup development environment
 
     $ npm install
-    $ gulp watch
+    $ gulp
 
 ## Release Procedure
 

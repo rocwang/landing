@@ -1,37 +1,37 @@
 // Load plugins
-const {src, dest, series, parallel} = require('gulp'),
+const {src, dest, series, parallel, watch} = require('gulp'),
 
       // Utility plugins
-      util                          = require('gulp-util'),
-      del                           = require('del'),
-      merge                         = require('merge-stream'),
-      plumber                       = require('gulp-plumber'),
-      notify                        = require('gulp-notify'),
-      path                          = require('path'),
-      sourcemaps                    = require('gulp-sourcemaps'),
-      browserSync                   = require('browser-sync'),
+      util                                 = require('gulp-util'),
+      del                                  = require('del'),
+      merge                                = require('merge-stream'),
+      plumber                              = require('gulp-plumber'),
+      notify                               = require('gulp-notify'),
+      path                                 = require('path'),
+      sourcemaps                           = require('gulp-sourcemaps'),
+      browserSync                          = require('browser-sync'),
 
 
       // HTML plugins
-      htmlmin                       = require('gulp-htmlmin'),
-      inlineSource                  = require('gulp-inline-source'),
-      RevAll                        = require('gulp-rev-all'),
+      htmlmin                              = require('gulp-htmlmin'),
+      inlineSource                         = require('gulp-inline-source'),
+      RevAll                               = require('gulp-rev-all'),
 
       // CSS plugins
-      sass                          = require('gulp-sass'),
-      nano                          = require('gulp-cssnano'),
-      autoprefixer                  = require('gulp-autoprefixer'),
+      sass                                 = require('gulp-sass'),
+      nano                                 = require('gulp-cssnano'),
+      autoprefixer                         = require('gulp-autoprefixer'),
 
       // JS plugins
-      uglify                        = require('gulp-uglify-es').default,
-      concat                        = require('gulp-concat'),
-      eslint                        = require('gulp-eslint'),
+      uglify                               = require('gulp-uglify-es').default,
+      concat                               = require('gulp-concat'),
+      eslint                               = require('gulp-eslint'),
 
 
       // Image plugins
-      imagemin                      = require('gulp-imagemin'),
-      svgSprite                     = require('gulp-svg-sprite'),
-      transform                     = require('gulp-transform');
+      imagemin                             = require('gulp-imagemin'),
+      svgSprite                            = require('gulp-svg-sprite'),
+      transform                            = require('gulp-transform');
 
 // Allows gulp --dist to be run for production compilation
 const isProduction = util.env.dist;
@@ -194,7 +194,6 @@ function misc() {
     .pipe(dest(basePaths.test));
 }
 
-// task('default', Object.keys(srcFiles));
 const build = parallel(html, misc, img, sprite);
 
 const release = series(build, () => {
@@ -216,7 +215,14 @@ const release = series(build, () => {
 });
 
 // Watch task
-const watch = series(build, () => {
+const serve = series(build, () => {
+  browserSync.init({
+    server: {
+      baseDir: basePaths.test,
+    },
+    open  : false,
+  });
+
   watch('scss/**', {cwd: basePaths.src}, scss);
   watch('js/**', {cwd: basePaths.src}, js);
   watch('img/**', {cwd: basePaths.src}, img);
@@ -232,19 +238,11 @@ const watch = series(build, () => {
     'google3945080f16c90e1d.html',
   ], {cwd: basePaths.src}, misc);
   watch(['js/*.js', 'img/**', '*.html'], {cwd: basePaths.test}, browserSync.reload);
-
-  browserSync({
-    server: {
-      baseDir: basePaths.test,
-    },
-    open  : false,
-  });
 });
 
 module.exports = {
-  default: build,
+  default: serve,
   clean,
-  watch,
   release,
 };
 
