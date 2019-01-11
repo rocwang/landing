@@ -5,7 +5,6 @@ Please see [https://kiwiberry.nz](https://kiwiberry.nz)
 
 ## Setup development environment
 
-    $ sudo gem install scss_lint
     $ npm install
     $ gulp watch
 
