@@ -1,9 +1,28 @@
+build:
+  image: node:11
+  stage: build
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - ${CI_PROJECT_DIR}/.npm/
+  tags:
+    - docker
+  script:
+    - npm config set cache ${CI_PROJECT_DIR}/.npm
+    - npm ci --prefer-offline
+    - npm install --global --no-progress gulp-cli
+    - gulp release --dist
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - release
+
 pages:
   stage: deploy
   script:
-  - mv release public
+    - mv release public
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master

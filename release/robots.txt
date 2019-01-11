@@ -1,4 +1,0 @@
-# robotstxt.org/
-
-User-agent: *
-Sitemap: https://kiwiberry.nz/sitemap.txt
