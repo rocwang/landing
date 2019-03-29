@@ -5,13 +5,13 @@
     "private": true,
     "description": "Roc's CV",
     "dependencies": {
-        "bootstrap-sass": "^3.4.0",
-        "breakpoint-sass": "^2.7.1",
+        "bootstrap-sass": "3.4.1",
+        "breakpoint-sass": "2.7.1",
         "chart.js": "1.x"
     },
     "devDependencies": {
         "browser-sync": "^2.26.3",
-        "del": "^3.0.0",
+        "del": "^4.0.0",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-concat": "^2.6.1",
@@ -24,7 +24,7 @@
         "gulp-plumber": "^1.2.1",
         "gulp-rev-all": "^1.0.0",
         "gulp-sass": "^4.0.2",
-        "gulp-sourcemaps": "^2.6.4",
+        "gulp-sourcemaps": "^2.6.5",
         "gulp-svg-sprite": "^1.5.0",
         "gulp-transform": "3.0.5",
         "gulp-uglify-es": "^1.0.4",
