@@ -1,6 +1,5 @@
 <script>
 import favicon from "../assets/favicon.png";
-import humanTxt from "../assets/humans.txt";
 
 export default {
   name: "Meta",
@@ -18,11 +17,7 @@ export default {
           "Roc is certified Magento Developer with extensive development experience on online retailing. As a full stack developer, Roc is able to deliver end to end website solutions for you, from cutting edge CSS tricks to high performance server infrastructure."
       }
     ],
-    link: [
-      { rel: "icon", href: favicon },
-      { rel: "author", href: humanTxt },
-      { rel: "canonical", href: "https://kiwiberry.nz/" }
-    ]
+    link: [{ rel: "icon", href: favicon }, { rel: "canonical", href: "https://kiwiberry.nz/" }]
   }
 };
 </script>
