@@ -1,13 +1,27 @@
-# Roc's CV Site
+# Roc's CV
 
-This is the source code of my CV site.
-Please see [https://kiwiberry.nz](https://kiwiberry.nz)
+This is the source code of Roc's CV.
+See [https://kiwiberry.nz](https://kiwiberry.nz)
 
-## Setup development environment
+## Project setup
+```
+npm install
+```
 
-    $ npm install
-    $ gulp
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## Release Procedure
+### Compiles and minifies for production
+```
+npm run build
+```
 
-    $ gulp release --dist
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
