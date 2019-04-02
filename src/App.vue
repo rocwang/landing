@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="bg">
+    <Meta />
     <header class="contact">
       <!-- Video background -->
       <video autoplay muted loop playsinline class="contact__video-bg" preload="auto">
@@ -746,9 +747,11 @@
 </template>
 
 <script>
+import Meta from "./components/Meta";
+
 export default {
   name: "app",
-  components: {}
+  components: { Meta }
 };
 </script>
 

@@ -12,5 +12,22 @@ module.exports = {
             cert: fs.readFileSync(os.homedir() + "/.localhost_ssl/server.crt")
           }
         : false
+  },
+  chainWebpack: webpackConfig => {
+    webpackConfig.module
+      .rule("text")
+      .test(/\.txt(\?.*)?$/)
+      .use("url-loader")
+      .loader("url-loader")
+      .options({
+        limit: 1,
+        // use explicit fallback to avoid regression in url-loader>=1.1.0
+        fallback: {
+          loader: "file-loader",
+          options: {
+            name: "text/[name].[hash:8].[ext]"
+          }
+        }
+      });
   }
 };

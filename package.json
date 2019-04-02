@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "chart.js": "1.x",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-meta": "^1.6.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
