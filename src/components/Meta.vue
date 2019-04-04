@@ -3,6 +3,7 @@ import favicon from "../assets/favicon.png";
 
 export default {
   name: "Meta",
+  render: () => null,
   metaInfo: {
     htmlAttrs: {
       lang: "en"
