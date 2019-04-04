@@ -1,12 +1,3 @@
-@import 'var';
-@import 'mixin';
-// Bootstrap Print
-@import 'bootstrap-sass/assets/stylesheets/bootstrap/print';
-// Component
-@import 'svg';
-@import 'screen';
-@import 'print';
-
 // Portfolio
 .portfolio {
   &__list {

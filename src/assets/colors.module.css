@@ -1,0 +1,15 @@
+@value colorRed : #dc3522;
+@value colorGold : #d9cb9e;
+@value colorLightGray : #374140;
+@value colorDarkGray : #2a2c2b;
+@value colorBlack : #1e1e20;
+@value colorWhite : #fff;
+
+:root {
+  --color-red : colorRead;
+  --color-gold : colorGold;
+  --color-light-gray : colorLightGray;
+  --color-dark-gray : colorDarkGray;
+  --color-black : colorBlack;
+  --color-white : colorWhite;
+}

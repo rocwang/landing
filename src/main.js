@@ -1,3 +1,6 @@
+import "./assets/reset.css";
+import "./assets/colors.module.css";
+
 import Vue from "vue";
 import App from "./App.vue";
 import Meta from "vue-meta";
