@@ -9,11 +9,9 @@
           target="_blank"
           rel="noreferrer noopener"
           class="portfolio__logo-link"
-          title="ATEED"
+          title="Area51"
         >
-          <svg class="portfolio__logo">
-            <use xlink:href="#area51"></use>
-          </svg>
+          <IconArea51 />
         </a>
       </li>
       <li class="portfolio__list-item">
@@ -24,22 +22,7 @@
           class="portfolio__logo-link"
           title="Superette"
         >
-          <svg class="portfolio__logo">
-            <use xlink:href="#superette"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="portfolio__list-item">
-        <a
-          href="https://www.trishpeng.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="portfolio__logo-link"
-          title="Trishpeng"
-        >
-          <svg class="portfolio__logo">
-            <use xlink:href="#trishpeng"></use>
-          </svg>
+          <IconHuckleBerry />
         </a>
       </li>
       <li class="portfolio__list-item">
@@ -50,9 +33,7 @@
           class="portfolio__logo-link"
           title="The Liquoriceland"
         >
-          <svg class="portfolio__logo">
-            <use xlink:href="#theliquoriceland"></use>
-          </svg>
+          The Liquoriceland
         </a>
       </li>
       <li class="portfolio__list-item">
@@ -63,22 +44,7 @@
           class="portfolio__logo-link"
           title="Huckleberry"
         >
-          <svg class="portfolio__logo">
-            <use xlink:href="#huckleberry"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="portfolio__list-item">
-        <a
-          href="http://www.customerservicesaudit.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="portfolio__logo-link"
-          title="Snapshotz"
-        >
-          <svg class="portfolio__logo">
-            <use xlink:href="#snapshotz"></use>
-          </svg>
+          <IconSuperette />
         </a>
       </li>
     </ul>
@@ -86,8 +52,16 @@
 </template>
 
 <script>
+import IconArea51 from "./IconArea51";
+import IconSuperette from "./IconSuperette";
+import IconHuckleBerry from "./IconHuckleBerry";
 export default {
-  name: "Portfolio"
+  name: "Portfolio",
+  components: {
+    IconArea51,
+    IconHuckleBerry,
+    IconSuperette
+  }
 };
 </script>
 

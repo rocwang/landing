@@ -12,7 +12,7 @@
     </div>
 
     <Footer />
-    <QrCode />
+    <IconQrCode />
   </div>
 </template>
 
@@ -20,17 +20,17 @@
 import Meta from "./components/Meta";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import QrCode from "./components/QrCode";
-import Experience from "./components/Education";
+import Experience from "./components/Experience";
 import Portfolio from "./components/Portfolio";
 import SideProjects from "./components/SideProjects";
 import Skills from "./components/Skills";
 import Education from "./components/Education";
 import Certificates from "./components/Certificates";
+import IconQrCode from "./components/IconQrCode";
 
 export default {
   name: "app",
-  components: { Meta, Header, Footer, QrCode, Education, Portfolio, SideProjects, Skills, Certificates, Experience }
+  components: { Meta, Header, Footer, IconQrCode, Education, Portfolio, SideProjects, Skills, Certificates, Experience }
 };
 </script>
 

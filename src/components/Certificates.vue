@@ -12,9 +12,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            <svg class="certificates__logo certificates__logo--magento">
-              <use xlink:href="#magento"></use>
-            </svg>
+            <IconMagento />
           </a>
         </div>
 
@@ -28,8 +26,11 @@
 </template>
 
 <script>
+import IconMagento from "./IconMagento";
+
 export default {
-  name: "Certificates"
+  name: "Certificates",
+  components: { IconMagento }
 };
 </script>
 

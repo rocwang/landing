@@ -5,11 +5,9 @@
     <dl class="dl-horizontal">
       <dt class="experience__company">
         <a href="https://www.canon.com.au/" target="_blank" rel="noreferrer noopener" class="experience__company-link">
-          <svg class="experience__logo experience__logo--lero9">
-            <use xlink:href="#canon"></use>
-          </svg> </a
-        ><br />
-
+          <IconDatacom />
+        </a>
+        <br />
         Oct 2018 &mdash; Dev 2018<br />
         Canon Australia<br />
         Sydney, Australia
@@ -26,11 +24,9 @@
           rel="noreferrer noopener"
           class="experience__company-link"
         >
-          <svg class="experience__logo experience__logo--pocket-square">
-            <use xlink:href="#pocket-square"></use>
-          </svg> </a
-        ><br />
-
+          <IconPocketSquare />
+        </a>
+        <br />
         Apr 2016 &mdash; Oct 2018<br />
         Pocket Square<br />
         Auckland, New Zealand
@@ -85,11 +81,8 @@
 
       <dt class="experience__company">
         <a href="https://lero9.co.nz/" target="_blank" rel="noreferrer noopener" class="experience__company-link">
-          <svg class="experience__logo experience__logo--lero9">
-            <use xlink:href="#lero9"></use>
-          </svg> </a
+          <IconLero9 /> </a
         ><br />
-
         Nov 2015 &mdash; Apr 2016<br />
         Lero9<br />
         Auckland, New Zealand
@@ -115,10 +108,9 @@
 
       <dt class="experience__company">
         <a href="http://www.moustacherepublic.com" target="_blank" class="experience__company-link">
-          <svg class="experience__logo experience__logo--mr">
-            <use xlink:href="#moustache-republic"></use>
-          </svg> </a
-        ><br />
+          <IconMoustacheRepublic />
+        </a>
+        <br />
 
         Feb 2014 &mdash; Nov 2015<br />
         Moustache Republic<br />
@@ -162,10 +154,9 @@
           rel="noreferrer noopener"
           class="experience__company-link"
         >
-          <svg class="experience__logo experience__logo--tencent">
-            <use xlink:href="#tencent"></use>
-          </svg> </a
-        ><br />
+          <IconTencent />
+        </a>
+        <br />
 
         Mar 2010 &mdash; Apr 2013<br />
         Tencent<br />
@@ -214,10 +205,9 @@
 
       <dt class="experience__company">
         <a href="http://www.infosys.com/" target="_blank" rel="noreferrer noopener" class="experience__company-link">
-          <svg class="experience__logo experience__logo--infosys">
-            <use xlink:href="#infosys"></use>
-          </svg> </a
-        ><br />
+          <IconInfosys />
+        </a>
+        <br />
 
         Sep 2006 &mdash; Apr 2007<br />
         Infosys<br />
@@ -244,8 +234,23 @@
 </template>
 
 <script>
+import IconDatacom from "./IconDatacom";
+import IconPocketSquare from "./IconPocketSquare";
+import IconLero9 from "./IconLero9";
+import IconMoustacheRepublic from "./IconMoustacheRepublic";
+import IconTencent from "./IconTencent";
+import IconInfosys from "./IconInfosys";
+
 export default {
-  name: "Experience"
+  name: "Experience",
+  components: {
+    IconDatacom,
+    IconPocketSquare,
+    IconLero9,
+    IconMoustacheRepublic,
+    IconTencent,
+    IconInfosys
+  }
 };
 </script>
 

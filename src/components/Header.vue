@@ -1,9 +1,9 @@
 <template>
   <header class="contact">
     <!-- Video background -->
-    <video autoplay muted loop playsinline class="contact__video-bg" preload="auto">
-      <source src="video/bungy-jump.webm" type="video/webm" />
-      <source src="video/bungy-jump.mp4" type="video/mp4" />
+    <video muted loop playsinline class="contact__video-bg" preload="auto">
+      <source :src="videoWebm" type="video/webm" />
+      <source :src="videoMp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
@@ -19,18 +19,12 @@
       <ul class="contact__address">
         <li class="contact__address-item">
           <a href="mailto:roc@kiwiberry.nz">
-            <svg class="icon">
-              <use xlink:href="#icon-envelope"></use>
-            </svg>
-            roc@kiwiberry.nz
+            Email: roc@kiwiberry.nz
           </a>
         </li>
         <li class="contact__address-item contact__website">
           <a href="https://kiwiberry.nz/">
-            <svg class="icon">
-              <use xlink:href="#icon-globe"></use>
-            </svg>
-            kiwiberry.nz
+            Website: kiwiberry.nz
           </a>
         </li>
       </ul>
@@ -39,8 +33,17 @@
 </template>
 
 <script>
+import videoWebm from "../assets/bungy-jump.webm";
+import videoMp4 from "../assets/bungy-jump.mp4";
+
 export default {
-  name: "Header"
+  name: "Header",
+  data() {
+    return {
+      videoWebm,
+      videoMp4
+    };
+  }
 };
 </script>
 

@@ -5,11 +5,9 @@
     <dl class="dl-horizontal education__list">
       <dt class="education__logo-container">
         <a href="http://en.uestc.edu.cn/" target="_blank" rel="noreferrer noopener" class="education__logo-link">
-          <svg class="education__logo">
-            <use xlink:href="#uestc"></use>
-          </svg> </a
-        ><br />
-
+          <IconUestc />
+        </a>
+        <br />
         Sep 2007 &mdash; Jun 2010<br />
         Chengdu, China
       </dt>
@@ -20,11 +18,9 @@
       </dd>
       <dt class="education__logo-container">
         <a href="http://en.uestc.edu.cn/" target="_blank" rel="noreferrer noopener" class="education__logo-link">
-          <svg class="education__logo">
-            <use xlink:href="#uestc"></use>
-          </svg> </a
-        ><br />
-
+          <IconUestc />
+        </a>
+        <br />
         Sep 2003 &mdash; Jun 2007<br />
         Chengdu, China
       </dt>
@@ -38,8 +34,11 @@
 </template>
 
 <script>
+import IconUestc from "./IconUestc";
+
 export default {
-  name: "Education"
+  name: "Education",
+  components: { IconUestc }
 };
 </script>
 
