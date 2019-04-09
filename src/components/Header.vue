@@ -12,7 +12,9 @@
       <!-- Name -->
       <h1 class="contact__name">
         Roc Wang<br />
-        <small class="contact__tag-line">&mdash; Builds artisanal websites.</small>
+        <small class="contact__tag-line"
+          >&mdash; Builds artisanal websites.</small
+        >
       </h1>
 
       <!-- Address -->
@@ -27,21 +29,38 @@
             Website: kiwiberry.nz
           </a>
         </li>
+        <li class="contact__address-item">
+          <a
+            href="https://github.com/rocwang/cv"
+            class="page-footer__github"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <IconGithub />
+            Github: rocwang
+          </a>
+        </li>
       </ul>
     </div>
+
+    <QrcodeVue :value="siteUrl" />
   </header>
 </template>
 
 <script>
 import videoWebm from "../assets/bungy-jump.webm";
 import videoMp4 from "../assets/bungy-jump.mp4";
+import IconGithub from "./IconGithub";
+import QrcodeVue from "qrcode.vue";
 
 export default {
   name: "Header",
+  components: { IconGithub, QrcodeVue },
   data() {
     return {
       videoWebm,
-      videoMp4
+      videoMp4,
+      siteUrl: window.location.href
     };
   }
 };

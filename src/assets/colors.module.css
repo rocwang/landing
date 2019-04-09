@@ -13,3 +13,9 @@
   --color-black: colorBlack;
   --color-white: colorWhite;
 }
+
+video,
+canvas,
+svg {
+  width: 100px;
+}

@@ -1,36 +1,41 @@
 <template>
   <div id="app" class="bg">
-    <Meta />
+    <Meta :title="name" :description="description" :website="website" />
     <Header />
-    <div class="container">
-      <Experience />
-      <Portfolio />
-      <SideProjects />
-      <Skills />
-      <Education />
-      <Certificates />
-    </div>
-
-    <Footer />
-    <IconQrCode />
+    <CareerHistory :careerHistory="careerHistory" />
+    <FeaturedProjects :projects="featuredProjects" />
+    <SideProjects :projects="sideProjects" />
+    <Skills :skills="skills" />
+    <Certification :certification="certification" />
   </div>
 </template>
 
 <script>
 import Meta from "./components/Meta";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Experience from "./components/Experience";
-import Portfolio from "./components/Portfolio";
+import CareerHistory from "./components/CareerHistory";
+import FeaturedProjects from "./components/FeaturedProjects";
 import SideProjects from "./components/SideProjects";
 import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Certificates from "./components/Certificates";
-import IconQrCode from "./components/IconQrCode";
+import Certification from "./components/Certification";
+import profile from "./profile";
 
 export default {
   name: "app",
-  components: { Meta, Header, Footer, IconQrCode, Education, Portfolio, SideProjects, Skills, Certificates, Experience }
+  components: {
+    Meta,
+    Header,
+    FeaturedProjects,
+    SideProjects,
+    Skills,
+    Certification,
+    CareerHistory
+  },
+  data() {
+    return {
+      ...profile
+    };
+  }
 };
 </script>
 

@@ -4,21 +4,39 @@ import favicon from "../assets/favicon.png";
 export default {
   name: "Meta",
   render: () => null,
-  metaInfo: {
-    htmlAttrs: {
-      lang: "en"
+  props: {
+    title: {
+      type: String,
+      required: true
     },
-    title: "Roc Wang",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width,initial-scale=1.0" },
-      {
-        name: "description",
-        content:
-          "Roc is certified Magento Developer with extensive development experience on online retailing. As a full stack developer, Roc is able to deliver end to end website solutions for you, from cutting edge CSS tricks to high performance server infrastructure."
-      }
-    ],
-    link: [{ rel: "icon", href: favicon }, { rel: "canonical", href: "https://kiwiberry.nz/" }]
+    description: {
+      type: String,
+      required: true
+    },
+    website: {
+      type: String,
+      required: true
+    }
+  },
+  metaInfo() {
+    return {
+      htmlAttrs: {
+        lang: "en"
+      },
+      title: this.title,
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width,initial-scale=1.0" },
+        {
+          name: "description",
+          content: this.description
+        }
+      ],
+      link: [
+        { rel: "icon", href: favicon },
+        { rel: "canonical", href: this.website }
+      ]
+    };
   }
 };
 </script>

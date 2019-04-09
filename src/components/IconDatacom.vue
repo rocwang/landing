@@ -18,7 +18,7 @@ export default {
     },
     color: {
       type: String,
-      default: "transparent"
+      default: "white"
     }
   }
 };
