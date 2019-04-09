@@ -15,7 +15,7 @@
             optimum="80"
             :value="item.value"
           >
-            {{ item.value }}
+            {{ item.value }} / 100
           </meter>
         </li>
       </ul>
