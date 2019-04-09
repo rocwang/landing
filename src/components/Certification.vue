@@ -10,7 +10,7 @@
           rel="noreferrer noopener"
           :title="item.title"
         >
-          <component :is="`Icon${item.title.replace(/ /g, '')}`" />
+          <component :is="item.title.replace(/ /g, '')" />
         </a>
         <h3>{{ item.title }}</h3>
       </li>
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import IconMagentoCertifiedDeveloper from "./IconMagentoCertifiedDeveloper";
+import MagentoCertifiedDeveloper from "../icons/MagentoCertifiedDeveloper";
 
 export default {
   name: "Certification",
-  components: { IconMagentoCertifiedDeveloper },
+  components: { MagentoCertifiedDeveloper },
   props: {
     certification: {
       type: Array,

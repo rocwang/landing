@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "IconDatacom",
+  name: "Datacom",
   props: {
     bg: {
       type: String,

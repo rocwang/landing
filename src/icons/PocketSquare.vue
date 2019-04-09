@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "IconPocketSquare",
+  name: "PocketSquare",
   props: {
     color: {
       type: String,

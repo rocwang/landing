@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "IconHuckleBerry",
+  name: "HuckleBerry",
   props: {
     color: {
       type: String,

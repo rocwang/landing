@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "IconGithub",
+  name: "Github",
   props: {
     color: {
       type: String,

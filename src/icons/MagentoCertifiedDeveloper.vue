@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: "IconMagento",
+  name: "Magento",
   props: {
     color: {
       type: String,

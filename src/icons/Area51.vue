@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "IconArea51",
+  name: "Area51",
   props: {
     color: {
       type: String,

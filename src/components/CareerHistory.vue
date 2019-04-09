@@ -10,7 +10,7 @@
           rel="noreferrer noopener"
           :title="item.company.name"
         >
-          <component :is="`Icon${item.company.name.replace(/ /g, '')}`" />
+          <component :is="item.company.name.replace(/ /g, '')" />
         </a>
         <time>{{ item.from }} &mdash; {{ item.to }}</time>
         <h3>{{ item.title }}</h3>
@@ -23,22 +23,22 @@
 </template>
 
 <script>
-import IconDatacom from "./IconDatacom";
-import IconPocketSquare from "./IconPocketSquare";
-import IconLero9 from "./IconLero9";
-import IconMoustacheRepublic from "./IconMoustacheRepublic";
-import IconTencent from "./IconTencent";
-import IconInfosys from "./IconInfosys";
+import Datacom from "../icons/Datacom";
+import PocketSquare from "../icons/PocketSquare";
+import Lero9 from "../icons/Lero9";
+import MoustacheRepublic from "../icons/MoustacheRepublic";
+import Tencent from "../icons/Tencent";
+import Infosys from "../icons/Infosys";
 
 export default {
   name: "CareerHistory",
   components: {
-    IconDatacom,
-    IconPocketSquare,
-    IconLero9,
-    IconMoustacheRepublic,
-    IconTencent,
-    IconInfosys
+    Datacom,
+    PocketSquare,
+    Lero9,
+    MoustacheRepublic,
+    Tencent,
+    Infosys
   },
   props: {
     careerHistory: {

@@ -36,7 +36,7 @@
             target="_blank"
             rel="noreferrer noopener"
           >
-            <IconGithub />
+            <Github />
             Github: rocwang
           </a>
         </li>
@@ -50,12 +50,12 @@
 <script>
 import videoWebm from "../assets/bungy-jump.webm";
 import videoMp4 from "../assets/bungy-jump.mp4";
-import IconGithub from "./IconGithub";
+import Github from "../icons/Github";
 import QrcodeVue from "qrcode.vue";
 
 export default {
   name: "Header",
-  components: { IconGithub, QrcodeVue },
+  components: { Github, QrcodeVue },
   data() {
     return {
       videoWebm,

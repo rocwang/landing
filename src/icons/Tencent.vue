@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "IconTencent",
+  name: "Tencent",
   props: {
     color: {
       type: String,

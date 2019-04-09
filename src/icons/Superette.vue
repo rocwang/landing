@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "IconSuperette",
+  name: "Superette",
   props: {
     color: {
       type: String,
