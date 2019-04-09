@@ -50,34 +50,36 @@ export default {
 </script>
 
 <style module>
-.bottomBg {
+.root:hover .bottomBg {
   fill: #717071;
 }
 
-.topBg {
+.root:hover .topBg {
   fill: #f1f1f1;
 }
 
-.developer {
+.root:hover .developer {
   fill: #fff;
 }
 
-.magentoCertified {
+.root:hover .magentoCertified {
   fill: #444;
 }
 
-.magentoLogo {
+.root:hover .magentoLogo {
   fill: #ef6229;
 }
 
-.root:hover .bottomBg,
-.root:hover .topBg {
+.bottomBg,
+.topBg {
   fill: #000;
+  transition: fill 0.3s ease-out;
 }
 
-.root:hover .developer,
-.root:hover .magentoCertified,
-.root:hover .magentoLogo {
+.developer,
+.magentoCertified,
+.magentoLogo {
   fill: #fff;
+  transition: fill 0.3s ease-out;
 }
 </style>
