@@ -10,7 +10,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "chart.js": "1.x",
     "qrcode.vue": "^1.6.1",
     "vue": "^2.6.6",
     "vue-meta": "^1.6.0"
