@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "version": "3.0.0",
-  "author": "Roc <roc@kiwiberry.nz>",
+  "author": "Roc Wang <roc@kiwiberry.nz>",
   "description": "Roc's CV",
   "private": false,
   "scripts": {
@@ -15,12 +15,12 @@
     "vue-meta": "^1.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-babel": "^3.5.5",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-service": "^3.5.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.4",
     "vue-template-compiler": "^2.5.21"
