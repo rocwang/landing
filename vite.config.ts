@@ -7,10 +7,13 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     open: true,
-    https: {
-      key: readFileSync(homedir() + "/.localhost_ssl/server.key"),
-      cert: readFileSync(homedir() + "/.localhost_ssl/server.crt"),
-    },
+    https:
+      process.env.NODE_ENV === "development"
+        ? {
+            key: readFileSync(homedir() + "/.localhost_ssl/server.key"),
+            cert: readFileSync(homedir() + "/.localhost_ssl/server.crt"),
+          }
+        : false,
   },
   optimizeDeps: { exclude: ["prettier"] },
 });
