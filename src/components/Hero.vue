@@ -56,15 +56,10 @@ export default defineComponent({
 .root::before {
   content: "";
   grid-area: 1/1/2/2;
-  background-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      var(--color-black) 100%
-    ),
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
-  background-size: 100% 20%, auto auto;
-  background-position: left bottom, left top;
-  background-repeat: no-repeat, repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
+  background-size: auto auto;
+  background-position: left top;
+  background-repeat: repeat;
   z-index: 5;
 }
 
