@@ -1,42 +1,28 @@
 <template>
-  <div id="app" class="bg">
-    <Meta :title="name" :description="description" :website="website" />
-    <Header />
-    <CareerHistory :careerHistory="careerHistory" />
-    <FeaturedProjects :projects="featuredProjects" />
-    <SideProjects :projects="sideProjects" />
-    <Skills :skills="skills" />
-    <Certification :certification="certification" />
-  </div>
+  <HtmlHead :title="name" :description="description" :website="website" />
+  <Hero />
 </template>
 
-<script>
-import Meta from "./components/Meta";
-import Header from "./components/Header";
-import CareerHistory from "./components/CareerHistory";
-import FeaturedProjects from "./components/FeaturedProjects";
-import SideProjects from "./components/SideProjects";
-import Skills from "./components/Skills";
-import Certification from "./components/Certification";
-import profile from "./profile";
+<script lang="ts">
+import { defineComponent } from "vue";
+import HtmlHead from "./components/HtmlHead.vue";
+import Hero from "./components/Hero.vue";
+import { name, description, website } from "./profile.json";
 
-export default {
+export default defineComponent({
   name: "app",
   components: {
-    Meta,
-    Header,
-    FeaturedProjects,
-    SideProjects,
-    Skills,
-    Certification,
-    CareerHistory
+    HtmlHead,
+    Hero,
   },
-  data() {
+  setup() {
     return {
-      ...profile
+      name,
+      description,
+      website,
     };
-  }
-};
+  },
+});
 </script>
 
 <style></style>
