@@ -1,8 +1,8 @@
 <template>
   <header :class="$style.root">
     <video muted loop playsinline autoplay :class="$style.video" preload="auto">
-      <source :src="videoH265" type="video/mp4; codecs=hevc" />
-      <source :src="videoH264" type="video/mp4" />
+      <source :src="videoH265" type="video/mp4; codecs=hvc1" />
+      <source :src="videoH264" type="video/mp4; codecs=avc1.64001E" />
       Your browser does not support the video tag.
     </video>
 
