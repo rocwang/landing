@@ -37,79 +37,87 @@ export default defineComponent({
 </script>
 
 <style module>
-.root {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  place-content: stretch;
-  position: relative;
-}
-
-.video {
-  grid-area: 1/1/2/2;
-  object-fit: cover;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.root::before {
-  content: "";
-  grid-area: 1/1/2/2;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
-  background-size: auto auto;
-  background-position: left top;
-  background-repeat: repeat;
-  z-index: 5;
-}
-
-.title {
-  grid-area: 1/1/2/2;
-  place-self: center start;
-  z-index: 10;
-  margin-left: 10%;
-}
-
-.name {
-  display: block;
-  font-weight: 300;
-  font-size: 36px;
-  color: var(--color-white);
-  line-height: 1.4;
-}
-
-@media screen and (min-width: 768px) {
-  .name {
-    font-weight: 100;
-    font-size: 84px;
+@media screen {
+  .root {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-content: stretch;
+    position: relative;
   }
-}
 
-@media screen and (min-width: 992px) {
-  .name {
-    font-size: 140px;
+  .video {
+    grid-area: 1/1/2/2;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
-}
 
-.tagLine {
-  display: block;
-  color: #d9cb9e;
-  font-size: 14px;
-}
+  .root::before {
+    content: "";
+    grid-area: 1/1/2/2;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQIW2OUk1P4/+jRA0YGBgYGMAETAHNgAgDNXglfa/ch1wAAAABJRU5ErkJggg==);
+    background-size: auto auto;
+    background-position: left top;
+    background-repeat: repeat;
+    z-index: 5;
+  }
 
-@media screen and (min-width: 768px) {
+  .title {
+    grid-area: 1/1/2/2;
+    place-self: center start;
+    z-index: 10;
+    margin-left: 10%;
+  }
+
+  .name {
+    display: block;
+    font-weight: 300;
+    font-size: 36px;
+    color: var(--color-white);
+    line-height: 1.4;
+  }
+
+  @media screen and (min-width: 768px) {
+    .name {
+      font-weight: 100;
+      font-size: 84px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .name {
+      font-size: 140px;
+    }
+  }
+
   .tagLine {
-    font-weight: 100;
-    font-size: 54px;
+    display: block;
+    color: var(--color-gold);
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .tagLine {
+      font-weight: 100;
+      font-size: 54px;
+    }
+  }
+
+  .email {
+    color: var(--color-gold);
+    align-self: flex-end;
+    position: absolute;
+    z-index: 15;
+    right: 20px;
+    bottom: 20px;
   }
 }
 
-.email {
-  color: #d9cb9e;
-  align-self: flex-end;
-  position: absolute;
-  z-index: 15;
-  right: 20px;
-  bottom: 20px;
+@media print {
+  .video {
+    display: none;
+  }
 }
 </style>

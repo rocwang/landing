@@ -7,6 +7,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "gutenberg-css": "^0.6.1",
     "prettier": "^2.2.1",
     "vue": "^3.0.5"
   },
