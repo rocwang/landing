@@ -1,10 +1,11 @@
-@media print {
-  * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+/*!
+ * Forked from Gutenberg
+ *
+ * MIT Fabien Sa
+ * https://github.com/BafS/Gutenberg
+ */
 
+@media print {
   *,
   *:before,
   *:after,
@@ -27,8 +28,6 @@
   }
 
   body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     background: #fff !important;
     color: #000 !important;
     font-size: 1.6rem;
@@ -45,6 +44,12 @@
   dl {
     margin-bottom: 0.75rem;
     margin-top: 0;
+  }
+
+  p:last-child,
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0;
   }
 
   h1,
@@ -255,10 +260,7 @@
   }
 
   body {
-    padding-bottom: 2.54cm;
-    padding-left: 1.8cm;
-    padding-right: 1.8cm;
-    padding-top: 2.54cm;
+    padding: 0;
   }
 
   a[href^="http"]:after,

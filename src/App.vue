@@ -1,6 +1,12 @@
 <template>
   <HtmlHead :title="name" :description="description" :website="website" />
-  <Hero :name="name" :email="email" :tel="tel" />
+  <Hero
+    :name="name"
+    :email="email"
+    :tel="tel"
+    :tagline="tagline"
+    :description="description"
+  />
   <Career :career="career" />
   <Projects :projects="projects" />
   <Skills :skills="skills" />
@@ -17,6 +23,7 @@ import {
   name,
   email,
   tel,
+  tagline,
   description,
   website,
   career,
@@ -38,6 +45,7 @@ export default defineComponent({
       name,
       email,
       tel,
+      tagline,
       description,
       website,
       career,
@@ -49,15 +57,6 @@ export default defineComponent({
 </script>
 
 <style>
-:root {
-  --color-red: #dc3522;
-  --color-gold: #d9cb9e;
-  --color-light-gray: #374140;
-  --color-dark-gray: #2a2c2b;
-  --color-black: #1e1e20;
-  --color-white: #fff;
-}
-
 @media screen {
   body {
     background-color: var(--color-black);
@@ -65,14 +64,19 @@ export default defineComponent({
 }
 
 @media print {
+  html {
+    height: 100%;
+  }
+
   body {
-    padding: 0;
     display: grid;
     grid-template:
       "hero hero" auto
-      "career projects" auto
+      "career projects" 1fr
+      "skills skills" auto
       / 1fr 1fr;
     grid-gap: 0 30px;
+    height: 100%;
   }
 }
 </style>

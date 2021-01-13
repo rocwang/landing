@@ -1,7 +1,6 @@
 <template>
   <footer v-if="skills.length" :class="$style.root">
-    Keywords for recruiters:
-    {{ skills.join(", ") }}
+    My Skills: {{ skills.join(", ") }}
   </footer>
 </template>
 
@@ -27,10 +26,9 @@ export default defineComponent({
 
 @media print {
   .root {
-    position: absolute;
-    bottom: 0;
     color: gray;
     font-size: 1rem;
+    grid-area: skills;
   }
 }
 </style>

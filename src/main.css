@@ -1,0 +1,11 @@
+@import "assets/reset.css";
+@import "assets/print.css" print;
+
+:root {
+  --color-red: #dc3522;
+  --color-gold: #d9cb9e;
+  --color-light-gray: #374140;
+  --color-dark-gray: #2a2c2b;
+  --color-black: #1e1e20;
+  --color-white: #fff;
+}

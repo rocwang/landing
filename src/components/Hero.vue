@@ -9,7 +9,7 @@
     <h1 :class="$style.title">
       <span :class="$style.name">{{ name }}</span>
       <small :class="[$style.tagLine, 'no-print']">
-        &mdash; artisanal web developer.
+        &mdash; {{ tagline }}
       </small>
     </h1>
 
@@ -25,6 +25,8 @@
         &nbsp; https://kiwiberry.nz/
       </a>
     </p>
+
+    <p :class="$style.noScreen">{{ description }}</p>
   </header>
 </template>
 
@@ -43,6 +45,12 @@ export default defineComponent({
       type: String as PropType<string>,
     },
     tel: {
+      type: String as PropType<string>,
+    },
+    tagline: {
+      type: String as PropType<string>,
+    },
+    description: {
       type: String as PropType<string>,
     },
   },
