@@ -7,25 +7,45 @@
     </video>
 
     <h1 :class="$style.title">
-      <span :class="$style.name">Roc Wong</span>
-      <small :class="$style.tagLine"> &mdash; artisanal web developer. </small>
+      <span :class="$style.name">{{ name }}</span>
+      <small :class="[$style.tagLine, 'no-print']">
+        &mdash; artisanal web developer.
+      </small>
     </h1>
 
-    <a href="mailto:roc@kiwiberry.nz" :class="$style.email">
-      roc@kiwiberry.nz
-    </a>
+    <p :class="$style.email">
+      <a href="mailto:roc@kiwiberry.nz">
+        {{ email }}
+      </a>
+      <a :href="`tel:${tel}`" :class="$style.noScreen">
+        &nbsp;
+        {{ tel }}
+      </a>
+      <a href="https://kiwiberry.nz/" :class="[$style.noScreen, 'no-reformat']">
+        &nbsp; https://kiwiberry.nz/
+      </a>
+    </p>
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import videoH264 from "../assets/bungy-jump.h264.mp4";
 import videoH265 from "../assets/bungy-jump.h265.mp4";
-import Github from "../icons/Github.vue";
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "Header",
-  components: { Github },
+  props: {
+    name: {
+      type: String as PropType<string>,
+    },
+    email: {
+      type: String as PropType<string>,
+    },
+    tel: {
+      type: String as PropType<string>,
+    },
+  },
   setup() {
     return {
       videoH264,
@@ -113,9 +133,17 @@ export default defineComponent({
     right: 20px;
     bottom: 20px;
   }
+
+  .noScreen {
+    display: none;
+  }
 }
 
 @media print {
+  .root {
+    grid-area: hero;
+  }
+
   .video {
     display: none;
   }

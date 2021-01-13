@@ -10,7 +10,7 @@
   </teleport>
 </template>
 
-<script>
+<script lang="ts">
 import favicon from "../assets/favicon.png";
 import { defineComponent } from "vue";
 

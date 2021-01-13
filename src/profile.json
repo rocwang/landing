@@ -1,88 +1,76 @@
 {
   "name": "Roc Wong",
-  "description": "As a full stack developer with 10 years+ experience, Roc is able to deliver end to end website solutions for you, from cutting edge CSS tricks to performant server infrastructure.",
+  "description": "As a full stack developer with 10 years+ experience, Roc is able to deliver end to end website solutions, from fancy CSS tricks to cloud based infrastructure.",
   "website": "https://kiwiberry.nz/",
-  "careerHistory": [
+  "email": "roc@kiwiberry.nz",
+  "tel": "+64 027 949 1310",
+  "career": [
     {
       "from": "2018",
       "to": "2020",
-      "company": {
-        "name": "Canon",
-        "website": "https://www.canon.co.nz/"
-      },
-      "location": "Auckland New Zealand",
+      "company": "Canon",
+      "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Built Salesforce integrated ecommerce systems using Magento, React and Kubernetes."
+      "description": "Built Salesforce integrated ecommerce systems using Magento, React, Kubernetes and Azure."
     },
     {
       "from": "2016",
       "to": "2018",
-      "company": {
-        "name": "Pocket Square",
-        "website": "https://pocketsquare.co.nz/"
-      },
-      "location": "Auckland New Zealand",
+      "company": "Pocket Square",
+      "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
       "description": "Full stack web development using Shopify, Magento and WordPress."
     },
     {
       "from": "2014",
       "to": "2015",
-      "company": {
-        "name": "Moustache Republic",
-        "website": "https://www.moustacherepublic.com/"
-      },
-      "location": "Auckland New Zealand",
+      "company": "Moustache Republic",
+      "location": "Auckland, New Zealand",
       "title": "Web Developer",
-      "description": "Full stack development on Magento"
+      "description": "Full stack development on Magento and AWS."
     },
     {
       "from": "2010",
       "to": "2013",
-      "company": {
-        "name": "Tencent",
-        "website": "http://www.tencent.com/en-us/"
-      },
+      "company": "Tencent",
       "location": "Shenzhen, China",
       "title": "Web Developer",
-      "description": "Worked on marketing campaign websites for QQ VIP"
+      "description": "Worked on marketing campaign sites for QQ VIP."
     },
     {
       "from": "2006",
       "to": "2007",
-      "company": {
-        "name": "Infosys",
-        "website": "http://www.infosys.com/"
-      },
+      "company": "Infosys",
       "location": "Mysore, India",
       "title": "Intern",
-      "description": "Trainee under the mainframe stream. Explored the interoperability between .NET and Java."
+      "description": "Trainee under the mainframe stream. Researched on the interoperability between .NET and Java."
     }
   ],
   "projects": [
     {
+      "name": "Cash Launcher",
+      "website": "https://github.com/rocwang/cash-launcher",
+      "description": "A \"make it rain\" device built with Raspberry Pi, controlled by a Vue 3 based UI on mobile."
+    },
+    {
       "name": "Area51",
       "website": "https://area51store.co.nz/",
-      "description": "The Area51 team was looking for something different. They wanted something fast, something that would set them apart from other New Zealand retailers, and I worked hard to deliver what is one of New Zealand’s fastest eCommerce sites. Pages load in less than a second using the latest single page app technology, meaning customers can find what they want and buy quicker."
+      "description": "The Area51 team was looking for something different. They wanted something fast, something that would set them apart from other New Zealand retailers, and I worked hard to deliver what is one of New Zealand’s fastest eCommerce sites. Pages load in less than a second using the latest technologies like Vue and Algolia, meaning customers can find what they want and buy quicker."
     },
     {
       "name": "Bus Bus",
       "website": "https://bus.kiwiberry.nz/",
-      "description": "A progressive web app for tracking buses & ferries in Auckland, New Zealand."
+      "description": "A progressive web app for tracking buses, trains & ferries in Auckland."
     },
     {
       "name": "Storefront",
       "website": "https://github.com/rocwang/storefront",
-      "description": "An proof of concept Angular 2 storefront app for Magento 2"
-    },
-    {
-      "name": "Do Less",
-      "website": "https://github.com/rocwang/Do-Less",
-      "description": "Do Less is a open source, companion app for the native Reminders app on iOS, by which you could choose the three most important tasks to do at a time. Do Less helps you focus and accomplish more by doing less."
+      "description": "An proof of concept storefront for headless Magento 2 using Angular."
     }
   ],
   "skills": [
     "AWS",
+    "Algolia",
     "Azure",
     "CLI",
     "CSS",
