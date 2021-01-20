@@ -1,5 +1,5 @@
 import { defineComponent, PropType, h } from "vue";
-import { Person } from "schema-dts";
+import { Person, WithContext } from "schema-dts";
 
 export default defineComponent({
   name: "JsonLdPerson",
@@ -30,7 +30,7 @@ export default defineComponent({
     },
   },
   render() {
-    const person: Person = {
+    const person: WithContext<Person> = {
       "@context": "https://schema.org",
       "@type": "Person",
       email: this.email,
