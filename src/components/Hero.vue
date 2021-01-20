@@ -12,12 +12,11 @@
       </small>
     </h1>
 
-    <p :class="$style.email">
+    <p :class="$style.contact">
       <a href="mailto:roc@kiwiberry.nz">
         {{ email }}
       </a>
       <a :href="`tel:${tel}`" :class="$style.noScreen" data-nosnippet>
-        &nbsp;
         {{ tel }}
       </a>
       <a
@@ -25,8 +24,9 @@
         :class="[$style.noScreen, 'no-reformat']"
         data-nosnippet
       >
-        &nbsp; https://kiwiberry.nz/
+        https://kiwiberry.nz/
       </a>
+      <router-link to="/blog" class="no-print">Blog</router-link>
     </p>
 
     <p :class="$style.noScreen">{{ description }}</p>
@@ -136,7 +136,7 @@ export default defineComponent({
     }
   }
 
-  .email {
+  .contact {
     color: var(--color-gold);
     align-self: flex-end;
     position: absolute;
@@ -148,6 +148,10 @@ export default defineComponent({
   .noScreen {
     display: none;
   }
+}
+
+.contact a + a {
+  margin-left: 10px;
 }
 
 @media print {
