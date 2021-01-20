@@ -16,11 +16,15 @@
       <a href="mailto:roc@kiwiberry.nz">
         {{ email }}
       </a>
-      <a :href="`tel:${tel}`" :class="$style.noScreen">
+      <a :href="`tel:${tel}`" :class="$style.noScreen" data-nosnippet>
         &nbsp;
         {{ tel }}
       </a>
-      <a href="https://kiwiberry.nz/" :class="[$style.noScreen, 'no-reformat']">
+      <a
+        href="https://kiwiberry.nz/"
+        :class="[$style.noScreen, 'no-reformat']"
+        data-nosnippet
+      >
         &nbsp; https://kiwiberry.nz/
       </a>
     </p>

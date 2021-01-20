@@ -10,6 +10,14 @@
   <Career :career="career" />
   <Projects :projects="projects" />
   <Skills :skills="skills" />
+  <JsonLdPerson
+    :name="name"
+    :email="email"
+    :tel="tel"
+    :website="website"
+    :github="github"
+    :description="description"
+  />
 </template>
 
 <script lang="ts">
@@ -19,6 +27,7 @@ import Hero from "./components/Hero.vue";
 import Career from "./components/Career.vue";
 import Projects from "./components/Projects.vue";
 import Skills from "./components/Skills.vue";
+import JsonLdPerson from "./components/JsonLdPerson.ts";
 import {
   name,
   email,
@@ -29,6 +38,7 @@ import {
   career,
   projects,
   skills,
+  github,
 } from "./profile.json";
 
 export default defineComponent({
@@ -39,6 +49,7 @@ export default defineComponent({
     Career,
     Projects,
     Skills,
+    JsonLdPerson,
   },
   setup() {
     return {
@@ -51,6 +62,7 @@ export default defineComponent({
       career,
       projects,
       skills,
+      github,
     };
   },
 });
