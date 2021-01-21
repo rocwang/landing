@@ -17,7 +17,6 @@ export default defineComponent({
   name: "Blog",
   components: { Post: VueComponentWith({ Youtube }) },
   setup() {
-    console.log(attributes);
     return {
       title: attributes.title,
       date: format(parseISO(attributes.date), "PP"),

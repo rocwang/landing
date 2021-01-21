@@ -21,4 +21,5 @@ export default defineConfig({
       : false,
   },
   optimizeDeps: { exclude: ["prettier"] },
+  build: { cssCodeSplit: false },
 });

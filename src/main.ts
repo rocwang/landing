@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { createRouter, createWebHistory } from "vue-router";
-const pages = import.meta.glob("./pages/*.vue");
+const pages = import.meta.globEager("./pages/*.vue");
 
 const app = createApp(App);
 
@@ -19,12 +19,12 @@ app.use(
 
           return {
             path: `/${matches[1].toLowerCase()}`,
-            component,
+            component: component.default,
           };
         } else {
           return {
             path: "",
-            component,
+            component: component.default,
           };
         }
       })
