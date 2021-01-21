@@ -1,5 +1,5 @@
 @import "assets/reset.css";
-@import "assets/print.css" print;
+@import "assets/print.css";
 
 :root {
   --color-red: #dc3522;

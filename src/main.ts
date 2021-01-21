@@ -2,7 +2,6 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import { createRouter, createWebHistory } from "vue-router";
 const pages = import.meta.glob("./pages/*.vue");
-console.log(pages);
 
 const app = createApp(App);
 

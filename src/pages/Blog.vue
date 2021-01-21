@@ -1,15 +1,27 @@
 <template>
-  <div v-html="html" :class="$style.root"></div>
+  <div :class="$style.root">
+    <h1>{{ title }}</h1>
+    <time>{{ date }}</time>
+
+    <Post />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { html } from "../posts/cash-launcher.md";
+import { attributes, VueComponentWith } from "../posts/cash-launcher.md";
+import Youtube from "../components/Youtube.vue";
+import { format, parseISO } from "date-fns";
 
 export default defineComponent({
-  name: "Post",
+  name: "Blog",
+  components: { Post: VueComponentWith({ Youtube }) },
   setup() {
-    return { html };
+    console.log(attributes);
+    return {
+      title: attributes.title,
+      date: format(parseISO(attributes.date), "PP"),
+    };
   },
 });
 </script>
@@ -20,22 +32,15 @@ export default defineComponent({
   max-width: 768px;
   padding: 30px;
   margin: auto;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
-.root p,
-.root blockquote,
-.root table,
-.root ul,
-.root ol,
-.root dl {
-  margin-bottom: 0.75rem;
+.root > * {
+  margin-bottom: 2rem;
   margin-top: 0;
 }
 
-.root p:last-child,
-.root ul:last-child,
-.root ol:last-child {
+.root > *:last-child {
   margin-bottom: 0;
 }
 
@@ -46,7 +51,7 @@ export default defineComponent({
 .root h5,
 .root h6 {
   line-height: 1.2;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
 }
@@ -106,7 +111,6 @@ export default defineComponent({
 .root pre,
 .root kbd {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 85%;
 }
 
 .root code,
@@ -115,8 +119,8 @@ export default defineComponent({
 }
 
 .root pre {
-  margin-bottom: 1.5rem;
-  padding: 10px 12px;
+  margin-bottom: 2rem;
+  padding: 10px;
 }
 .root pre code,
 .root pre kbd {
@@ -125,34 +129,22 @@ export default defineComponent({
 
 .root blockquote {
   border: 0;
-  border-left: 5px solid #bbb;
+  border-left: 5px solid var(--color-white);
   margin-left: 1px;
   padding: 12px 1.5rem;
 }
 
-.root blockquote:first-child {
-  margin-top: 0;
-}
-.root blockquote p:last-child,
-.root blockquote ul:last-child,
-.root blockquote ol:last-child {
+.root blockquote > *:last-child {
   margin-bottom: 0;
-}
-.root blockquote footer {
-  display: block;
-  font-size: 80%;
 }
 
 .root img {
-  border: 0;
-  display: block;
-  max-width: 100% !important;
-  vertical-align: middle;
+  max-width: 100%;
 }
 
 .root hr {
   border: 0;
-  border-bottom: 2px solid #bbb;
+  border-bottom: 2px solid var(--color-white);
   height: 0;
   margin: 2.25rem 0;
   padding: 0;
@@ -163,13 +155,6 @@ export default defineComponent({
 }
 
 .root dd {
-  margin: 0;
-  margin-bottom: 0.75rem;
-}
-
-.root abbr[title],
-.root acronym[title] {
-  border: 0;
-  text-decoration: none;
+  margin: 0 0 0.75rem 0;
 }
 </style>

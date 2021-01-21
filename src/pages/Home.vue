@@ -20,23 +20,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onUnmounted } from "vue";
 import Hero from "../components/Hero.vue";
 import Career from "../components/Career.vue";
 import Projects from "../components/Projects.vue";
 import Skills from "../components/Skills.vue";
 import JsonLdPerson from "../components/JsonLdPerson";
 import {
-  name,
-  email,
-  tel,
-  tagline,
-  description,
-  website,
   career,
+  description,
+  email,
+  github,
+  name,
   projects,
   skills,
-  github,
+  tagline,
+  tel,
+  website,
 } from "../profile.json";
 
 export default defineComponent({
@@ -49,6 +49,9 @@ export default defineComponent({
     JsonLdPerson,
   },
   setup() {
+    document.querySelector("html").classList.add("home");
+    onUnmounted(() => document.querySelector("html").classList.remove("home"));
+
     return {
       name,
       email,
@@ -65,4 +68,21 @@ export default defineComponent({
 });
 </script>
 
-<style module></style>
+<style>
+@media print {
+  html.home {
+    height: 100%;
+  }
+
+  html.home body {
+    display: grid;
+    grid-template:
+      "hero hero" auto
+      "career projects" 1fr
+      "skills skills" auto
+      / 1fr 1fr;
+    grid-gap: 0 30px;
+    height: 100%;
+  }
+}
+</style>
