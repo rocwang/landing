@@ -7,7 +7,16 @@
     :description="description"
   />
   <Career :career="career" />
-  <Projects :projects="projects" />
+  <Projects
+    name="Featured Commercial Projects"
+    :projects="commercialProjects"
+    :style="{ '--grid-area': 'commercial' }"
+  />
+  <Projects
+    name="Featured Hobby Projects"
+    :projects="hobbyProjects"
+    :style="{ '--grid-area': 'hobby' }"
+  />
   <Skills :skills="skills" />
   <JsonLdPerson
     :name="name"
@@ -32,7 +41,8 @@ import {
   email,
   github,
   name,
-  projects,
+  commercialProjects,
+  hobbyProjects,
   skills,
   tagline,
   tel,
@@ -60,7 +70,8 @@ export default defineComponent({
       description,
       website,
       career,
-      projects,
+      commercialProjects,
+      hobbyProjects,
       skills,
       github,
     };
@@ -78,7 +89,8 @@ export default defineComponent({
     display: grid;
     grid-template:
       "hero hero" auto
-      "career projects" 1fr
+      "career commercial" auto
+      "career hobby" 1fr
       "skills skills" auto
       / 1fr 1fr;
     grid-gap: 0 30px;

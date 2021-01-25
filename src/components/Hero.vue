@@ -27,6 +27,9 @@
         https://kiwiberry.nz/
       </a>
       <router-link to="/blog" class="no-print">Blog</router-link>
+      <a href="#" class="no-print" data-nosnippet @click.prevent="print">
+        CV
+      </a>
     </p>
 
     <p :class="$style.noScreen">{{ description }}</p>
@@ -62,6 +65,7 @@ export default defineComponent({
       videoH264,
       videoH265,
       siteUrl: window.location.href,
+      print: () => window.print(),
     };
   },
 });

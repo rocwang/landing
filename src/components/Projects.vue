@@ -1,6 +1,6 @@
 <template>
   <section v-if="projects.length" :class="$style.root">
-    <h2>Featured Projects</h2>
+    <h2>{{ name }}</h2>
 
     <template v-for="(item, index) in projects" :key="index">
       <h3>
@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts">
-import Area51 from "../icons/Area51.vue";
 import { defineComponent, PropType } from "vue";
 
 declare interface Project {
@@ -24,10 +23,10 @@ declare interface Project {
 
 export default defineComponent({
   name: "FeaturedProjects",
-  components: {
-    Area51,
-  },
   props: {
+    name: {
+      type: String as PropType<string>,
+    },
     projects: {
       type: Array as PropType<Project[]>,
     },
@@ -39,6 +38,12 @@ export default defineComponent({
 @media screen {
   .root {
     display: none;
+  }
+}
+
+@media print {
+  .root {
+    grid-area: var(--grid-area);
   }
 }
 </style>
