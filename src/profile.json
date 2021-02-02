@@ -1,7 +1,7 @@
 {
   "name": "Roc Wong",
   "tagline": "web, handcrafted.",
-  "description": "As a full-stack developer with 10 years+ experience, Roc can deliver end to end web solutions, from fancy CSS tricks to cloud-based infrastructure.",
+  "description": "As a full-stack developer with 10 years+ experience, Roc is a veteran of Javascript and PHP, with proficiency in CSS and hands-on experience on Docker & Kubernetes.",
   "website": "https://kiwiberry.nz/",
   "email": "roc@kiwiberry.nz",
   "github": "https://github.com/rocwang/",
@@ -12,7 +12,7 @@
       "to": "2020",
       "company": "Canon",
       "location": "Auckland, New Zealand",
-      "title": "Lead Web Developer",
+      "title": "Senior Web Developer",
       "description": "Led a four-person team to build Salesforce integrated e-commerce systems using React, Laravel, Magento, Kubernetes and Azure."
     },
     {
@@ -21,7 +21,7 @@
       "company": "Pocket Square",
       "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Primarily working on the Shopify e-Commerce platform, while also did Vue, WordPress and Magento projects."
+      "description": "Primarily working on the Shopify e-Commerce platform as a full-stack developer, while also did Vue, WordPress and Magento projects."
     },
     {
       "from": "2014",
@@ -58,6 +58,11 @@
       "name": "Walker & Hall",
       "website": "https://www.walkerandhall.co.nz/",
       "description": "A fully customised Shopify theme for the local jewellery brand."
+    },
+    {
+      "name": "The Horse",
+      "website": "https://www.thehorse.com.au/",
+      "description": "A single page eCommerce site built with Vue and GraphQL."
     },
     {
       "name": "Samantha Sung",
