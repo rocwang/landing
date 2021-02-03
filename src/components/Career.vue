@@ -1,16 +1,16 @@
 <template>
   <section v-if="career.length" :class="$style.root">
-    <h2>Career</h2>
+    <h2>Career & Education</h2>
 
     <template v-for="(item, index) in career" :key="index">
       <h3>{{ item.title }} @ {{ item.company }}</h3>
 
       <p :class="$style.timeAddr">
-          <time :class="$style.time">
-            {{ item.from }} &mdash; {{ item.to }}
-          </time>
-          &nbsp;
-          <address :class="$style.address">{{ item.location }}</address>
+        <time :class="$style.time">
+          {{ item.from }} &mdash; {{ item.to }}
+        </time>
+        &nbsp;
+        <address :class="$style.address">{{ item.location }}</address>
       </p>
 
       <p>{{ item.description }}</p>
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import {defineComponent, PropType} from "vue";
 
 declare interface Career {
   from: string;
@@ -31,7 +31,7 @@ declare interface Career {
 }
 
 export default defineComponent({
-  name: "Career",
+  name : "Career",
   props: {
     career: {
       type: Array as PropType<Career[]>,
@@ -50,6 +50,16 @@ export default defineComponent({
 @media print {
   .root {
     grid-area: career;
+    position: relative;
+  }
+
+  .root::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    right: -15px;
+    border-right: 1px solid var(--color-black);
   }
 
   .timeAddr {
