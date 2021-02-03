@@ -1,7 +1,7 @@
 {
   "name": "Roc Wong",
   "tagline": "web, handcrafted.",
-  "description": "As a full-stack developer with 10 years+ experience, Roc is a veteran of Javascript and PHP, with proficiency in CSS and hands-on experience on Docker & Kubernetes.",
+  "description": "As a full-stack developer with 10 years+ experience, Roc is a veteran of Javascript/Typescript and PHP, with proficiency in CSS and hands-on experience on CI/CD & Docker/Kubernetes.",
   "website": "https://kiwiberry.nz/",
   "email": "roc@kiwiberry.nz",
   "github": "https://github.com/rocwang/",
@@ -13,7 +13,7 @@
       "company": "Canon",
       "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Led a four-person team to build Salesforce integrated e-commerce systems using React, Laravel, Magento, Kubernetes and Azure."
+      "description": "Led a four-person team to build Salesforce integrated B2B eCommerce systems using React, Redux, Laravel, PHPUnit, MySQL, Kubernetes and Azure."
     },
     {
       "from": "2016",
@@ -21,7 +21,7 @@
       "company": "Pocket Square",
       "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Primarily working on the Shopify e-Commerce platform as a full-stack developer, while also did Vue, WordPress and Magento projects."
+      "description": "Primarily working on the Shopify eCommerce platform as a full-stack developer, while also did Vue, WordPress and Magento projects, hosted on Digital Ocean."
     },
     {
       "from": "2014",
@@ -37,10 +37,10 @@
       "company": "Tencent",
       "location": "Shenzhen, China",
       "title": "Web Developer",
-      "description": "Built marketing campaign sites for QQ VIP. Created a campaign management system, and an internal framework based on PHP and Yii."
+      "description": "Built marketing campaign sites for QQ VIP using JS & PHP. Created a campaign management system, and an internal framework based on Yii."
     },
     {
-      "from": "2007",
+      "from": "2003",
       "to": "2010",
       "company": "UESTC",
       "location": "Chengdu, China",
@@ -53,65 +53,71 @@
       "company": "Infosys",
       "location": "Mysore, India",
       "title": "Intern",
-      "description": "A trainee under the mainframe stream (e.g. Cobol and DB2). Researched on the interoperability between .NET and Java."
+      "description": "A trainee under the mainframe stream (e.g. COBOL and DB2). Researched on the interoperability between .NET and Java."
     }
   ],
   "commercialProjects": [
     {
       "name": "Area51",
       "website": "https://area51store.co.nz/",
-      "description": "One of New Zealand’s fastest eCommerce sites. Pages load in less than a second using the latest technologies like Vue and Algolia, meaning customers can find what they want and buy quicker."
+      "description": "This could be one of New Zealand’s fastest eCommerce sites. Performant page loading thanks to the latest technologies like Vue, GraphQL and Algolia, meaning customers can find what they want and buy quicker."
     },
     {
       "name": "Walker & Hall",
       "website": "https://www.walkerandhall.co.nz/",
-      "description": "A fully customised Shopify theme for the local jewellery brand."
+      "description": "A fully customised Shopify storefront built for the local jewellery brand."
     },
     {
       "name": "The Horse",
       "website": "https://www.thehorse.com.au/",
-      "description": "A single page eCommerce site built with Vue and GraphQL."
+      "description": "A single page app on eCommerce built with Vue and GraphQL."
     },
     {
       "name": "Samantha Sung",
       "website": "https://samanthasung.com/",
-      "description": "A handcrafted Shopify theme for the fashion vendor."
+      "description": "A handcrafted Shopify store for the fashion vendor."
     }
   ],
   "hobbyProjects": [
     {
       "name": "Cash Launcher",
-      "website": "https://www.youtube.com/watch?v=qdm6b15lcD4",
-      "description": "A \"make it rain\" device built with Raspberry Pi, controlled by a Vue 3 based UI on mobile. A live demo can be found at https://bus.kiwiberry.nz."
+      "website": "https://github.com/rocwang/cash-launcher",
+      "description": "A \"make it rain\" device built with Raspberry Pi and Node.js, controlled by a Vue 3 based UI on mobile written in Typescript. A live demo can be found at https://bus.kiwiberry.nz."
     },
     {
       "name": "Bus Bus",
       "website": "https://bus.kiwiberry.nz/",
-      "description": "An offline-first progressive web app for tracking buses, trains & ferries in Auckland."
+      "description": "An offline-first progressive web app for tracking buses, trains & ferries in Auckland, built with Vue, Node.js with test cases written in Jest."
     },
     {
       "name": "Storefront",
       "website": "https://github.com/rocwang/storefront",
-      "description": "An proof of concept storefront for headless Magento 2 using Angular."
+      "description": "A proof of concept storefront for headless Magento 2 using Angular."
     }
   ],
   "skills": [
     "AWS",
     "Algolia",
+    "Apollo",
     "Azure",
+    "CI/CD",
     "CLI",
     "CSS",
     "Docker",
     "GCP",
     "HTML",
     "Javascript",
+    "Jest",
     "Kubernetes",
     "Magento",
     "MySQL",
     "Nginx",
-    "Node",
+    "Node.js",
     "PHP",
+    "PHPUnit",
     "React",
+    "Redux",
+    "RxJs",
     "SASS",
     "SQL",
     "Shell",
@@ -119,6 +125,7 @@
     "Sketch",
     "Typescript",
     "Vue",
+    "Vuex",
     "Wordpress"
   ]
 }
