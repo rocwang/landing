@@ -48,22 +48,8 @@ export default defineComponent({
 }
 
 @media print {
-  .root {
-    grid-area: career;
-    position: relative;
-  }
-
-  .root::after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    right: -15px;
-    border-right: 1px solid var(--color-black);
-  }
-
   .timeAddr {
-    font-size: 1.2rem;
+    font-weight: 700;
     font-style: normal;
   }
 

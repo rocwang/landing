@@ -3,9 +3,11 @@
     <h2>{{ name }}</h2>
 
     <template v-for="(item, index) in projects" :key="index">
-      <h3>
-        <a :href="item.website">{{ item.name }}</a>
-      </h3>
+      <h3>{{ item.name }}</h3>
+
+      <p :class="website">
+        <strong>{{ item.website }}</strong>
+      </p>
 
       <p>{{ item.description }}</p>
     </template>
@@ -38,17 +40,6 @@ export default defineComponent({
 @media screen {
   .root {
     display: none;
-  }
-}
-
-@media print {
-  .root {
-    grid-area: var(--grid-area);
-  }
-
-  .root:nth-child(3) {
-    padding-bottom: 15px;
-    border-bottom: 1px solid var(--color-black);
   }
 }
 </style>

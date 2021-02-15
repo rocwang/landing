@@ -160,10 +160,6 @@ export default defineComponent({
 }
 
 @media print {
-  .root {
-    grid-area: hero;
-  }
-
   .video {
     display: none;
   }

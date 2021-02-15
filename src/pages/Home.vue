@@ -10,13 +10,9 @@
   <Projects
     name="Featured Commercial Projects"
     :projects="commercialProjects"
-    :style="{ '--grid-area': 'commercial' }"
+    class="break-before"
   />
-  <Projects
-    name="Featured Hobby Projects"
-    :projects="hobbyProjects"
-    :style="{ '--grid-area': 'hobby' }"
-  />
+  <Projects name="Featured Hobby Projects" :projects="hobbyProjects" />
   <Skills :skills="skills" />
   <Footnote />
   <JsonLdPerson
@@ -89,16 +85,7 @@ export default defineComponent({
   }
 
   html.home body {
-    display: grid;
-    grid-template:
-      "hero hero" auto
-      "career commercial" auto
-      "career hobby" 1fr
-      "skills skills" auto
-      "footnote footnote" auto
-      / 1fr 1fr;
-    grid-gap: 0 30px;
-    height: 100%;
+    padding-bottom: 4rem;
   }
 }
 </style>

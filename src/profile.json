@@ -1,7 +1,7 @@
 {
   "name": "Roc Wong",
   "tagline": "web, handcrafted.",
-  "description": "As a full-stack developer with 10 years+ experience, Roc is a veteran of Javascript/Typescript and PHP, with proficiency in CSS and hands-on experience on CI/CD & Docker/Kubernetes.",
+  "description": "As a full-stack developer with 10 years+ experience in the industry, Roc is a veteran of Javascript/Typescript and PHP, with proficiency in CSS and hands-on experience on CI/CD & Docker/Kubernetes.",
   "website": "https://kiwiberry.nz/",
   "email": "roc@kiwiberry.nz",
   "github": "https://github.com/rocwang/",
@@ -13,7 +13,7 @@
       "company": "Canon",
       "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Led a four-person team to build Salesforce integrated B2B eCommerce systems using React, Redux, Laravel, PHPUnit, MySQL, Kubernetes and Azure."
+      "description": "Built a Salesforce integrated B2B quoting systems as the lead developer. using React, Redux, Laravel, PHPUnit, MySQL, Kubernetes and Azure."
     },
     {
       "from": "2016",
@@ -21,7 +21,7 @@
       "company": "Pocket Square",
       "location": "Auckland, New Zealand",
       "title": "Senior Web Developer",
-      "description": "Primarily working on the Shopify eCommerce platform as a full-stack developer, while also did Vue, WordPress and Magento projects, hosted on Digital Ocean."
+      "description": "Developed beautiful and performant storefronts with integrated backend for various retailing brands, using Shopify & Vue.js. Built an event booking system with integrated kiosks for Jaguar Land Rover. Created \"Alchemist\", a jewellery image synthesizer for Meadowlark. Awarded as \"The Golden Child\" of Pocket Square."
     },
     {
       "from": "2014",
@@ -29,7 +29,7 @@
       "company": "Moustache Republic",
       "location": "Auckland, New Zealand",
       "title": "Web Developer",
-      "description": "Full-stack web development on Magento and AWS. Built in-house Magento extensions. Email dev & testing."
+      "description": "Full-stack web development on multiple eCommerce websites, using Magento and AWS, integrated with retail POS systems like Retail Express. Built styled transactional email templates that look nice across all major email clients. Created a SPA storefront with Angular for headless Magento."
     },
     {
       "from": "2010",
@@ -37,7 +37,7 @@
       "company": "Tencent",
       "location": "Shenzhen, China",
       "title": "Web Developer",
-      "description": "Built marketing campaign sites for QQ VIP using JS & PHP. Created a campaign management system, and an internal framework based on Yii."
+      "description": "Built 30+ marketing campaign sites using JS & PHP. Created a campaign management system, and an internal framework based on Yii. Mentoring interns. \"The outstanding employee of 2013.\" Open-sourced 6 projects within the company, honoured as the most open-source contributor of 2013."
     },
     {
       "from": "2003",
@@ -53,7 +53,7 @@
       "company": "Infosys",
       "location": "Mysore, India",
       "title": "Intern",
-      "description": "A trainee under the mainframe stream (e.g. COBOL and DB2). Researched on the interoperability between .NET and Java."
+      "description": "A trainee under the mainframe stream (e.g. COBOL and DB2). Researched the interoperability between .NET and Java."
     }
   ],
   "commercialProjects": [
@@ -70,7 +70,7 @@
     {
       "name": "The Horse",
       "website": "https://www.thehorse.com.au/",
-      "description": "A single page app on eCommerce built with Vue and GraphQL."
+      "description": "A single-page app on eCommerce built with Vue and GraphQL."
     },
     {
       "name": "Samantha Sung",
@@ -130,6 +130,6 @@
     "Vue",
     "Vuex",
     "Webpack",
-    "Wordpress"
+    "WordPress"
   ]
 }

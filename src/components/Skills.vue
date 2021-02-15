@@ -28,7 +28,8 @@ export default defineComponent({
   .root {
     color: gray;
     font-size: 1rem;
-    grid-area: skills;
+    position: fixed;
+    bottom: 2rem;
   }
 }
 </style>
