@@ -1,6 +1,7 @@
 <template>
-  <footer v-if="skills.length" :class="$style.root">
-    My Skills: {{ skills.join(", ") }}.
+  <footer :class="$style.root">
+    This CV is built with TypeScript, Vue.js and Vite. The source code is
+    available at https://github.com/rocwang/landing
   </footer>
 </template>
 
@@ -8,12 +9,7 @@
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
-  name: "Skills",
-  props: {
-    skills: {
-      type: Array as PropType<string[]>,
-    },
-  },
+  name: "Footnote",
 });
 </script>
 
@@ -28,7 +24,7 @@ export default defineComponent({
   .root {
     color: gray;
     font-size: 1rem;
-    grid-area: skills;
+    grid-area: footnote;
   }
 }
 </style>

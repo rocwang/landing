@@ -109,12 +109,14 @@
     "Javascript",
     "Jest",
     "Kubernetes",
+    "Laravel",
     "Magento",
     "MySQL",
     "Nginx",
     "Node.js",
     "PHP",
     "PHPUnit",
+    "Ramda",
     "React",
     "Redux",
     "RxJs",
@@ -124,8 +126,10 @@
     "Shopify",
     "Sketch",
     "Typescript",
+    "Vite",
     "Vue",
     "Vuex",
+    "Webpack",
     "Wordpress"
   ]
 }
