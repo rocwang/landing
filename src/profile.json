@@ -1,7 +1,7 @@
 {
   "name": "Roc Wong",
   "tagline": "web, handcrafted.",
-  "description": "As a full-stack developer with 10 years+ experience in the industry, Roc is a veteran of Javascript/Typescript and PHP, with proficiency in CSS and hands-on experience on CI/CD & Docker/Kubernetes.",
+  "description": "As a software engineer with 12 years+ experience, I build innovative healthcare software in day and work on grocer.nz at night.",
   "website": "https://kiwiberry.nz/",
   "email": "roc@kiwiberry.nz",
   "github": "https://github.com/rocwang/",
@@ -79,14 +79,14 @@
       "name": "The Horse",
       "website": "https://www.thehorse.com.au/",
       "description": "A single-page app on eCommerce built with Vue and GraphQL."
-    },
-    {
-      "name": "Samantha Sung",
-      "website": "https://samanthasung.com/",
-      "description": "A handcrafted Shopify store for the fashion vendor."
     }
   ],
   "hobbyProjects": [
+    {
+      "name": "Grocer",
+      "website": "https://grocer.nz",
+      "description": "A grocery price comparison app for Kiwis."
+    },
     {
       "name": "Cash Launcher",
       "website": "https://github.com/rocwang/cash-launcher",
@@ -96,48 +96,33 @@
       "name": "Bus Bus",
       "website": "https://bus.kiwiberry.nz/",
       "description": "An offline-first progressive web app for tracking buses, trains & ferries in Auckland, built with Vue, Node.js with test cases written in Jest."
-    },
-    {
-      "name": "Storefront",
-      "website": "https://github.com/rocwang/storefront",
-      "description": "A proof of concept storefront for headless Magento 2 using Angular."
     }
   ],
   "skills": [
     "AWS",
-    "Algolia",
-    "Apollo",
     "Azure",
     "CI/CD",
     "CLI",
     "CSS",
+    "Databricks",
     "Docker",
+    "Functional Programming",
     "GCP",
     "HTML",
     "Javascript",
-    "Jest",
     "Kubernetes",
-    "Laravel",
-    "Magento",
-    "MySQL",
-    "Nginx",
     "Node.js",
     "PHP",
-    "PHPUnit",
-    "Ramda",
     "React",
-    "Redux",
+    "Redshift",
     "RxJs",
-    "SASS",
     "SQL",
+    "Scala",
     "Shell",
     "Shopify",
-    "Sketch",
     "Typescript",
-    "Vite",
     "Vue",
-    "Vuex",
-    "Webpack",
-    "WordPress"
+    "dbt",
+    "duckdb"
   ]
 }

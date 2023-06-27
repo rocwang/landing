@@ -10,7 +10,6 @@
   <Projects
     name="Featured Commercial Projects"
     :projects="commercialProjects"
-    class="break-before"
   />
   <Projects name="Featured Hobby Projects" :projects="hobbyProjects" />
   <Skills :skills="skills" />
